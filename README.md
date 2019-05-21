@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/JHSRobo/Bioseer-Web-Interface.svg?branch=master)](https://travis-ci.com/JHSRobo/Bioseer-Web-Interface)
+
 # BioseerWebInterface
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
