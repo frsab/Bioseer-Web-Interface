@@ -10,6 +10,10 @@
     "e2e": "ng e2e",
     "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --includes additional-doc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JHSRobo/Bioseer-Web-Interface.git"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
