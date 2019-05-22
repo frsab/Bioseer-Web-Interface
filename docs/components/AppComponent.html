@@ -124,6 +124,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#mapLoaded">mapLoaded</a>
+                            </li>
+                            <li>
                                 <a href="#title">title</a>
                             </li>
                         </ul>
@@ -139,6 +142,54 @@
     </table>
 </section>
 
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(bingApiLoader: <a href="../injectables/BingApiLoaderService.html">BingApiLoaderService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/app.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>bingApiLoader</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BingApiLoaderService.html" target="_self" >BingApiLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -150,6 +201,32 @@
         <h3 id="inputs">
             Properties
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mapLoaded"></a>
+                        <span class="name">
+                            <b>
+                            mapLoaded</b>
+                            <a href="#mapLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/app.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -175,7 +252,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/app.component.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/app.component.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -188,7 +265,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+import {BingApiLoaderService} from &#x27;./services/bing-api-loader.service&#x27;;
 
 @Component({
   selector: &#x27;app-root&#x27;,
@@ -197,32 +275,21 @@
 })
 export class AppComponent {
   title &#x3D; &#x27;Bioseer-Web-Interface&#x27;;
+  mapLoaded &#x3D; false;
+
+  constructor(private bingApiLoader: BingApiLoaderService) {
+    this.bingApiLoader.load().then(() &#x3D;&gt; {
+      console.log(&#x27;map loaded&#x27;);
+      this.mapLoaded &#x3D; true;
+    });
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!--The content below is only a placeholder and can be replaced.--&gt;
-&lt;div style&#x3D;&quot;text-align:center&quot;&gt;
-  &lt;h1&gt;
-    Welcome to {{ title }}!
-  &lt;/h1&gt;
-  &lt;img width&#x3D;&quot;300&quot; alt&#x3D;&quot;Angular Logo&quot; src&#x3D;&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg&#x3D;&#x3D;&quot;&gt;
-&lt;/div&gt;
-&lt;h2&gt;Here are some links to help you start: &lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h2&gt;&lt;a target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;noopener&quot; href&#x3D;&quot;https://angular.io/tutorial&quot;&gt;Tour of Heroes&lt;/a&gt;&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2&gt;&lt;a target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;noopener&quot; href&#x3D;&quot;https://angular.io/cli&quot;&gt;CLI Documentation&lt;/a&gt;&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2&gt;&lt;a target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;noopener&quot; href&#x3D;&quot;https://blog.angular.io/&quot;&gt;Angular blog&lt;/a&gt;&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;Bing Maps:&lt;/h1&gt;
+&lt;app-bing-map *ngIf&#x3D;&quot;mapLoaded&quot;&gt;&lt;/app-bing-map&gt;
 </code></pre>
     </div>
 
@@ -258,8 +325,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--The content below is only a placeholder and can be replaced.--><div style="text-align:center">  <h1>    Welcome to {{ title }}!  </h1>  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="></div><h2>Here are some links to help you start: </h2><ul>  <li>    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>  </li>  <li>    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>  </li>  <li>    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>  </li></ul><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'}];
+        var COMPONENT_TEMPLATE = '<div><h1>Bing Maps:</h1><app-bing-map *ngIf="mapLoaded"></app-bing-map></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

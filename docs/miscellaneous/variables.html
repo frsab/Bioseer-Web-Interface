@@ -57,10 +57,22 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
+                            <a href="#browserWindowProvider" title="src/app/services/window.service.ts"><b>browserWindowProvider</b>&nbsp;&nbsp;&nbsp;(src/.../window.service.ts)</a>
+                        </li>
+                        <li>
                             <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WINDOW" title="src/app/services/window.service.ts"><b>WINDOW</b>&nbsp;&nbsp;&nbsp;(src/.../window.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WINDOW_PROVIDERS" title="src/app/services/window.service.ts"><b>WINDOW_PROVIDERS</b>&nbsp;&nbsp;&nbsp;(src/.../window.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#windowProvider" title="src/app/services/window.service.ts"><b>windowProvider</b>&nbsp;&nbsp;&nbsp;(src/.../window.service.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -69,6 +81,121 @@
     </table>
 </section>
 
+    <h3>src/app/services/window.service.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="browserWindowProvider"></a>
+                        <span class="name">
+                            <b>
+                            browserWindowProvider</b>
+                            <a href="#browserWindowProvider"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ClassProvider" target="_blank" >ClassProvider</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  provide: WindowRef,
+  useClass: BrowserWindowRef
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WINDOW"></a>
+                        <span class="name">
+                            <b>
+                            WINDOW</b>
+                            <a href="#WINDOW"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new InjectionToken(&#x27;WindowToken&#x27;)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WINDOW_PROVIDERS"></a>
+                        <span class="name">
+                            <b>
+                            WINDOW_PROVIDERS</b>
+                            <a href="#WINDOW_PROVIDERS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  browserWindowProvider,
+  windowProvider
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="windowProvider"></a>
+                        <span class="name">
+                            <b>
+                            windowProvider</b>
+                            <a href="#windowProvider"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/FactoryProvider" target="_blank" >FactoryProvider</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  provide: WINDOW,
+  useFactory: windowFactory,
+  deps: [ WindowRef, PLATFORM_ID ]
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
     <h3>src/environments/environment.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
