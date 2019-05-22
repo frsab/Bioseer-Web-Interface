@@ -9,8 +9,6 @@ install:
     - npm install
 script:
     - npm run doc
-    - ng lint
-    - ng build --prod
     - bash ./deploy.sh
 env:
   global:
