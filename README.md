@@ -4,6 +4,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+Built off of [this angular project](https://stackblitz.com/edit/angular-bing-maps?file=src%2Fapp%2Fbing-map.component.ts) that incorporated bing maps.
+
+Documented using compodoc. Before every push to master, run `npm run doc` to build docs for github pages.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
