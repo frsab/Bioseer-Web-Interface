@@ -59,6 +59,13 @@
             <code>src/app/services/bing-api-loader.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Loads the bing api object</p>
+
+            </p>
 
 
 
@@ -121,7 +128,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/bing-api-loader.service.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/bing-api-loader.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -200,17 +207,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/services/bing-api-loader.service.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/services/bing-api-loader.service.ts:22</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Creates the script tag for the bing api</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>promise to make sure it doesn&#39;t load multiple times</p>
 
                     </div>
                 </td>
@@ -238,7 +253,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/bing-api-loader.service.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/bing-api-loader.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -266,12 +281,12 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;https://www.bing.com/api/maps/mapcontrol?callback&#x3D;__onBingLoaded&amp;branch&#x3D;release&#x27;</code>
+                            <i>Default value : </i><code>&#x27;https://www.bing.com/api/maps/mapcontrol?callback&#x3D;__onBingLoaded&amp;key&#x3D;AukHSv0yxiZQnvbYs4szic5RfGEmKxhaSLCmRZ5PV8UmgQWI11uH2Mo5_sWDh8l8&#x27;</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/bing-api-loader.service.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/bing-api-loader.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -289,15 +304,22 @@
 import { DOCUMENT } from &#x27;@angular/platform-browser&#x27;;
 import { WINDOW } from &#x27;./window.service&#x27;;
 
+/**
+ * Loads the bing api object
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class BingApiLoaderService {
   private promise;
-  private url &#x3D; &#x27;https://www.bing.com/api/maps/mapcontrol?callback&#x3D;__onBingLoaded&amp;branch&#x3D;release&#x27;;
+  private url &#x3D; &#x27;https://www.bing.com/api/maps/mapcontrol?callback&#x3D;__onBingLoaded&amp;key&#x3D;AukHSv0yxiZQnvbYs4szic5RfGEmKxhaSLCmRZ5PV8UmgQWI11uH2Mo5_sWDh8l8&#x27;; // URL to API Endpoint
 
   constructor(@Inject(DOCUMENT) private documentRef: Document, @Inject(WINDOW) private windowRef: Window) {}
 
+  /**
+   * Creates the script tag for the bing api
+   * @returns promise to make sure it doesn&#x27;t load multiple times
+   */
   public load() {
     // First time &#x27;load&#x27; is called?
     if (!this.promise) {
@@ -311,6 +333,7 @@ export class BingApiLoaderService {
           resolve(&#x27;Bing Maps API loaded&#x27;);
         };
 
+        // Creates DOM script tag
         // const node &#x3D; document.createElement(&#x27;script&#x27;);
         const node &#x3D; this.documentRef.createElement(&#x27;script&#x27;);
         node.src &#x3D; this.url;

@@ -63,6 +63,13 @@
             <code>src/app/services/window.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Define abstract class for obtaining reference to the global window object.</p>
+
+            </p>
 
 
 
@@ -123,7 +130,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/window.service.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/window.service.ts:16</a></div>
                                 </td>
                             </tr>
 
@@ -137,10 +144,16 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { isPlatformBrowser } from &#x27;@angular/common&#x27;;
 import { ClassProvider, FactoryProvider, InjectionToken, PLATFORM_ID } from &#x27;@angular/core&#x27;;
 
-/* Create a new injection token for injecting the window into a component. */
+// This file handles all the window referencing operations, Alden I know you don&#x27;t know what any of this is, either research or ignore
+
+/**
+ *  Create a new injection token for injecting the window into a component.
+ */
 export const WINDOW &#x3D; new InjectionToken(&#x27;WindowToken&#x27;);
 
-/* Define abstract class for obtaining reference to the global window object. */
+/**
+ *  Define abstract class for obtaining reference to the global window object.
+ */
 export abstract class WindowRef {
 
   get nativeWindow(): Window | object {
@@ -149,7 +162,10 @@ export abstract class WindowRef {
 
 }
 
-/* Define class that implements the abstract class and returns the native window object. */
+/**
+ * Define class that implements the abstract class and returns the native window object.
+ * Alden I know you don&#x27;t know what this is, look up class extensions
+ */
 export class BrowserWindowRef extends WindowRef {
 
   constructor() {
@@ -162,7 +178,11 @@ export class BrowserWindowRef extends WindowRef {
 
 }
 
-/* Create an factory function that returns the native window object. */
+/**
+ * Create an factory function that returns the native window object.
+ * @params BrowserWindowRef, platformID
+ * @returns Native window object
+ */
 export function windowFactory(browserWindowRef: BrowserWindowRef, platformId: object): Window | object {
   if (isPlatformBrowser(platformId)) {
     return browserWindowRef.nativeWindow;
@@ -170,20 +190,26 @@ export function windowFactory(browserWindowRef: BrowserWindowRef, platformId: ob
   return {};
 }
 
-/* Create a injectable provider for the WindowRef token that uses the BrowserWindowRef class. */
+/**
+ * Create a injectable provider for the WindowRef token that uses the BrowserWindowRef class.
+ */
 const browserWindowProvider: ClassProvider &#x3D; {
   provide: WindowRef,
   useClass: BrowserWindowRef
 };
 
-/* Create an injectable provider that uses the windowFactory function for returning the native window object. */
+/**
+ * Create an injectable provider that uses the windowFactory function for returning the native window object.
+ */
 const windowProvider: FactoryProvider &#x3D; {
   provide: WINDOW,
   useFactory: windowFactory,
   deps: [ WindowRef, PLATFORM_ID ]
 };
 
-/* Create an array of providers. */
+/**
+ * Create an array of providers
+ */
 export const WINDOW_PROVIDERS &#x3D; [
   browserWindowProvider,
   windowProvider
