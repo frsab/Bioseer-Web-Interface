@@ -5,8 +5,8 @@ GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -p -e "require('./package.json').repos
 sudo rm -R .git
 git init && \
 
-git config user.name "Travis CI" && \
-git config user.email "github@travis-ci.org" && \
+git config --global user.name "Travis CI" && \
+git config --global user.email "github@travis-ci.org" && \
 
 git add . && \
 git commit -m "Deploy to GitHub Pages" && \
