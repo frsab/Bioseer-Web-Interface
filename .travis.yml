@@ -11,3 +11,8 @@ script:
     - npm run doc
     - ng lint
     - ng build --prod
+    - bash ./deploy.sh
+env:
+  global:
+    - GH_REF: https://github.com/JHSRobo/Bioseer-Web-Interface
+    - GH_TOKEN: 2eba68f85360fa7c5ba874f29292f8dd09bbb6c3
