@@ -7,6 +7,7 @@ import { BingMapComponent } from './bing-map/bing-map.component';
 import {SiteConditionsService} from './services/site-conditions.service';
 import {WINDOW_PROVIDERS} from './services/window.service';
 import {BingApiLoaderService} from './services/bing-api-loader.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {BingApiLoaderService} from './services/bing-api-loader.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent],
   providers: [ SiteConditionsService, WINDOW_PROVIDERS, BingApiLoaderService ]
