@@ -2,7 +2,7 @@
 
 GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -p -e "require('./package.json').repository.url")}
 
-rm -R .git
+sudo rm -R .git
 git init && \
 
 git config user.name "Travis CI" && \
