@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json --includes additional-doc"
+    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -d docs"
   },
   "repository": {
     "type": "git",

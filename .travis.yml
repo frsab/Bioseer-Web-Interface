@@ -9,8 +9,5 @@ install:
     - npm install
 script:
     - npm run doc
-    - bash ./deploy.sh
-env:
-  global:
-    - GH_REF: https://github.com/JHSRobo/Bioseer-Web-Interface
-    - secure: 2eba68f85360fa7c5ba874f29292f8dd09bbb6c3
+    - ng lint
+    - ng build --prod
