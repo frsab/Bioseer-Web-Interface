@@ -24,12 +24,44 @@ $Bioseer-Web-Interface-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $Bioseer-Web-Interface-theme: mat-light-theme($Bioseer-Web-Interface-primary, $Bioseer-Web-Interface-accent, $Bioseer-Web-Interface-warn);
 
+// Alternate Status Theme
+$status-primary: mat-palette($mat-green);
+$status-accent: mat-palette($mat-yellow);
+$status-warn: mat-palette($mat-red);
+$status-theme: mat-light-theme($status-primary, $status-accent, $status-warn);
+.status-theme {
+  @include angular-material-theme($status-theme)
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($Bioseer-Web-Interface-theme);
 
+// Import custom compoonent themes
+@import "app/map-overlay/map-overlay.component.scss-theme";
+
+// Add additional components here
+@mixin custom-components-theme($theme) {
+  @include map-overlay-component-theme($theme);
+}
+
+.default-theme {
+  @include angular-material-theme($Bioseer-Web-Interface-theme);
+
+  // Custom compnent theme mixin
+  @include custom-components-theme($status-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-card {
+  border-radius: 12px !important;
+}
+
+.mat-tab-label {
+  min-width: 100px !important;
+}

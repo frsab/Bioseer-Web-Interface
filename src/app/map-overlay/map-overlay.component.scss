@@ -1,5 +1,18 @@
+
 #container {
   position: fixed;
-  z-index: 1000;
+  z-index: -1000;
   width: 100%;
+}
+
+#vertical-divider {
+  height: 100%;
+  width: 5px;
+}
+
+.mat-card-content {
+}
+
+#right-side {
+  width: 25vw;
 }
