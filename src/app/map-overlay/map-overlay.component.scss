@@ -1,18 +1,9 @@
-
-#container {
-  position: fixed;
-  z-index: -1000;
-  width: 100%;
-}
-
-#vertical-divider {
-  height: 100%;
-  width: 5px;
-}
-
-.mat-card-content {
-}
-
 #right-side {
   width: 25vw;
+}
+
+#left-side {
+  //TODO Figure out how to make this align properly
+  left: 1790px;
+  top: 16px;
 }

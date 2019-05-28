@@ -1,62 +1,9 @@
 <!-- This component has to not cover up the map, map must have space to click on it that's uncovered-->
 <div id="right-side" class="m-3">
-  <mat-card class="mb-3" id="overview">
-    <mat-card-title class="text-center">OVERVIEW</mat-card-title>
-    <div class="container-fluid mb-3">
-      <div class="row">
-        <div class="col-5 status-theme">
-          <mat-card-subtitle class="text-center">SENSORS</mat-card-subtitle>
-          <mat-card-content class="green font-weight-bold">10 Sensors Online</mat-card-content>
-          <mat-card-content class="yellow font-weight-bold">2 Sensors Warning</mat-card-content>
-          <mat-card-content class="red font-weight-bold">2 Sensors Offline</mat-card-content>
-        </div>
-        <div class="col-2">
-          <mat-divider [vertical]="true" id="vertical-divider" class="mx-auto"></mat-divider>
-        </div>
-        <div class="col-5">
-          <mat-card-subtitle class="text-center">AUVS</mat-card-subtitle>
-          <mat-card-content class="green font-weight-bold">2 AUVs Online</mat-card-content>
-          <mat-card-content class="yellow font-weight-bold">2 AUVs Warning</mat-card-content>
-          <mat-card-content class="red font-weight-bold">0 AUVs Offline</mat-card-content>
-        </div>
-      </div>
-    </div>
-    <h4 class="text-center">14 Groups</h4>
-    <h4 class="text-center">37 Zones</h4>
-    <!--<ul *ngIf="hasLogEntries()">-->
-      <!--<li *ngFor="let entry of log">{{entry}}</li>-->
-    <!--</ul>-->
-  </mat-card>
-  <mat-card class="text-center">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-1">
-          <mat-icon class="mat-18 mt-2">close</mat-icon>
-        </div>
-        <div class="col-10">
-          <mat-card-title>GROUP 10</mat-card-title>
-          <mat-tab-group>
-            <mat-tab label="First">
-              <ng-template matTabContent>
-                Content 1
-              </ng-template>
-            </mat-tab>
-            <mat-tab label="Second">
-              <ng-template matTabContent>
-                Content 2
-              </ng-template>
-            </mat-tab>
-            <mat-tab label="Third">
-              <ng-template matTabContent>
-                Content 3
-              </ng-template>
-            </mat-tab>
-          </mat-tab-group>
-        </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-  </mat-card>
+  <app-overview></app-overview>
+  <app-group></app-group>
+</div>
+<div class="position-absolute" id="left-side">
 </div>
 
 <!--<ul *ngIf="hasLogEntries()">-->
