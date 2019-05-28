@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' : 'data-target="#xs-components-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' }>
+                                            'data-target="#components-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' : 'data-target="#xs-components-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' :
-                                            'id="xs-components-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' :
+                                            'id="xs-components-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -70,17 +70,33 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                                 <a href="components/BingMapComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BingMapComponent</a>
                                             </li>
+                                            <li class="link">
+                                                <a href="components/GroupComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GroupComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/MapOverlayComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MapOverlayComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/MapSettingsComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MapSettingsComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/OverviewComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">OverviewComponent</a>
+                                            </li>
                                         </ul>
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' : 'data-target="#xs-injectables-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' }>
+                                        'data-target="#injectables-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' : 'data-target="#xs-injectables-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' :
-                                        'id="xs-injectables-links-module-AppModule-ab3ca528a310e33b37056ee1e51ca39f"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' :
+                                        'id="xs-injectables-links-module-AppModule-de72c1f37e4ec9cc000eab61aa09fcda"' }>
                                         <li class="link">
                                             <a href="injectables/BingApiLoaderService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>BingApiLoaderService</a>
@@ -94,6 +110,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/MaterialModule.html" data-type="entity-link">MaterialModule</a>
                             </li>
                 </ul>
                 </li>
