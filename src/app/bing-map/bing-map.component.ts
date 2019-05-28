@@ -16,8 +16,8 @@ import { SiteConditionsService } from '../services/site-conditions.service';
 })
 export class BingMapComponent implements OnChanges, AfterViewInit  {
 
-  // References streetsideMap on the DOM
-  @ViewChild('streetsideMap') streetsideMapViewChild: ElementRef;
+  // References bingMap on the DOM
+  @ViewChild('bingMap') streetsideMapViewChild: ElementRef;
 
   /**
    * Gets center of the map
