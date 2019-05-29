@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/Bioseer-Web-Interface",
     "ignore": [
       "firebase.json",
       "**/.*",
