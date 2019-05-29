@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MatCardModule,
-  MatDividerModule,
+  MatCardModule, MatCheckboxModule,
+  MatDividerModule, MatFormFieldModule,
   MatGridListModule,
-  MatIconModule,
+  MatIconModule, MatOptionModule, MatSelectModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
@@ -23,7 +23,10 @@ import {
     MatDividerModule,
     MatGridListModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatOptionModule
   ]
 })
 export class MaterialModule { }

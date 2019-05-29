@@ -1,13 +1,42 @@
-<mat-card>
+<mat-card id="settings-card">
   <div class="container-fluid">
     <div class="row">
       <div class="col-4">
+        <h6>View</h6>
+      </div>
+      <div class="col-8">
+        <h6>Map Settings</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <mat-form-field>
+          <mat-label>View Zone</mat-label>
+          <mat-select [(value)]="zoneSelected">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Zone 1</mat-option>
+            <mat-option value="option2">Zone 2</mat-option>
+            <mat-option value="option3">Zone 3</mat-option>
+          </mat-select>
+        </mat-form-field>
 
       </div>
-      <div class="col-2"></div>
-      <div class="col-2"></div>
-      <div class="col-2"></div>
-      <div class="col-2"></div>
+      <div class="col-2">
+        <mat-checkbox value="" color="primary">Sensors</mat-checkbox>
+        <mat-checkbox value="" color="primary">AUVS</mat-checkbox>
+      </div>
+      <div class="col-2">
+        <mat-checkbox value="" color="primary">Sector Borders</mat-checkbox>
+        <mat-checkbox value="" color="primary">Sector Names</mat-checkbox>
+      </div>
+      <div class="col-2">
+        <mat-checkbox value="" color="primary">Temperature Map</mat-checkbox>
+        <mat-checkbox value="" color="primary">Water Quality Map</mat-checkbox>
+      </div>
+      <div class="col-2">
+        <mat-checkbox value="" color="primary">pH Map</mat-checkbox>
+        <mat-checkbox value="" color="primary">Sattelite</mat-checkbox>
+      </div>
     </div>
   </div>
 </mat-card>
