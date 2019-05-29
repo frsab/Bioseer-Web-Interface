@@ -317,6 +317,11 @@ app-map-overlay {
   position: fixed;
   z-index: 1000;
 }
+
+.mat-toolbar.mat-primary {
+  background: #ffffff;
+  color: #1f1f1f;
+}
 </code></pre>
     </div>
 
@@ -346,7 +351,7 @@ app-map-overlay {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <h1 class="px-4">BioSeer</h1>  <a class="px-4 my-auto" style="font-size: 16px">Home</a>  <span class="fill"></span>  <a class="px-4 my-auto" style="font-size: 16px">Account</a></mat-toolbar><app-map-overlay class="m-3" class="default-theme"></app-map-overlay><app-bing-map *ngIf="mapLoaded"></app-bing-map></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

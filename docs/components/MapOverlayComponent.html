@@ -243,6 +243,7 @@ export class MapOverlayComponent implements OnInit {
   &lt;app-group&gt;&lt;/app-group&gt;
 &lt;/div&gt;
 &lt;div class&#x3D;&quot;position-absolute&quot; id&#x3D;&quot;left-side&quot;&gt;
+  &lt;app-map-settings&gt;&lt;/app-map-settings&gt;
 &lt;/div&gt;
 
 &lt;!--&lt;ul *ngIf&#x3D;&quot;hasLogEntries()&quot;&gt;--&gt;
@@ -272,7 +273,7 @@ export class MapOverlayComponent implements OnInit {
 
 #left-side {
   //TODO Figure out how to make this align properly
-  left: 1790px;
+  left: 1100px;
   top: 16px;
 }
 </code></pre>
@@ -303,8 +304,8 @@ export class MapOverlayComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- This component has to not cover up the map, map must have space to click on it that\'s uncovered--><div id="right-side" class="m-3">  <app-overview></app-overview>  <app-group></app-group></div><div class="position-absolute" id="left-side"></div><!--<ul *ngIf="hasLogEntries()">-->        <!--<li *ngFor="let entry of log">{{entry}}</li>-->        <!--</ul>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<p>Lifecycle log:</p>-->      <!--</mat-card>-->    <!--</div>-->    <!--<div class="col-3"></div>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<h1>Test</h1>-->      <!--</mat-card>-->    <!--</div>--></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
+        var COMPONENT_TEMPLATE = '<div><!-- This component has to not cover up the map, map must have space to click on it that\'s uncovered--><div id="right-side" class="m-3">  <app-overview></app-overview>  <app-group></app-group></div><div class="position-absolute" id="left-side">  <app-map-settings></app-map-settings></div><!--<ul *ngIf="hasLogEntries()">-->        <!--<li *ngFor="let entry of log">{{entry}}</li>-->        <!--</ul>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<p>Lifecycle log:</p>-->      <!--</mat-card>-->    <!--</div>-->    <!--<div class="col-3"></div>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<h1>Test</h1>-->      <!--</mat-card>-->    <!--</div>--></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MapOverlayComponent'};
 </script>

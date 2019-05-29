@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>GroupComponent</li>
+  <li>GeneralCardsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/map-overlay/group/group.component.ts</code>
+    <code>src/app/map-overlay/group/general-cards/general-cards.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-group</code></td>
+                <td class="col-md-9"><code>app-general-cards</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./group.component.scss</code></td>
+                <td class="col-md-9"><code>./general-cards.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./group.component.html</code></td>
+                <td class="col-md-9"><code>./general-cards.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/map-overlay/group/group.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/map-overlay/group/general-cards/general-cards.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/map-overlay/group/group.component.ts:12</a></div>
+                            class="link-to-prism">src/app/map-overlay/group/general-cards/general-cards.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-group&#x27;,
-  templateUrl: &#x27;./group.component.html&#x27;,
-  styleUrls: [&#x27;./group.component.scss&#x27;]
+  selector: &#x27;app-general-cards&#x27;,
+  templateUrl: &#x27;./general-cards.component.html&#x27;,
+  styleUrls: [&#x27;./general-cards.component.scss&#x27;]
 })
-export class GroupComponent implements OnInit {
+export class GeneralCardsComponent implements OnInit {
 
   constructor() { }
 
@@ -237,45 +237,49 @@ export class GroupComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-card class&#x3D;&quot;text-center&quot;&gt;
-  &lt;div class&#x3D;&quot;container-fluid&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-1&quot;&gt;
-        &lt;mat-icon class&#x3D;&quot;mat-18 mt-2&quot;&gt;close&lt;/mat-icon&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div&gt;
+  &lt;div class&#x3D;&quot;container mx-0 px-0 my-2&quot;&gt;
+    &lt;div class&#x3D;&quot;row mx-0&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 text-left&quot;&gt;
+        &lt;p class&#x3D;&quot;mb-0&quot;&gt;S10A&lt;/p&gt;
+        &lt;p class&#x3D;&quot;subtext mb-0&quot;&gt;Sector 10-A1232&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-10&quot;&gt;
-        &lt;mat-card-title&gt;GROUP 10&lt;/mat-card-title&gt;
-        &lt;mat-tab-group&gt;
-          &lt;mat-tab label&#x3D;&quot;General&quot;&gt;
-            &lt;ng-template matTabContent&gt;
-              &lt;app-general-cards&gt;&lt;/app-general-cards&gt;
-            &lt;/ng-template&gt;
-          &lt;/mat-tab&gt;
-          &lt;mat-tab label&#x3D;&quot;Data&quot;&gt;
-            &lt;ng-template matTabContent&gt;
-              Content 2
-            &lt;/ng-template&gt;
-          &lt;/mat-tab&gt;
-          &lt;mat-tab label&#x3D;&quot;Settings&quot;&gt;
-            &lt;ng-template matTabContent&gt;
-              Content 3
-            &lt;/ng-template&gt;
-          &lt;/mat-tab&gt;
-        &lt;/mat-tab-group&gt;
+      &lt;div class&#x3D;&quot;col-6 text-right&quot;&gt;
+        &lt;p class&#x3D;&quot;yellow small mt-2&quot;&gt;Weak Connection&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-1&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/mat-card&gt;
+  &lt;mat-divider class&#x3D;&quot;&quot; [inset]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
+  &lt;div class&#x3D;&quot;container mx-0 px-0 my-2&quot;&gt;
+    &lt;div class&#x3D;&quot;row mx-0&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 text-left&quot;&gt;
+        &lt;p class&#x3D;&quot;mb-0&quot;&gt;S10A&lt;/p&gt;
+        &lt;p class&#x3D;&quot;subtext mb-0&quot;&gt;Sector 10-A1232&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-6 text-right&quot;&gt;
+        &lt;p class&#x3D;&quot;green small mt-2&quot;&gt;Connected&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;mat-divider class&#x3D;&quot;&quot; [inset]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./group.component.scss</code>
+                    <code>./general-cards.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.mat-tab-body {
-  top: 5px !important;
+                <pre class="line-numbers"><code class="language-scss">.subtext {
+  font-size: 10px;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
 }
 </code></pre>
     </div>
@@ -305,10 +309,10 @@ export class GroupComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-card class="text-center">  <div class="container-fluid">    <div class="row">      <div class="col-1">        <mat-icon class="mat-18 mt-2">close</mat-icon>      </div>      <div class="col-10">        <mat-card-title>GROUP 10</mat-card-title>        <mat-tab-group>          <mat-tab label="General">            <ng-template matTabContent>              <app-general-cards></app-general-cards>            </ng-template>          </mat-tab>          <mat-tab label="Data">            <ng-template matTabContent>              Content 2            </ng-template>          </mat-tab>          <mat-tab label="Settings">            <ng-template matTabContent>              Content 3            </ng-template>          </mat-tab>        </mat-tab-group>      </div>      <div class="col-1"></div>    </div>  </div></mat-card></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <div class="container mx-0 px-0 my-2">    <div class="row mx-0">      <div class="col-6 text-left">        <p class="mb-0">S10A</p>        <p class="subtext mb-0">Sector 10-A1232</p>      </div>      <div class="col-6 text-right">        <p class="yellow small mt-2">Weak Connection</p>      </div>    </div>  </div>  <mat-divider class="" [inset]="true"></mat-divider>  <div class="container mx-0 px-0 my-2">    <div class="row mx-0">      <div class="col-6 text-left">        <p class="mb-0">S10A</p>        <p class="subtext mb-0">Sector 10-A1232</p>      </div>      <div class="col-6 text-right">        <p class="green small mt-2">Connected</p>      </div>    </div>  </div>  <mat-divider class="" [inset]="true"></mat-divider></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'GroupComponent'};
+    var ACTUAL_COMPONENT = {'name': 'GeneralCardsComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -342,7 +346,7 @@ export class GroupComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'GroupComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'GeneralCardsComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
