@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' : 'data-target="#xs-components-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' }>
+                                            'data-target="#components-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' : 'data-target="#xs-components-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' :
-                                            'id="xs-components-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' :
+                                            'id="xs-components-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -69,6 +69,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/BingMapComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BingMapComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/DataComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DataComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/GeneralCardsComponent.html"
@@ -94,13 +98,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' : 'data-target="#xs-injectables-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' }>
+                                        'data-target="#injectables-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' : 'data-target="#xs-injectables-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' :
-                                        'id="xs-injectables-links-module-AppModule-6c67bdb0ed9ed41a028d1286aad699dc"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' :
+                                        'id="xs-injectables-links-module-AppModule-ff3cb13b10eaf66024e76fd43a6bbafa"' }>
                                         <li class="link">
                                             <a href="injectables/BingApiLoaderService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>BingApiLoaderService</a>

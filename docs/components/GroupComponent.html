@@ -253,7 +253,7 @@ export class GroupComponent implements OnInit {
           &lt;/mat-tab&gt;
           &lt;mat-tab label&#x3D;&quot;Data&quot;&gt;
             &lt;ng-template matTabContent&gt;
-              Content 2
+              &lt;app-data&gt;&lt;/app-data&gt;
             &lt;/ng-template&gt;
           &lt;/mat-tab&gt;
           &lt;mat-tab label&#x3D;&quot;Settings&quot;&gt;
@@ -305,8 +305,8 @@ export class GroupComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-card class="text-center">  <div class="container-fluid">    <div class="row">      <div class="col-1">        <mat-icon class="mat-18 mt-2">close</mat-icon>      </div>      <div class="col-10">        <mat-card-title>GROUP 10</mat-card-title>        <mat-tab-group>          <mat-tab label="General">            <ng-template matTabContent>              <app-general-cards></app-general-cards>            </ng-template>          </mat-tab>          <mat-tab label="Data">            <ng-template matTabContent>              Content 2            </ng-template>          </mat-tab>          <mat-tab label="Settings">            <ng-template matTabContent>              Content 3            </ng-template>          </mat-tab>        </mat-tab-group>      </div>      <div class="col-1"></div>    </div>  </div></mat-card></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
+        var COMPONENT_TEMPLATE = '<div><mat-card class="text-center">  <div class="container-fluid">    <div class="row">      <div class="col-1">        <mat-icon class="mat-18 mt-2">close</mat-icon>      </div>      <div class="col-10">        <mat-card-title>GROUP 10</mat-card-title>        <mat-tab-group>          <mat-tab label="General">            <ng-template matTabContent>              <app-general-cards></app-general-cards>            </ng-template>          </mat-tab>          <mat-tab label="Data">            <ng-template matTabContent>              <app-data></app-data>            </ng-template>          </mat-tab>          <mat-tab label="Settings">            <ng-template matTabContent>              Content 3            </ng-template>          </mat-tab>        </mat-tab-group>      </div>      <div class="col-1"></div>    </div>  </div></mat-card></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GroupComponent'};
 </script>
