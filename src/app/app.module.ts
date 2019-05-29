@@ -14,6 +14,7 @@ import { OverviewComponent } from './map-overlay/overview/overview.component';
 import { GroupComponent } from './map-overlay/group/group.component';
 import { MapSettingsComponent } from './map-overlay/map-settings/map-settings.component';
 import { GeneralCardsComponent } from './map-overlay/group/general-cards/general-cards.component';
+import { DataComponent } from './map-overlay/group/data/data.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GeneralCardsComponent } from './map-overlay/group/general-cards/general
     OverviewComponent,
     GroupComponent,
     MapSettingsComponent,
-    GeneralCardsComponent
+    GeneralCardsComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,

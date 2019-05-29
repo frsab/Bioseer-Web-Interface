@@ -31,6 +31,7 @@
     "@types/bingmaps": "0.0.1",
     "bingmaps": "^2.0.3",
     "bootstrap": "^4.3.1",
+    "chart.js": "^2.8.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.3.3",

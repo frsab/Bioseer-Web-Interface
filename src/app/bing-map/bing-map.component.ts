@@ -48,7 +48,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
    */
   ngAfterViewInit() {
     this.log.push('AfterViewInit');
-    this.createStreetSideMap();
+    this.createMap();
     this.service.center$.pipe(
       // Filters out what it wants, no empty coordinates, take only one
       filter(coords => !!coords),
@@ -68,7 +68,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
   /**
    * Creates streetside maps using Microsoft maps object
    */
-  createStreetSideMap() {
+  createMap() {
     // @ts-ignore
     this.streetsideMap = new Microsoft.Maps.Map(
       this.streetsideMapViewChild.nativeElement,
