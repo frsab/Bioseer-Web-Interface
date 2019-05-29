@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  MatAutocompleteModule,
   MatCardModule, MatCheckboxModule,
   MatDividerModule, MatFormFieldModule,
   MatGridListModule,
-  MatIconModule, MatListModule, MatOptionModule, MatSelectModule,
+  MatIconModule, MatInputModule, MatListModule, MatOptionModule, MatSelectModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -27,7 +29,12 @@ import {
     MatSelectModule,
     MatCheckboxModule,
     MatOptionModule,
-    MatListModule
+    MatListModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MaterialModule { }

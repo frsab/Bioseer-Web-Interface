@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import { Chart } from 'chart.js';
 import {NavigationEnd, Router} from '@angular/router';
 
+// @ts-ignore
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
