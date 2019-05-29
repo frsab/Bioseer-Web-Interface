@@ -145,9 +145,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#drawChart">drawChart</a>
-                            </li>
-                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
@@ -173,7 +170,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -236,45 +233,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="drawChart"></a>
-                    <span class="name">
-                        <b>
-                            drawChart
-                        </b>
-                        <a href="#drawChart"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>drawChart()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:54</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
@@ -293,8 +251,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:25</a></div>
                 </td>
             </tr>
 
@@ -341,7 +299,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/map-overlay/group/data/data.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -358,6 +316,7 @@
 import { Chart } from &#x27;chart.js&#x27;;
 import {NavigationEnd, Router} from &#x27;@angular/router&#x27;;
 
+// @ts-ignore
 @Component({
   selector: &#x27;app-data&#x27;,
   templateUrl: &#x27;./data.component.html&#x27;,
@@ -372,7 +331,7 @@ export class DataComponent implements OnInit {
     private router: Router) {
     this.router.events.subscribe((e) &#x3D;&gt; {
       if (e instanceof NavigationEnd) {
-        console.log(&#x27;Na End&#x27;)
+        console.log(&#x27;Na End&#x27;);
       }
     });
   }
@@ -381,61 +340,21 @@ export class DataComponent implements OnInit {
     this.LineChart &#x3D; new Chart(&#x27;lineChart&#x27;, {
       type: &#x27;line&#x27;,
       data: {
-        labels: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;,&quot;July&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;],
+        labels: [&#x27;Jan&#x27;, &#x27;Feb&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, &#x27;July&#x27;, &#x27;Aug&#x27;, &#x27;Sep&#x27;, &#x27;Oct&#x27;, &#x27;Nov&#x27;, &#x27;Dec&#x27;],
         datasets: [{
-          label: &#x27;Number of Items Sold in Months&#x27;,
-          data: [9,7 , 3, 5, 2, 10,15,16,19,3,1,9],
-          fill:false,
-          lineTension:0.2,
-          borderColor:&quot;red&quot;,
+          label: &#x27;Temperature in Celsius&#x27;,
+          data: [9, 7 , 3, 5, 2, 10, 15, 16, 19, 3, 1, 9],
+          fill: false,
+          lineTension: 0.2,
+          borderColor: &#x27;red&#x27;,
           borderWidth: 1
         }]
       },
       options: {
-        title:{
-          text:&quot;Line Chart&quot;,
-          display:true
+        title: {
+          text: &#x27;&#x27;,
+          display: true
         },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero:true
-            }
-          }]
-        }
-      }
-    });
-  }
-
-  drawChart() {
-    const htmlRef &#x3D; document.getElementById(&#x27;myChart&#x27;);
-    this.myChart &#x3D; new Chart(htmlRef, {
-      type: &#x27;bar&#x27;,
-      data: {
-        labels: [&#x27;Red&#x27;, &#x27;Blue&#x27;, &#x27;Yellow&#x27;, &#x27;Green&#x27;, &#x27;Purple&#x27;, &#x27;Orange&#x27;],
-        datasets: [{
-          label: &#x27;# of Votes&#x27;,
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            &#x27;rgba(255, 99, 132, 0.2)&#x27;,
-            &#x27;rgba(54, 162, 235, 0.2)&#x27;,
-            &#x27;rgba(255, 206, 86, 0.2)&#x27;,
-            &#x27;rgba(75, 192, 192, 0.2)&#x27;,
-            &#x27;rgba(153, 102, 255, 0.2)&#x27;,
-            &#x27;rgba(255, 159, 64, 0.2)&#x27;
-          ],
-          borderColor: [
-            &#x27;rgba(255, 99, 132, 1)&#x27;,
-            &#x27;rgba(54, 162, 235, 1)&#x27;,
-            &#x27;rgba(255, 206, 86, 1)&#x27;,
-            &#x27;rgba(75, 192, 192, 1)&#x27;,
-            &#x27;rgba(153, 102, 255, 1)&#x27;,
-            &#x27;rgba(255, 159, 64, 1)&#x27;
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
         scales: {
           yAxes: [{
             ticks: {
@@ -452,6 +371,18 @@ export class DataComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
+  &lt;mat-form-field&gt;
+    &lt;mat-label&gt;Sensor #&lt;/mat-label&gt;
+    &lt;mat-select&gt;
+      &lt;mat-option [value]&#x3D;&quot;1&quot;&gt;
+        Sensor 1
+      &lt;/mat-option&gt;
+      &lt;mat-option [value]&#x3D;&quot;2&quot;&gt;
+        Sensor 2
+      &lt;/mat-option&gt;
+    &lt;/mat-select&gt;
+  &lt;/mat-form-field&gt;
+
   &lt;canvas id&#x3D;&quot;lineChart&quot; width&#x3D;&quot;300&quot; height&#x3D;&quot;300&quot;&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
@@ -490,8 +421,8 @@ export class DataComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <canvas id="lineChart" width="300" height="300"></canvas></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
+        var COMPONENT_TEMPLATE = '<div><div>  <mat-form-field>    <mat-label>Sensor #</mat-label>    <mat-select>      <mat-option [value]="1">        Sensor 1      </mat-option>      <mat-option [value]="2">        Sensor 2      </mat-option>    </mat-select>  </mat-form-field>  <canvas id="lineChart" width="300" height="300"></canvas></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DataComponent'};
 </script>

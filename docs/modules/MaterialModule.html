@@ -73,13 +73,15 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import {
+  MatAutocompleteModule,
   MatCardModule, MatCheckboxModule,
   MatDividerModule, MatFormFieldModule,
   MatGridListModule,
-  MatIconModule, MatListModule, MatOptionModule, MatSelectModule,
+  MatIconModule, MatInputModule, MatListModule, MatOptionModule, MatSelectModule,
   MatTabsModule,
   MatToolbarModule
 } from &#x27;@angular/material&#x27;;
+import {FormsModule, ReactiveFormsModule} from &#x27;@angular/forms&#x27;;
 
 @NgModule({
   declarations: [],
@@ -99,7 +101,12 @@ import {
     MatSelectModule,
     MatCheckboxModule,
     MatOptionModule,
-    MatListModule
+    MatListModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MaterialModule { }
