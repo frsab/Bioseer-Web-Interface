@@ -41,7 +41,7 @@ $status-theme: mat-light-theme($status-primary, $status-accent, $status-warn);
 @include angular-material-theme($Bioseer-Web-Interface-theme);
 
 // Import custom compoonent themes
-@import "app/map-overlay/map-overlay.component.scss-theme";
+@import "app/dashboard/map-overlay/map-overlay.component.scss-theme";
 
 // Add additional components here
 @mixin custom-components-theme($theme) {
