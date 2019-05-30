@@ -16,6 +16,7 @@ import { MapSettingsComponent } from './map-overlay/map-settings/map-settings.co
 import { GeneralCardsComponent } from './map-overlay/group/general-cards/general-cards.component';
 import { DataComponent } from './map-overlay/group/data/data.component';
 import { SettingsComponent } from './map-overlay/group/settings/settings.component';
+import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SettingsComponent } from './map-overlay/group/settings/settings.compone
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    SlimLoadingBarModule
   ],
   bootstrap: [AppComponent],
   providers: [ SiteConditionsService, WINDOW_PROVIDERS, BingApiLoaderService ]
