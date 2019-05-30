@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BingApiLoaderService} from '../services/bing-api-loader.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  mapLoaded = false;
 
-  constructor() { }
+  constructor(
+    private bingApiLoader: BingApiLoaderService,
+  ) {
+    this.bingApiLoader.load().then(() => {
+      console.log('map loaded');
+      this.mapLoaded = true;
+    });
+  }
 
   ngOnInit() {
   }

@@ -2,17 +2,6 @@
   z-index: 1000;
 }
 
-.fill {
-  /* This fills the remaining space, by using flexbox.
-     Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
-}
-
-app-map-overlay {
-  position: fixed;
-  z-index: 1000;
-}
-
 .mat-toolbar.mat-primary {
   background: #ffffff;
   color: #1f1f1f;
