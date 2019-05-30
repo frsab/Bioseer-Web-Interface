@@ -121,6 +121,20 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#mapLoaded">mapLoaded</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -151,15 +165,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(bingApiLoader: <a href="../injectables/BingApiLoaderService.html">BingApiLoaderService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/dashboard/dashboard.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/dashboard/dashboard.component.ts:10</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>bingApiLoader</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BingApiLoaderService.html" target="_self" >BingApiLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -195,8 +239,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:21</a></div>
                 </td>
             </tr>
 
@@ -213,12 +257,45 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mapLoaded"></a>
+                        <span class="name">
+                            <b>
+                            mapLoaded</b>
+                            <a href="#mapLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/dashboard/dashboard.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {BingApiLoaderService} from &#x27;../services/bing-api-loader.service&#x27;;
 
 @Component({
   selector: &#x27;app-dashboard&#x27;,
@@ -226,8 +303,16 @@
   styleUrls: [&#x27;./dashboard.component.scss&#x27;]
 })
 export class DashboardComponent implements OnInit {
+  mapLoaded &#x3D; false;
 
-  constructor() { }
+  constructor(
+    private bingApiLoader: BingApiLoaderService,
+  ) {
+    this.bingApiLoader.load().then(() &#x3D;&gt; {
+      console.log(&#x27;map loaded&#x27;);
+      this.mapLoaded &#x3D; true;
+    });
+  }
 
   ngOnInit() {
   }
@@ -246,7 +331,17 @@ export class DashboardComponent implements OnInit {
                 <p class="comment">
                     <code>./dashboard.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">.fill {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+app-map-overlay {
+  position: fixed;
+  z-index: 1000;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">

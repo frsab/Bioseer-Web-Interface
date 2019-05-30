@@ -441,7 +441,8 @@ export class AppComponent {
   &lt;a class&#x3D;&quot;px-4 my-auto&quot; style&#x3D;&quot;font-size: 16px&quot;&gt;Account&lt;/a&gt;
 &lt;/mat-toolbar&gt;
 &lt;router-outlet&gt;&lt;/router-outlet&gt;
-&lt;app-footer&gt;&lt;/app-footer&gt;
+&lt;!-- TODO Get Footer Sized properly on dashboard--&gt;
+&lt;!--&lt;app-footer&gt;&lt;/app-footer&gt;--&gt;
 </code></pre>
     </div>
 
@@ -450,17 +451,6 @@ export class AppComponent {
                     <code>./app.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">#header {
-  z-index: 1000;
-}
-
-.fill {
-  /* This fills the remaining space, by using flexbox.
-     Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
-}
-
-app-map-overlay {
-  position: fixed;
   z-index: 1000;
 }
 
@@ -496,7 +486,7 @@ app-map-overlay {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng2-slim-loading-bar color="blue"></ng2-slim-loading-bar><mat-toolbar color="primary">  <h1 class="px-4">BioSeer</h1>  <a mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/" routerLinkActive="active">Home</a>  <a mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>  <span class="fill"></span>  <a class="px-4 my-auto" style="font-size: 16px">Account</a></mat-toolbar><router-outlet></router-outlet><app-footer></app-footer></div>'
+        var COMPONENT_TEMPLATE = '<div><ng2-slim-loading-bar color="blue"></ng2-slim-loading-bar><mat-toolbar color="primary">  <h1 class="px-4">BioSeer</h1>  <a mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/" routerLinkActive="active">Home</a>  <a mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>  <span class="fill"></span>  <a class="px-4 my-auto" style="font-size: 16px">Account</a></mat-toolbar><router-outlet></router-outlet><!-- TODO Get Footer Sized properly on dashboard--><!--<app-footer></app-footer>--></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
