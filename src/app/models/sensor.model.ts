@@ -15,9 +15,12 @@ export class SensorModel {
   ];
   dataSegmented: [
     {
-      images: [[]]; // Image array of arrays
-      timestamps: string; // ISO
+      image: [[]]; // Image array of arrays
+      timestamp: string; // ISO
       location: [number]; // 4 point array to draw out bounding box
+      meta: {
+        // Info about various fields
+      }
     }
     ];
   dataSpecies: {
@@ -25,5 +28,5 @@ export class SensorModel {
     speciesImages: [[]];
     unknownSpeciesNumber: number;
     unknownSpeciesImages: [[]];
-  }
+  };
 }
