@@ -1,22 +1,18 @@
-const express = require('express'),
-  path = require('path'),
-  bodyParser = require('body-parser'),
-  cors = require('cors'),
-  mongoClient = require('mongodb').MongoClient,
-  passport = require('passport'),
-  session = require('express-session'),
-  RedisStore = require('connect-redis')(session)
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const routes = require('./routes/routes');
 
-mongoClient.connect("mongodb://bioseer:2qVnkQCMo3GRoTIWIQJ7gLC0TPk0nTHLnyLIjRQ5W3t1fLA6b3bCgD806ylsRBl92SfpJ2dLIiu3QKAQOYuaWQ%3D%3D@bioseer.documents.azure.com:10255/?ssl=true", function (err, client) {
-  client.close();
-});
+const root = './';
+const port = process.env.PORT || '3000';
 const app = express();
+
 app.use(bodyParser.json());
-app.use(cors());
-
-
-let port = process.env.PORT || 4000;
-
-const server = app.listen(function(){
-  console.log('Listening on port ' + port);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(root, 'dist/Bioseer-Web-Interface')));
+app.use('/api', routes);
+app.get('*', (req, res) => {
+  res.sendFile('../dist/Bioseer-Web-Interface/index.html', {root});
 });
+
+app.listen(port, () => console.log(`API running on localhost:${port}`));
