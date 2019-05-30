@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 // TODO Refactor to get rid of this Document import, it's deprecated
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { WINDOW } from './window.service';
 
 /**
