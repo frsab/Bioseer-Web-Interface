@@ -17,6 +17,10 @@ import { GeneralCardsComponent } from './map-overlay/group/general-cards/general
 import { DataComponent } from './map-overlay/group/data/data.component';
 import { SettingsComponent } from './map-overlay/group/settings/settings.component';
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import {ErrorInterceptor} from './helpers/error.interceptor';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {JwtInterceptor} from './helpers/jwt.interceptor';
+import {fakeBackendProvider} from './helpers/fake-backend';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,14 @@ import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
     SlimLoadingBarModule
   ],
   bootstrap: [AppComponent],
-  providers: [ SiteConditionsService, WINDOW_PROVIDERS, BingApiLoaderService ]
+  providers: [
+    SiteConditionsService,
+    WINDOW_PROVIDERS,
+    BingApiLoaderService,
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+
+    // provider used to create fake backend
+    fakeBackendProvider]
 })
 export class AppModule { }
