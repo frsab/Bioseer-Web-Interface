@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>DashboardModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/dashboard/dashboard.module.ts</code>
         </p>
 
 
@@ -71,36 +71,15 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import {Routes, RouterModule, Router} from &#x27;@angular/router&#x27;;
-import {HomeComponent} from &#x27;./home/home.component&#x27;;
-import {DashboardComponent} from &#x27;./dashboard/dashboard.component&#x27;;
-import {LoginComponent} from &#x27;./login/login.component&#x27;;
-import {AuthGuard} from &#x27;./guards/auth.guard&#x27;;
-
-const routes: Routes &#x3D; [
-  {
-    path: &#x27;&#x27;,
-    component: HomeComponent,
-    // canActivate: [AuthGuard]
-  },
-  {
-    path: &#x27;dashboard&#x27;,
-    component: DashboardComponent
-  },
-  {
-    path: &#x27;login&#x27;,
-    component: LoginComponent
-  },
-
-  // otherwise redirect to home
-  { path: &#x27;**&#x27;, redirectTo: &#x27;&#x27; }
-];
+import { CommonModule } from &#x27;@angular/common&#x27;;
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    CommonModule
+  ]
 })
-export class AppRoutingModule { }
+export class DashboardModule { }
 </code></pre>
     </div>
 </div>
@@ -135,7 +114,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DashboardModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
