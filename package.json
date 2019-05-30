@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "start": "ng s",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -d docs",
-    "deploy": "webpack --mode production d && firebase deploy"
+    "deploy": "ng build --prod && firebase deploy"
   },
   "repository": {
     "type": "git",

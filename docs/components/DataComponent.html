@@ -130,7 +130,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#LineChart">LineChart</a>
+                                <a href="#lineChart">lineChart</a>
                             </li>
                         </ul>
                     </td>
@@ -278,11 +278,11 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="LineChart"></a>
+                        <a name="lineChart"></a>
                         <span class="name">
                             <b>
-                            LineChart</b>
-                            <a href="#LineChart"><span class="icon ion-ios-link"></span></a>
+                            lineChart</b>
+                            <a href="#lineChart"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -325,7 +325,7 @@ import {NavigationEnd, Router} from &#x27;@angular/router&#x27;;
 export class DataComponent implements OnInit {
 
 
-  LineChart &#x3D; [];
+  lineChart &#x3D; [];
   constructor(
     private elementRef: ElementRef,
     private router: Router) {
@@ -337,7 +337,7 @@ export class DataComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.LineChart &#x3D; new Chart(&#x27;lineChart&#x27;, {
+    this.lineChart &#x3D; new Chart(&#x27;lineChart&#x27;, {
       type: &#x27;line&#x27;,
       data: {
         labels: [&#x27;Jan&#x27;, &#x27;Feb&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, &#x27;July&#x27;, &#x27;Aug&#x27;, &#x27;Sep&#x27;, &#x27;Oct&#x27;, &#x27;Nov&#x27;, &#x27;Dec&#x27;],
@@ -422,7 +422,7 @@ export class DataComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div>  <mat-form-field>    <mat-label>Sensor #</mat-label>    <mat-select>      <mat-option [value]="1">        Sensor 1      </mat-option>      <mat-option [value]="2">        Sensor 2      </mat-option>    </mat-select>  </mat-form-field>  <canvas id="lineChart" width="300" height="300"></canvas></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DataComponent'};
 </script>
