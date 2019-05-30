@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const userService = require('../services/user.service');
+const passport = require('passport');
+
 
 router.get('/user', (req, res) => {
   userService.getUsers(req, res);
@@ -9,8 +11,21 @@ router.get('/user', (req, res) => {
   // ])
 });
 
-router.post('/user', (req, res) => {
-  userService.postUser(req, res);
+router.post('/register', (req, res) => {
+  userService.registerUser(req, res)
+});
+
+router.post('/login',
+  passport.authenticate('local'),
+    (req, res) => {
+      res.send(req.user);
+    }
+);
+
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.send(null)
 });
 
 module.exports=router;
+
