@@ -11,7 +11,7 @@ import {NavigationEnd, Router} from '@angular/router';
 export class DataComponent implements OnInit {
 
 
-  LineChart = [];
+  lineChart = [];
   constructor(
     private elementRef: ElementRef,
     private router: Router) {
@@ -23,7 +23,7 @@ export class DataComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.LineChart = new Chart('lineChart', {
+    this.lineChart = new Chart('lineChart', {
       type: 'line',
       data: {
         labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
