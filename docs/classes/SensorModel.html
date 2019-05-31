@@ -202,7 +202,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/models/sensor.model.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/models/sensor.model.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -427,9 +427,12 @@
   ];
   dataSegmented: [
     {
-      images: [[]]; // Image array of arrays
-      timestamps: string; // ISO
+      image: [[]]; // Image array of arrays
+      timestamp: string; // ISO
       location: [number]; // 4 point array to draw out bounding box
+      meta: {
+        // Info about various fields
+      }
     }
     ];
   dataSpecies: {
@@ -437,7 +440,7 @@
     speciesImages: [[]];
     unknownSpeciesNumber: number;
     unknownSpeciesImages: [[]];
-  }
+  };
 }
 </code></pre>
     </div>

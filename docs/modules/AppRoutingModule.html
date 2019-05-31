@@ -74,8 +74,9 @@
 import {Routes, RouterModule, Router} from &#x27;@angular/router&#x27;;
 import {HomeComponent} from &#x27;./home/home.component&#x27;;
 import {DashboardComponent} from &#x27;./dashboard/dashboard.component&#x27;;
-import {LoginComponent} from &#x27;./login/login.component&#x27;;
-import {AuthGuard} from &#x27;./guards/auth.guard&#x27;;
+import {LoginComponent} from &#x27;./user/login/login.component&#x27;;
+import {AuthGuard} from &#x27;./_guards/auth.guard&#x27;;
+import {EditAccountComponent} from &#x27;./user/edit-account/edit-account.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
@@ -90,6 +91,11 @@ const routes: Routes &#x3D; [
   {
     path: &#x27;login&#x27;,
     component: LoginComponent
+  },
+  {
+    path: &#x27;edit-account&#x27;,
+    component: EditAccountComponent,
+    canActivate: [AuthGuard]
   },
 
   // otherwise redirect to home

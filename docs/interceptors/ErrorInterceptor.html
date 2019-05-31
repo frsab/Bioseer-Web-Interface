@@ -57,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/helpers/error.interceptor.ts</code>
+            <code>src/app/_helpers/error.interceptor.ts</code>
         </p>
 
 
@@ -101,7 +101,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/helpers/error.interceptor.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/_helpers/error.interceptor.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -167,7 +167,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/helpers/error.interceptor.ts:11</a></div>
+                            class="link-to-prism">src/app/_helpers/error.interceptor.ts:11</a></div>
                 </td>
             </tr>
 
@@ -247,12 +247,12 @@ export class ErrorInterceptor implements HttpInterceptor {
       if (err.status &#x3D;&#x3D;&#x3D; 401) {
         // auto logout if 401 response returned from api
         this.authenticationService.logout();
-        location.reload(true);
+        location.reload();
       }
 
       const error &#x3D; err.error.message || err.statusText;
       return throwError(error);
-    }))
+    }));
   }
 }
 </code></pre>

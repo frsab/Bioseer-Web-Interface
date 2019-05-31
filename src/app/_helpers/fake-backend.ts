@@ -9,7 +9,7 @@ import { User } from '../models/user.model';
 export class FakeBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const users: User[] = [
-      { id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User' }
+      { _id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User' }
     ];
 
     const authHeader = request.headers.get('Authorization');
@@ -23,7 +23,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         const user = users.find(x => x.username === request.body.username && x.password === request.body.password);
         if (!user) { return error('Username or password is incorrect'); }
         return ok({
-          id: user.id,
+          id: user._id,
           username: user.username,
           firstName: user.firstName,
           lastName: user.lastName,
