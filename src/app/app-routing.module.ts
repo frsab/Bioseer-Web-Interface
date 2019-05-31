@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import {Routes, RouterModule, Router} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {LoginComponent} from './login/login.component';
-import {AuthGuard} from './guards/auth.guard';
+import {LoginComponent} from './user/login/login.component';
+import {AuthGuard} from './_guards/auth.guard';
+import {EditAccountComponent} from './user/edit-account/edit-account.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'edit-account',
+    component: EditAccountComponent,
+    canActivate: [AuthGuard]
   },
 
   // otherwise redirect to home

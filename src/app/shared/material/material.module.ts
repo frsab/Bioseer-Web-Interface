@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MatAutocompleteModule,
+  MatAutocompleteModule, MatButtonModule,
   MatCardModule, MatCheckboxModule,
   MatDividerModule, MatFormFieldModule,
   MatGridListModule,
-  MatIconModule, MatInputModule, MatListModule, MatOptionModule, MatSelectModule,
+  MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatOptionModule, MatSelectModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
@@ -14,10 +14,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatDividerModule
+    CommonModule
   ],
   exports: [
     MatCardModule,
@@ -34,7 +31,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule,
+    MatButtonModule
   ]
 })
 export class MaterialModule { }

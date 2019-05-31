@@ -3,6 +3,7 @@ const router = express.Router();
 const userService = require('./user.service');
 
 // routes
+// Note if testing routes with postman, be sure to put key into Authorization tab
 router.post('/authenticate', authenticate);
 router.post('/register', register);
 router.get('/', getAll);
@@ -44,6 +45,8 @@ function getById(req, res, next) {
 }
 
 function update(req, res, next) {
+  console.log(req.params);
+  console.log(req.body);
   userService.update(req.params.id, req.body)
     .then(() => res.json({}))
     .catch(err => next(err));

@@ -17,14 +17,16 @@ import { GeneralCardsComponent } from './dashboard/map-overlay/group/general-car
 import { DataComponent } from './dashboard/map-overlay/group/data/data.component';
 import { SettingsComponent } from './dashboard/map-overlay/group/settings/settings.component';
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
-import {ErrorInterceptor} from './helpers/error.interceptor';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {JwtInterceptor} from './helpers/jwt.interceptor';
-import {fakeBackendProvider} from './helpers/fake-backend';
+import {ErrorInterceptor} from './_helpers/error.interceptor';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {JwtInterceptor} from './_helpers/jwt.interceptor';
+import {fakeBackendProvider} from './_helpers/fake-backend';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { EditAccountComponent } from './user/edit-account/edit-account.component';
 
 @NgModule({
   declarations: [
@@ -40,14 +42,17 @@ import { FooterComponent } from './shared/footer/footer.component';
     DashboardComponent,
     HomeComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent,
+    EditAccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SlimLoadingBarModule
+    SlimLoadingBarModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -58,6 +63,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
 
     // provider used to create fake backend
-    fakeBackendProvider]
+    // fakeBackendProvider
+  ]
 })
 export class AppModule { }
