@@ -71,9 +71,36 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import {Routes, RouterModule, Router} from &#x27;@angular/router&#x27;;
+import {HomeComponent} from &#x27;./home/home.component&#x27;;
+import {DashboardComponent} from &#x27;./dashboard/dashboard.component&#x27;;
+import {LoginComponent} from &#x27;./user/login/login.component&#x27;;
+import {AuthGuard} from &#x27;./_guards/auth.guard&#x27;;
+import {EditAccountComponent} from &#x27;./user/edit-account/edit-account.component&#x27;;
 
-const routes: Routes &#x3D; [];
+const routes: Routes &#x3D; [
+  {
+    path: &#x27;&#x27;,
+    component: HomeComponent,
+    // canActivate: [AuthGuard]
+  },
+  {
+    path: &#x27;dashboard&#x27;,
+    component: DashboardComponent
+  },
+  {
+    path: &#x27;login&#x27;,
+    component: LoginComponent
+  },
+  {
+    path: &#x27;edit-account&#x27;,
+    component: EditAccountComponent,
+    canActivate: [AuthGuard]
+  },
+
+  // otherwise redirect to home
+  { path: &#x27;**&#x27;, redirectTo: &#x27;&#x27; }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

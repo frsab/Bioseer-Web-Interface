@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Bioseer-Web-Interface",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+<mat-card class="text-center">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+        <mat-icon class="mat-18 mt-2">close</mat-icon>
+      </div>
+      <div class="col-10">
+        <mat-card-title>GROUP 10</mat-card-title>
+        <mat-tab-group>
+          <mat-tab label="General">
+            <ng-template matTabContent>
+              <app-general-cards></app-general-cards>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Data">
+            <ng-template matTabContent>
+              <app-data></app-data>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Settings">
+            <ng-template matTabContent>
+              <app-settings></app-settings>
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+      <div class="col-1">
+        <mat-icon class="mat-18">fullscreen</mat-icon>
+      </div>
+    </div>
+  </div>
+</mat-card>

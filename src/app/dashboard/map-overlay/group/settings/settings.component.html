@@ -1,0 +1,54 @@
+<mat-form-field>
+  <mat-label>Sensor #</mat-label>
+  <mat-select>
+    <mat-option value="1">
+      Sensor 1
+    </mat-option>
+    <mat-option value="2">
+      Sensor 2
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<p class="text-left text-sub"> ID: 123532431</p>
+<p class="text-left text-sub">Added 5/23/17 5:24:23 GMT</p>
+<h6 class="mt-4">Reassign</h6>
+<mat-form-field>
+  <mat-label>Group #</mat-label>
+  <mat-select>
+    <mat-option value="1">
+      Group 1
+    </mat-option>
+    <mat-option value="2">
+      Group 2
+    </mat-option>
+    <mat-option value="10">
+      Group 10
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Label" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+<h6 class="mt-4">Frequency</h6>
+<mat-form-field>
+  <mat-label>Data Collection Frequency</mat-label>
+  <mat-select>
+    <mat-option value="1">
+      Every Second
+    </mat-option>
+    <mat-option value="2">
+      Every Minute
+    </mat-option>
+    <mat-option value="2">
+      Every Hour
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
