@@ -10,10 +10,8 @@ import { map, switchMap, take, delay } from 'rxjs/operators';
 @Injectable()
 export class SiteConditionsService {
   center: BehaviorSubject<number[]> = new BehaviorSubject<number[]>([41.49871231510167, -72.95581850473526]); // doesn't work
-  heading = new BehaviorSubject<number>(0);
 
   center$ = this.center.asObservable(); // Reference {@link BingMapComponent}
-  heading$ = this.heading.asObservable();
 
   /**
    * Run on program startup, gets initial center and sets it to center$

@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import { filter, take } from 'rxjs/operators';
 import { SiteConditionsService } from '../../services/site-conditions.service';
+import {SensorModel} from '../../models/sensor.model';
 
 // Needed to reference typescript for microsoft object
 /// <reference path="types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
@@ -16,6 +17,8 @@ import { SiteConditionsService } from '../../services/site-conditions.service';
 })
 export class BingMapComponent implements OnChanges, AfterViewInit  {
 
+  @Input() sensors: Observable<[SensorModel]>;
+
   // References bingMap on the DOM
   @ViewChild('bingMap') streetsideMapViewChild: ElementRef;
 
@@ -28,7 +31,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
   }
 
   // @ts-ignore
-  streetsideMap: Microsoft.Maps.Map;
+  map: Microsoft.Maps.Map;
   // @ts-ignore
   position: Microsoft.Maps.Location;
 
@@ -55,14 +58,25 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       take(1)
     ).subscribe(coords => {
       const [lat, lon] = coords;
-      this.log.push(`Got coords from service: ${coords}`);
+      console.log(`Got coords from service: ${coords}`);
       // @ts-ignore
       // Creates microsoft position object with the lat and lon from the service
       const position = new Microsoft.Maps.Location(lat, lon);
       // Sets view of streetside map
-      this.streetsideMap.setView({ center: position });
-      this.log.push(`current Center: ${this.streetsideMap.getCenter()}`);
+      this.map.setView({ center: position });
+      console.log(`current Center: ${this.map.getCenter()}`);
     });
+
+    // Subscribe to Inputs and create markers
+    if (this.sensors) {
+      this.sensors.subscribe((currentSensor: [SensorModel]) => {
+        for (const i of currentSensor) {
+          // @ts-ignore
+          const location = new Microsoft.Maps.Location(currentSensor.currentLocation.lat, currentSensor.currentLocation.long);
+          this.createCirclePushpin(location, 25, 'blue', 'black', 2);
+        }
+      })
+    }
   }
 
   /**
@@ -70,7 +84,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
    */
   createMap() {
     // @ts-ignore
-    this.streetsideMap = new Microsoft.Maps.Map(
+    this.map = new Microsoft.Maps.Map(
       this.streetsideMapViewChild.nativeElement,
       {
         // @ts-ignore
@@ -82,13 +96,28 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
         zoom: 10
       }
     );
+    // @ts-ignore
+    // Microsoft.Maps.Events.addHandler(this.map, 'viewchange', (e) => {
+    //   console.log(this.map.getCenter());
+    // });
   }
 
-  /**
-   * Returns whether or not the log exists, if it does, it'll be printed
-   */
-  hasLogEntries() {
-    return this.log.length > 0;
+  // @ts-ignore
+  createCirclePushpin(location: Microsoft.Maps.Location, radius, fillColor, strokeColor, strokeWidth) {
+    strokeWidth = strokeWidth || 0;
+
+    // Create an SVG string of a circle with the specified radius and color.
+    const svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="', (radius * 2),
+      '" height="', (radius * 2), '"><circle cx="', radius, '" cy="', radius, '" r="',
+      (radius - strokeWidth), '" stroke="', strokeColor, '" stroke-width="', strokeWidth, '" fill="', fillColor, '"/></svg>'];
+
+    // Create a pushpin from the SVG and anchor it to the center of the circle.
+    // @ts-ignore
+    return new Microsoft.Maps.Pushpin(location, {
+      icon: svg.join(''),
+      // @ts-ignore
+      anchor: new Microsoft.Maps.Point(radius, radius)
+    });
   }
 }
 

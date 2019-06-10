@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BingApiLoaderService} from '../services/bing-api-loader.service';
+import {SensorModel} from '../models/sensor.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,7 @@ import {BingApiLoaderService} from '../services/bing-api-loader.service';
 })
 export class DashboardComponent implements OnInit {
   mapLoaded = false;
+  sensors: [SensorModel]; // All Loaded Sensors
 
   constructor(
     private bingApiLoader: BingApiLoaderService,
@@ -19,6 +21,8 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    // TODO Replace with API Call to get Sensors
+
   }
 
 }

@@ -12,7 +12,9 @@ Built with a combination of a nodejs backend serve with MongoDB and an Angular 7
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. To launch the node server, open a new terminal `cd api`, run `npm i`, and `npm start`. 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. To launch the node server, open a new terminal `nodemon server`. 
+
+If nodemon not installed, install it with `npm i -g nodemon` 
 
 ## Further help
 
