@@ -122,7 +122,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
     const svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="', (radius * 2),
       '" height="', (radius * 2), '"><circle cx="', radius, '" cy="', radius, '" r="',
       (radius - strokeWidth), '" stroke="', strokeColor, '" stroke-width="', strokeWidth, '" fill="', fillColor, '"/>' +
-      '<text x="45" y="87" font-family="sans-serif" font-size="35" fill="black" font-weight="700">' + sensorName + '</text>' +
+      '<text x="18" y="43" font-family="sans-serif" font-size="20" fill="black" font-weight="900">' + sensorName + '</text>' +
       '</svg>'];
 
     // Create a pushpin from the SVG and anchor it to the center of the circle.
@@ -157,7 +157,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
 
     // @ts-ignore
     const location = new Microsoft.Maps.Location(coordX, coordY);
-    const pin = this.createCirclePushpin(location, 75, 'rgb(252, 252, 252)', 'rgb(96, 96, 96)', 15, sensorName, pushpinID);
+    const pin = this.createCirclePushpin(location, 35, 'rgb(252, 252, 252)', 'rgb(96, 96, 96)', 8, sensorName, pushpinID);
     this.map.entities.push(pin);
   }
 }
