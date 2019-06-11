@@ -9,6 +9,8 @@ import {
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
+import { MatFileUploadModule } from 'angular-material-fileupload';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -33,7 +35,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFileUploadModule
   ]
 })
 export class MaterialModule { }

@@ -11,6 +11,9 @@ import {Observable} from 'rxjs';
 export class DashboardComponent implements OnInit {
   mapLoaded = false;
   sensors: Observable<[SensorModel]>; // All Loaded Sensors
+
+  // ------------------------------
+
   // Blank Data for practice
   practiceData1: SensorModel = {
     sensorId: '123kjfkeaf32q',
@@ -82,6 +85,8 @@ export class DashboardComponent implements OnInit {
     dataSegmented: undefined,
     dataSpecies: undefined
   };
+
+  // ------------------------------
 
   constructor(
     private bingApiLoader: BingApiLoaderService,
