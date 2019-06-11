@@ -27,6 +27,7 @@ import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { EditAccountComponent } from './user/edit-account/edit-account.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { EditAccountComponent } from './user/edit-account/edit-account.component
     LoginComponent,
     FooterComponent,
     HeaderComponent,
-    EditAccountComponent
+    EditAccountComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,

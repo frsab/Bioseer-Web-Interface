@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8 text-center">
+      <h1>Upload Files for Analysis</h1>
+      <br>
+      <button mat-raised-button color="primary" (click)="fileInput.click()">Click to Upload File</button>
+      <br>
+      <input hidden id="singleFile" type="file" #fileInput [fileUploadInputFor]="fileUploadQueue" accept="image/x-png/">
+      <br>
+
+      <p>or...</p>
+
+      <div [fileUploadInputFor]="fileUploadQueue" class="upload-drop-zone">
+        Just drag and drop files here
+      </div>
+
+      <div class="text-center mx-auto" style="width: 500px">
+        <mat-file-upload-queue #fileUploadQueue
+                               [fileAlias]="'file'"
+                               [httpUrl]="'http://localhost:8180/jax-rs-jersey-application-sample'"
+                               accept="image/x-png"
+                               multiple>
+
+          <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
+        </mat-file-upload-queue>
+      </div>
+
+
+    </div>
+    <div class="col-2">
+
+    </div>
+  </div>
+</div>
+
