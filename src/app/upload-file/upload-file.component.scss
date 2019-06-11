@@ -29,3 +29,13 @@ label {
   color: #222;
   border-color: #222;
 }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.form-container > * {
+  width: 100%;
+}

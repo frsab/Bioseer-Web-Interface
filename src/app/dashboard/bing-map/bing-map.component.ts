@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } fro
 import {BehaviorSubject, Observable} from 'rxjs';
 import { filter, take } from 'rxjs/operators';
 import { SiteConditionsService } from '../../_services/site-conditions.service';
-import {SensorModel} from '../../_models/sensor.model';
+import {SensorBroadcastModel} from '../../_models/sensor-broadcast.model';
 
 // Needed to reference typescript for microsoft object
 /// <reference path="types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
@@ -17,7 +17,7 @@ import {SensorModel} from '../../_models/sensor.model';
 })
 export class BingMapComponent implements OnChanges, AfterViewInit  {
 
-  @Input() sensors: Observable<[SensorModel]>;
+  @Input() sensors: Observable<[SensorBroadcastModel]>;
 
   // References bingMap on the DOM
   @ViewChild('bingMap') streetsideMapViewChild: ElementRef;
@@ -70,9 +70,9 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
 
     // Subscribe to Inputs and create markers
     if (this.sensors) {
-      this.sensors.subscribe((currentSensor: [SensorModel]) => {
+      this.sensors.subscribe((currentSensor: [SensorBroadcastModel]) => {
         for (const i of Object.keys(currentSensor)) {
-          const selectedSensor: SensorModel = currentSensor[i];
+          const selectedSensor: SensorBroadcastModel = currentSensor[i];
           // If already on the map, update position, else add a new pushpin
           this.handlePushPin(selectedSensor.currentLocation.lat, selectedSensor.currentLocation.long, selectedSensor.sensorId, selectedSensor.sensorName);
         }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BingApiLoaderService} from '../_services/bing-api-loader.service';
-import {SensorModel} from '../_models/sensor.model';
+import {SensorBroadcastModel} from '../_models/sensor-broadcast.model';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -10,12 +10,12 @@ import {Observable} from 'rxjs';
 })
 export class DashboardComponent implements OnInit {
   mapLoaded = false;
-  sensors: Observable<[SensorModel]>; // All Loaded Sensors
+  sensors: Observable<[SensorBroadcastModel]>; // All Loaded Sensors
 
   // ------------------------------
 
   // Blank Data for practice
-  practiceData1: SensorModel = {
+  practiceData1: SensorBroadcastModel = {
     sensorId: '123kjfkeaf32q',
     sensorName: '10A',
     ownerId: '134feafeafea',
@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
     dataSegmented: undefined,
     dataSpecies: undefined
   };
-  practiceData2: SensorModel = {
+  practiceData2: SensorBroadcastModel = {
     sensorId: '123kjfkeaf32q',
     sensorName: 'Sensor 10B',
     ownerId: '134feafeafea',
