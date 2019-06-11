@@ -1,12 +1,27 @@
 export class SensorModel {
   sensorId: string;
+  sensorName: string;
   ownerId: string;
   startTime: string;
   endTime: string;
-  location: [{
-    lat: number,
-    long: number
-  }]; // 4 point array to draw out bounding box
+  location: [
+    {
+      lat: number,
+      long: number
+    },
+    {
+      lat: number,
+      long: number
+    },
+    {
+      lat: number,
+      long: number
+    },
+    {
+      lat: number,
+      long: number
+    }
+  ]; // 4 point array to draw out bounding box
   currentLocation: {
     lat: number,
     long: number
@@ -30,7 +45,7 @@ export class SensorModel {
         // Info about various fields
       }
     }
-    ];
+  ];
   dataSpecies: {
     speciesNumber: number;
     speciesImages: [[]];

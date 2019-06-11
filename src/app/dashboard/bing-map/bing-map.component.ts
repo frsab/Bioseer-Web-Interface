@@ -48,6 +48,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
 
   /**
    * Creates streestide map, sets coordinates
+   * Subscribes to current sensors and updates pushpins
    */
   ngAfterViewInit() {
     this.log.push('AfterViewInit');
@@ -70,12 +71,12 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
     // Subscribe to Inputs and create markers
     if (this.sensors) {
       this.sensors.subscribe((currentSensor: [SensorModel]) => {
-        for (const i of currentSensor) {
-          // @ts-ignore
-          const location = new Microsoft.Maps.Location(currentSensor.currentLocation.lat, currentSensor.currentLocation.long);
-          this.createCirclePushpin(location, 25, 'blue', 'black', 2);
+        for (const i of Object.keys(currentSensor)) {
+          const selectedSensor: SensorModel = currentSensor[i];
+          // If already on the map, update position, else add a new pushpin
+          this.handlePushPin(selectedSensor.currentLocation.lat, selectedSensor.currentLocation.long, selectedSensor.sensorId, selectedSensor.sensorName);
         }
-      })
+      });
     }
   }
 
@@ -102,8 +103,18 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
     // });
   }
 
+  /**
+   * Creates a new circle pushpin
+   * @param location Microsoft Maps Location Object
+   * @param radius Radius in pixels of pushpin
+   * @param fillColor Fillcolor in RBGA
+   * @param strokeColor Stroke Color in black
+   * @param strokeWidth Width of stroke
+   * @param sensorName Name of sensor for title
+   * @param sensorId ID of sensor for subtitle
+   */
   // @ts-ignore
-  createCirclePushpin(location: Microsoft.Maps.Location, radius, fillColor, strokeColor, strokeWidth) {
+  createCirclePushpin(location: Microsoft.Maps.Location, radius, fillColor, strokeColor, strokeWidth, sensorName, sensorId) {
     strokeWidth = strokeWidth || 0;
 
     // Create an SVG string of a circle with the specified radius and color.
@@ -114,10 +125,36 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
     // Create a pushpin from the SVG and anchor it to the center of the circle.
     // @ts-ignore
     return new Microsoft.Maps.Pushpin(location, {
+      title: sensorName,
+      subTitle: sensorId,
       icon: svg.join(''),
       // @ts-ignore
       anchor: new Microsoft.Maps.Point(radius, radius)
     });
+  }
+
+  /**
+   * Update Pin Position Based on Sensor ID
+   * @param coordX New x Coordinate
+   * @param coordY new y coordinate
+   * @param pushpinID SensorID
+   * @param sensorName Name of the sensor
+   */
+  handlePushPin(coordX: number, coordY: number, pushpinID: string, sensorName: string) {
+    for (let i = this.map.entities.getLength() - 1; i >= 0; i--) {
+      const pushpin = this.map.entities.get(i);
+      // @ts-ignore
+      if (pushpin instanceof Microsoft.Maps.Pushpin && pushpin.getSubTitle() === String(pushpinID)) {
+        // @ts-ignore
+        pushpin.setLocation(new Microsoft.Maps.Location(coordX, coordY));
+        return;
+      }
+    }
+
+    // @ts-ignore
+    const location = new Microsoft.Maps.Location(coordX, coordY);
+    const pin = this.createCirclePushpin(location, 200, 'rgba(255, 255, 255, 0.8)', 'black', 2, sensorName, pushpinID);
+    this.map.entities.push(pin);
   }
 }
 
