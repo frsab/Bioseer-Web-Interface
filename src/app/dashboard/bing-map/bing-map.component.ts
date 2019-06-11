@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import { filter, take } from 'rxjs/operators';
-import { SiteConditionsService } from '../../services/site-conditions.service';
-import {SensorModel} from '../../models/sensor.model';
+import { SiteConditionsService } from '../../_services/site-conditions.service';
+import {SensorModel} from '../../_models/sensor.model';
 
 // Needed to reference typescript for microsoft object
 /// <reference path="types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
@@ -117,10 +117,13 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
   createCirclePushpin(location: Microsoft.Maps.Location, radius, fillColor, strokeColor, strokeWidth, sensorName, sensorId) {
     strokeWidth = strokeWidth || 0;
 
-    // Create an SVG string of a circle with the specified radius and color.
+    // Create an SVG string of a circle with the specified radius and color, iunjects sensor ID into circle
+    // language=HTML
     const svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="', (radius * 2),
       '" height="', (radius * 2), '"><circle cx="', radius, '" cy="', radius, '" r="',
-      (radius - strokeWidth), '" stroke="', strokeColor, '" stroke-width="', strokeWidth, '" fill="', fillColor, '"/></svg>'];
+      (radius - strokeWidth), '" stroke="', strokeColor, '" stroke-width="', strokeWidth, '" fill="', fillColor, '"/>' +
+      '<text x="45" y="87" font-family="sans-serif" font-size="35" fill="black" font-weight="700">' + sensorName + '</text>' +
+      '</svg>'];
 
     // Create a pushpin from the SVG and anchor it to the center of the circle.
     // @ts-ignore
@@ -129,7 +132,8 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       subTitle: sensorId,
       icon: svg.join(''),
       // @ts-ignore
-      anchor: new Microsoft.Maps.Point(radius, radius)
+      anchor: new Microsoft.Maps.Point(radius, radius),
+      // htmlContent: '<h1>Test</h1>'
     });
   }
 
@@ -153,7 +157,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
 
     // @ts-ignore
     const location = new Microsoft.Maps.Location(coordX, coordY);
-    const pin = this.createCirclePushpin(location, 200, 'rgba(255, 255, 255, 0.8)', 'black', 2, sensorName, pushpinID);
+    const pin = this.createCirclePushpin(location, 75, 'rgb(252, 252, 252)', 'rgb(96, 96, 96)', 15, sensorName, pushpinID);
     this.map.entities.push(pin);
   }
 }

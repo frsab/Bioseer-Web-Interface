@@ -7,7 +7,7 @@ import { NavigationCancel,
   NavigationStart,
   Router } from '@angular/router';
 
-import {BingApiLoaderService} from './services/bing-api-loader.service';
+import {BingApiLoaderService} from './_services/bing-api-loader.service';
 
 @Component({
   selector: 'app-root',

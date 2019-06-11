@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {BingApiLoaderService} from '../services/bing-api-loader.service';
-import {SensorModel} from '../models/sensor.model';
+import {BingApiLoaderService} from '../_services/bing-api-loader.service';
+import {SensorModel} from '../_models/sensor.model';
 import {Observable} from 'rxjs';
 
 @Component({
