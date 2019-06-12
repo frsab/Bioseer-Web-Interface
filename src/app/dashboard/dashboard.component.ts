@@ -28,7 +28,6 @@ export class DashboardComponent implements OnInit {
       long: -72.95581850473526
     },
     imageData: undefined,
-    meta: undefined,
     zoneID: 'fjkjkeawj321q4',
     status: 'Good',
   };
@@ -41,7 +40,6 @@ export class DashboardComponent implements OnInit {
       long: -72.95581850473526
     },
     imageData: undefined,
-    meta: undefined,
     zoneID: 'fjkjkeawj321q4',
     status: 'Good',
   };
