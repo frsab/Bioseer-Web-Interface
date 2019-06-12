@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MobiledashboardComponent} from './mobiledashboard.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MobiledashboardComponent
+  ],
   imports: [
     CommonModule
   ]
