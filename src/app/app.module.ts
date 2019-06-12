@@ -20,7 +20,6 @@ import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
-import {fakeBackendProvider} from './_helpers/fake-backend';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './user/login/login.component';

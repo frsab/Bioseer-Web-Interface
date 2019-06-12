@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import {AuthenticationService} from '../../_services/authentication.service';
-import {Subscription} from 'rxjs';
-import {first} from 'rxjs-compat/operator/first';
 import {User} from '../../_models/user.model';
 
 @Component({
@@ -100,7 +98,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(post) {
-    submitted = true;
+    this.submitted = true;
     this.authenticationService.register(post.email, post.username, post.firstName, post.lastName, post.password).subscribe((res) => {
       res.message === 'Registered' ? this.success = true : this.success = false;
     });

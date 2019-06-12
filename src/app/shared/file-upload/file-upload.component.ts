@@ -41,7 +41,7 @@ export class FileUploadComponent implements OnInit {
 
   @Output() clicked = new EventEmitter<boolean>();
 
-  private files: Array<FileUploadModel> = [];
+  public files: Array<FileUploadModel> = [];
 
   constructor(private _http: HttpClient) { }
 
