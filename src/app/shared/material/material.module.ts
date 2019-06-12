@@ -1,15 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MatAutocompleteModule, MatButtonModule,
-  MatCardModule, MatCheckboxModule, MatDatepickerModule,
-  MatDividerModule, MatFormFieldModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatFormFieldModule,
   MatGridListModule,
-  MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatOptionModule, MatProgressBarModule, MatSelectModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatOptionModule,
+  MatProgressBarModule,
+  MatSelectModule,
+  MatSidenavModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
-import { MatFileUploadModule } from 'angular-material-fileupload';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -38,7 +50,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
   ]
 })
 export class MaterialModule { }

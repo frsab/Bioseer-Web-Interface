@@ -30,7 +30,7 @@ export class FileUploadComponent implements OnInit {
    * `npm i -g corsproxy`
    * `corsproxy`
    */
-  @Input() target = 'http://localhost:1337/file.io';
+  @Input() target = 'http://3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
   /**
    *   File extension that accepted, same as 'accept' of <input type="file" />.
    *  By the default, it's set to 'image

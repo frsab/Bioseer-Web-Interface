@@ -1,22 +1,51 @@
 <mat-toolbar color="primary">
-  <h1 class="px-4">BioSeer</h1>
-  <a mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/" routerLinkActive="active">Home</a>
-  <a mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-  <a *ngIf="displayName" mat-button class="px-4 my-auto" style="font-size: 16px" routerLink="/upload-images" routerLinkActive="active">Upload File</a>
-  <span class="fill"></span>
-  <div *ngIf="displayName">
-    <button mat-button class="px-4 my-auto" style="font-size: 16px" [matMenuTriggerFor]="accountMenu">
-      <mat-icon class="mr-2">account_circle</mat-icon>
-      {{ displayName | titlecase }}
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #accountMenu="matMenu">
-      <button mat-menu-item routerLink="/edit-account">Edit Account Information</button>
-      <mat-divider [inset]="true"></mat-divider>
-      <a mat-menu-item routerLink="/" (click)="logout()">Logout</a>
-    </mat-menu>
-  </div>
-  <div *ngIf="!displayName">
-    <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
-    <button mat-button routerLink="/register" routerLinkActive="active">Register</button>
-  </div>
+    <a routerLink="/">BioSeer</a>
+    <span class="menu-spacer"></span>
+    <div fxShow="true" fxHide.lt-md>
+      <a mat-button routerLink="/">Home</a>
+      <a mat-button routerLink="/dashboard">Dashboard</a>
+      <a mat-button routerLink="/upload-images" *ngIf="displayName">Upload File</a>
+    </div>
+    <div fxShow="true" fxHide.lt-md>
+      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <div *ngIf="displayName">
+        <a mat-button class="px-4 my-auto" style="font-size: 16px" [matMenuTriggerFor]="accountMenu">
+          <mat-icon class="mr-2">account_circle</mat-icon>
+          {{ displayName | titlecase }}
+        </a>
+        <mat-menu #accountMenu="matMenu">
+          <a mat-menu-item routerLink="/edit-account">Edit Account Information</a>
+          <a mat-menu-item routerLink="/" (click)="logout()">Logout</a>
+        </mat-menu>
+      </div>
+      <div *ngIf="!displayName">
+        <button mat-button routerLink="/login">Login</button>
+        <button mat-button routerLink="/register">Register</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
+
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.toggle()">
+      <!--<a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>-->
+      <a mat-menu-item routerLink="/">Home</a>
+      <a mat-menu-item routerLink="/dashboard">Dashboard</a>
+      <a mat-menu-item routerLink="/upload-images" *ngIf="displayName">Upload File</a>
+      <a mat-button class="mt-2" style="font-size: 16px" *ngIf="displayName">
+        {{ displayName | titlecase }}
+      </a>
+      <a mat-menu-item routerLink="/edit-account" *ngIf="displayName" >Edit Account Information</a>
+      <a mat-menu-item routerLink="/" (click)="logout()" *ngIf="displayName" >Logout</a>
+      <a mat-menu-item routerLink="/login" *ngIf="!displayName">Login</a>
+      <br>
+      <a mat-menu-item routerLink="/register" *ngIf="!displayName">Register</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <ng-content></ng-content>
+</mat-sidenav-container>

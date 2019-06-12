@@ -7,8 +7,19 @@
   color: #1f1f1f;
 }
 
-.fill {
-  /* This fills the remaining space, by using flexbox.
-     Every toolbar row uses a flexbox row layout. */
+.menu-spacer {
   flex: 1 1 auto;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+mat-sidenav > .mat-button {
+  width: 100%;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
 }

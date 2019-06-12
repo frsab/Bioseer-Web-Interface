@@ -45,11 +45,11 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(post) {
-    this.submitted = true;
     this.authenticationService.login(post.username, post.password)
       .pipe(first())
       .subscribe(
         data => {
+          this.submitted = true;
           this.router.navigate([this.returnUrl]);
         },
         error => {

@@ -11,10 +11,31 @@
 }
 
 .form-element {
-  padding: 5px 0px 25px 2px;
   width: 100%;
 }
 
 .button {
   width: 100%;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.background {
+  position: static;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  background-image: url(https://images.pexels.com/photos/2049422/pexels-photo-2049422.jpeg?auto=compress&cs=tinysrgb&dpr=2z&w=1760);
+  background-size: auto;
 }
