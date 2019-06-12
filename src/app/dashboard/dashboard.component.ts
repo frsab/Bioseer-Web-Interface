@@ -12,7 +12,11 @@ export class DashboardComponent implements OnInit {
   mapLoaded = false;
   sensors: Observable<[SensorBroadcastModel]>; // All Loaded Sensors
 
-  // ------------------------------
+  // mobiledetect(){
+  //   if (screen.width <= 699) {
+  //       document.location = "mobile.html";
+  //   }
+  // }
 
   // Blank Data for practice
   practiceData1: SensorBroadcastModel = {
