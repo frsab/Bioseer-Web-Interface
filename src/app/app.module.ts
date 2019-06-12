@@ -29,6 +29,7 @@ import { EditAccountComponent } from './user/edit-account/edit-account.component
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { FileUploadComponent } from './shared/file-upload/file-upload.component';
 import { RegisterComponent } from './user/register/register.component';
+import { MobiledashboardComponent } from './mobiledashboard/mobiledashboard.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RegisterComponent } from './user/register/register.component';
     EditAccountComponent,
     UploadImagesComponent,
     FileUploadComponent,
-    RegisterComponent
+    RegisterComponent,
+    MobiledashboardComponent
   ],
   imports: [
     BrowserModule,

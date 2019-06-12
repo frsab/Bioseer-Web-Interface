@@ -7,6 +7,7 @@ import {AuthGuard} from './_guards/auth.guard';
 import {EditAccountComponent} from './user/edit-account/edit-account.component';
 import {UploadImagesComponent} from './upload-images/upload-images.component';
 import {RegisterComponent} from './user/register/register.component';
+import {MobiledashboardComponent} from './mobiledashboard/mobiledashboard.component'
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'mobiledashboard',
+    component: MobiledashboardComponent,
   },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

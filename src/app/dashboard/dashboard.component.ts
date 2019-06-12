@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {BingApiLoaderService} from '../_services/bing-api-loader.service';
 import {SensorBroadcastModel} from '../_models/sensor-broadcast.model';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-dashboard',
@@ -11,12 +12,6 @@ import {Observable} from 'rxjs';
 export class DashboardComponent implements OnInit {
   mapLoaded = false;
   sensors: Observable<[SensorBroadcastModel]>; // All Loaded Sensors
-
-  // mobiledetect(){
-  //   if (screen.width <= 699) {
-  //       document.location = "mobile.html";
-  //   }
-  // }
 
   // Blank Data for practice
   practiceData1: SensorBroadcastModel = {
@@ -49,14 +44,20 @@ export class DashboardComponent implements OnInit {
   // ------------------------------
 
   constructor(
-    private bingApiLoader: BingApiLoaderService,
+    private router: Router, private bingApiLoader: BingApiLoaderService,
   ) {
     this.bingApiLoader.load().then(() => {
       this.mapLoaded = true;
     });
   }
+  // mobiledetect(){
+  //
+  // }
 
   ngOnInit() {
+    if (screen.width <= 699) {
+      this.router.navigate(['mobiledashboard']);
+    }
     // TODO Replace with API Call to get Sensors
     this.sensors = new Observable(subscriber => {
       subscriber.next([this.practiceData1]);
