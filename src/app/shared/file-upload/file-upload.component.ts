@@ -37,7 +37,7 @@ export class FileUploadComponent implements OnInit {
    */
   @Input() accept = 'image/*';
   /** Allow you to add handler after its completion. Bubble up response text from remote. */
-  @Output() complete = new EventEmitter<Object>();
+  @Output() complete = new EventEmitter<object>();
 
   @Output() clicked = new EventEmitter<boolean>();
 

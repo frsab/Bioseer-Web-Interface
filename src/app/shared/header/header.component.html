@@ -10,12 +10,13 @@
       {{ displayName | titlecase }}
     </button>
     <mat-menu #accountMenu="matMenu">
-      <button mat-menu-item>Edit Account Information</button>
+      <button mat-menu-item routerLink="/edit-account">Edit Account Information</button>
       <mat-divider [inset]="true"></mat-divider>
       <a mat-menu-item routerLink="/" (click)="logout()">Logout</a>
     </mat-menu>
   </div>
   <div *ngIf="!displayName">
     <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+    <button mat-button routerLink="/register" routerLinkActive="active">Register</button>
   </div>
 </mat-toolbar>
