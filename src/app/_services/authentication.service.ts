@@ -12,14 +12,24 @@ export class AuthenticationService {
   public currentUser: Observable<User>;
 
   constructor(private http: HttpClient) {
+    // Sets local storage key to user subject. Local storage holds iuf the user if logged in
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
+    // Sets current user to observable
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
+  /**
+   * Returns the current User Object
+   */
   public get currentUserValue(): User {
     return this.currentUserSubject.value;
   }
 
+  /**
+   * Login the user
+   * @param username Username
+   * @param password Password
+   */
   login(username: string, password: string) {
     return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, { username, password })
       .pipe(map(user => {
@@ -34,6 +44,13 @@ export class AuthenticationService {
       }));
   }
 
+  /**
+   * Edits current user
+   * @param username New username
+   * @param firstName New firstname
+   * @param lastName New lastname
+   * @param _id Id Remains the same
+   */
   editUser(username: string, firstName: string, lastName: string, _id: number) {
     const options = { params: new HttpParams().set('_id', String(_id))};
     return this.http.put<any>(`${environment.apiUrl}/users/${_id}`,
@@ -51,6 +68,23 @@ export class AuthenticationService {
       }));
   }
 
+  /**
+   * Registers user
+   * @param username New username
+   * @param firstName Users First name
+   * @param lastName New Last Name
+   * @param password Password as String
+   */
+  register(username: string, firstName: string, lastName: string, password: string) {
+    return this.http.post<any>(`${environment.apiUrl}/users/register`, { username, password, firstName, lastName })
+      .pipe(map(res => {
+        return res;
+      }));
+  }
+
+  /**
+   * Logs out user by removing key from local storage
+   */
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');

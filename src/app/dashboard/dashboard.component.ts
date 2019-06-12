@@ -23,71 +23,27 @@ export class DashboardComponent implements OnInit {
     sensorId: '123kjfkeaf32q',
     sensorName: '10A',
     ownerId: '134feafeafea',
-    startTime: '20080915T155300', // ISO 8601
-    endTime: '20080915T155600',
-    location: [
-      {
-      lat: 41.49971231510167,
-      long: -72.99581850473526
-      },
-      {
-        lat: 41.59971231510167,
-        long: -73
-      },
-      {
-        lat: 41.47971231510167,
-        long: -71.89581850473526
-      },
-      {
-        lat: 41.46971231510167,
-        long: -71.85581850473526
-      }
-    ], // 4 point array to draw out bounding box
     currentLocation: {
       lat: 41.49871231510167,
       long: -72.95581850473526
     },
+    imageData: undefined,
+    meta: undefined,
     zoneID: 'fjkjkeawj321q4',
-    zoneName: '10A',
     status: 'Good',
-    dataRaw: undefined,
-    dataSegmented: undefined,
-    dataSpecies: undefined
   };
   practiceData2: SensorBroadcastModel = {
     sensorId: '123kjfkeaf32q',
-    sensorName: 'Sensor 10B',
+    sensorName: '10A',
     ownerId: '134feafeafea',
-    startTime: '20080915T155300', // ISO 8601
-    endTime: '20080915T155600',
-    location: [
-      {
-        lat: 41.49971231510167,
-        long: -72.99581850473526
-      },
-      {
-        lat: 41.59971231510167,
-        long: -73
-      },
-      {
-        lat: 41.47971231510167,
-        long: -71.89581850473526
-      },
-      {
-        lat: 41.46971231510167,
-        long: -71.85581850473526
-      }
-    ], // 4 point array to draw out bounding box
     currentLocation: {
-      lat: 41.48871231510167,
+      lat: 41.59871231510167,
       long: -72.95581850473526
     },
+    imageData: undefined,
+    meta: undefined,
     zoneID: 'fjkjkeawj321q4',
-    zoneName: '10A',
     status: 'Good',
-    dataRaw: undefined,
-    dataSegmented: undefined,
-    dataSpecies: undefined
   };
 
   // ------------------------------
@@ -106,7 +62,7 @@ export class DashboardComponent implements OnInit {
       subscriber.next([this.practiceData1]);
       setTimeout(() => {
         subscriber.next([this.practiceData2]);
-      }, 10000);
+      }, 7000);
     });
   }
 
