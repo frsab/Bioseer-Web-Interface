@@ -29,13 +29,11 @@ app.use(cors());
 app.use(jwt());
 
 // api routes
-app.use(express.static(path.join(__dirname, 'dist/Bioseer-Web-Interface')));
+app.use(express.static(__dirname + '/dist/Bioseer-Web-Interface'));
 app.use('/users', require('./api/users/users.controller'));
 app.use('/images', require('./api/images/images.controller'));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/Bioseer-Web-Interface/index.html'))
-});
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
 
 // global error handler
 app.use(errorHandler);
@@ -45,9 +43,7 @@ const server = http.createServer(app);
 
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 
-server.listen(port, () => {
-  console.log('Server listening on port ' + port);
-});
+server.listen(port, () => console.log('Running...'));
 
 
 // const server = app.listen(port, function () {
