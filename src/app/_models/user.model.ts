@@ -7,4 +7,5 @@ export class User {
   sensorsIds?: [string];
   savedZones?: [string];
   createdDate?: Date;
+  _id: any;
 }

@@ -1,0 +1,61 @@
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space text-center">Register</span>
+</mat-toolbar>
+
+<div class="container-fluid" *ngIf="!submitted">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form mx-auto mt-2">
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Email Address" formControlName="email">
+      <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+        {{ getErrorEmail() }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="First Name" formControlName="firstName">
+      <mat-error *ngIf="!firstName.valid && firstName.touched">
+        {{ titleAlert }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Last Name" formControlName="lastName">
+      <mat-error *ngIf="!lastName.valid && lastName.touched">
+        {{ titleAlert }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Username" formControlName="username">
+      <mat-hint>This will be displayed to other users</mat-hint>
+      <mat-error *ngIf="!formGroup.controls['username'].valid && formGroup.controls['username'].touched">
+        {{ getErrorUsername() }}
+      </mat-error>
+      <!--<mat-error *ngIf="!lastName.valid && lastName.touched">-->
+        <!--{{ titleAlert }}-->
+      <!--</mat-error>-->
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Password" formControlName="password">
+      <mat-hint>Choose a password of at least eight characters, one uppercase letter and one number</mat-hint>
+      <mat-error *ngIf="!formGroup.controls['password'].valid && formGroup.controls['password'].touched">
+        {{ getErrorPassword() }}
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit Form</button>
+    </div>
+
+  </form>
+</div>
+<div class="container-fluid" *ngIf="success === true">
+  <h1>Welcome to BioSeer</h1>
+</div>
+<div class="container-fluid" *ngIf="success === false">
+  <mat-error>Something Went Wrong</mat-error>
+</div>
+
+

@@ -20,7 +20,6 @@ import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
-import {fakeBackendProvider} from './_helpers/fake-backend';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './user/login/login.component';
@@ -29,6 +28,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { EditAccountComponent } from './user/edit-account/edit-account.component';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { FileUploadComponent } from './shared/file-upload/file-upload.component';
+import { RegisterComponent } from './user/register/register.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { FileUploadComponent } from './shared/file-upload/file-upload.component'
     HeaderComponent,
     EditAccountComponent,
     UploadImagesComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

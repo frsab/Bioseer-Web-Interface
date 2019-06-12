@@ -26,6 +26,16 @@ export class AuthenticationService {
   }
 
   /**
+   * Returns an observable for every registered user
+   */
+  getAlUsers() {
+    return this.http.get<any>(`${environment.apiUrl}/users`, {})
+      .pipe(map(res => {
+        return res;
+      }));
+  }
+
+  /**
    * Login the user
    * @param username Username
    * @param password Password
@@ -70,13 +80,14 @@ export class AuthenticationService {
 
   /**
    * Registers user
+   * @param email New Email
    * @param username New username
    * @param firstName Users First name
    * @param lastName New Last Name
    * @param password Password as String
    */
-  register(username: string, firstName: string, lastName: string, password: string) {
-    return this.http.post<any>(`${environment.apiUrl}/users/register`, { username, password, firstName, lastName })
+  register(email: string, username: string, firstName: string, lastName: string, password: string) {
+    return this.http.post<any>(`${environment.apiUrl}/users/register`, { username, email, password, firstName, lastName })
       .pipe(map(res => {
         return res;
       }));

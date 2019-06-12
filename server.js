@@ -28,15 +28,13 @@ app.use(cors());
 // use JWT auth to secure the api
 app.use(jwt());
 
-// Favicon
-app.use(favicon(path.join(__dirname, './src/', 'favicon.ico')));
-
 // api routes
-app.use(express.static('dist/Bioseer-Web-Interface'));
+app.use(express.static(path.join(__dirname, 'dist/Bioseer-Web-Interface')));
 app.use('/users', require('./api/users/users.controller'));
-app.use('/images', require('./api/images/images.controller'))
+app.use('/images', require('./api/images/images.controller'));
+
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/Bioseer-Web-Interface/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/Bioseer-Web-Interface/index.html'))
 });
 
 // global error handler
