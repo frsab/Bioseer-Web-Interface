@@ -8,7 +8,9 @@
         <h1>Upload Files for Analysis</h1>
         <h3>Files must be in png format, 256x256 pixels</h3>
         <br>
-        <app-file-upload (complete)="onFileComplete($event)"></app-file-upload>
+        <p>1. First Fill in Form</p>
+        <p>2. Press Upload and Choose Photos to Submit</p>
+        <p>3. Begin Photo Upload</p>
         <!--<button mat-raised-button color="primary" (click)="fileInput.click()">Click to Upload File</button>-->
         <!--<br>-->
         <!--<input hidden id="singleFile" type="file" #fileInput [fileUploadInputFor]="fileUploadQueue" accept="image/x-png/">-->
@@ -59,6 +61,7 @@
             </mat-select>
           </mat-form-field>
         </div>
+        <app-file-upload (clicked)="onSubmit()" (complete)="onFileComplete($event)"></app-file-upload>
       </mat-card>
       <!-- Options for Other Data -->
     </div>

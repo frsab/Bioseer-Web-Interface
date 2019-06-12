@@ -25,15 +25,21 @@ export class FileUploadComponent implements OnInit {
   @Input() text = 'Upload';
   /** Name used in form which will be sent in HTTP request. */
   @Input() param = 'file';
-  /** Target URL for file uploading. */
-  @Input() target = 'https://file.io';
+  /**
+   * Target URL for file uploading. Make sure you have corsproxy installed.
+   * `npm i -g corsproxy`
+   * `corsproxy`
+   */
+  @Input() target = 'http://localhost:1337/file.io';
   /**
    *   File extension that accepted, same as 'accept' of <input type="file" />.
    *  By the default, it's set to 'image
    */
   @Input() accept = 'image/*';
   /** Allow you to add handler after its completion. Bubble up response text from remote. */
-  @Output() complete = new EventEmitter<string>();
+  @Output() complete = new EventEmitter<Object>();
+
+  @Output() clicked = new EventEmitter<boolean>();
 
   private files: Array<FileUploadModel> = [];
 
@@ -52,6 +58,7 @@ export class FileUploadComponent implements OnInit {
       }
       this.uploadFiles();
     };
+    this.clicked.emit(true);
     fileUpload.click();
   }
 

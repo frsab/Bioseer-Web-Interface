@@ -5,7 +5,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {LoginComponent} from './user/login/login.component';
 import {AuthGuard} from './_guards/auth.guard';
 import {EditAccountComponent} from './user/edit-account/edit-account.component';
-import {UploadFileComponent} from './upload-file/upload-file.component';
+import {UploadImagesComponent} from './upload-images/upload-images.component';
 
 const routes: Routes = [
   {
@@ -27,8 +27,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'upload-file',
-    component: UploadFileComponent,
+    path: 'upload-images',
+    component: UploadImagesComponent,
     canActivate: [AuthGuard]
   },
   // otherwise redirect to home

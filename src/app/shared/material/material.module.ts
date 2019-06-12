@@ -36,7 +36,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     MatMenuModule,
     MatButtonModule,
-    MatFileUploadModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatProgressBarModule

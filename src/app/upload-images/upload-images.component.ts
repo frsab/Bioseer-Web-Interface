@@ -2,14 +2,20 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-upload-file',
-  templateUrl: './upload-file.component.html',
-  styleUrls: ['./upload-file.component.scss']
+  templateUrl: './upload-images.component.html',
+  styleUrls: ['./upload-images.component.scss']
 })
-export class UploadFileComponent implements OnInit {
+export class UploadImagesComponent implements OnInit {
+
+  clicked = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log('Submit');
   }
 
   onFileComplete(data: any) {
