@@ -58,21 +58,29 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
    * Subscribes to current sensors and updates pushpins
    */
   ngAfterViewInit() {
-    this.log.push('AfterViewInit');
     this.createMap();
-    this.service.center$.pipe(
-      // Filters out what it wants, no empty coordinates, take only one
-      filter(coords => !!coords),
-      take(1)
-    ).subscribe(coords => {
-      const [lat, lon] = coords;
-      console.log(`Got coords from service: ${coords}`);
+    // this.service.center$.pipe(
+    //   // Filters out what it wants, no empty coordinates, take only one
+    //   filter(coords => !!coords),
+    //   take(1)
+    // ).subscribe(coords => {
+    //   const [lat, lon] = coords;
+    //   console.log(`Got coords from service: ${coords}`);
+    //   // @ts-ignore
+    //   // Creates microsoft position object with the lat and lon from the services
+    //   const position = new Microsoft.Maps.Location(lat, lon);
+    //   // Sets view of streetside map
+    //   this.map.setView({ center: position });
+    //   console.log(`current Center: ${this.map.getCenter()}`);
+    // });
+
+    // Add Click Handler
+    // @ts-ignore
+    Microsoft.Maps.Events.addHandler(this.map, 'click', (e) => {
       // @ts-ignore
-      // Creates microsoft position object with the lat and lon from the services
-      const position = new Microsoft.Maps.Location(lat, lon);
-      // Sets view of streetside map
-      this.map.setView({ center: position });
-      console.log(`current Center: ${this.map.getCenter()}`);
+      const point = new Microsoft.Maps.Point(e.getX(), e.getY());
+      const loc = e.target.tryPixelToLocation(point);
+      console.log(loc);
     });
 
     // Subscribe to Inputs and create markers
@@ -81,7 +89,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
         for (const i of Object.keys(currentSensor)) {
           const selectedSensor: SensorBroadcastModel = currentSensor[i];
           // If already on the map, update position, else add a new pushpin
-          this.bingMaps.handlePushPin(selectedSensor.currentLocation.lat, selectedSensor.currentLocation.long, selectedSensor.sensorId, selectedSensor.sensorName, this.map);
+          this.bingMaps.handleSensor(selectedSensor.currentLocation.lat, selectedSensor.currentLocation.long, selectedSensor.sensorId, selectedSensor.sensorName, this.map);
         }
       });
     }
@@ -90,7 +98,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       this.zones.subscribe((currentZones: [ZoneModel]) => {
         for (let i of Object.keys(currentZones)) {
           const selectedZone: ZoneModel = currentZones[i];
-          this.bingMaps.handleRectangle(selectedZone.location, selectedZone.zoneHealth, this.map);
+          this.bingMaps.handleZone(selectedZone.location, selectedZone.zoneHealth, this.map, selectedZone.zoneName, selectedZone.zoneId);
         }
       })
     }
@@ -113,7 +121,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
         center: new Microsoft.Maps.Location(38.616070, -121.304723),
         // @ts-ignore
         mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-        zoom: 15
+        zoom: 17
       }
     );
     // @ts-ignore

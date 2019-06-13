@@ -12,40 +12,57 @@ import {ZoneModel} from '../_models/zone.model';
 })
 export class DashboardComponent implements OnInit {
   mapLoaded = false;
-  sensors: Observable<[SensorBroadcastModel]>; // All Loaded Sensors
-  zones: Observable<[ZoneModel]>;
+  sensors: Observable<Array<SensorBroadcastModel>>; // All Loaded Sensors
+  zones: Observable<Array<ZoneModel>>;
 
   // Blank Data for practice
   practiceData1: SensorBroadcastModel = {
-    sensorId: '123kjfkeaf32q',
-    sensorName: '10A',
-    ownerId: '134feafeafea',
+    sensorId: '18942384923',
+    sensorName: '1A',
+    ownerId: 'caelinsutch',
     currentLocation: {
-      lat: 41.49871231510167,
-      long: -72.95581850473526
+      lat: 38.616,
+      long: -121.304
     },
     imageData: undefined,
-    zoneID: 'fjkjkeawj321q4',
+    zoneID: '1',
     status: 'Good',
   };
   practiceData2: SensorBroadcastModel = {
     sensorId: '123kjfkeaf32q',
-    sensorName: '10A',
-    ownerId: '134feafeafea',
+    sensorName: '2A',
+    ownerId: 'caelinsutch',
     currentLocation: {
-      lat: 41.59871231510167,
-      long: -72.95581850473526
+      lat: 38.61382,
+      long: -121.30376
     },
     imageData: undefined,
-    zoneID: 'fjkjkeawj321q4',
+    zoneID: '2',
     status: 'Good',
   };
 
   practiceZoneData: ZoneModel = {
     zoneHealth: 'good',
-    zoneId: '18942384923',
-    zoneName: '10',
+    zoneId: '1',
+    zoneName: '1',
     location: [38.615847, -121.303725, 38.615137, -121.304004, 38.617477, -121.305792, 38.618365, -121.306204, 38.618394, -121.305682, 38.617571, -121.305246,  ]
+  };
+  practiceZoneData2: ZoneModel = {
+    zoneHealth: 'average',
+    zoneId: '2',
+    zoneName: '2',
+    location: [
+      38.615587564962745, -121.30335599884867,
+      38.6142, -121.3032,
+      38.6130, -121.3037,
+      38.6119, -121.3043,
+      38.6107, -121.3051,
+      38.6093, -121.3065,
+      38.6097, -121.3072,
+      38.6122, -121.3048,
+      38.6140, -121.3038,
+      38.6150, -121.3037,
+    ]
   };
 
   // ------------------------------
@@ -67,14 +84,12 @@ export class DashboardComponent implements OnInit {
     }
     // TODO Replace with API Call to get Sensors
     this.sensors = new Observable(subscriber => {
-      subscriber.next([this.practiceData1]);
-      setTimeout(() => {
-        subscriber.next([this.practiceData2]);
-      }, 7000);
+      subscriber.next([this.practiceData1, this.practiceData2]);
     });
 
     this.zones = new Observable(subscriber => {
-      subscriber.next([this.practiceZoneData]);
+      subscriber.next([this.practiceZoneData, this.practiceZoneData2]);
+      subscriber.complete();
     })
   }
 

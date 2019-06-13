@@ -51,14 +51,27 @@ export class BingMapsService {
    * @param map Map object that's being appended too
    */
   // @ts-ignore
-  createRectangle(location: Array<Microsoft.Maps.Location>, fillColor, map, strokeColor?, strokeWidth?, ) {
+  createRectangle(location: Array<Microsoft.Maps.Location>, fillColor, map, zoneName, zoneId, strokeColor?, strokeWidth?, ) {
     // @ts-ignore
     const polygon = new Microsoft.Maps.Polygon(location, {
       fillColor: fillColor,
       strokeColor: strokeColor ? strokeColor : 'white',
       strokeThickness: strokeWidth ? strokeWidth : 3
     });
-    map.entities.push(polygon)
+    map.entities.push(polygon);
+    // @ts-ignore
+    Microsoft.Maps.loadModule('Microsoft.Maps.SpatialMath', () => {
+      // @ts-ignore
+      const pin = new Microsoft.Maps.Pushpin(Microsoft.Maps.SpatialMath.Geometry.centroid(polygon),
+        {
+          text: zoneName.toString(),
+          title: zoneId.toString(),
+          color: 'gray'
+        }
+      );
+      // @ts-ignore
+      map.entities.push(pin)
+    })
   }
 
   /**
@@ -79,7 +92,7 @@ export class BingMapsService {
     return groupsOfLocations;
   }
 
-  handleRectangle(location: Array<number>, fillColor, map, strokeColor?, strokeWidth?) {
+  handleZone(location: Array<number>, fillColor, map, zoneName, zoneId, strokeColor?, strokeWidth?) {
     switch (fillColor) {
       case 'good':
         fillColor = 'rgba(55, 204, 44, .4)';
@@ -94,7 +107,7 @@ export class BingMapsService {
         fillColor = 'rgbagood(36, 115, 242, .4)'
     }
 
-    this.createRectangle(this.createArrayOfLocations(location), fillColor, map, strokeColor, strokeWidth, )
+    this.createRectangle(this.createArrayOfLocations(location), fillColor, map, zoneName, zoneId, strokeColor, strokeWidth, )
   }
 
   /**
@@ -105,7 +118,7 @@ export class BingMapsService {
    * @param sensorName Name of the sensor
    * @param map Bing Map Instance
    */
-  handlePushPin(coordX: number, coordY: number, pushpinID: string, sensorName: string, map) {
+  handleSensor(coordX: number, coordY: number, pushpinID: string, sensorName: string, map) {
     for (let i = map.entities.getLength() - 1; i >= 0; i--) {
       const pushpin = map.entities.get(i);
       // @ts-ignore
