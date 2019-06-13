@@ -73,14 +73,28 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import {
-  MatAutocompleteModule, MatButtonModule,
-  MatCardModule, MatCheckboxModule,
-  MatDividerModule, MatFormFieldModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatFormFieldModule,
   MatGridListModule,
-  MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatOptionModule, MatSelectModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatOptionModule,
+  MatProgressBarModule,
+  MatSelectModule,
+  MatSidenavModule,
   MatTabsModule,
   MatToolbarModule
 } from &#x27;@angular/material&#x27;;
+import { FlexLayoutModule } from &#x27;@angular/flex-layout&#x27;;
+
 import {FormsModule, ReactiveFormsModule} from &#x27;@angular/forms&#x27;;
 
 @NgModule({
@@ -105,7 +119,13 @@ import {FormsModule, ReactiveFormsModule} from &#x27;@angular/forms&#x27;;
     ReactiveFormsModule,
     FormsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatProgressBarModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
   ]
 })
 export class MaterialModule { }

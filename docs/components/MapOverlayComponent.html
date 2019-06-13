@@ -239,11 +239,9 @@ export class MapOverlayComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;!-- This component has to not cover up the map, map must have space to click on it that&#x27;s uncovered--&gt;
 &lt;div id&#x3D;&quot;right-side&quot; class&#x3D;&quot;m-3&quot;&gt;
+  &lt;app-map-settings&gt;&lt;/app-map-settings&gt;
   &lt;app-overview&gt;&lt;/app-overview&gt;
   &lt;app-group&gt;&lt;/app-group&gt;
-&lt;/div&gt;
-&lt;div class&#x3D;&quot;position-absolute&quot; id&#x3D;&quot;left-side&quot;&gt;
-  &lt;app-map-settings&gt;&lt;/app-map-settings&gt;
 &lt;/div&gt;
 
 &lt;!--&lt;ul *ngIf&#x3D;&quot;hasLogEntries()&quot;&gt;--&gt;
@@ -273,7 +271,7 @@ export class MapOverlayComponent implements OnInit {
 
 #left-side {
   //TODO Figure out how to make this align properly
-  left: 1100px;
+  left: 520px;
   top: 16px;
 }
 </code></pre>
@@ -304,8 +302,8 @@ export class MapOverlayComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- This component has to not cover up the map, map must have space to click on it that\'s uncovered--><div id="right-side" class="m-3">  <app-overview></app-overview>  <app-group></app-group></div><div class="position-absolute" id="left-side">  <app-map-settings></app-map-settings></div><!--<ul *ngIf="hasLogEntries()">-->        <!--<li *ngFor="let entry of log">{{entry}}</li>-->        <!--</ul>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<p>Lifecycle log:</p>-->      <!--</mat-card>-->    <!--</div>-->    <!--<div class="col-3"></div>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<h1>Test</h1>-->      <!--</mat-card>-->    <!--</div>--></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
+        var COMPONENT_TEMPLATE = '<div><!-- This component has to not cover up the map, map must have space to click on it that\'s uncovered--><div id="right-side" class="m-3">  <app-map-settings></app-map-settings>  <app-overview></app-overview>  <app-group></app-group></div><!--<ul *ngIf="hasLogEntries()">-->        <!--<li *ngFor="let entry of log">{{entry}}</li>-->        <!--</ul>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<p>Lifecycle log:</p>-->      <!--</mat-card>-->    <!--</div>-->    <!--<div class="col-3"></div>-->    <!--<div class="col-3">-->      <!--<mat-card>-->        <!--<h1>Test</h1>-->      <!--</mat-card>-->    <!--</div>--></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MapOverlayComponent'};
 </script>

@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>GeneralCardsComponent</li>
+  <li>AuthFormsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/dashboard/map-overlay/group/general-cards/general-cards.component.ts</code>
+    <code>src/app/shared/auth-forms/auth-forms.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-general-cards</code></td>
+                <td class="col-md-9"><code>app-auth-forms</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./general-cards.component.scss</code></td>
+                <td class="col-md-9"><code>./auth-forms.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./general-cards.component.html</code></td>
+                <td class="col-md-9"><code>./auth-forms.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/dashboard/map-overlay/group/general-cards/general-cards.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/shared/auth-forms/auth-forms.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/dashboard/map-overlay/group/general-cards/general-cards.component.ts:12</a></div>
+                            class="link-to-prism">src/app/shared/auth-forms/auth-forms.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-general-cards&#x27;,
-  templateUrl: &#x27;./general-cards.component.html&#x27;,
-  styleUrls: [&#x27;./general-cards.component.scss&#x27;]
+  selector: &#x27;app-auth-forms&#x27;,
+  templateUrl: &#x27;./auth-forms.component.html&#x27;,
+  styleUrls: [&#x27;./auth-forms.component.scss&#x27;]
 })
-export class GeneralCardsComponent implements OnInit {
+export class AuthFormsComponent implements OnInit {
 
   constructor() { }
 
@@ -237,51 +237,32 @@ export class GeneralCardsComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div&gt;
-  &lt;div class&#x3D;&quot;container mx-0 px-0 my-2&quot;&gt;
-    &lt;div class&#x3D;&quot;row mx-0&quot;&gt;
-      &lt;div class&#x3D;&quot;col-6 text-left&quot;&gt;
-        &lt;p class&#x3D;&quot;mb-0&quot;&gt;S10A&lt;/p&gt;
-        &lt;p class&#x3D;&quot;subtext mb-0&quot;&gt;Sector 10-A1232&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 text-right&quot;&gt;
-        &lt;p class&#x3D;&quot;yellow small mt-2&quot;&gt;Weak Connection&lt;/p&gt;
-      &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;mat-card class&#x3D;&quot;mat-elevation-z20 centered text-center&quot; *ngIf&#x3D;&quot;!submitted&quot;&gt;
+  &lt;h1&gt;Login&lt;/h1&gt;
+  &lt;form [formGroup]&#x3D;&quot;formGroup&quot; (ngSubmit)&#x3D;&quot;onSubmit(formGroup.value)&quot; class&#x3D;&quot;mb-2 my-2&quot;&gt;
+    &lt;mat-form-field class&#x3D;&quot;form-element&quot;&gt;
+      &lt;input matInput placeholder&#x3D;&quot;Username&quot; formControlName&#x3D;&quot;username&quot;&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;mat-form-field class&#x3D;&quot;form-element mb-3&quot;&gt;
+      &lt;input matInput placeholder&#x3D;&quot;Password&quot; formControlName&#x3D;&quot;password&quot; type&#x3D;&quot;password&quot;&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;div class&#x3D;&quot;form-element&quot;&gt;
+      &lt;button mat-raised-button color&#x3D;&quot;primary&quot; type&#x3D;&quot;submit&quot; class&#x3D;&quot;button mt-1&quot; [disabled]&#x3D;&quot;!formGroup.valid&quot;&gt;Login&lt;/button&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;mat-divider class&#x3D;&quot;&quot; [inset]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
-  &lt;div class&#x3D;&quot;container mx-0 px-0 my-2&quot;&gt;
-    &lt;div class&#x3D;&quot;row mx-0&quot;&gt;
-      &lt;div class&#x3D;&quot;col-6 text-left&quot;&gt;
-        &lt;p class&#x3D;&quot;mb-0&quot;&gt;S10A&lt;/p&gt;
-        &lt;p class&#x3D;&quot;subtext mb-0&quot;&gt;Sector 10-A1232&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 text-right&quot;&gt;
-        &lt;p class&#x3D;&quot;green small mt-2&quot;&gt;Connected&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;mat-divider class&#x3D;&quot;&quot; [inset]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
-&lt;/div&gt;
+    &lt;div class&#x3D;&quot;alert alert-danger&quot; *ngIf&#x3D;&quot;error&quot;&gt;{{ error }}&lt;/div&gt;
+  &lt;/form&gt;
+
+&lt;/mat-card&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./general-cards.component.scss</code>
+                    <code>./auth-forms.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.subtext {
-  font-size: 10px;
-}
-
-.container {
-  width: 100%;
-}
-
-.row {
-  width: 100%;
-}
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -309,10 +290,10 @@ export class GeneralCardsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <div class="container mx-0 px-0 my-2">    <div class="row mx-0">      <div class="col-6 text-left">        <p class="mb-0">S10A</p>        <p class="subtext mb-0">Sector 10-A1232</p>      </div>      <div class="col-6 text-right">        <p class="yellow small mt-2">Weak Connection</p>      </div>    </div>  </div>  <mat-divider class="" [inset]="true"></mat-divider>  <div class="container mx-0 px-0 my-2">    <div class="row mx-0">      <div class="col-6 text-left">        <p class="mb-0">S10A</p>        <p class="subtext mb-0">Sector 10-A1232</p>      </div>      <div class="col-6 text-right">        <p class="green small mt-2">Connected</p>      </div>    </div>  </div>  <mat-divider class="" [inset]="true"></mat-divider></div></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+        var COMPONENT_TEMPLATE = '<div><mat-card class="mat-elevation-z20 centered text-center" *ngIf="!submitted">  <h1>Login</h1>  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="mb-2 my-2">    <mat-form-field class="form-element">      <input matInput placeholder="Username" formControlName="username">    </mat-form-field>    <mat-form-field class="form-element mb-3">      <input matInput placeholder="Password" formControlName="password" type="password">    </mat-form-field>    <div class="form-element">      <button mat-raised-button color="primary" type="submit" class="button mt-1" [disabled]="!formGroup.valid">Login</button>    </div>    <div class="alert alert-danger" *ngIf="error">{{ error }}</div>  </form></mat-card></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthFormsComponent', 'selector': 'app-auth-forms'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'GeneralCardsComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AuthFormsComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -346,7 +327,7 @@ export class GeneralCardsComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'GeneralCardsComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthFormsComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

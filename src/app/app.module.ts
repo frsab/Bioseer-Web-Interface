@@ -30,7 +30,6 @@ import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { FileUploadComponent } from './shared/file-upload/file-upload.component';
 import { RegisterComponent } from './user/register/register.component';
 import { MobiledashboardComponent } from './mobiledashboard/mobiledashboard.component';
-import { AuthFormsComponent } from './shared/auth-forms/auth-forms.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurmissionComponent } from './ourmission/ourmission.component';
 import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component';
@@ -56,7 +55,6 @@ import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component'
     FileUploadComponent,
     RegisterComponent,
     MobiledashboardComponent,
-    AuthFormsComponent,
     AboutusComponent,
     OurmissionComponent,
     OurtechnologyComponent

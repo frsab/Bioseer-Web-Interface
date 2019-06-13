@@ -240,9 +240,9 @@ export class HomeComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;!-- Header --&gt;
 &lt;header class&#x3D;&quot;masthead d-flex&quot;&gt;
   &lt;div class&#x3D;&quot;container text-center my-auto&quot;&gt;
-    &lt;h1 class&#x3D;&quot;mb-1&quot;&gt;BioSeer&lt;/h1&gt;
-    &lt;h3 class&#x3D;&quot;mb-5&quot;&gt;
-      &lt;em&gt;Alden Please Help me write this dumb thing&lt;/em&gt;
+    &lt;img src&#x3D;&quot;assets/img/logo.png&quot; class&#x3D;&quot;logo mb-5&quot;&gt;
+    &lt;h3 class&#x3D;&quot;mb-5 text-black-50&quot;&gt;
+      &lt;em&gt;Changing the Tides of Marine Monitoring&lt;/em&gt;
     &lt;/h3&gt;
     &lt;a class&#x3D;&quot;btn btn-primary btn-xl js-scroll-trigger&quot; href&#x3D;&quot;#about&quot;&gt;Find Out More&lt;/a&gt;
   &lt;/div&gt;
@@ -255,7 +255,7 @@ export class HomeComponent implements OnInit {
     &lt;div class&#x3D;&quot;row&quot;&gt;
       &lt;div class&#x3D;&quot;col-lg-10 mx-auto&quot;&gt;
         &lt;h2&gt;About the Project&lt;/h2&gt;
-        &lt;p class&#x3D;&quot;lead mb-5&quot;&gt;Include a quick explanation right here&lt;/p&gt;
+        &lt;p class&#x3D;&quot;lead mb-5&quot;&gt;BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. &lt;/p&gt;
         &lt;a class&#x3D;&quot;btn btn-dark btn-xl js-scroll-trigger&quot; href&#x3D;&quot;#services&quot;&gt;What We Offer&lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -263,64 +263,64 @@ export class HomeComponent implements OnInit {
 &lt;/section&gt;
 
 &lt;!-- Services --&gt;
-&lt;!--&lt;section class&#x3D;&quot;content-section bg-primary text-white text-center&quot; id&#x3D;&quot;services&quot;&gt;--&gt;
-  &lt;!--&lt;div class&#x3D;&quot;container&quot;&gt;--&gt;
-    &lt;!--&lt;div class&#x3D;&quot;content-section-heading&quot;&gt;--&gt;
-      &lt;!--&lt;h3 class&#x3D;&quot;text-secondary mb-0&quot;&gt;Services&lt;/h3&gt;--&gt;
-      &lt;!--&lt;h2 class&#x3D;&quot;mb-5&quot;&gt;What We Offer&lt;/h2&gt;--&gt;
-    &lt;!--&lt;/div&gt;--&gt;
-    &lt;!--&lt;div class&#x3D;&quot;row&quot;&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-lg-0&quot;&gt;--&gt;
-          &lt;!--&lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;--&gt;
-            &lt;!--&lt;i class&#x3D;&quot;icon-screen-smartphone&quot;&gt;&lt;/i&gt;--&gt;
-          &lt;!--&lt;/span&gt;--&gt;
-        &lt;!--&lt;h4&gt;--&gt;
-          &lt;!--&lt;strong&gt;Responsive&lt;/strong&gt;--&gt;
-        &lt;!--&lt;/h4&gt;--&gt;
-        &lt;!--&lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Looks great on any screen size!&lt;/p&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-lg-0&quot;&gt;--&gt;
-          &lt;!--&lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;--&gt;
-            &lt;!--&lt;i class&#x3D;&quot;icon-pencil&quot;&gt;&lt;/i&gt;--&gt;
-          &lt;!--&lt;/span&gt;--&gt;
-        &lt;!--&lt;h4&gt;--&gt;
-          &lt;!--&lt;strong&gt;Redesigned&lt;/strong&gt;--&gt;
-        &lt;!--&lt;/h4&gt;--&gt;
-        &lt;!--&lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Freshly redesigned for Bootstrap 4.&lt;/p&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-md-0&quot;&gt;--&gt;
-          &lt;!--&lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;--&gt;
-            &lt;!--&lt;i class&#x3D;&quot;icon-like&quot;&gt;&lt;/i&gt;--&gt;
-          &lt;!--&lt;/span&gt;--&gt;
-        &lt;!--&lt;h4&gt;--&gt;
-          &lt;!--&lt;strong&gt;Favorited&lt;/strong&gt;--&gt;
-        &lt;!--&lt;/h4&gt;--&gt;
-        &lt;!--&lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Millions of users--&gt;
-          &lt;!--&lt;i class&#x3D;&quot;fas fa-heart&quot;&gt;&lt;/i&gt;--&gt;
-          &lt;!--Start Bootstrap!&lt;/p&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-3 col-md-6&quot;&gt;--&gt;
-          &lt;!--&lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;--&gt;
-            &lt;!--&lt;i class&#x3D;&quot;icon-mustache&quot;&gt;&lt;/i&gt;--&gt;
-          &lt;!--&lt;/span&gt;--&gt;
-        &lt;!--&lt;h4&gt;--&gt;
-          &lt;!--&lt;strong&gt;Question&lt;/strong&gt;--&gt;
-        &lt;!--&lt;/h4&gt;--&gt;
-        &lt;!--&lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;I mustache you a question...&lt;/p&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-    &lt;!--&lt;/div&gt;--&gt;
-  &lt;!--&lt;/div&gt;--&gt;
-&lt;!--&lt;/section&gt;--&gt;
+&lt;!-- &lt;section class&#x3D;&quot;content-section bg-primary text-white text-center&quot; id&#x3D;&quot;services&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;content-section-heading&quot;&gt;
+      &lt;h3 class&#x3D;&quot;text-secondary mb-0&quot;&gt;Services&lt;/h3&gt;
+      &lt;h2 class&#x3D;&quot;mb-5&quot;&gt;What We Offer&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-lg-0&quot;&gt;
+          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
+            &lt;i class&#x3D;&quot;icon-screen-smartphone&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;h4&gt;
+          &lt;strong&gt;Responsive&lt;/strong&gt;
+        &lt;/h4&gt;
+        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Looks great on any screen size!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-lg-0&quot;&gt;
+          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
+            &lt;i class&#x3D;&quot;icon-pencil&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;h4&gt;
+          &lt;strong&gt;Redesigned&lt;/strong&gt;
+        &lt;/h4&gt;
+        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Freshly redesigned for Bootstrap 4.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-md-0&quot;&gt;
+          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
+            &lt;i class&#x3D;&quot;icon-like&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;h4&gt;
+          &lt;strong&gt;Favorited&lt;/strong&gt;
+        &lt;/h4&gt;
+        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Millions of users
+          &lt;i class&#x3D;&quot;fas fa-heart&quot;&gt;&lt;/i&gt;
+          Start Bootstrap!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-3 col-md-6&quot;&gt;
+          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
+            &lt;i class&#x3D;&quot;icon-mustache&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;h4&gt;
+          &lt;strong&gt;Question&lt;/strong&gt;
+        &lt;/h4&gt;
+        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;I mustache you a question...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt; --&gt;
 
 &lt;!-- Callout --&gt;
-&lt;section class&#x3D;&quot;callout&quot;&gt;
+&lt;!-- &lt;section class&#x3D;&quot;callout&quot;&gt;
   &lt;div class&#x3D;&quot;container text-center&quot;&gt;
     &lt;h2 class&#x3D;&quot;mx-auto mb-5&quot;&gt;Welcome to
       &lt;em&gt;your&lt;/em&gt;
       next website!&lt;/h2&gt;
     &lt;a class&#x3D;&quot;btn btn-primary btn-xl&quot; href&#x3D;&quot;https://startbootstrap.com/template-overviews/stylish-portfolio/&quot;&gt;Download Now!&lt;/a&gt;
   &lt;/div&gt;
-&lt;/section&gt;
+&lt;/section&gt; --&gt;
 
 &lt;!-- Portfolio --&gt;
 &lt;!--&lt;section class&#x3D;&quot;content-section&quot; id&#x3D;&quot;portfolio&quot;&gt;--&gt;
@@ -381,12 +381,14 @@ export class HomeComponent implements OnInit {
 &lt;!-- Call to Action --&gt;
 &lt;section class&#x3D;&quot;content-section bg-primary text-white&quot;&gt;
   &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-    &lt;h2 class&#x3D;&quot;mb-4&quot;&gt;The buttons below are impossible to resist...&lt;/h2&gt;
-    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn btn-xl btn-light mr-4&quot;&gt;Click Me!&lt;/a&gt;
-    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn btn-xl btn-dark&quot;&gt;Look at Me!&lt;/a&gt;
+    &lt;h2 class&#x3D;&quot;mb-4&quot;&gt;Contact Us&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;container text-center&quot;&gt;
+      &lt;h5&gt;Email: bioseercontact@gmail.com&lt;/h5&gt;
+      &lt;br&gt;
+      &lt;a class&#x3D;&quot;btn btn-dark btn-xl js-scroll-trigger&quot; href&#x3D;&quot;mailto:bioseercontact@gmail.com&quot;&gt;Email Us&lt;/a&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
-
 </code></pre>
     </div>
 
@@ -404,6 +406,15 @@ export class HomeComponent implements OnInit {
 @import &quot;portfolio&quot;;
 @import &quot;footer&quot;;
 @import &quot;bootstrap-overrides&quot;;
+
+.masthead {
+  background-image: url(https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto&#x3D;format%2Ccompress&amp;cs&#x3D;tinysrgb&amp;dpr&#x3D;2&amp;h&#x3D;750&amp;w&#x3D;1260);
+  background-position: center;
+}
+
+.logo {
+  width: 80%;
+}
 </code></pre>
     </div>
 
@@ -432,8 +443,8 @@ export class HomeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Header --><header class="masthead d-flex">  <div class="container text-center my-auto">    <h1 class="mb-1">BioSeer</h1>    <h3 class="mb-5">      <em>Alden Please Help me write this dumb thing</em>    </h3>    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>  </div>  <div class="overlay"></div></header><!-- About --><section class="content-section bg-light" id="about">  <div class="container text-center">    <div class="row">      <div class="col-lg-10 mx-auto">        <h2>About the Project</h2>        <p class="lead mb-5">Include a quick explanation right here</p>        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#_services">What We Offer</a>      </div>    </div>  </div></section><!-- Services --><!--<section class="content-section bg-primary text-white text-center" id="_services">-->  <!--<div class="container">-->    <!--<div class="content-section-heading">-->      <!--<h3 class="text-secondary mb-0">Services</h3>-->      <!--<h2 class="mb-5">What We Offer</h2>-->    <!--</div>-->    <!--<div class="row">-->      <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->          <!--<span class="service-icon rounded-circle mx-auto mb-3">-->            <!--<i class="icon-screen-smartphone"></i>-->          <!--</span>-->        <!--<h4>-->          <!--<strong>Responsive</strong>-->        <!--</h4>-->        <!--<p class="text-faded mb-0">Looks great on any screen size!</p>-->      <!--</div>-->      <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->          <!--<span class="service-icon rounded-circle mx-auto mb-3">-->            <!--<i class="icon-pencil"></i>-->          <!--</span>-->        <!--<h4>-->          <!--<strong>Redesigned</strong>-->        <!--</h4>-->        <!--<p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>-->      <!--</div>-->      <!--<div class="col-lg-3 col-md-6 mb-5 mb-md-0">-->          <!--<span class="service-icon rounded-circle mx-auto mb-3">-->            <!--<i class="icon-like"></i>-->          <!--</span>-->        <!--<h4>-->          <!--<strong>Favorited</strong>-->        <!--</h4>-->        <!--<p class="text-faded mb-0">Millions of users-->          <!--<i class="fas fa-heart"></i>-->          <!--Start Bootstrap!</p>-->      <!--</div>-->      <!--<div class="col-lg-3 col-md-6">-->          <!--<span class="service-icon rounded-circle mx-auto mb-3">-->            <!--<i class="icon-mustache"></i>-->          <!--</span>-->        <!--<h4>-->          <!--<strong>Question</strong>-->        <!--</h4>-->        <!--<p class="text-faded mb-0">I mustache you a question...</p>-->      <!--</div>-->    <!--</div>-->  <!--</div>--><!--</section>--><!-- Callout --><section class="callout">  <div class="container text-center">    <h2 class="mx-auto mb-5">Welcome to      <em>your</em>      next website!</h2>    <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>  </div></section><!-- Portfolio --><!--<section class="content-section" id="portfolio">-->  <!--<div class="container">-->    <!--<div class="content-section-heading text-center">-->      <!--<h3 class="text-secondary mb-0">Portfolio</h3>-->      <!--<h2 class="mb-5">Recent Projects</h2>-->    <!--</div>-->    <!--<div class="row no-gutters">-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Stationary</h2>-->                <!--<p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-1.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Ice Cream</h2>-->                <!--<p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-2.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Strawberries</h2>-->                <!--<p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-3.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Workspace</h2>-->                <!--<p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-4.jpg" alt="">-->        <!--</a>-->      <!--</div>-->    <!--</div>-->  <!--</div>--><!--</section>--><!-- Call to Action --><section class="content-section bg-primary text-white">  <div class="container text-center">    <h2 class="mb-4">The buttons below are impossible to resist...</h2>    <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>    <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>  </div></section></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
+        var COMPONENT_TEMPLATE = '<div><!-- Header --><header class="masthead d-flex">  <div class="container text-center my-auto">    <img src="assets/img/logo.png" class="logo mb-5">    <h3 class="mb-5 text-black-50">      <em>Changing the Tides of Marine Monitoring</em>    </h3>    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>  </div>  <div class="overlay"></div></header><!-- About --><section class="content-section bg-light" id="about">  <div class="container text-center">    <div class="row">      <div class="col-lg-10 mx-auto">        <h2>About the Project</h2>        <p class="lead mb-5">BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. </p>        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>      </div>    </div>  </div></section><!-- Services --><!-- <section class="content-section bg-primary text-white text-center" id="services">  <div class="container">    <div class="content-section-heading">      <h3 class="text-secondary mb-0">Services</h3>      <h2 class="mb-5">What We Offer</h2>    </div>    <div class="row">      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-screen-smartphone"></i>          </span>        <h4>          <strong>Responsive</strong>        </h4>        <p class="text-faded mb-0">Looks great on any screen size!</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-pencil"></i>          </span>        <h4>          <strong>Redesigned</strong>        </h4>        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-like"></i>          </span>        <h4>          <strong>Favorited</strong>        </h4>        <p class="text-faded mb-0">Millions of users          <i class="fas fa-heart"></i>          Start Bootstrap!</p>      </div>      <div class="col-lg-3 col-md-6">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-mustache"></i>          </span>        <h4>          <strong>Question</strong>        </h4>        <p class="text-faded mb-0">I mustache you a question...</p>      </div>    </div>  </div></section> --><!-- Callout --><!-- <section class="callout">  <div class="container text-center">    <h2 class="mx-auto mb-5">Welcome to      <em>your</em>      next website!</h2>    <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>  </div></section> --><!-- Portfolio --><!--<section class="content-section" id="portfolio">-->  <!--<div class="container">-->    <!--<div class="content-section-heading text-center">-->      <!--<h3 class="text-secondary mb-0">Portfolio</h3>-->      <!--<h2 class="mb-5">Recent Projects</h2>-->    <!--</div>-->    <!--<div class="row no-gutters">-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Stationary</h2>-->                <!--<p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-1.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Ice Cream</h2>-->                <!--<p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-2.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Strawberries</h2>-->                <!--<p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-3.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Workspace</h2>-->                <!--<p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-4.jpg" alt="">-->        <!--</a>-->      <!--</div>-->    <!--</div>-->  <!--</div>--><!--</section>--><!-- Call to Action --><section class="content-section bg-primary text-white">  <div class="container text-center">    <h2 class="mb-4">Contact Us</h2>    <div class="container text-center">      <h5>Email: bioseercontact@gmail.com</h5>      <br>      <a class="btn btn-dark btn-xl js-scroll-trigger" href="mailto:bioseercontact@gmail.com">Email Us</a>    </div>  </div></section></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

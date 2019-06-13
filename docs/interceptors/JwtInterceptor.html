@@ -236,7 +236,7 @@
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from &#x27;@angular/common/http&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
-import { AuthenticationService } from &#x27;../services/authentication.service&#x27;;
+import { AuthenticationService } from &#x27;../_services/authentication.service&#x27;;
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
@@ -245,10 +245,10 @@ export class JwtInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
     // add authorization header with jwt token if available
     const currentUser &#x3D; this.authenticationService.currentUserValue;
-    if (currentUser &amp;&amp; currentUser.token) {
+    if (currentUser &amp;&amp; currentUser.hash) {
       request &#x3D; request.clone({
         setHeaders: {
-          Authorization: &#x60;Bearer ${currentUser.token}&#x60;
+          Authorization: &#x60;Bearer ${currentUser.hash}&#x60;
         }
       });
     }
