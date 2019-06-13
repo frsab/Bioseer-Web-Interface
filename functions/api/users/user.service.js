@@ -16,7 +16,11 @@ module.exports = {
 async function authenticate({ username, password }) {
   const user = await User.findOne({ username });
   if (user && bcrypt.compareSync(password, user.hash)) {
-    const { hash, userWithoutHash } = user.toObject();
+    let userWithoutHash = user.toObject();
+    // TODO Better way to do this
+    delete userWithoutHash.hash;
+    console.log(userWithoutHash);
+    console.log(userWithoutHash);
     const token = jwt.sign({ sub: user.id }, config.secret);
     return {
       userWithoutHash,

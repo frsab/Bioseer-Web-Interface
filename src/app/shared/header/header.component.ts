@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.authenticationService.currentUser.subscribe(user => {
+      // console.log(user);
       user ? this.displayName = user.firstName + ' ' + user.lastName : this.displayName = undefined;
     });
   }

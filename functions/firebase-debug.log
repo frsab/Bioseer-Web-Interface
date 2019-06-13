@@ -1,149 +1,599 @@
-[debug] [2019-06-13T17:48:20.871Z] ----------------------------------------------------------------------
-[debug] [2019-06-13T17:48:20.873Z] Command:       /home/caelin/.nvm/versions/node/v10.16.0/bin/node /home/caelin/.nvm/versions/node/v10.16.0/bin/firebase serve --only functions
-[debug] [2019-06-13T17:48:20.873Z] CLI Version:   7.0.0
-[debug] [2019-06-13T17:48:20.873Z] Platform:      linux
-[debug] [2019-06-13T17:48:20.873Z] Node Version:  v10.16.0
-[debug] [2019-06-13T17:48:20.873Z] Time:          Thu Jun 13 2019 10:48:20 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-13T17:48:20.873Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T18:26:07.678Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T18:26:07.680Z] Command:       /home/caelin/.nvm/versions/node/v10.16.0/bin/node /home/caelin/.nvm/versions/node/v10.16.0/bin/firebase emulators:start --only functions
+[debug] [2019-06-13T18:26:07.680Z] CLI Version:   7.0.0
+[debug] [2019-06-13T18:26:07.680Z] Platform:      linux
+[debug] [2019-06-13T18:26:07.680Z] Node Version:  v10.16.0
+[debug] [2019-06-13T18:26:07.680Z] Time:          Thu Jun 13 2019 11:26:07 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-13T18:26:07.680Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-13T17:48:20.878Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-13T17:48:20.878Z] > authorizing via signed-in user
-[debug] [2019-06-13T17:48:20.878Z] [iam] checking project bioseer-c55f5 for permissions ["firebase.projects.get"]
-[debug] [2019-06-13T17:48:20.879Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
-
-[debug] [2019-06-13T17:48:21.358Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T17:48:21.359Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
+[debug] [2019-06-13T18:26:07.685Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-13T18:26:07.685Z] > authorizing via signed-in user
+[debug] [2019-06-13T18:26:07.686Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
  
-[debug] [2019-06-13T17:48:21.705Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T18:26:08.116Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["functions"]
 [info] ✔  functions: Using node@10 from host.
-[debug] [2019-06-13T17:48:21.724Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
+[debug] [2019-06-13T18:26:08.151Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
  
-[debug] [2019-06-13T17:48:22.169Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Emulator started at http://localhost:5000
+[debug] [2019-06-13T18:26:08.585Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
 [info] i  functions: Watching "/home/caelin/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
-[debug] [2019-06-13T17:48:22.370Z] Functions runtime initialized.
-[debug] [2019-06-13T17:48:22.370Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
-[debug] [2019-06-13T17:48:22.429Z] firebase-admin has been stubbed.
-[warn] ⚠  TypeError: Cannot read property 'accountname' of undefined
-    at Object.<anonymous> (/home/caelin/Github/Bioseer-Web-Interface/functions/api/environment/environment.js:4:42)
-    at Module._compile (internal/modules/cjs/loader.js:776:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
-    at Module.load (internal/modules/cjs/loader.js:653:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
-    at Module.require (internal/modules/cjs/loader.js:690:17)
-    at require (internal/modules/cjs/helpers.js:25:18)
-    at Object.<anonymous> (/home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/db.js:1:13)
-    at Module._compile (internal/modules/cjs/loader.js:776:30)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2019-06-13T17:48:30.188Z] ----------------------------------------------------------------------
-[debug] [2019-06-13T17:48:30.190Z] Command:       /home/caelin/.nvm/versions/node/v10.16.0/bin/node /home/caelin/.nvm/versions/node/v10.16.0/bin/firebase serve --only functions
-[debug] [2019-06-13T17:48:30.190Z] CLI Version:   7.0.0
-[debug] [2019-06-13T17:48:30.190Z] Platform:      linux
-[debug] [2019-06-13T17:48:30.190Z] Node Version:  v10.16.0
-[debug] [2019-06-13T17:48:30.190Z] Time:          Thu Jun 13 2019 10:48:30 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-13T17:48:30.190Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2019-06-13T17:48:30.195Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-13T17:48:30.195Z] > authorizing via signed-in user
-[debug] [2019-06-13T17:48:30.195Z] [iam] checking project bioseer-c55f5 for permissions ["firebase.projects.get"]
-[debug] [2019-06-13T17:48:30.196Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
-
-[debug] [2019-06-13T17:48:30.768Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T17:48:30.769Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
- 
-[debug] [2019-06-13T17:48:31.131Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Using node@10 from host.
-[debug] [2019-06-13T17:48:31.142Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
- 
-[debug] [2019-06-13T17:48:31.596Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Emulator started at http://localhost:5000
-[info] i  functions: Watching "/home/caelin/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
-[debug] [2019-06-13T17:48:31.632Z] Error: listen EADDRINUSE: address already in use :::5000
-    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
-    at listenInCluster (net.js:1327:12)
-    at Server.listen (net.js:1414:7)
-    at Function.listen (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/node_modules/express/lib/application.js:618:24)
-    at FunctionsEmulator.<anonymous> (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:257:99)
-    at Generator.next (<anonymous>)
-    at fulfilled (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:4:58)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2019-06-13T17:48:31.794Z] Functions runtime initialized.
-[debug] [2019-06-13T17:48:31.794Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
-[debug] [2019-06-13T17:48:31.851Z] firebase-admin has been stubbed.
-[debug] [2019-06-13T17:49:29.958Z] ----------------------------------------------------------------------
-[debug] [2019-06-13T17:49:29.959Z] Command:       /home/caelin/.nvm/versions/node/v10.16.0/bin/node /home/caelin/.nvm/versions/node/v10.16.0/bin/firebase serve --only functions
-[debug] [2019-06-13T17:49:29.959Z] CLI Version:   7.0.0
-[debug] [2019-06-13T17:49:29.959Z] Platform:      linux
-[debug] [2019-06-13T17:49:29.959Z] Node Version:  v10.16.0
-[debug] [2019-06-13T17:49:29.960Z] Time:          Thu Jun 13 2019 10:49:29 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-13T17:49:29.960Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2019-06-13T17:49:29.964Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-13T17:49:29.965Z] > authorizing via signed-in user
-[debug] [2019-06-13T17:49:29.965Z] [iam] checking project bioseer-c55f5 for permissions ["firebase.projects.get"]
-[debug] [2019-06-13T17:49:29.966Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
-
-[debug] [2019-06-13T17:49:30.386Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T17:49:30.390Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
- 
-[debug] [2019-06-13T17:49:30.781Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Using node@10 from host.
-[debug] [2019-06-13T17:49:30.791Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
- 
-[debug] [2019-06-13T17:49:31.229Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Emulator started at http://localhost:5000
-[info] i  functions: Watching "/home/caelin/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
-[debug] [2019-06-13T17:49:31.246Z] Error: listen EADDRINUSE: address already in use :::5000
-    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
-    at listenInCluster (net.js:1327:12)
-    at Server.listen (net.js:1414:7)
-    at Function.listen (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/node_modules/express/lib/application.js:618:24)
-    at FunctionsEmulator.<anonymous> (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:257:99)
-    at Generator.next (<anonymous>)
-    at fulfilled (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:4:58)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2019-06-13T17:49:31.398Z] Functions runtime initialized.
-[debug] [2019-06-13T17:49:31.398Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
-[debug] [2019-06-13T17:49:31.454Z] firebase-admin has been stubbed.
-[debug] [2019-06-13T17:50:45.496Z] ----------------------------------------------------------------------
-[debug] [2019-06-13T17:50:45.497Z] Command:       /home/caelin/.nvm/versions/node/v10.16.0/bin/node /home/caelin/.nvm/versions/node/v10.16.0/bin/firebase serve --only functions
-[debug] [2019-06-13T17:50:45.497Z] CLI Version:   7.0.0
-[debug] [2019-06-13T17:50:45.497Z] Platform:      linux
-[debug] [2019-06-13T17:50:45.497Z] Node Version:  v10.16.0
-[debug] [2019-06-13T17:50:45.497Z] Time:          Thu Jun 13 2019 10:50:45 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-13T17:50:45.497Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2019-06-13T17:50:45.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-13T17:50:45.502Z] > authorizing via signed-in user
-[debug] [2019-06-13T17:50:45.502Z] [iam] checking project bioseer-c55f5 for permissions ["firebase.projects.get"]
-[debug] [2019-06-13T17:50:45.503Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
-
-[debug] [2019-06-13T17:50:45.952Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T17:50:45.954Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
- 
-[debug] [2019-06-13T17:50:46.289Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Using node@10 from host.
-[debug] [2019-06-13T17:50:46.298Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
- 
-[debug] [2019-06-13T17:50:46.665Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: Emulator started at http://localhost:5000
-[info] i  functions: Watching "/home/caelin/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
-[debug] [2019-06-13T17:50:46.702Z] Error: listen EADDRINUSE: address already in use :::5000
-    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
-    at listenInCluster (net.js:1327:12)
-    at Server.listen (net.js:1414:7)
-    at Function.listen (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/node_modules/express/lib/application.js:618:24)
-    at FunctionsEmulator.<anonymous> (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:257:99)
-    at Generator.next (<anonymous>)
-    at fulfilled (/home/caelin/.nvm/versions/node/v10.16.0/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:4:58)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2019-06-13T17:50:46.858Z] Functions runtime initialized.
-[debug] [2019-06-13T17:50:46.859Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
-[debug] [2019-06-13T17:50:46.916Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:26:08.771Z] Functions runtime initialized.
+[debug] [2019-06-13T18:26:08.771Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:26:08.856Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:26:08.856Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:26:08.880Z] Checked functions.config()
+[debug] [2019-06-13T18:26:08.885Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5001/bioseer-c55f5/us-central1/api
+[debug] [2019-06-13T18:26:12.598Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-13T18:26:12.766Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:26:12.767Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:26:12.854Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:26:12.854Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:26:12.879Z] Checked functions.config()
+[debug] [2019-06-13T18:26:12.883Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:26:13.107Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:26:13.107Z] 
+[debug] [2019-06-13T18:26:13.108Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:26:13.112Z] {"socketPath":"/tmp/firebase_emulator_invocation_24709.sock"}
+[debug] [2019-06-13T18:26:13.113Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24709.sock"}
+[debug] [2019-06-13T18:26:13.127Z] Ephemeral server used!
+[debug] [2019-06-13T18:26:13.128Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T18:26:13.132Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:26:21.301Z] Accepted request OPTIONS /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:26:21.478Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:26:21.479Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:26:21.562Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:26:21.563Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:26:21.586Z] Checked functions.config()
+[debug] [2019-06-13T18:26:21.589Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:26:21.794Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:26:21.794Z] 
+[debug] [2019-06-13T18:26:21.794Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:26:21.798Z] {"socketPath":"/tmp/firebase_emulator_invocation_24731.sock"}
+[debug] [2019-06-13T18:26:21.799Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24731.sock"}
+[debug] [2019-06-13T18:26:21.803Z] Ephemeral server used!
+[debug] [2019-06-13T18:26:21.804Z] Bodyundefined
+[debug] [2019-06-13T18:26:21.807Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:26:21.808Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:26:21.964Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:26:21.965Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:26:22.049Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:26:22.049Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:26:22.072Z] Checked functions.config()
+[debug] [2019-06-13T18:26:22.076Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:26:22.286Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:26:22.286Z] 
+[debug] [2019-06-13T18:26:22.286Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:26:22.290Z] {"socketPath":"/tmp/firebase_emulator_invocation_24743.sock"}
+[debug] [2019-06-13T18:26:22.291Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24743.sock"}
+[debug] [2019-06-13T18:26:22.301Z] Ephemeral server used!
+[debug] [2019-06-13T18:26:22.301Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:26:22.304Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:26:55.944Z] Accepted request OPTIONS /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:26:56.119Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:26:56.120Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:26:56.204Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:26:56.204Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:26:56.227Z] Checked functions.config()
+[debug] [2019-06-13T18:26:56.232Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:26:56.435Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:26:56.436Z] 
+[debug] [2019-06-13T18:26:56.436Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:26:56.441Z] {"socketPath":"/tmp/firebase_emulator_invocation_24912.sock"}
+[debug] [2019-06-13T18:26:56.441Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24912.sock"}
+[debug] [2019-06-13T18:26:56.446Z] Ephemeral server used!
+[debug] [2019-06-13T18:26:56.446Z] Bodyundefined
+[debug] [2019-06-13T18:26:56.450Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:26:56.451Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:26:56.603Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:26:56.604Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:26:56.688Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:26:56.688Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:26:56.712Z] Checked functions.config()
+[debug] [2019-06-13T18:26:56.716Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:26:56.927Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:26:56.927Z] 
+[debug] [2019-06-13T18:26:56.927Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:26:56.933Z] {"socketPath":"/tmp/firebase_emulator_invocation_24924.sock"}
+[debug] [2019-06-13T18:26:56.933Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24924.sock"}
+[debug] [2019-06-13T18:26:56.944Z] Ephemeral server used!
+[debug] [2019-06-13T18:26:56.944Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:26:56.948Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:27:10.474Z] Accepted request GET /bioseer-c55f5/us-central1/api/current --> api
+[debug] [2019-06-13T18:27:10.636Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:27:10.638Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:27:10.730Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:27:10.730Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:27:10.757Z] Checked functions.config()
+[debug] [2019-06-13T18:27:10.761Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:27:10.971Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:27:10.971Z] 
+[debug] [2019-06-13T18:27:10.971Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:27:10.976Z] {"socketPath":"/tmp/firebase_emulator_invocation_24945.sock"}
+[debug] [2019-06-13T18:27:10.976Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24945.sock"}
+[debug] [2019-06-13T18:27:10.988Z] Ephemeral server used!
+[debug] [2019-06-13T18:27:10.988Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T18:27:10.990Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:27:18.816Z] Accepted request GET /bioseer-c55f5/us-central1/api/users/current --> api
+[debug] [2019-06-13T18:27:18.981Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:27:18.982Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:27:19.073Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:27:19.073Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:27:19.097Z] Checked functions.config()
+[debug] [2019-06-13T18:27:19.101Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:27:19.307Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:27:19.307Z] 
+[debug] [2019-06-13T18:27:19.307Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:27:19.311Z] {"socketPath":"/tmp/firebase_emulator_invocation_24960.sock"}
+[debug] [2019-06-13T18:27:19.312Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24960.sock"}
+[debug] [2019-06-13T18:27:19.322Z] Ephemeral server used!
+[debug] [2019-06-13T18:27:19.323Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T18:27:19.327Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:27:36.469Z] Accepted request GET /bioseer-c55f5/us-central1/api/users/current --> api
+[debug] [2019-06-13T18:27:36.643Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:27:36.645Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:27:36.744Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:27:36.744Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:27:36.772Z] Checked functions.config()
+[debug] [2019-06-13T18:27:36.777Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:27:36.995Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:27:36.995Z] 
+[debug] [2019-06-13T18:27:36.995Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:27:37.002Z] {"socketPath":"/tmp/firebase_emulator_invocation_24985.sock"}
+[debug] [2019-06-13T18:27:37.002Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24985.sock"}
+[debug] [2019-06-13T18:27:37.015Z] Ephemeral server used!
+[debug] [2019-06-13T18:27:37.016Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T18:27:37.019Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:27:50.562Z] Accepted request OPTIONS /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:27:50.744Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:27:50.745Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:27:50.827Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:27:50.828Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:27:50.852Z] Checked functions.config()
+[debug] [2019-06-13T18:27:50.856Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:27:51.062Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:27:51.063Z] 
+[debug] [2019-06-13T18:27:51.063Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:27:51.067Z] {"socketPath":"/tmp/firebase_emulator_invocation_25005.sock"}
+[debug] [2019-06-13T18:27:51.067Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25005.sock"}
+[debug] [2019-06-13T18:27:51.071Z] Ephemeral server used!
+[debug] [2019-06-13T18:27:51.072Z] Bodyundefined
+[debug] [2019-06-13T18:27:51.075Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:27:51.076Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:27:51.281Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:27:51.282Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:27:51.364Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:27:51.364Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:27:51.387Z] Checked functions.config()
+[debug] [2019-06-13T18:27:51.391Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:27:51.594Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:27:51.594Z] 
+[debug] [2019-06-13T18:27:51.594Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:27:51.598Z] {"socketPath":"/tmp/firebase_emulator_invocation_25017.sock"}
+[debug] [2019-06-13T18:27:51.598Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25017.sock"}
+[debug] [2019-06-13T18:27:51.608Z] Ephemeral server used!
+[debug] [2019-06-13T18:27:51.609Z] Body{"username":"register5","password":"test"}
+[debug] [2019-06-13T18:27:51.612Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:29:29.717Z] Accepted request OPTIONS /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:29:29.876Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:29:29.877Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:29:29.960Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:29:29.960Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:29:29.983Z] Checked functions.config()
+[debug] [2019-06-13T18:29:29.987Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:29:30.192Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:29:30.192Z] 
+[debug] [2019-06-13T18:29:30.192Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:29:30.196Z] {"socketPath":"/tmp/firebase_emulator_invocation_25141.sock"}
+[debug] [2019-06-13T18:29:30.197Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25141.sock"}
+[debug] [2019-06-13T18:29:30.200Z] Ephemeral server used!
+[debug] [2019-06-13T18:29:30.201Z] Bodyundefined
+[debug] [2019-06-13T18:29:30.204Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:29:30.213Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:29:30.365Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:29:30.366Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:29:30.455Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:29:30.456Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:29:30.479Z] Checked functions.config()
+[debug] [2019-06-13T18:29:30.483Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:29:30.691Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:29:30.692Z] 
+[debug] [2019-06-13T18:29:30.692Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:29:30.696Z] {"socketPath":"/tmp/firebase_emulator_invocation_25153.sock"}
+[debug] [2019-06-13T18:29:30.696Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25153.sock"}
+[debug] [2019-06-13T18:29:30.707Z] Ephemeral server used!
+[debug] [2019-06-13T18:29:30.707Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:29:30.710Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~6s
+[debug] [2019-06-13T18:33:41.436Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:33:41.610Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:33:41.610Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:33:41.694Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:33:41.694Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:33:41.717Z] Checked functions.config()
+[debug] [2019-06-13T18:33:41.721Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:33:41.926Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:33:41.926Z] 
+[debug] [2019-06-13T18:33:41.926Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:33:41.930Z] {"socketPath":"/tmp/firebase_emulator_invocation_25441.sock"}
+[debug] [2019-06-13T18:33:41.931Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25441.sock"}
+[debug] [2019-06-13T18:33:41.941Z] Ephemeral server used!
+[debug] [2019-06-13T18:33:41.943Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:33:41.945Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:34:39.648Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:34:39.815Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:34:39.816Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:34:39.907Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:34:39.907Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:34:39.932Z] Checked functions.config()
+[debug] [2019-06-13T18:34:39.936Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:34:40.153Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:34:40.153Z] 
+[debug] [2019-06-13T18:34:40.153Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:34:40.157Z] {"socketPath":"/tmp/firebase_emulator_invocation_25566.sock"}
+[debug] [2019-06-13T18:34:40.158Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25566.sock"}
+[debug] [2019-06-13T18:34:40.169Z] Ephemeral server used!
+[debug] [2019-06-13T18:34:40.170Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T18:34:40.173Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:35:45.985Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:35:47.180Z] Functions runtime initialized.
+[debug] [2019-06-13T18:35:47.181Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:35:47.277Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:35:47.278Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:35:47.304Z] Checked functions.config()
+[debug] [2019-06-13T18:35:47.308Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:35:55.849Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:35:56.035Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:35:56.036Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:35:56.123Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:35:56.123Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:35:56.146Z] Checked functions.config()
+[debug] [2019-06-13T18:35:56.150Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:35:56.358Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:35:56.358Z] 
+[debug] [2019-06-13T18:35:56.358Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:35:56.362Z] {"socketPath":"/tmp/firebase_emulator_invocation_25666.sock"}
+[debug] [2019-06-13T18:35:56.362Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25666.sock"}
+[debug] [2019-06-13T18:35:56.372Z] Ephemeral server used!
+[debug] [2019-06-13T18:35:56.372Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:35:56.376Z] Ephemeral server survived.
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    hash:
+[info] >     '$2a$10$V3pTI6onhfXzfGcL5Nyp6..4D5we/eaDVr.SyXRDoNrkfXW.1JKXO',
+[info] >    __v: 0 }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:36:27.551Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:36:28.741Z] Functions runtime initialized.
+[debug] [2019-06-13T18:36:28.741Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:36:28.848Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:36:28.848Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:36:28.877Z] Checked functions.config()
+[debug] [2019-06-13T18:36:28.881Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:36:36.993Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:36:37.175Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:36:37.176Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:36:37.261Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:36:37.261Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:36:37.285Z] Checked functions.config()
+[debug] [2019-06-13T18:36:37.289Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:36:37.504Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:36:37.504Z] 
+[debug] [2019-06-13T18:36:37.504Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:36:37.509Z] {"socketPath":"/tmp/firebase_emulator_invocation_25714.sock"}
+[debug] [2019-06-13T18:36:37.509Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25714.sock"}
+[debug] [2019-06-13T18:36:37.519Z] Ephemeral server used!
+[debug] [2019-06-13T18:36:37.520Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:36:37.523Z] Ephemeral server survived.
+[debug] [2019-06-13T18:36:38.641Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    hash:
+[info] >     '$2a$10$V3pTI6onhfXzfGcL5Nyp6..4D5we/eaDVr.SyXRDoNrkfXW.1JKXO',
+[info] >    __v: 0 }
+[info] >  undefined
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:36:38.830Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:36:38.831Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:36:38.920Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:36:38.920Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:36:38.945Z] Checked functions.config()
+[debug] [2019-06-13T18:36:38.949Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:36:39.170Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:36:39.170Z] 
+[debug] [2019-06-13T18:36:39.170Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:36:39.175Z] {"socketPath":"/tmp/firebase_emulator_invocation_25726.sock"}
+[debug] [2019-06-13T18:36:39.176Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25726.sock"}
+[debug] [2019-06-13T18:36:39.186Z] Ephemeral server used!
+[debug] [2019-06-13T18:36:39.187Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:36:39.190Z] Ephemeral server survived.
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    hash:
+[info] >     '$2a$10$V3pTI6onhfXzfGcL5Nyp6..4D5we/eaDVr.SyXRDoNrkfXW.1JKXO',
+[info] >    __v: 0 }
+[info] >  undefined
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:38:08.670Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:38:09.906Z] Functions runtime initialized.
+[debug] [2019-06-13T18:38:09.906Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:38:09.998Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:38:09.998Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:38:10.023Z] Checked functions.config()
+[debug] [2019-06-13T18:38:10.027Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:38:24.200Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:38:24.356Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:38:24.356Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:38:24.440Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:38:24.440Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:38:24.463Z] Checked functions.config()
+[debug] [2019-06-13T18:38:24.467Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:38:24.679Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:38:24.680Z] 
+[debug] [2019-06-13T18:38:24.680Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:38:24.684Z] {"socketPath":"/tmp/firebase_emulator_invocation_25941.sock"}
+[debug] [2019-06-13T18:38:24.684Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25941.sock"}
+[debug] [2019-06-13T18:38:24.694Z] Ephemeral server used!
+[debug] [2019-06-13T18:38:24.695Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:38:24.697Z] Ephemeral server survived.
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    hash:
+[info] >     '$2a$10$V3pTI6onhfXzfGcL5Nyp6..4D5we/eaDVr.SyXRDoNrkfXW.1JKXO',
+[info] >    __v: 0 }
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    hash:
+[info] >     '$2a$10$V3pTI6onhfXzfGcL5Nyp6..4D5we/eaDVr.SyXRDoNrkfXW.1JKXO',
+[info] >    __v: 0 }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:38:46.349Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:38:47.546Z] Functions runtime initialized.
+[debug] [2019-06-13T18:38:47.546Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:38:47.644Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:38:47.644Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:38:47.670Z] Checked functions.config()
+[debug] [2019-06-13T18:38:47.675Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:39:41.090Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:39:42.277Z] Functions runtime initialized.
+[debug] [2019-06-13T18:39:42.278Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:39:42.368Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:39:42.368Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:39:42.392Z] Checked functions.config()
+[debug] [2019-06-13T18:39:42.396Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:40:38.184Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:40:39.403Z] Functions runtime initialized.
+[debug] [2019-06-13T18:40:39.404Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:40:39.511Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:40:39.511Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:40:39.537Z] Checked functions.config()
+[debug] [2019-06-13T18:40:39.541Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:40:49.838Z] Accepted request OPTIONS /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:40:49.996Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:40:49.997Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:40:50.081Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:40:50.081Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:40:50.104Z] Checked functions.config()
+[debug] [2019-06-13T18:40:50.108Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:40:50.312Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:40:50.312Z] 
+[debug] [2019-06-13T18:40:50.312Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:40:50.316Z] {"socketPath":"/tmp/firebase_emulator_invocation_26293.sock"}
+[debug] [2019-06-13T18:40:50.317Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_26293.sock"}
+[debug] [2019-06-13T18:40:50.321Z] Ephemeral server used!
+[debug] [2019-06-13T18:40:50.321Z] Bodyundefined
+[debug] [2019-06-13T18:40:50.324Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:40:50.328Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:40:50.478Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:40:50.479Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:40:50.563Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:40:50.563Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:40:50.586Z] Checked functions.config()
+[debug] [2019-06-13T18:40:50.590Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:40:50.794Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:40:50.794Z] 
+[debug] [2019-06-13T18:40:50.794Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:40:50.798Z] {"socketPath":"/tmp/firebase_emulator_invocation_26305.sock"}
+[debug] [2019-06-13T18:40:50.798Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_26305.sock"}
+[debug] [2019-06-13T18:40:50.808Z] Ephemeral server used!
+[debug] [2019-06-13T18:40:50.808Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:40:50.811Z] Ephemeral server survived.
+[debug] [2019-06-13T18:40:51.717Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:40:51.890Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:40:51.891Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:40:51.981Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:40:51.981Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:40:52.007Z] Checked functions.config()
+[debug] [2019-06-13T18:40:52.011Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:40:52.227Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:40:52.227Z] 
+[debug] [2019-06-13T18:40:52.227Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:40:52.232Z] {"socketPath":"/tmp/firebase_emulator_invocation_26317.sock"}
+[debug] [2019-06-13T18:40:52.233Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_26317.sock"}
+[debug] [2019-06-13T18:40:52.243Z] Ephemeral server used!
+[debug] [2019-06-13T18:40:52.243Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:40:52.246Z] Ephemeral server survived.
+[info] >  true
+[info] >  true
+[info] i  functions: Finished "api" in ~2s
+[info] >  true
+[info] >  true
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:41:31.832Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/user.service.js changed, reloading triggers
+[debug] [2019-06-13T18:41:32.996Z] Functions runtime initialized.
+[debug] [2019-06-13T18:41:32.997Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:41:33.087Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:41:33.087Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:41:33.111Z] Checked functions.config()
+[debug] [2019-06-13T18:41:33.115Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:43:34.599Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:43:34.775Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:43:34.776Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:43:34.860Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:43:34.860Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:43:34.884Z] Checked functions.config()
+[debug] [2019-06-13T18:43:34.888Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:43:35.097Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:43:35.097Z] 
+[debug] [2019-06-13T18:43:35.097Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:43:35.101Z] {"socketPath":"/tmp/firebase_emulator_invocation_26500.sock"}
+[debug] [2019-06-13T18:43:35.102Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_26500.sock"}
+[debug] [2019-06-13T18:43:35.112Z] Ephemeral server used!
+[debug] [2019-06-13T18:43:35.112Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:43:35.115Z] Ephemeral server survived.
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    __v: 0 }
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    __v: 0 }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:45:03.372Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T18:45:03.530Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:45:03.531Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:45:03.617Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:45:03.617Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:45:03.640Z] Checked functions.config()
+[debug] [2019-06-13T18:45:03.644Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:45:03.858Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:45:03.858Z] 
+[debug] [2019-06-13T18:45:03.858Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:45:03.862Z] {"socketPath":"/tmp/firebase_emulator_invocation_26635.sock"}
+[debug] [2019-06-13T18:45:03.862Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_26635.sock"}
+[debug] [2019-06-13T18:45:03.872Z] Ephemeral server used!
+[debug] [2019-06-13T18:45:03.873Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:45:03.876Z] Ephemeral server survived.
+[debug] [2019-06-13T18:45:05.037Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    __v: 0 }
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    __v: 0 }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T18:45:05.244Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T18:45:05.245Z] Disabled runtime features: undefined
+[debug] [2019-06-13T18:45:05.336Z] Couldn't find @google-cloud/firestore or google-gax, this may be okay if using @google-cloud/firestore@2.0.0
+[debug] [2019-06-13T18:45:05.336Z] Outgoing network have been stubbed.
+[debug] [2019-06-13T18:45:05.363Z] Checked functions.config()
+[debug] [2019-06-13T18:45:05.367Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T18:45:05.587Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T18:45:05.587Z] 
+[debug] [2019-06-13T18:45:05.587Z] Running api in mode HTTPS
+[debug] [2019-06-13T18:45:05.593Z] {"socketPath":"/tmp/firebase_emulator_invocation_26649.sock"}
+[debug] [2019-06-13T18:45:05.593Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_26649.sock"}
+[debug] [2019-06-13T18:45:05.605Z] Ephemeral server used!
+[debug] [2019-06-13T18:45:05.607Z] Body{"username":"caelinsutch","password":"Coolstar10!"}
+[debug] [2019-06-13T18:45:05.610Z] Ephemeral server survived.
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    __v: 0 }
+[info] >  { sensorsIds: [],
+[info] >    savedZones: [],
+[info] >    _id: 5d0158718ac36d1106892192,
+[info] >    username: 'caelinsutch',
+[info] >    email: 'caelinsutch@gmail.com',
+[info] >    firstName: 'Caelin',
+[info] >    lastName: 'Sutch',
+[info] >    createdDate: 2019-06-12T19:54:25.406Z,
+[info] >    __v: 0 }
+[info] i  functions: Finished "api" in ~1s
