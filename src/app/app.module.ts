@@ -33,6 +33,7 @@ import { MobiledashboardComponent } from './mobiledashboard/mobiledashboard.comp
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurmissionComponent } from './ourmission/ourmission.component';
 import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component'
     BrowserAnimationsModule,
     MaterialModule,
     SlimLoadingBarModule,
-    HttpClientModule
+    HttpClientModule,
+    AnimateOnScrollModule.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: [

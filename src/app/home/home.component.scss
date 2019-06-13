@@ -17,3 +17,73 @@
 .logo {
   width: 80%;
 }
+
+.tripleinfo {
+  
+}
+
+.afterani {
+  visibility: visible !important;
+}
+
+.bioseercard {
+  background-color: white;
+  position: absolute;
+  z-index: 20;
+  margin-top: 3%;
+  margin-left: 49%;
+  height: 6%;
+  width: 20%;
+  border-radius: 0px !important;
+  visibility: hidden;
+}
+
+.leftimgturtle {
+  width: 50%;
+  margin-top: -5%;
+  margin-left: 5%;
+
+}
+
+.shadow-slide {
+	-webkit-animation: shadow-slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes shadow-slide {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(1000px);
+            transform: translateZ(100px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.45);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes shadow-slide {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(1000px);
+            transform: translateZ(1000px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.45);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
