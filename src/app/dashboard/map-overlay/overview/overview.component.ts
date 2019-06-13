@@ -12,9 +12,9 @@ export class OverviewComponent implements OnInit {
   @Input() onlineSensors: number;
   @Input() warningSensors: number;
   @Input() offlineSensors: number;
-  @Input() onlineAuvs: number;
-  @Input() warningAuvs: number;
-  @Input() offlineAuvs: number;
+  @Input() onlineMobileBuoys: number;
+  @Input() warningMobileBuoys: number;
+  @Input() offlineMobileBuoys: number;
   @Input() totalGroups: number;
   @Input() totalZones: number;
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {BingApiLoaderService} from '../_services/bing-api-loader.service';
 import {SensorBroadcastModel} from '../_models/sensor-broadcast.model';
 import {Observable} from 'rxjs';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
 import {ZoneModel} from '../_models/zone.model';
 
 @Component({
@@ -79,16 +79,17 @@ export class DashboardComponent implements OnInit {
   // }
 
   ngOnInit() {
-    if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
-		  this.router.navigate(['mobiledashboard']);
-	  }
+    if ((navigator.userAgent.indexOf('iPhone') !== -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') !== -1)) {
+      this.router.navigate(['mobiledashboard']);
+    }
     if (screen.width <= 699) {
       this.router.navigate(['mobiledashboard']);
     }
+
     // TODO Replace with API Call to get Sensors
     this.sensors = new Observable(subscriber => {
       subscriber.next([this.practiceData1, this.practiceData2]);
-      let getRandomNumber = (min, max) => {
+      const getRandomNumber = (min, max) => {
         return Math.random() * (max - min) + min;
       };
       setInterval(() => {
@@ -97,13 +98,21 @@ export class DashboardComponent implements OnInit {
         this.practiceData1.currentLocation.long += getRandomNumber(-.00001, .00001);
         this.practiceData2.currentLocation.long += getRandomNumber(-.00001, .00001);
         subscriber.next([this.practiceData1, this.practiceData2]);
-      }, 1000)
+      }, 1000);
     });
 
     this.zones = new Observable(subscriber => {
       subscriber.next([this.practiceZoneData, this.practiceZoneData2]);
       subscriber.complete();
-    })
+    });
+  }
+
+  mapSettings(event) {
+    console.log(event);
+  }
+
+  newZone(event) {
+    console.log(event);
   }
 
 }
