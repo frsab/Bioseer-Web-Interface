@@ -1,199 +1,687 @@
-[debug] [2019-06-13T16:04:41.056Z] ----------------------------------------------------------------------
-[debug] [2019-06-13T16:04:41.058Z] Command:       /home/caelin/.nvm/versions/node/v11.10.0/bin/node /home/caelin/.nvm/versions/node/v11.10.0/bin/firebase deploy --only functions
-[debug] [2019-06-13T16:04:41.058Z] CLI Version:   6.10.0
-[debug] [2019-06-13T16:04:41.058Z] Platform:      linux
-[debug] [2019-06-13T16:04:41.058Z] Node Version:  v11.10.0
-[debug] [2019-06-13T16:04:41.058Z] Time:          Thu Jun 13 2019 09:04:41 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-13T16:04:41.058Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T17:14:18.612Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T17:14:18.614Z] Command:       /home/caelin/.nvm/versions/node/v10.16.0/bin/node /home/caelin/.nvm/versions/node/v10.16.0/bin/firebase serve --only functions
+[debug] [2019-06-13T17:14:18.614Z] CLI Version:   7.0.0
+[debug] [2019-06-13T17:14:18.614Z] Platform:      linux
+[debug] [2019-06-13T17:14:18.614Z] Node Version:  v10.16.0
+[debug] [2019-06-13T17:14:18.614Z] Time:          Thu Jun 13 2019 10:14:18 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-13T17:14:18.614Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-13T16:04:41.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-13T16:04:41.063Z] > authorizing via signed-in user
-[debug] [2019-06-13T16:04:41.064Z] [iam] checking project bioseer-c55f5 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2019-06-13T16:04:41.065Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
+[debug] [2019-06-13T17:14:18.619Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-13T17:14:18.619Z] > authorizing via signed-in user
+[debug] [2019-06-13T17:14:18.619Z] [iam] checking project bioseer-c55f5 for permissions ["firebase.projects.get"]
+[debug] [2019-06-13T17:14:18.620Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
 
-[debug] [2019-06-13T16:04:41.618Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Deploying to 'bioseer-c55f5'...
-[info] 
-[info] i  deploying functions
-[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
-[info] ✔  functions: Finished running predeploy script.
-[debug] [2019-06-13T16:04:43.553Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "eslint .",
-    "serve": "firebase serve --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "main": "./index.js",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "express-jwt": "^5.3.1",
-    "firebase-admin": "~7.0.0",
-    "firebase-functions": "^3.0.1",
-    "http": "0.0.0",
-    "mongoose": "^5.5.15",
-    "path": "^0.12.7",
-    "rootpath": "^0.1.2"
-  },
-  "devDependencies": {
-    "eslint": "^5.12.0",
-    "eslint-plugin-promise": "^4.0.1"
-  },
-  "lint-staged": {
-    "*.{js,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "engines": {
-    "node": "10"
-  },
-  "private": true
-}
-[info] i  functions: ensuring necessary APIs are enabled...
-[debug] [2019-06-13T16:04:43.553Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/bioseer-c55f5?view=CONSUMER_VIEW  
+[debug] [2019-06-13T17:14:19.050Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T17:14:19.055Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
  
-[debug] [2019-06-13T16:04:43.554Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/bioseer-c55f5?view=CONSUMER_VIEW  
+[debug] [2019-06-13T17:14:19.391Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Using node@10 from host.
+[debug] [2019-06-13T17:14:19.406Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
  
-[debug] [2019-06-13T16:04:44.578Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:44.675Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: all necessary APIs are enabled
-[debug] [2019-06-13T16:04:44.677Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
- 
-[debug] [2019-06-13T16:04:45.117Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:45.118Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
- 
-[debug] [2019-06-13T16:04:45.527Z] <<< HTTP RESPONSE 200
-[info] i  functions: preparing functions directory for uploading...
-[debug] [2019-06-13T16:04:45.532Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs  
- 
-[debug] [2019-06-13T16:04:46.658Z] <<< HTTP RESPONSE 200
-[info] i  functions: packaged functions (49.45 KB) for uploading
-[debug] [2019-06-13T16:04:47.057Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/bioseer-c55f5/locations/us-central1/functions:generateUploadUrl  
- 
-[debug] [2019-06-13T16:04:47.541Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:47.543Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-f255a504-dc88-48e7-bf2f-c77e119d14a2/dd7936dc-f7f9-4625-9d89-74ecb82c4332.zip?GoogleAccessId=service-222562557771@gcf-admin-robot.iam.gserviceaccount.com&Expires=1560443687&Signature=c3I2m%2FoFrlrjdZ%2BE7U5MzYwyWlH6BpGIkjilrYpGwCh7Ztk3m2cU18jtxoIQQ5eFUoVqZ%2FDFuKmGJu%2Brv%2B8Fq4Lyu6tF9OFzwR0hGG3UQiKiopf3RHrZlUEqTpoy%2F27hp1qTI3qxz5Zl1e5MEhSqrvpkOgFKyrA5MqJRMPolS%2Bev%2FvsI6dCRAoe%2BIKEsxu17MsXF8PVGKvEqNr5SoWYFSNJBIDjfR%2Bi7ZVfkzB%2FL4a8XZM0Y4nYWFC9i6hNjsxlq4EvNob6FSjieO92%2FvU%2FsgpPIaBSnG%2BmZcEsatu%2FNLPrKNgKsxVJR%2FSR7W%2FTrydOhTOFHSx7evQ%2FvdWSFDMuNCg%3D%3D  
+[debug] [2019-06-13T17:14:19.813Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/home/caelin/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
+[debug] [2019-06-13T17:14:20.035Z] Functions runtime initialized.
+[debug] [2019-06-13T17:14:20.035Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:14:20.092Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/bioseer-c55f5/us-central1/api
+[debug] [2019-06-13T17:14:22.070Z] Accepted request GET /bioseer-c55f5/us-central1/test --> test
+[debug] [2019-06-13T17:14:22.231Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "test"
+[debug] [2019-06-13T17:14:22.232Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:14:22.306Z] firebase-admin has been stubbed.
+[warn] ⚠  Could not find trigger "test" in your functions directory.
+[warn] ⚠  Your function was killed because it raised an unhandled error.
+[debug] [2019-06-13T17:14:29.603Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:14:29.767Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:14:29.768Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:14:29.831Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:14:30.046Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:14:30.046Z] 
+[debug] [2019-06-13T17:14:30.046Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:14:30.052Z] {"socketPath":"/tmp/firebase_emulator_invocation_10084.sock"}
+[debug] [2019-06-13T17:14:30.054Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10084.sock"}
+[debug] [2019-06-13T17:14:30.060Z] Ephemeral server used!
+[debug] [2019-06-13T17:14:30.060Z] Bodyundefined
+[debug] [2019-06-13T17:14:30.065Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:14:52.394Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:14:53.570Z] Functions runtime initialized.
+[debug] [2019-06-13T17:14:53.570Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:14:53.626Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:01.376Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:01.538Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:01.539Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:01.600Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:01.827Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:01.827Z] 
+[debug] [2019-06-13T17:15:01.827Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:01.833Z] {"socketPath":"/tmp/firebase_emulator_invocation_10153.sock"}
+[debug] [2019-06-13T17:15:01.833Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10153.sock"}
+[debug] [2019-06-13T17:15:01.838Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:01.839Z] Bodyundefined
+[debug] [2019-06-13T17:15:01.844Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:15:06.802Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:15:06.991Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:07.157Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:07.158Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:07.219Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:07.447Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:07.447Z] 
+[debug] [2019-06-13T17:15:07.447Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:07.452Z] {"socketPath":"/tmp/firebase_emulator_invocation_10169.sock"}
+[debug] [2019-06-13T17:15:07.453Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10169.sock"}
+[debug] [2019-06-13T17:15:07.458Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:07.459Z] Bodyundefined
+[info] >  
+[debug] [2019-06-13T17:15:07.464Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:15:07.964Z] Functions runtime initialized.
+[debug] [2019-06-13T17:15:07.965Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:08.024Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:14.518Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:14.703Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:14.704Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:14.767Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:14.985Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:14.985Z] 
+[debug] [2019-06-13T17:15:14.985Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:14.989Z] {"socketPath":"/tmp/firebase_emulator_invocation_10200.sock"}
+[debug] [2019-06-13T17:15:14.990Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10200.sock"}
+[debug] [2019-06-13T17:15:14.993Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:14.994Z] Bodyundefined
+[info] >  
+[debug] [2019-06-13T17:15:14.999Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:15:28.288Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:15:29.457Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:29.486Z] Functions runtime initialized.
+[debug] [2019-06-13T17:15:29.486Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:29.566Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:29.659Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:29.660Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:29.723Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:29.941Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:29.941Z] 
+[debug] [2019-06-13T17:15:29.941Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:29.947Z] {"socketPath":"/tmp/firebase_emulator_invocation_10237.sock"}
+[debug] [2019-06-13T17:15:29.947Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10237.sock"}
+[debug] [2019-06-13T17:15:29.952Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:29.954Z] Bodyundefined
+[debug] [2019-06-13T17:15:29.958Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:15:42.375Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:15:43.577Z] Functions runtime initialized.
+[debug] [2019-06-13T17:15:43.578Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:43.634Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:43.974Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:44.135Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:44.136Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:44.203Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:44.424Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:44.424Z] 
+[debug] [2019-06-13T17:15:44.424Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:44.429Z] {"socketPath":"/tmp/firebase_emulator_invocation_10283.sock"}
+[debug] [2019-06-13T17:15:44.429Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10283.sock"}
+[debug] [2019-06-13T17:15:44.433Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:44.434Z] Bodyundefined
+[debug] [2019-06-13T17:15:44.439Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:15:47.666Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:15:48.883Z] Functions runtime initialized.
+[debug] [2019-06-13T17:15:48.884Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:48.952Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:48.987Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:49.173Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:49.176Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:49.237Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:49.454Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:49.454Z] 
+[debug] [2019-06-13T17:15:49.454Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:49.459Z] {"socketPath":"/tmp/firebase_emulator_invocation_10313.sock"}
+[debug] [2019-06-13T17:15:49.459Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10313.sock"}
+[debug] [2019-06-13T17:15:49.463Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:49.464Z] Bodyundefined
+[debug] [2019-06-13T17:15:49.469Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:15:54.270Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:15:55.426Z] Functions runtime initialized.
+[debug] [2019-06-13T17:15:55.427Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:55.442Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:15:55.513Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:55.635Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:15:55.637Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:15:55.699Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:15:55.919Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:15:55.919Z] 
+[debug] [2019-06-13T17:15:55.919Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:15:55.926Z] {"socketPath":"/tmp/firebase_emulator_invocation_10356.sock"}
+[debug] [2019-06-13T17:15:55.926Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10356.sock"}
+[debug] [2019-06-13T17:15:55.931Z] Ephemeral server used!
+[debug] [2019-06-13T17:15:55.932Z] Bodyundefined
+[debug] [2019-06-13T17:15:55.937Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:16:04.022Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:16:04.199Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:16:04.363Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:16:04.364Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:16:04.427Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:16:04.670Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:16:04.670Z] 
+[debug] [2019-06-13T17:16:04.670Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:16:04.676Z] {"socketPath":"/tmp/firebase_emulator_invocation_10384.sock"}
+[debug] [2019-06-13T17:16:04.677Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10384.sock"}
+[debug] [2019-06-13T17:16:04.680Z] Ephemeral server used!
+[debug] [2019-06-13T17:16:04.681Z] Bodyundefined
+[debug] [2019-06-13T17:16:04.686Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:16:05.208Z] Functions runtime initialized.
+[debug] [2019-06-13T17:16:05.209Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:16:05.267Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:16:58.316Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:16:59.504Z] Functions runtime initialized.
+[debug] [2019-06-13T17:16:59.504Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:16:59.562Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:02.401Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:17:02.567Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:17:02.568Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:02.627Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:02.864Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:17:02.864Z] 
+[debug] [2019-06-13T17:17:02.864Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:17:02.869Z] {"socketPath":"/tmp/firebase_emulator_invocation_10566.sock"}
+[debug] [2019-06-13T17:17:02.870Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10566.sock"}
+[debug] [2019-06-13T17:17:02.874Z] Ephemeral server used!
+[debug] [2019-06-13T17:17:02.875Z] Bodyundefined
+[debug] [2019-06-13T17:17:02.880Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:17:08.218Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:17:09.405Z] Functions runtime initialized.
+[debug] [2019-06-13T17:17:09.405Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:09.464Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:09.915Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:17:10.080Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:17:10.082Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:10.141Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:10.364Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:17:10.364Z] 
+[debug] [2019-06-13T17:17:10.364Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:17:10.369Z] {"socketPath":"/tmp/firebase_emulator_invocation_10608.sock"}
+[debug] [2019-06-13T17:17:10.370Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10608.sock"}
+[debug] [2019-06-13T17:17:10.375Z] Ephemeral server used!
+[debug] [2019-06-13T17:17:10.375Z] Bodyundefined
+[debug] [2019-06-13T17:17:10.380Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:17:29.271Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:17:30.523Z] Functions runtime initialized.
+[debug] [2019-06-13T17:17:30.524Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:30.583Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:31.069Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:17:31.230Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:17:31.231Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:31.289Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:31.515Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:17:31.515Z] 
+[debug] [2019-06-13T17:17:31.516Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:17:31.520Z] {"socketPath":"/tmp/firebase_emulator_invocation_10653.sock"}
+[debug] [2019-06-13T17:17:31.520Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10653.sock"}
+[debug] [2019-06-13T17:17:31.524Z] Ephemeral server used!
+[debug] [2019-06-13T17:17:31.525Z] Bodyundefined
+[info] >  
+[debug] [2019-06-13T17:17:31.530Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:17:39.293Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:17:39.478Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:17:39.644Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:17:39.645Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:39.706Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:39.939Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:17:39.940Z] 
+[debug] [2019-06-13T17:17:39.940Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:17:39.946Z] {"socketPath":"/tmp/firebase_emulator_invocation_10672.sock"}
+[debug] [2019-06-13T17:17:39.946Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10672.sock"}
+[debug] [2019-06-13T17:17:39.951Z] Ephemeral server used!
+[debug] [2019-06-13T17:17:39.952Z] Bodyundefined
+[debug] [2019-06-13T17:17:39.958Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:17:40.478Z] Functions runtime initialized.
+[debug] [2019-06-13T17:17:40.478Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:40.534Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:44.185Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:17:45.403Z] Functions runtime initialized.
+[debug] [2019-06-13T17:17:45.405Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:45.418Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:17:45.488Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:45.603Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:17:45.605Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:45.669Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:45.884Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:17:45.884Z] 
+[debug] [2019-06-13T17:17:45.884Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:17:45.889Z] {"socketPath":"/tmp/firebase_emulator_invocation_10715.sock"}
+[debug] [2019-06-13T17:17:45.889Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10715.sock"}
+[debug] [2019-06-13T17:17:45.893Z] Ephemeral server used!
+[debug] [2019-06-13T17:17:45.893Z] Bodyundefined
+[debug] [2019-06-13T17:17:45.898Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:17:54.479Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:17:55.676Z] Functions runtime initialized.
+[debug] [2019-06-13T17:17:55.677Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:55.739Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:56.829Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:17:56.996Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:17:56.997Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:17:57.058Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:17:57.286Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:17:57.287Z] 
+[debug] [2019-06-13T17:17:57.287Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:17:57.291Z] {"socketPath":"/tmp/firebase_emulator_invocation_10763.sock"}
+[debug] [2019-06-13T17:17:57.291Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10763.sock"}
+[debug] [2019-06-13T17:17:57.295Z] Ephemeral server used!
+[debug] [2019-06-13T17:17:57.295Z] Bodyundefined
+[debug] [2019-06-13T17:17:57.300Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:18:02.591Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:18:02.772Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:18:02.932Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:18:02.933Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:18:02.991Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:18:03.213Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:18:03.214Z] 
+[debug] [2019-06-13T17:18:03.214Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:18:03.220Z] {"socketPath":"/tmp/firebase_emulator_invocation_10781.sock"}
+[debug] [2019-06-13T17:18:03.220Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10781.sock"}
+[debug] [2019-06-13T17:18:03.226Z] Ephemeral server used!
+[debug] [2019-06-13T17:18:03.226Z] Bodyundefined
+[debug] [2019-06-13T17:18:03.234Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:18:03.790Z] Functions runtime initialized.
+[debug] [2019-06-13T17:18:03.790Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:18:03.848Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:18:49.237Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:18:50.440Z] Functions runtime initialized.
+[debug] [2019-06-13T17:18:50.440Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:18:50.502Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:18:53.025Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:18:53.214Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:18:53.215Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:18:53.276Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:18:53.501Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:18:53.501Z] 
+[debug] [2019-06-13T17:18:53.502Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:18:53.506Z] {"socketPath":"/tmp/firebase_emulator_invocation_10919.sock"}
+[debug] [2019-06-13T17:18:53.506Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10919.sock"}
+[debug] [2019-06-13T17:18:53.510Z] Ephemeral server used!
+[debug] [2019-06-13T17:18:53.511Z] Bodyundefined
+[debug] [2019-06-13T17:18:53.516Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:18:56.177Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:18:57.381Z] Functions runtime initialized.
+[debug] [2019-06-13T17:18:57.382Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:18:57.441Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:18:58.293Z] Accepted request GET /bioseer-c55f5/us-central1/api/test --> api
+[debug] [2019-06-13T17:18:58.454Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:18:58.455Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:18:58.515Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:18:58.739Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:18:58.739Z] 
+[debug] [2019-06-13T17:18:58.739Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:18:58.745Z] {"socketPath":"/tmp/firebase_emulator_invocation_10957.sock"}
+[debug] [2019-06-13T17:18:58.746Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_10957.sock"}
+[debug] [2019-06-13T17:18:58.750Z] Ephemeral server used!
+[debug] [2019-06-13T17:18:58.751Z] Bodyundefined
+[debug] [2019-06-13T17:18:58.757Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:21:18.382Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:21:19.557Z] Functions runtime initialized.
+[debug] [2019-06-13T17:21:19.558Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:19.615Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:24.366Z] Accepted request GET /bioseer-c55f5/us-central1/api/api --> api
+[debug] [2019-06-13T17:21:24.527Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:21:24.529Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:24.590Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:24.810Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:21:24.810Z] 
+[debug] [2019-06-13T17:21:24.810Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:21:24.815Z] {"socketPath":"/tmp/firebase_emulator_invocation_11201.sock"}
+[debug] [2019-06-13T17:21:24.815Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11201.sock"}
+[debug] [2019-06-13T17:21:24.820Z] Ephemeral server used!
+[debug] [2019-06-13T17:21:24.821Z] Bodyundefined
+[debug] [2019-06-13T17:21:24.826Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:21:28.310Z] Accepted request GET /bioseer-c55f5/us-central1/api/ --> api
+[debug] [2019-06-13T17:21:28.477Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:21:28.478Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:28.539Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:28.772Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:21:28.772Z] 
+[debug] [2019-06-13T17:21:28.772Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:21:28.776Z] {"socketPath":"/tmp/firebase_emulator_invocation_11215.sock"}
+[debug] [2019-06-13T17:21:28.776Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11215.sock"}
+[debug] [2019-06-13T17:21:28.780Z] Ephemeral server used!
+[debug] [2019-06-13T17:21:28.781Z] Bodyundefined
+[debug] [2019-06-13T17:21:28.782Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:21:38.655Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:21:39.822Z] Functions runtime initialized.
+[debug] [2019-06-13T17:21:39.823Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:39.882Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:40.666Z] Accepted request GET /bioseer-c55f5/us-central1/api/ --> api
+[debug] [2019-06-13T17:21:40.844Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:21:40.845Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:40.905Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:41.131Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:21:41.132Z] 
+[debug] [2019-06-13T17:21:41.132Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:21:41.138Z] {"socketPath":"/tmp/firebase_emulator_invocation_11256.sock"}
+[debug] [2019-06-13T17:21:41.138Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11256.sock"}
+[debug] [2019-06-13T17:21:41.142Z] Ephemeral server used!
+[debug] [2019-06-13T17:21:41.143Z] Bodyundefined
+[debug] [2019-06-13T17:21:41.147Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:21:51.287Z] Accepted request GET /bioseer-c55f5/us-central1/api --> api
+[debug] [2019-06-13T17:21:51.451Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:21:51.452Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:51.518Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:51.733Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:21:51.733Z] 
+[debug] [2019-06-13T17:21:51.733Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:21:51.739Z] {"socketPath":"/tmp/firebase_emulator_invocation_11279.sock"}
+[debug] [2019-06-13T17:21:51.739Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11279.sock"}
+[debug] [2019-06-13T17:21:51.744Z] Ephemeral server used!
+[debug] [2019-06-13T17:21:51.744Z] Bodyundefined
+[debug] [2019-06-13T17:21:51.750Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:21:56.830Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:21:58.019Z] Functions runtime initialized.
+[debug] [2019-06-13T17:21:58.020Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:58.078Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:58.372Z] Accepted request GET /bioseer-c55f5/us-central1/api --> api
+[debug] [2019-06-13T17:21:58.532Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:21:58.533Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:21:58.591Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:21:58.809Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:21:58.809Z] 
+[debug] [2019-06-13T17:21:58.809Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:21:58.814Z] {"socketPath":"/tmp/firebase_emulator_invocation_11320.sock"}
+[debug] [2019-06-13T17:21:58.814Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11320.sock"}
+[debug] [2019-06-13T17:21:58.818Z] Ephemeral server used!
+[debug] [2019-06-13T17:21:58.818Z] Bodyundefined
+[debug] [2019-06-13T17:21:58.823Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:23:10.487Z] Accepted request GET /bioseer-c55f5/us-central1/api --> api
+[debug] [2019-06-13T17:23:10.648Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:23:10.649Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:23:10.708Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:23:10.924Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:23:10.924Z] 
+[debug] [2019-06-13T17:23:10.925Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:23:10.929Z] {"socketPath":"/tmp/firebase_emulator_invocation_11362.sock"}
+[debug] [2019-06-13T17:23:10.929Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11362.sock"}
+[debug] [2019-06-13T17:23:10.932Z] Ephemeral server used!
+[debug] [2019-06-13T17:23:10.933Z] Bodyundefined
+[debug] [2019-06-13T17:23:10.938Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:25:19.492Z] Accepted request POST /bioseer-c55f5/us-central1/apiusers/register --> apiusers
+[debug] [2019-06-13T17:25:19.654Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "apiusers"
+[debug] [2019-06-13T17:25:19.655Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:25:19.716Z] firebase-admin has been stubbed.
+[warn] ⚠  Could not find trigger "apiusers" in your functions directory.
+[warn] ⚠  Your function was killed because it raised an unhandled error.
+[debug] [2019-06-13T17:25:26.967Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/register --> api
+[debug] [2019-06-13T17:25:27.123Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:25:27.124Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:25:27.191Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:25:27.411Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:25:27.411Z] 
+[debug] [2019-06-13T17:25:27.411Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:25:27.415Z] {"socketPath":"/tmp/firebase_emulator_invocation_11580.sock"}
+[debug] [2019-06-13T17:25:27.415Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11580.sock"}
+[debug] [2019-06-13T17:25:27.427Z] Ephemeral server used!
+[debug] [2019-06-13T17:25:27.428Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:25:27.432Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:26:50.748Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:26:51.942Z] Functions runtime initialized.
+[debug] [2019-06-13T17:26:51.942Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:26:51.999Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:27:05.817Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-13T17:27:05.974Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:27:05.975Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:27:06.034Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:27:06.249Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:27:06.250Z] 
+[debug] [2019-06-13T17:27:06.250Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:27:06.256Z] {"socketPath":"/tmp/firebase_emulator_invocation_11778.sock"}
+[debug] [2019-06-13T17:27:06.257Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_11778.sock"}
+[debug] [2019-06-13T17:27:06.269Z] Ephemeral server used!
+[debug] [2019-06-13T17:27:06.269Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:27:06.273Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:29:30.151Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:29:30.156Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/index.js changed, reloading triggers
+[debug] [2019-06-13T17:29:30.162Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/users.controller.js changed, reloading triggers
+[debug] [2019-06-13T17:29:31.342Z] Functions runtime initialized.
+[debug] [2019-06-13T17:29:31.343Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:29:31.404Z] firebase-admin has been stubbed.
+[warn] ⚠  /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js:10
+  })
+   ^
 
-[debug] [2019-06-13T16:04:48.155Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: functions folder uploaded successfully
-[debug] [2019-06-13T16:04:48.159Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/bioseer-c55f5/locations/-/functions  
- 
-[debug] [2019-06-13T16:04:48.804Z] <<< HTTP RESPONSE 200
-[info] i  functions: updating Node.js 10 (Beta) function converter(us-central1)...
-[debug] [2019-06-13T16:04:48.808Z] Trigger is:  {"httpsTrigger":{}}
-[debug] [2019-06-13T16:04:48.809Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudscheduler.googleapis.com/projectSettings/bioseer-c55f5?view=CONSUMER_VIEW  
- 
-[debug] [2019-06-13T16:04:49.770Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:49.772Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/bioseer-c55f5/locations/us-central1/functions/converter {"updateMask":"sourceUploadUrl,name,labels,runtime,httpsTrigger"} 
+SyntaxError: Unexpected token )
+    at Module._compile (internal/modules/cjs/loader.js:721:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/caelin/Github/Bioseer-Web-Interface/functions/index.js:6:13)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-06-13T17:29:33.940Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-13T17:29:34.102Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:29:34.103Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:29:34.164Z] firebase-admin has been stubbed.
+[warn] ⚠  /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js:10
+  })
+   ^
 
-[debug] [2019-06-13T16:04:50.341Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:50.345Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/bioseer-c55f5/locations/-/functions  
- 
-[debug] [2019-06-13T16:04:51.061Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:51.063Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:04:51.450Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:53.454Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:04:53.856Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:55.859Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:04:56.233Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:04:58.237Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:04:58.616Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:00.619Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:01.079Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:03.082Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:03.440Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:05.443Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:05.822Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:07.825Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:08.192Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:10.194Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:10.557Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:12.561Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:13.202Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:15.203Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:15.679Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:17.681Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:18.042Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:20.045Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:20.802Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:22.803Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:23.168Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:25.171Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:25.497Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:27.500Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:27.861Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:29.863Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:30.282Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:32.285Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:32.639Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:34.640Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:35.032Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:37.035Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:37.345Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:39.348Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:39.719Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:41.723Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:42.101Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:44.104Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:44.456Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:46.459Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:46.829Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:48.834Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:49.234Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:51.237Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:51.615Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:53.618Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:53.978Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:55.979Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:56.368Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:05:58.371Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:05:58.746Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:06:00.747Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:06:01.117Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:06:03.118Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:06:03.528Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:06:05.532Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:06:05.899Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:06:07.903Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
-[debug] [2019-06-13T16:06:08.207Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-13T16:06:10.210Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/Ymlvc2Vlci1jNTVmNS91cy1jZW50cmFsMS9jb252ZXJ0ZXIvb25MeUdLMWJLbG8  
- 
+SyntaxError: Unexpected token )
+    at Module._compile (internal/modules/cjs/loader.js:721:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/caelin/Github/Bioseer-Web-Interface/functions/index.js:6:13)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-06-13T17:29:43.378Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/helpers/jwt.js changed, reloading triggers
+[debug] [2019-06-13T17:29:44.573Z] Functions runtime initialized.
+[debug] [2019-06-13T17:29:44.574Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:29:44.635Z] firebase-admin has been stubbed.
+[warn] ⚠  Error: Cannot find module './api/helpers/jwt'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/caelin/Github/Bioseer-Web-Interface/functions/api/users/users.controller.js:4:13)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/caelin/Github/Bioseer-Web-Interface/functions/index.js:18:19)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-06-13T17:30:00.369Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/users.controller.js changed, reloading triggers
+[debug] [2019-06-13T17:30:01.563Z] Functions runtime initialized.
+[debug] [2019-06-13T17:30:01.564Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:01.621Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:05.563Z] File /home/caelin/Github/Bioseer-Web-Interface/functions/api/users/users.controller.js changed, reloading triggers
+[debug] [2019-06-13T17:30:06.754Z] Functions runtime initialized.
+[debug] [2019-06-13T17:30:06.754Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:06.810Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:11.632Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-13T17:30:11.801Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:30:11.801Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:11.862Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:12.080Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:30:12.080Z] 
+[debug] [2019-06-13T17:30:12.080Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:30:12.085Z] {"socketPath":"/tmp/firebase_emulator_invocation_12128.sock"}
+[debug] [2019-06-13T17:30:12.085Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12128.sock"}
+[debug] [2019-06-13T17:30:12.096Z] Ephemeral server used!
+[debug] [2019-06-13T17:30:12.097Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:30:12.100Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:30:20.401Z] Accepted request GET /bioseer-c55f5/us-central1/api/current --> api
+[debug] [2019-06-13T17:30:20.577Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:30:20.578Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:20.636Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:20.855Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:30:20.855Z] 
+[debug] [2019-06-13T17:30:20.855Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:30:20.861Z] {"socketPath":"/tmp/firebase_emulator_invocation_12149.sock"}
+[debug] [2019-06-13T17:30:20.862Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12149.sock"}
+[debug] [2019-06-13T17:30:20.872Z] Ephemeral server used!
+[debug] [2019-06-13T17:30:20.872Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:30:20.874Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:30:30.913Z] Accepted request GET /bioseer-c55f5/us-central1/api/users/current --> api
+[debug] [2019-06-13T17:30:31.077Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:30:31.078Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:31.139Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:31.367Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:30:31.367Z] 
+[debug] [2019-06-13T17:30:31.367Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:30:31.372Z] {"socketPath":"/tmp/firebase_emulator_invocation_12168.sock"}
+[debug] [2019-06-13T17:30:31.372Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12168.sock"}
+[debug] [2019-06-13T17:30:31.384Z] Ephemeral server used!
+[debug] [2019-06-13T17:30:31.385Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:30:31.389Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:30:40.058Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/register --> api
+[debug] [2019-06-13T17:30:40.229Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:30:40.230Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:40.288Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:40.521Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:30:40.521Z] 
+[debug] [2019-06-13T17:30:40.521Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:30:40.527Z] {"socketPath":"/tmp/firebase_emulator_invocation_12186.sock"}
+[debug] [2019-06-13T17:30:40.527Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12186.sock"}
+[debug] [2019-06-13T17:30:40.538Z] Ephemeral server used!
+[debug] [2019-06-13T17:30:40.539Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:30:40.542Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:30:45.136Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/login --> api
+[debug] [2019-06-13T17:30:45.296Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:30:45.297Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:45.355Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:45.572Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:30:45.572Z] 
+[debug] [2019-06-13T17:30:45.572Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:30:45.579Z] {"socketPath":"/tmp/firebase_emulator_invocation_12201.sock"}
+[debug] [2019-06-13T17:30:45.579Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12201.sock"}
+[debug] [2019-06-13T17:30:45.591Z] Ephemeral server used!
+[debug] [2019-06-13T17:30:45.592Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:30:45.594Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:30:52.540Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T17:30:52.705Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:30:52.706Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:30:52.770Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:30:53.000Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:30:53.000Z] 
+[debug] [2019-06-13T17:30:53.000Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:30:53.006Z] {"socketPath":"/tmp/firebase_emulator_invocation_12217.sock"}
+[debug] [2019-06-13T17:30:53.006Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12217.sock"}
+[debug] [2019-06-13T17:30:53.017Z] Ephemeral server used!
+[debug] [2019-06-13T17:30:53.017Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:30:53.020Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:31:35.101Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/authenticate --> api
+[debug] [2019-06-13T17:31:35.269Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:31:35.270Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:31:35.331Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:31:35.548Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:31:35.548Z] 
+[debug] [2019-06-13T17:31:35.548Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:31:35.552Z] {"socketPath":"/tmp/firebase_emulator_invocation_12257.sock"}
+[debug] [2019-06-13T17:31:35.552Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12257.sock"}
+[debug] [2019-06-13T17:31:35.562Z] Ephemeral server used!
+[debug] [2019-06-13T17:31:35.563Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:31:35.565Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:31:41.518Z] Accepted request POST /bioseer-c55f5/us-central1/api/users/current --> api
+[debug] [2019-06-13T17:31:41.687Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:31:41.688Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:31:41.753Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:31:41.973Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:31:41.974Z] 
+[debug] [2019-06-13T17:31:41.974Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:31:41.978Z] {"socketPath":"/tmp/firebase_emulator_invocation_12272.sock"}
+[debug] [2019-06-13T17:31:41.979Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12272.sock"}
+[debug] [2019-06-13T17:31:41.989Z] Ephemeral server used!
+[debug] [2019-06-13T17:31:41.990Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:31:41.991Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-13T17:31:46.314Z] Accepted request GET /bioseer-c55f5/us-central1/api/users/current --> api
+[debug] [2019-06-13T17:31:46.479Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-13T17:31:46.480Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-13T17:31:46.540Z] firebase-admin has been stubbed.
+[debug] [2019-06-13T17:31:46.765Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-13T17:31:46.765Z] 
+[debug] [2019-06-13T17:31:46.765Z] Running api in mode HTTPS
+[debug] [2019-06-13T17:31:46.771Z] {"socketPath":"/tmp/firebase_emulator_invocation_12287.sock"}
+[debug] [2019-06-13T17:31:46.771Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_12287.sock"}
+[debug] [2019-06-13T17:31:46.782Z] Ephemeral server used!
+[debug] [2019-06-13T17:31:46.782Z] Bodyusername=register5&password=test&firstName=Register4&lastName=Test
+[debug] [2019-06-13T17:31:46.785Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s

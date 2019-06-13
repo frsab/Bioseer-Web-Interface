@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const userService = require('./user.service');
+const jwt = require('../helpers/jwt');
 
 // routes
 // Note if testing routes with postman, be sure to put key into Authorization tab
 router.post('/authenticate', authenticate);
 router.post('/register', register);
 router.get('/', getAll);
-router.get('/current', getCurrent);
-router.get('/:id', getById);
-router.put('/:id', update);
-router.delete('/:id', _delete);
+router.get('/current', jwt(), getCurrent);
+router.get('/:id', jwt(), getById);
+router.put('/:id', jwt(), update);
+router.delete('/:id', jwt(), _delete);
 
 module.exports = router;
 

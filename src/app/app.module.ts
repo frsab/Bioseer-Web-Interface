@@ -30,6 +30,7 @@ import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { FileUploadComponent } from './shared/file-upload/file-upload.component';
 import { RegisterComponent } from './user/register/register.component';
 import { MobiledashboardComponent } from './mobiledashboard/mobiledashboard.component';
+import { AuthFormsComponent } from './shared/auth-forms/auth-forms.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MobiledashboardComponent } from './mobiledashboard/mobiledashboard.comp
     UploadImagesComponent,
     FileUploadComponent,
     RegisterComponent,
-    MobiledashboardComponent
+    MobiledashboardComponent,
+    AuthFormsComponent
   ],
   imports: [
     BrowserModule,

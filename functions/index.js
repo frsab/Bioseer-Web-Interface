@@ -6,29 +6,37 @@ const bodyParser = require('body-parser');
 const jwt = require('./api/helpers/jwt');
 const errorHandler = require('./api/helpers/error-handler');
 const functions = require("firebase-functions");
+const admin = require('firebase-admin');
+
+admin.initializeApp();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-// use JWT auth to secure the api
-app.use(jwt());
-
 // api routes
 app.use('/users', require('./api/users/users.controller'));
-app.use('/images', require('./api/images/images.controller'));
+app.use('/api/images', jwt(), require('./api/images/images.controller'));
+
+app.get('/test', (req, res) => {
+  console.log(req.auth);
+  res.send('Authorized')
+});
 
 // global error handler
 app.use(errorHandler);
 
-const converter = functions.https.onRequest((req, res) => {
-  if (!req.path) {
-    req.url = `/${req.url}` // prepend '/' to keep query params if any
+app.use(function(err, req, res, next) { res.status(err.status || 500).send(err); });
+
+const api = functions.https.onRequest((request, response) => {
+  if (!request.path) {
+    request.url = `/${request.url}`; // Prepend '/' to keep query params if any
   }
-  return app(req, res)
+
+  return app(request, response);
 });
 
 // Configure Firebase Server
 module.exports = {
-  converter
+  api
 };
