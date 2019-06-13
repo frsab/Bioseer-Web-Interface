@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {BingApiLoaderService} from '../_services/bing-api-loader.service';
 import {SensorBroadcastModel} from '../_models/sensor-broadcast.model';
 import {Observable} from 'rxjs';
@@ -14,6 +14,14 @@ export class DashboardComponent implements OnInit {
   mapLoaded = false;
   sensors: Observable<Array<SensorBroadcastModel>>; // All Loaded Sensors
   zones: Observable<Array<ZoneModel>>;
+  onlineSensors: number;
+  warningSensors: number;
+  offlineSensors: number;
+  onlineMobileBuoys: number;
+  warningMobileBuoys: number;
+  offlineMobileBuoys: number;
+  totalGroups: number;
+  totalZones: number;
 
   // Blank Data for practice
   practiceData1: SensorBroadcastModel = {
@@ -41,7 +49,7 @@ export class DashboardComponent implements OnInit {
     status: 'Good',
   };
 
-  practiceZoneData: ZoneModel = {
+  practiceZoneData1: ZoneModel = {
     zoneHealth: 'good',
     zoneId: '1',
     zoneName: '1',
@@ -86,9 +94,12 @@ export class DashboardComponent implements OnInit {
       this.router.navigate(['mobiledashboard']);
     }
 
+    const exampleSensor = [this.practiceData1, this.practiceData2];
+    const exampleZone = [this.practiceZoneData1, this.practiceZoneData2]
+
     // TODO Replace with API Call to get Sensors
     this.sensors = new Observable(subscriber => {
-      subscriber.next([this.practiceData1, this.practiceData2]);
+      subscriber.next(exampleSensor);
       const getRandomNumber = (min, max) => {
         return Math.random() * (max - min) + min;
       };
@@ -102,7 +113,7 @@ export class DashboardComponent implements OnInit {
     });
 
     this.zones = new Observable(subscriber => {
-      subscriber.next([this.practiceZoneData, this.practiceZoneData2]);
+      subscriber.next(exampleZone);
       subscriber.complete();
     });
   }
