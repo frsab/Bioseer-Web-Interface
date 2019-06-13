@@ -9,7 +9,7 @@ import { map, switchMap, take, delay } from 'rxjs/operators';
  */
 @Injectable()
 export class SiteConditionsService {
-  center: BehaviorSubject<number[]> = new BehaviorSubject<number[]>([41.49871231510167, -72.95581850473526]); // doesn't work
+  center: BehaviorSubject<number[]> = new BehaviorSubject<number[]>([38.616070, -121.304723]); // doesn't work
 
   center$ = this.center.asObservable(); // Reference {@link BingMapComponent}
 

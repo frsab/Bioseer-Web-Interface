@@ -3,6 +3,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import { filter, take } from 'rxjs/operators';
 import { SiteConditionsService } from '../../_services/site-conditions.service';
 import {SensorBroadcastModel} from '../../_models/sensor-broadcast.model';
+import {group} from '@angular/animations';
 
 // Needed to reference typescript for microsoft object
 /// <reference path="types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
@@ -78,6 +79,9 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
         }
       });
     }
+
+    let locations = this.createArrayOfLocations([38.618394, -121.305682, 38.617571, -121.305246, 38.617477, -121.305792, 38.618365, -121.306204])
+    this.createRectangle(locations, 'rgba(78, 244, 66, .4)', 'white', 5)
   }
 
   /**
@@ -91,10 +95,10 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
         // @ts-ignore
         credentials: 'AukHSv0yxiZQnvbYs4szic5RfGEmKxhaSLCmRZ5PV8UmgQWI11uH2Mo5_sWDh8l8',
         // @ts-ignore
-        center: new Microsoft.Maps.Location(51.50632, -0.12714),
+        center: new Microsoft.Maps.Location(38.616070, -121.304723),
         // @ts-ignore
         mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-        zoom: 10
+        zoom: 15
       }
     );
     // @ts-ignore
@@ -135,6 +139,31 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       anchor: new Microsoft.Maps.Point(radius, radius),
       // htmlContent: '<h1>Test</h1>'
     });
+  }
+
+  // @ts-ignore
+  createRectangle(location: Array<Microsoft.Maps.Location>, fillColor, strokeColor, strokeWidth) {
+    // @ts-ignore
+    const polygon = new Microsoft.Maps.Polygon(location, {
+      fillColor: fillColor,
+      strokeColor: strokeColor,
+      strokeThickness: strokeWidth
+    });
+    this.map.entities.push(polygon)
+  }
+
+  createArrayOfLocations(location: Array<number>) {
+    let groupsOfCoordinates: Array<Array<number>> = [];
+    // @ts-ignore
+    let groupsOfLocations: Array<any> = [];
+    for (let i = 0; i < location.length; i+=2) {
+      groupsOfCoordinates.push(location.slice(i, i+2));
+    }
+    for (let i = 0; i < groupsOfCoordinates.length; i++) {
+      // @ts-ignore
+      groupsOfLocations.push(new Microsoft.Maps.Location(groupsOfCoordinates[i][0], groupsOfCoordinates[i][1]))
+    }
+    return groupsOfLocations;
   }
 
   /**
