@@ -5,6 +5,7 @@ import { SiteConditionsService } from '../../_services/site-conditions.service';
 import {SensorBroadcastModel} from '../../_models/sensor-broadcast.model';
 import {group} from '@angular/animations';
 import {BingMapsService} from '../../_services/bing-maps.service';
+import {ZoneModel} from '../../_models/zone.model';
 
 // Needed to reference typescript for microsoft object
 /// <reference path="types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
@@ -20,6 +21,7 @@ import {BingMapsService} from '../../_services/bing-maps.service';
 export class BingMapComponent implements OnChanges, AfterViewInit  {
 
   @Input() sensors: Observable<[SensorBroadcastModel]>;
+  @Input() zones: Observable<[ZoneModel]>;
 
   // References bingMap on the DOM
   @ViewChild('bingMap') streetsideMapViewChild: ElementRef;
@@ -84,8 +86,17 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       });
     }
 
-    let locations = this.bingMaps.createArrayOfLocations([38.618394, -121.305682, 38.617571, -121.305246, 38.617477, -121.305792, 38.618365, -121.306204])
-    this.bingMaps.createRectangle(locations, 'rgba(78, 244, 66, .4)', 'white', 5, this.map)
+    if (this.zones) {
+      this.zones.subscribe((currentZones: [ZoneModel]) => {
+        for (let i of Object.keys(currentZones)) {
+          const selectedZone: ZoneModel = currentZones[i];
+          this.bingMaps.handleRectangle(selectedZone.location, selectedZone.zoneHealth, this.map);
+        }
+      })
+    }
+
+    // let locations = this.bingMaps.createArrayOfLocations([38.618394, -121.305682, 38.617571, -121.305246, 38.617477, -121.305792, 38.618365, -121.306204])
+    // this.bingMaps.createRectangle(locations, 'rgba(78, 244, 66, .4)', 'white', 5, this.map)
   }
 
   /**

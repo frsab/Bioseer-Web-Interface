@@ -1,3 +1,6 @@
+/**
+ * Handles some of the more complex parts of bing maps creation, such as adding pins or rectangles
+ */
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -39,17 +42,29 @@ export class BingMapsService {
     });
   }
 
+  /**
+   * Creates a rectangle and pushes it to the map
+   * @param location: Array of Microsoft Maps Locations to draw points
+   * @param fillColor Fill in rgba
+   * @param strokeColor Color  such as `white`
+   * @param strokeWidth Width of stroke in pixels
+   * @param map Map object that's being appended too
+   */
   // @ts-ignore
-  createRectangle(location: Array<Microsoft.Maps.Location>, fillColor, strokeColor, strokeWidth, map) {
+  createRectangle(location: Array<Microsoft.Maps.Location>, fillColor, map, strokeColor?, strokeWidth?, ) {
     // @ts-ignore
     const polygon = new Microsoft.Maps.Polygon(location, {
       fillColor: fillColor,
-      strokeColor: strokeColor,
-      strokeThickness: strokeWidth
+      strokeColor: strokeColor ? strokeColor : 'white',
+      strokeThickness: strokeWidth ? strokeWidth : 3
     });
     map.entities.push(polygon)
   }
 
+  /**
+   * Creates an array of Microsoft locations
+   * @param location Array of coordinates `[-32, -43.3, -12, 12]`
+   */
   createArrayOfLocations(location: Array<number>) {
     let groupsOfCoordinates: Array<Array<number>> = [];
     // @ts-ignore
@@ -64,12 +79,31 @@ export class BingMapsService {
     return groupsOfLocations;
   }
 
+  handleRectangle(location: Array<number>, fillColor, map, strokeColor?, strokeWidth?) {
+    switch (fillColor) {
+      case 'good':
+        fillColor = 'rgba(55, 204, 44, .4)';
+        break;
+      case 'average':
+        fillColor = 'rgba(255, 255, 2, .4)';
+        break;
+      case 'bad':
+        fillColor = 'rgba(255, 27, 1, .4)';
+        break;
+      default:
+        fillColor = 'rgbagood(36, 115, 242, .4)'
+    }
+
+    this.createRectangle(this.createArrayOfLocations(location), fillColor, map, strokeColor, strokeWidth, )
+  }
+
   /**
    * Update Pin Position Based on Sensor ID
    * @param coordX New x Coordinate
    * @param coordY new y coordinate
    * @param pushpinID SensorID
    * @param sensorName Name of the sensor
+   * @param map Bing Map Instance
    */
   handlePushPin(coordX: number, coordY: number, pushpinID: string, sensorName: string, map) {
     for (let i = map.entities.getLength() - 1; i >= 0; i--) {

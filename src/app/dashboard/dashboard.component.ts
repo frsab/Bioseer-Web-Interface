@@ -3,6 +3,7 @@ import {BingApiLoaderService} from '../_services/bing-api-loader.service';
 import {SensorBroadcastModel} from '../_models/sensor-broadcast.model';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router'
+import {ZoneModel} from '../_models/zone.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +13,7 @@ import {Router} from '@angular/router'
 export class DashboardComponent implements OnInit {
   mapLoaded = false;
   sensors: Observable<[SensorBroadcastModel]>; // All Loaded Sensors
+  zones: Observable<[ZoneModel]>;
 
   // Blank Data for practice
   practiceData1: SensorBroadcastModel = {
@@ -39,6 +41,13 @@ export class DashboardComponent implements OnInit {
     status: 'Good',
   };
 
+  practiceZoneData: ZoneModel = {
+    zoneHealth: 'good',
+    zoneId: '18942384923',
+    zoneName: '10',
+    location: [38.615847, -121.303725, 38.615137, -121.304004, 38.617477, -121.305792, 38.618365, -121.306204, 38.618394, -121.305682, 38.617571, -121.305246,  ]
+  };
+
   // ------------------------------
 
   constructor(
@@ -63,6 +72,10 @@ export class DashboardComponent implements OnInit {
         subscriber.next([this.practiceData2]);
       }, 7000);
     });
+
+    this.zones = new Observable(subscriber => {
+      subscriber.next([this.practiceZoneData]);
+    })
   }
 
 }
