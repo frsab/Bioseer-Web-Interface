@@ -1,137 +1,33 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-import { HttpClient, HttpResponse, HttpRequest,
-  HttpEventType, HttpErrorResponse } from '@angular/common/http';
-import { Subscription } from 'rxjs/Subscription';
-import { of } from 'rxjs/observable/of';
-import { catchError, last, map, tap } from 'rxjs/operators';
+import * as Uppy from '@uppy/core';
+import * as FileInput from '@uppy/file-input';
+import * as XHRUpload from '@uppy/xhr-upload'
+import * as ProgressBar from '@uppy/progress-bar';
 
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      state('in', style({ opacity: 100 })),
-      transition('* => void', [
-        animate(300, style({ opacity: 0 }))
-      ])
-    ])
-  ]
 })
 export class FileUploadComponent implements OnInit {
+  ngOnInit(): void {
 
-  /** Link text */
-  @Input() text = 'Upload';
-  /** Name used in form which will be sent in HTTP request. */
-  @Input() param = 'file';
-  /**
-   * Target URL for file uploading. Make sure you have corsproxy installed.
-   * `npm i -g corsproxy`
-   * `corsproxy`
-   */
-  @Input() target = 'http://3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
-  /**
-   *   File extension that accepted, same as 'accept' of <input type="file" />.
-   *  By the default, it's set to 'image
-   */
-  @Input() accept = 'image/*';
-  /** Allow you to add handler after its completion. Bubble up response text from remote. */
-  @Output() complete = new EventEmitter<object>();
-
-  @Output() clicked = new EventEmitter<boolean>();
-
-  public files: Array<FileUploadModel> = [];
-
-  constructor(private _http: HttpClient) { }
-
-  ngOnInit() {
-  }
-
-  onClick() {
-    const fileUpload = document.getElementById('fileUpload') as HTMLInputElement;
-    fileUpload.onchange = () => {
-      for (let index = 0; index < fileUpload.files.length; index++) {
-        const file = fileUpload.files[index];
-        this.files.push({ data: file, state: 'in',
-          inProgress: false, progress: 0, canRetry: false, canCancel: true });
-      }
-      this.uploadFiles();
-    };
-    this.clicked.emit(true);
-    fileUpload.click();
-  }
-
-  cancelFile(file: FileUploadModel) {
-    file.sub.unsubscribe();
-    this.removeFileFromArray(file);
-  }
-
-  retryFile(file: FileUploadModel) {
-    this.uploadFile(file);
-    file.canRetry = false;
-  }
-
-  private uploadFile(file: FileUploadModel) {
-    const fd = new FormData();
-    fd.append(this.param, file.data);
-
-    const req = new HttpRequest('POST', this.target, fd, {
-      reportProgress: true
+    // @ts-ignore
+    const uppy = new Uppy({ debug: true, autoProceed: true });
+    uppy.use(FileInput, { target: '.UppyForm', replaceTargetContent: true });
+    uppy.use(XHRUpload, {
+      endpoint: 'http://localhost:1337///api2.transloadit.com',
+      formData: true,
+      fieldName: 'files[]'
     });
+    uppy.use(ProgressBar, {
+      target: 'body',
+      fixed: true,
+      hideAfterFinish: false
+    })
 
-    file.inProgress = true;
-    file.sub = this._http.request(req).pipe(
-      map(event => {
-        switch (event.type) {
-          case HttpEventType.UploadProgress:
-            file.progress = Math.round(event.loaded * 100 / event.total);
-            break;
-          case HttpEventType.Response:
-            return event;
-        }
-      }),
-      tap(message => { }),
-      last(),
-      catchError((error: HttpErrorResponse) => {
-        file.inProgress = false;
-        file.canRetry = true;
-        return of(`${file.data.name} upload failed.`);
-      })
-    ).subscribe(
-      (event: any) => {
-        if (typeof (event) === 'object') {
-          this.removeFileFromArray(file);
-          this.complete.emit(event.body);
-        }
-      }
-    );
+    console.log('Uppy with Formtag and XHRUpload is loaded')
   }
 
-  private uploadFiles() {
-    const fileUpload = document.getElementById('fileUpload') as HTMLInputElement;
-    fileUpload.value = '';
 
-    this.files.forEach(file => {
-      this.uploadFile(file);
-    });
-  }
-
-  private removeFileFromArray(file: FileUploadModel) {
-    const index = this.files.indexOf(file);
-    if (index > -1) {
-      this.files.splice(index, 1);
-    }
-  }
-
-}
-
-export class FileUploadModel {
-  data: File;
-  state: string;
-  inProgress: boolean;
-  progress: number;
-  canRetry: boolean;
-  canCancel: boolean;
-  sub?: Subscription;
 }
