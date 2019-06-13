@@ -26,8 +26,6 @@ app.get('/test', (req, res) => {
 // global error handler
 app.use(errorHandler);
 
-app.use(function(err, req, res, next) { res.status(err.status || 500).send(err); });
-
 const api = functions.https.onRequest((request, response) => {
   if (!request.path) {
     request.url = `/${request.url}`; // Prepend '/' to keep query params if any

@@ -1,4 +1,4 @@
-<div class="container-fluid text-center" *ngIf="!submitted">
+<mat-card class="mat-elevation-z20 centered text-center" *ngIf="!submitted">
   <h1>Register</h1>
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form mx-auto mt-2">
     <mat-form-field class="form-element">
@@ -46,7 +46,7 @@
     </div>
 
   </form>
-</div>
+</mat-card>
 <div class="container-fluid" *ngIf="success === true">
   <h1>Welcome to BioSeer</h1>
 </div>

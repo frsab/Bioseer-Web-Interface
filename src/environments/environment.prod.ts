@@ -1,5 +1,5 @@
 export const environment = {
-  apiUrl: 'https://bioseer-c55f5.firebaseapp.com/',
+  apiUrl: 'https://us-central1-bioseer-c55f5.cloudfunctions.net/api',
   debugMode: false,
   production: true
 };
