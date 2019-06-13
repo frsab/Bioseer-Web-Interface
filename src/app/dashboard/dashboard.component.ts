@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   // Blank Data for practice
   practiceData1: SensorBroadcastModel = {
-    sensorId: '18942384923',
+    sensorId: '1',
     sensorName: '1A',
     ownerId: 'caelinsutch',
     currentLocation: {
@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
     status: 'Good',
   };
   practiceData2: SensorBroadcastModel = {
-    sensorId: '123kjfkeaf32q',
+    sensorId: '2',
     sensorName: '2A',
     ownerId: 'caelinsutch',
     currentLocation: {
@@ -85,6 +85,16 @@ export class DashboardComponent implements OnInit {
     // TODO Replace with API Call to get Sensors
     this.sensors = new Observable(subscriber => {
       subscriber.next([this.practiceData1, this.practiceData2]);
+      let getRandomNumber = (min, max) => {
+        return Math.random() * (max - min) + min;
+      };
+      setInterval(() => {
+        this.practiceData1.currentLocation.lat += getRandomNumber(-.00001, .00001);
+        this.practiceData2.currentLocation.lat += getRandomNumber(-.00001, .00001);
+        this.practiceData1.currentLocation.long += getRandomNumber(-.00001, .00001);
+        this.practiceData2.currentLocation.long += getRandomNumber(-.00001, .00001);
+        subscriber.next([this.practiceData1, this.practiceData2]);
+      }, 1000)
     });
 
     this.zones = new Observable(subscriber => {
