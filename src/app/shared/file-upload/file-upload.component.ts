@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import * as Uppy from '@uppy/core';
 import * as FileInput from '@uppy/file-input';
-import * as XHRUpload from '@uppy/xhr-upload'
+import * as XHRUpload from '@uppy/xhr-upload';
 import * as ProgressBar from '@uppy/progress-bar';
 
 @Component({
@@ -24,7 +24,7 @@ export class FileUploadComponent implements OnInit {
       target: 'body',
       fixed: true,
       hideAfterFinish: false
-    })
+    });
 
     console.log('Uppy with Formtag and XHRUpload is loaded')
   }
