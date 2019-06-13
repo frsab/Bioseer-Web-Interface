@@ -16,7 +16,7 @@ function jwt() {
     ]
   }, (req) => {
     const ext = url.parse(req.originalUrl).pathname.substr(-4);
-    return !~['.jpg', '.html', '.css', '.js', 'ico'].indexOf(ext);
+    return ['.jpg', '.html', '.css', '.js', 'ico'].indexOf(ext) !== -1
   });
 }
 
@@ -29,4 +29,5 @@ async function isRevoked(req, payload, done) {
   }
 
   done();
-};
+  return null
+}
