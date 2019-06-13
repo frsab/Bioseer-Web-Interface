@@ -53,6 +53,9 @@ export class DashboardComponent implements OnInit {
   // }
 
   ngOnInit() {
+    if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+		  this.router.navigate(['mobiledashboard']);
+	  }
     if (screen.width <= 699) {
       this.router.navigate(['mobiledashboard']);
     }
