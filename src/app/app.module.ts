@@ -31,6 +31,9 @@ import { FileUploadComponent } from './shared/file-upload/file-upload.component'
 import { RegisterComponent } from './user/register/register.component';
 import { MobiledashboardComponent } from './mobiledashboard/mobiledashboard.component';
 import { AuthFormsComponent } from './shared/auth-forms/auth-forms.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { OurmissionComponent } from './ourmission/ourmission.component';
+import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import { AuthFormsComponent } from './shared/auth-forms/auth-forms.component';
     FileUploadComponent,
     RegisterComponent,
     MobiledashboardComponent,
-    AuthFormsComponent
+    AuthFormsComponent,
+    AboutusComponent,
+    OurmissionComponent,
+    OurtechnologyComponent
   ],
   imports: [
     BrowserModule,
