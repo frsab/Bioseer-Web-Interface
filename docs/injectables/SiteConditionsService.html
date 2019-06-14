@@ -244,7 +244,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new BehaviorSubject&lt;number[]&gt;([41.49871231510167, -72.95581850473526])</code>
+                            <i>Default value : </i><code>new BehaviorSubject&lt;number[]&gt;([38.616070, -121.304723])</code>
                         </td>
                     </tr>
                         <tr>
@@ -299,7 +299,7 @@ import { map, switchMap, take, delay } from &#x27;rxjs/operators&#x27;;
  */
 @Injectable()
 export class SiteConditionsService {
-  center: BehaviorSubject&lt;number[]&gt; &#x3D; new BehaviorSubject&lt;number[]&gt;([41.49871231510167, -72.95581850473526]); // doesn&#x27;t work
+  center: BehaviorSubject&lt;number[]&gt; &#x3D; new BehaviorSubject&lt;number[]&gt;([38.616070, -121.304723]); // doesn&#x27;t work
 
   center$ &#x3D; this.center.asObservable(); // Reference {@link BingMapComponent}
 

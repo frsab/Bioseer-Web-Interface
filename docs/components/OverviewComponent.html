@@ -146,13 +146,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#offlineAuvs">offlineAuvs</a>
+                                <a href="#offlineMobileBuoys">offlineMobileBuoys</a>
                             </li>
                             <li>
                                 <a href="#offlineSensors">offlineSensors</a>
                             </li>
                             <li>
-                                <a href="#onlineAuvs">onlineAuvs</a>
+                                <a href="#onlineMobileBuoys">onlineMobileBuoys</a>
                             </li>
                             <li>
                                 <a href="#onlineSensors">onlineSensors</a>
@@ -164,7 +164,7 @@
                                 <a href="#totalZones">totalZones</a>
                             </li>
                             <li>
-                                <a href="#warningAuvs">warningAuvs</a>
+                                <a href="#warningMobileBuoys">warningMobileBuoys</a>
                             </li>
                             <li>
                                 <a href="#warningSensors">warningSensors</a>
@@ -205,8 +205,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="offlineAuvs"></a>
-                        <b>offlineAuvs</b>
+                        <a name="offlineMobileBuoys"></a>
+                        <b>offlineMobileBuoys</b>
                     </td>
                 </tr>
                 <tr>
@@ -247,8 +247,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="onlineAuvs"></a>
-                        <b>onlineAuvs</b>
+                        <a name="onlineMobileBuoys"></a>
+                        <b>onlineMobileBuoys</b>
                     </td>
                 </tr>
                 <tr>
@@ -331,8 +331,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="warningAuvs"></a>
-                        <b>warningAuvs</b>
+                        <a name="warningMobileBuoys"></a>
+                        <b>warningMobileBuoys</b>
                     </td>
                 </tr>
                 <tr>
@@ -434,9 +434,9 @@ export class OverviewComponent implements OnInit {
   @Input() onlineSensors: number;
   @Input() warningSensors: number;
   @Input() offlineSensors: number;
-  @Input() onlineAuvs: number;
-  @Input() warningAuvs: number;
-  @Input() offlineAuvs: number;
+  @Input() onlineMobileBuoys: number;
+  @Input() warningMobileBuoys: number;
+  @Input() offlineMobileBuoys: number;
   @Input() totalGroups: number;
   @Input() totalZones: number;
 
@@ -464,10 +464,10 @@ export class OverviewComponent implements OnInit {
         &lt;mat-divider [vertical]&#x3D;&quot;true&quot; id&#x3D;&quot;vertical-divider&quot; class&#x3D;&quot;mx-auto&quot;&gt;&lt;/mat-divider&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;col-5&quot;&gt;
-        &lt;mat-card-subtitle class&#x3D;&quot;text-center&quot;&gt;AUVS&lt;/mat-card-subtitle&gt;
-        &lt;mat-card-content class&#x3D;&quot;green font-weight-bold&quot;&gt;2 AUVs Online&lt;/mat-card-content&gt;
-        &lt;mat-card-content class&#x3D;&quot;yellow font-weight-bold&quot;&gt;2 AUVs Warning&lt;/mat-card-content&gt;
-        &lt;mat-card-content class&#x3D;&quot;red font-weight-bold&quot;&gt;0 AUVs Offline&lt;/mat-card-content&gt;
+        &lt;mat-card-subtitle class&#x3D;&quot;text-center&quot;&gt;MOBILE BUOYS&lt;/mat-card-subtitle&gt;
+        &lt;mat-card-content class&#x3D;&quot;green font-weight-bold&quot;&gt;2 Mobile Buoys Online&lt;/mat-card-content&gt;
+        &lt;mat-card-content class&#x3D;&quot;yellow font-weight-bold&quot;&gt;2 Mobile Buoys Warning&lt;/mat-card-content&gt;
+        &lt;mat-card-content class&#x3D;&quot;red font-weight-bold&quot;&gt;0 Mobile BuoysOffline&lt;/mat-card-content&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -516,8 +516,8 @@ export class OverviewComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-card class="mb-3" id="overview">  <mat-card-title class="text-center">OVERVIEW</mat-card-title>  <div class="container-fluid mb-3">    <div class="row">      <div class="col-5 status-theme">        <mat-card-subtitle class="text-center">SENSORS</mat-card-subtitle>        <mat-card-content class="green font-weight-bold">10 Sensors Online</mat-card-content>        <mat-card-content class="yellow font-weight-bold">2 Sensors Warning</mat-card-content>        <mat-card-content class="red font-weight-bold">2 Sensors Offline</mat-card-content>      </div>      <div class="col-2">        <mat-divider [vertical]="true" id="vertical-divider" class="mx-auto"></mat-divider>      </div>      <div class="col-5">        <mat-card-subtitle class="text-center">AUVS</mat-card-subtitle>        <mat-card-content class="green font-weight-bold">2 AUVs Online</mat-card-content>        <mat-card-content class="yellow font-weight-bold">2 AUVs Warning</mat-card-content>        <mat-card-content class="red font-weight-bold">0 AUVs Offline</mat-card-content>      </div>    </div>  </div>  <h4 class="text-center">14 Groups</h4>  <h4 class="text-center">37 Zones</h4>  <!--<ul *ngIf="hasLogEntries()">-->  <!--<li *ngFor="let entry of log">{{entry}}</li>-->  <!--</ul>--></mat-card></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+        var COMPONENT_TEMPLATE = '<div><mat-card class="mb-3" id="overview">  <mat-card-title class="text-center">OVERVIEW</mat-card-title>  <div class="container-fluid mb-3">    <div class="row">      <div class="col-5 status-theme">        <mat-card-subtitle class="text-center">SENSORS</mat-card-subtitle>        <mat-card-content class="green font-weight-bold">10 Sensors Online</mat-card-content>        <mat-card-content class="yellow font-weight-bold">2 Sensors Warning</mat-card-content>        <mat-card-content class="red font-weight-bold">2 Sensors Offline</mat-card-content>      </div>      <div class="col-2">        <mat-divider [vertical]="true" id="vertical-divider" class="mx-auto"></mat-divider>      </div>      <div class="col-5">        <mat-card-subtitle class="text-center">MOBILE BUOYS</mat-card-subtitle>        <mat-card-content class="green font-weight-bold">2 Mobile Buoys Online</mat-card-content>        <mat-card-content class="yellow font-weight-bold">2 Mobile Buoys Warning</mat-card-content>        <mat-card-content class="red font-weight-bold">0 Mobile BuoysOffline</mat-card-content>      </div>    </div>  </div>  <h4 class="text-center">14 Groups</h4>  <h4 class="text-center">37 Zones</h4>  <!--<ul *ngIf="hasLogEntries()">-->  <!--<li *ngFor="let entry of log">{{entry}}</li>-->  <!--</ul>--></mat-card></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'OverviewComponent'};
 </script>
