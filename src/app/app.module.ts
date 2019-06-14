@@ -34,6 +34,7 @@ import { OurmissionComponent } from './ourmission/ourmission.component';
 import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { MobilehomeComponent } from './mobilehome/mobilehome.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { MobilehomeComponent } from './mobilehome/mobilehome.component';
     AboutusComponent,
     OurmissionComponent,
     OurtechnologyComponent,
-    MobilehomeComponent
+    MobilehomeComponent,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,

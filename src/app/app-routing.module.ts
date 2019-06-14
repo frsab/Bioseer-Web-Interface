@@ -12,6 +12,7 @@ import {OurmissionComponent} from './ourmission/ourmission.component'
 import {OurtechnologyComponent} from './ourtechnology/ourtechnology.component'
 import {AboutusComponent} from './aboutus/aboutus.component'
 import {MobilehomeComponent} from './mobilehome/mobilehome.component'
+import {ErrorpageComponent} from './errorpage/errorpage.component'
 
 const routes: Routes = [
   {
@@ -61,8 +62,12 @@ const routes: Routes = [
     path: 'mobilehome',
     component: MobilehomeComponent,
   },
+  {
+    path: 'error',
+    component: ErrorpageComponent,
+  },
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'error' }
 ];
 
 @NgModule({
