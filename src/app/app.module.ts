@@ -33,6 +33,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurmissionComponent } from './ourmission/ourmission.component';
 import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import { MobilehomeComponent } from './mobilehome/mobilehome.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
     MobiledashboardComponent,
     AboutusComponent,
     OurmissionComponent,
-    OurtechnologyComponent
+    OurtechnologyComponent,
+    MobilehomeComponent
   ],
   imports: [
     BrowserModule,

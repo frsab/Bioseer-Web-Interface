@@ -11,6 +11,7 @@ import {MobiledashboardComponent} from './mobiledashboard/mobiledashboard.compon
 import {OurmissionComponent} from './ourmission/ourmission.component'
 import {OurtechnologyComponent} from './ourtechnology/ourtechnology.component'
 import {AboutusComponent} from './aboutus/aboutus.component'
+import {MobilehomeComponent} from './mobilehome/mobilehome.component'
 
 const routes: Routes = [
   {
@@ -55,6 +56,10 @@ const routes: Routes = [
   {
     path: 'ourtechnology',
     component: OurtechnologyComponent,
+  },
+  {
+    path: 'mobilehome',
+    component: MobilehomeComponent,
   },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
