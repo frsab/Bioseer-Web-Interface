@@ -9,7 +9,6 @@ import {WINDOW_PROVIDERS} from './_services/window.service';
 import {BingApiLoaderService} from './_services/bing-api-loader.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './shared/material/material.module';
-import { MapOverlayComponent } from './dashboard/map-overlay/map-overlay.component';
 import { OverviewComponent } from './dashboard/map-overlay/overview/overview.component';
 import { GroupComponent } from './dashboard/map-overlay/group/group.component';
 import { MapSettingsComponent } from './dashboard/map-overlay/map-settings/map-settings.component';
@@ -39,7 +38,6 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
   declarations: [
     AppComponent,
     BingMapComponent,
-    MapOverlayComponent,
     OverviewComponent,
     GroupComponent,
     MapSettingsComponent,

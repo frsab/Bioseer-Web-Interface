@@ -1,2 +1,8 @@
-<app-map-overlay class="m-3" class="default-theme"></app-map-overlay>
+<div class="m-3 default-theme hud">
+  <div id="right-side" class="m-3">
+    <app-map-settings (mapSettings)="mapSettings($event)" (newZone)="newZone($event)" ></app-map-settings>
+    <app-overview></app-overview>
+    <!--<app-group></app-group>-->
+  </div>
+</div>
 <app-bing-map *ngIf="mapLoaded" [sensors]="sensors" [zones]="zones"></app-bing-map>

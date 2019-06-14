@@ -8,7 +8,7 @@ import {FormControl, FormGroup} from '@angular/forms';
   styleUrls: ['./map-settings.component.scss']
 })
 export class MapSettingsComponent implements OnInit {
-  @Output() mapSettings: EventEmitter<mapSettings> = new EventEmitter();
+  @Output() mapSettings: EventEmitter<MapSettings> = new EventEmitter();
   @Output() newZone: EventEmitter<boolean> = new EventEmitter();
 
   mapSettingsForm: FormGroup;
@@ -24,17 +24,16 @@ export class MapSettingsComponent implements OnInit {
       phMap: new FormControl(false),
       satellite: new FormControl(false),
     });
-    this.onChanges()
+    this.onChanges();
   }
 
   ngOnInit() {
-    this.mapSettingsForm.getRawValue();
   }
 
   onChanges(): void {
     this.mapSettingsForm.valueChanges.subscribe(val => {
       this.mapSettings.emit(val);
-    })
+    });
   }
 
   addZone() {
@@ -43,7 +42,7 @@ export class MapSettingsComponent implements OnInit {
 
 }
 
-export class mapSettings {
+export class MapSettings {
   zoneView: number;
   sensors: boolean;
   mobileBuoys: boolean;
