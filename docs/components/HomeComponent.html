@@ -240,17 +240,42 @@ export class HomeComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;!-- Header --&gt;
 &lt;header class&#x3D;&quot;masthead d-flex&quot;&gt;
   &lt;div class&#x3D;&quot;container text-center my-auto&quot;&gt;
-    &lt;img src&#x3D;&quot;assets/img/logo.png&quot; class&#x3D;&quot;logo mb-5&quot;&gt;
-    &lt;h3 class&#x3D;&quot;mb-5 text-black-50&quot;&gt;
+    &lt;img src&#x3D;&quot;assets/img/logo.png&quot; class&#x3D;&quot;logo mb-5 animated fadeInDown&quot;&gt;
+    &lt;h3 class&#x3D;&quot;mb-5 text-black-50 animated fadeInDown&quot;&gt;
       &lt;em&gt;Changing the Tides of Marine Monitoring&lt;/em&gt;
     &lt;/h3&gt;
-    &lt;a class&#x3D;&quot;btn btn-primary btn-xl js-scroll-trigger&quot; href&#x3D;&quot;#about&quot;&gt;Find Out More&lt;/a&gt;
+    &lt;a class&#x3D;&quot;btn btn-primary btn-xl js-scroll-trigger animated fadeInDown delay-1s&quot; href&#x3D;&quot;#about&quot;&gt;Find Out More&lt;/a&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;overlay&quot;&gt;&lt;/div&gt;
 &lt;/header&gt;
 
 &lt;!-- About --&gt;
-&lt;section class&#x3D;&quot;content-section bg-light&quot; id&#x3D;&quot;about&quot;&gt;
+&lt;section class&#x3D;&quot;content-section bg-light&quot;&gt;
+  &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani shadow-slide&quot; class&#x3D;&quot;bioseercard&quot;&gt;
+    &lt;div class&#x3D;&quot;container text-center&quot;&gt;
+      &lt;h4&gt;BioSeer&lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/mat-card&gt;
+  &lt;img src&#x3D;&quot;assets/img/turtle.jpg&quot; class&#x3D;&quot;leftimgturtle&quot;&gt;
+  &lt;div class&#x3D;&quot;tripleinfo&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-3&quot;&gt;
+        &lt;h5&gt;BLANK&lt;/h5&gt;
+        &lt;p&gt;Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-3&quot;&gt;
+        &lt;h5&gt;NAN&lt;/h5&gt;
+        &lt;p&gt;Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-3&quot;&gt;
+        &lt;h5&gt;ERROR 404&lt;/h5&gt;
+        &lt;p&gt;Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- &lt;section class&#x3D;&quot;content-section bg-light&quot; id&#x3D;&quot;about&quot;&gt;
   &lt;div class&#x3D;&quot;container text-center&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
       &lt;div class&#x3D;&quot;col-lg-10 mx-auto&quot;&gt;
@@ -260,7 +285,7 @@ export class HomeComponent implements OnInit {
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;
+&lt;/section&gt; --&gt;
 
 &lt;!-- Services --&gt;
 &lt;!-- &lt;section class&#x3D;&quot;content-section bg-primary text-white text-center&quot; id&#x3D;&quot;services&quot;&gt;
@@ -415,6 +440,76 @@ export class HomeComponent implements OnInit {
 .logo {
   width: 80%;
 }
+
+.tripleinfo {
+  
+}
+
+.afterani {
+  visibility: visible !important;
+}
+
+.bioseercard {
+  background-color: white;
+  position: absolute;
+  z-index: 20;
+  margin-top: 3%;
+  margin-left: 49%;
+  height: 6%;
+  width: 20%;
+  border-radius: 0px !important;
+  visibility: hidden;
+}
+
+.leftimgturtle {
+  width: 50%;
+  margin-top: -5%;
+  margin-left: 5%;
+
+}
+
+.shadow-slide {
+	-webkit-animation: shadow-slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes shadow-slide {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(1000px);
+            transform: translateZ(100px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.45);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes shadow-slide {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(1000px);
+            transform: translateZ(1000px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.45);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
 </code></pre>
     </div>
 
@@ -443,8 +538,8 @@ export class HomeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Header --><header class="masthead d-flex">  <div class="container text-center my-auto">    <img src="assets/img/logo.png" class="logo mb-5">    <h3 class="mb-5 text-black-50">      <em>Changing the Tides of Marine Monitoring</em>    </h3>    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>  </div>  <div class="overlay"></div></header><!-- About --><section class="content-section bg-light" id="about">  <div class="container text-center">    <div class="row">      <div class="col-lg-10 mx-auto">        <h2>About the Project</h2>        <p class="lead mb-5">BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. </p>        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>      </div>    </div>  </div></section><!-- Services --><!-- <section class="content-section bg-primary text-white text-center" id="services">  <div class="container">    <div class="content-section-heading">      <h3 class="text-secondary mb-0">Services</h3>      <h2 class="mb-5">What We Offer</h2>    </div>    <div class="row">      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-screen-smartphone"></i>          </span>        <h4>          <strong>Responsive</strong>        </h4>        <p class="text-faded mb-0">Looks great on any screen size!</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-pencil"></i>          </span>        <h4>          <strong>Redesigned</strong>        </h4>        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-like"></i>          </span>        <h4>          <strong>Favorited</strong>        </h4>        <p class="text-faded mb-0">Millions of users          <i class="fas fa-heart"></i>          Start Bootstrap!</p>      </div>      <div class="col-lg-3 col-md-6">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-mustache"></i>          </span>        <h4>          <strong>Question</strong>        </h4>        <p class="text-faded mb-0">I mustache you a question...</p>      </div>    </div>  </div></section> --><!-- Callout --><!-- <section class="callout">  <div class="container text-center">    <h2 class="mx-auto mb-5">Welcome to      <em>your</em>      next website!</h2>    <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>  </div></section> --><!-- Portfolio --><!--<section class="content-section" id="portfolio">-->  <!--<div class="container">-->    <!--<div class="content-section-heading text-center">-->      <!--<h3 class="text-secondary mb-0">Portfolio</h3>-->      <!--<h2 class="mb-5">Recent Projects</h2>-->    <!--</div>-->    <!--<div class="row no-gutters">-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Stationary</h2>-->                <!--<p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-1.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Ice Cream</h2>-->                <!--<p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-2.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Strawberries</h2>-->                <!--<p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-3.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Workspace</h2>-->                <!--<p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-4.jpg" alt="">-->        <!--</a>-->      <!--</div>-->    <!--</div>-->  <!--</div>--><!--</section>--><!-- Call to Action --><section class="content-section bg-primary text-white">  <div class="container text-center">    <h2 class="mb-4">Contact Us</h2>    <div class="container text-center">      <h5>Email: bioseercontact@gmail.com</h5>      <br>      <a class="btn btn-dark btn-xl js-scroll-trigger" href="mailto:bioseercontact@gmail.com">Email Us</a>    </div>  </div></section></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapOverlayComponent', 'selector': 'app-map-overlay'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+        var COMPONENT_TEMPLATE = '<div><!-- Header --><header class="masthead d-flex">  <div class="container text-center my-auto">    <img src="assets/img/logo.png" class="logo mb-5 animated fadeInDown">    <h3 class="mb-5 text-black-50 animated fadeInDown">      <em>Changing the Tides of Marine Monitoring</em>    </h3>    <a class="btn btn-primary btn-xl js-scroll-trigger animated fadeInDown delay-1s" href="#about">Find Out More</a>  </div>  <div class="overlay"></div></header><!-- About --><section class="content-section bg-light">  <mat-card animateOnScroll animationName="afterani shadow-slide" class="bioseercard">    <div class="container text-center">      <h4>BioSeer</h4>    </div>  </mat-card>  <img src="assets/img/turtle.jpg" class="leftimgturtle">  <div class="tripleinfo">    <div class="row">      <div class="col-3">        <h5>BLANK</h5>        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>      </div>      <div class="col-3">        <h5>NAN</h5>        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>      </div>      <div class="col-3">        <h5>ERROR 404</h5>        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>      </div>    </div>  </div></section><!-- <section class="content-section bg-light" id="about">  <div class="container text-center">    <div class="row">      <div class="col-lg-10 mx-auto">        <h2>About the Project</h2>        <p class="lead mb-5">BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. </p>        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>      </div>    </div>  </div></section> --><!-- Services --><!-- <section class="content-section bg-primary text-white text-center" id="services">  <div class="container">    <div class="content-section-heading">      <h3 class="text-secondary mb-0">Services</h3>      <h2 class="mb-5">What We Offer</h2>    </div>    <div class="row">      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-screen-smartphone"></i>          </span>        <h4>          <strong>Responsive</strong>        </h4>        <p class="text-faded mb-0">Looks great on any screen size!</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-pencil"></i>          </span>        <h4>          <strong>Redesigned</strong>        </h4>        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-like"></i>          </span>        <h4>          <strong>Favorited</strong>        </h4>        <p class="text-faded mb-0">Millions of users          <i class="fas fa-heart"></i>          Start Bootstrap!</p>      </div>      <div class="col-lg-3 col-md-6">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-mustache"></i>          </span>        <h4>          <strong>Question</strong>        </h4>        <p class="text-faded mb-0">I mustache you a question...</p>      </div>    </div>  </div></section> --><!-- Callout --><!-- <section class="callout">  <div class="container text-center">    <h2 class="mx-auto mb-5">Welcome to      <em>your</em>      next website!</h2>    <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>  </div></section> --><!-- Portfolio --><!--<section class="content-section" id="portfolio">-->  <!--<div class="container">-->    <!--<div class="content-section-heading text-center">-->      <!--<h3 class="text-secondary mb-0">Portfolio</h3>-->      <!--<h2 class="mb-5">Recent Projects</h2>-->    <!--</div>-->    <!--<div class="row no-gutters">-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Stationary</h2>-->                <!--<p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-1.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Ice Cream</h2>-->                <!--<p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-2.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Strawberries</h2>-->                <!--<p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-3.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Workspace</h2>-->                <!--<p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-4.jpg" alt="">-->        <!--</a>-->      <!--</div>-->    <!--</div>-->  <!--</div>--><!--</section>--><!-- Call to Action --><section class="content-section bg-primary text-white">  <div class="container text-center">    <h2 class="mb-4">Contact Us</h2>    <div class="container text-center">      <h5>Email: bioseercontact@gmail.com</h5>      <br>      <a class="btn btn-dark btn-xl js-scroll-trigger" href="mailto:bioseercontact@gmail.com">Email Us</a>    </div>  </div></section></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

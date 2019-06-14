@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' : 'data-target="#xs-components-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' }>
+                                            'data-target="#components-links-module-AppModule-79118a30ea1c09df260240207575eca8"' : 'data-target="#xs-components-links-module-AppModule-79118a30ea1c09df260240207575eca8"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' :
-                                            'id="xs-components-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-79118a30ea1c09df260240207575eca8"' :
+                                            'id="xs-components-links-module-AppModule-79118a30ea1c09df260240207575eca8"' }>
                                             <li class="link">
                                                 <a href="components/AboutusComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AboutusComponent</a>
@@ -115,10 +115,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">LoginComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/MapOverlayComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">MapOverlayComponent</a>
-                                            </li>
-                                            <li class="link">
                                                 <a href="components/MapSettingsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">MapSettingsComponent</a>
                                             </li>
@@ -154,13 +150,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' : 'data-target="#xs-injectables-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' }>
+                                        'data-target="#injectables-links-module-AppModule-79118a30ea1c09df260240207575eca8"' : 'data-target="#xs-injectables-links-module-AppModule-79118a30ea1c09df260240207575eca8"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' :
-                                        'id="xs-injectables-links-module-AppModule-a6c92b0e133f4c37062c337fd81a87c4"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-79118a30ea1c09df260240207575eca8"' :
+                                        'id="xs-injectables-links-module-AppModule-79118a30ea1c09df260240207575eca8"' }>
                                         <li class="link">
                                             <a href="injectables/BingApiLoaderService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>BingApiLoaderService</a>
@@ -195,6 +191,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="classes/BrowserWindowRef.html" data-type="entity-link">BrowserWindowRef</a>
                             </li>
                             <li class="link">
+                                <a href="classes/MapSettings.html" data-type="entity-link">MapSettings</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/SensorBroadcastModel.html" data-type="entity-link">SensorBroadcastModel</a>
                             </li>
                             <li class="link">
@@ -218,6 +217,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
                                     <a href="injectables/AuthenticationService.html" data-type="entity-link">AuthenticationService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/BingMapsService.html" data-type="entity-link">BingMapsService</a>
                                 </li>
                                 <li class="link">
                                     <a href="injectables/UserService.html" data-type="entity-link">UserService</a>
