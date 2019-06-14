@@ -59,6 +59,7 @@ $status-theme: mat-light-theme($status-primary, $status-accent, $status-warn);
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
 mat-card {
   border-radius: 12px !important;
 }
@@ -76,4 +77,3 @@ mat-card {
 a {
   color: black;
 }
-

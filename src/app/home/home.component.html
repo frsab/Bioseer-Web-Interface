@@ -1,8 +1,8 @@
 <!-- Header -->
-<header class="masthead d-flex">
-  <div class="container text-center my-auto">
-    <img src="assets/img/logo.png" class="logo mb-5 animated fadeInDown">
-    <h3 class="mb-5 text-black-50 animated fadeInDown">
+<header class="masthead" style="height: 1700px;">
+  <div class="container text-center" style="margin-top: 10%;">
+    <img src="assets/img/logo.png" class="logo mb-5 animated fadeInDown delay-1s">
+    <h3 class="mb-5 text-grey-70 animated fadeInDown delay-1s">
       <em>Changing the Tides of Marine Monitoring</em>
     </h3>
     <a class="btn btn-primary btn-xl js-scroll-trigger animated fadeInDown delay-1s" href="#about">Find Out More</a>
@@ -10,43 +10,62 @@
   <div class="overlay"></div>
 </header>
 
-<!-- About -->
-<section class="content-section bg-light">
-  <mat-card animateOnScroll animationName="afterani shadow-slide" class="bioseercard">
-    <div class="container text-center">
-      <h4>BioSeer</h4>
-    </div>
-  </mat-card>
-  <img src="assets/img/turtle.jpg" class="leftimgturtle">
-  <div class="tripleinfo">
+<section class="content-section" id="about">
+  <div class="container text-center">
     <div class="row">
-      <div class="col-3">
-        <h5>BLANK</h5>
-        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>
-      </div>
-      <div class="col-3">
-        <h5>NAN</h5>
-        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>
-      </div>
-      <div class="col-3">
-        <h5>ERROR 404</h5>
-        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>
+      <div class="col-lg-10 mx-auto">
+        <div class="row">
+          <div class="col-6">
+            <h2 style="margin-top: 6%;">About the Project</h2>
+          </div>
+          <div class="col-6" style="margin-top: -4%;">
+              <a animateOnScroll animationName="afterani shadow-slide" class="btn aboutbutton mb-5" href="#software">
+                <h4 class="mt-2">Software</h4>
+              </a>
+              <a animateOnScroll animationName="afterani shadow-slide" class="btn aboutbutton" href="#hardware">
+                <h4 class="mt-2">Hardware</h4>
+              </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- <section class="content-section bg-light" id="about">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <h2>About the Project</h2>
-        <p class="lead mb-5">BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. </p>
-        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+<!-- About -->
+<section class="content-section">
+  <mat-card animateOnScroll animationName="afterani shadow-slide" class="bioseercard">
+    <div class="container text-center">
+      <h4>BioSeer</h4>
+    </div>
+  </mat-card>
+  <div class="row" style="width: 100%">
+    <div class="col-6">
+      <img src="assets/img/turtle.jpg" class="leftimgturtle">
+    </div>
+    <div class="padding">
+      <div animateOnScroll animationName="afterani animated fadeInUp" class="tripleinfo">
+        <div class="row">
+          <div class="col-4 text-center">
+            <h5>BLANK</h5>
+            <p>Lipsum iscso ifnondoau bdwonawo dinaow dnaouenf oaindoi</p>
+          </div>
+          <div class="col-4 text-center">
+            <h5>NAN</h5>
+            <p>Lipsum iscsoif nondoaubdw onawo dinaowd naouen foaindoi</p>
+          </div>
+          <div class="col-4 text-center">
+            <h5>ERROR 404</h5>
+            <p>Lipsum iscso ifnon doaubdw ona wodinaow dnaouen fo aindoi</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
+
+<section class="content-section imagetransition" style="height: 1537px;" id="image">
+</section>
 
 <!-- Services -->
 <!-- <section class="content-section bg-primary text-white text-center" id="services">
@@ -165,13 +184,12 @@
 <!--</section>-->
 
 <!-- Call to Action -->
-<section class="content-section bg-primary text-white">
+<section class="content-section bg-primary text-white footer">
   <div class="container text-center">
-    <h2 class="mb-4">Contact Us</h2>
+    <h2 class="mb-4 contactus">Contact Us</h2>
     <div class="container text-center">
       <h5>Email: bioseercontact@gmail.com</h5>
-      <br>
-      <a class="btn btn-dark btn-xl js-scroll-trigger" href="mailto:bioseercontact@gmail.com">Email Us</a>
+      <a class="btn btn-dark btn-xl js-scroll-trigger mt-2" href="mailto:bioseercontact@gmail.com">Email Us</a>
     </div>
   </div>
 </section>
