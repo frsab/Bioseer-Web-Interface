@@ -42,6 +42,12 @@
       <!--<a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>-->
       <a mat-menu-item routerLink="/">Home</a>
       <a mat-menu-item routerLink="/dashboard">Dashboard</a>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item routerLink="/aboutus">Our Team</button>
+        <button mat-menu-item routerLink="/ourmission">Our Mission</button>
+        <button mat-menu-item routerLink="/ourtechnology">Our Technology</button>
+      </mat-menu>
+      <a mat-menu-item [matMenuTriggerFor]="appMenu">About Us</a>
       <a mat-menu-item routerLink="/upload-images" *ngIf="displayName">Upload File</a>
       <a mat-button class="mt-2" style="font-size: 16px" *ngIf="displayName">
         {{ displayName | titlecase }}
