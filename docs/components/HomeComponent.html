@@ -151,15 +151,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/home/home.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/home/home.component.ts:9</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -195,8 +225,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/home/home.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/home/home.component.ts:14</a></div>
                 </td>
             </tr>
 
@@ -219,6 +249,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
 
 @Component({
   selector: &#x27;app-home&#x27;,
@@ -227,9 +258,16 @@
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router){
+  }
 
   ngOnInit() {
+    // if ((navigator.userAgent.indexOf(&#x27;iPhone&#x27;) !&#x3D;&#x3D; -1) || (navigator.userAgent.indexOf(&#x27;iPod&#x27;) !&#x3D; -1) || (navigator.userAgent.indexOf(&#x27;iPad&#x27;) !&#x3D;&#x3D; -1)) {
+    //   this.router.navigate([&#x27;mobilehome&#x27;]);
+    // }
+    // if (screen.width &lt;&#x3D; 699) {
+    //   this.router.navigate([&#x27;mobilehome&#x27;]);
+    // }
   }
 
 }
@@ -238,179 +276,251 @@ export class HomeComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;!-- Header --&gt;
-&lt;header class&#x3D;&quot;masthead d-flex&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center my-auto&quot;&gt;
-    &lt;img src&#x3D;&quot;assets/img/logo.png&quot; class&#x3D;&quot;logo mb-5 animated fadeInDown&quot;&gt;
-    &lt;h3 class&#x3D;&quot;mb-5 text-black-50 animated fadeInDown&quot;&gt;
-      &lt;em&gt;Changing the Tides of Marine Monitoring&lt;/em&gt;
-    &lt;/h3&gt;
-    &lt;a class&#x3D;&quot;btn btn-primary btn-xl js-scroll-trigger animated fadeInDown delay-1s&quot; href&#x3D;&quot;#about&quot;&gt;Find Out More&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;overlay&quot;&gt;&lt;/div&gt;
-&lt;/header&gt;
-
-&lt;!-- About --&gt;
-&lt;section class&#x3D;&quot;content-section bg-light&quot;&gt;
-  &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani shadow-slide&quot; class&#x3D;&quot;bioseercard&quot;&gt;
-    &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-      &lt;h4&gt;BioSeer&lt;/h4&gt;
-    &lt;/div&gt;
-  &lt;/mat-card&gt;
-  &lt;img src&#x3D;&quot;assets/img/turtle.jpg&quot; class&#x3D;&quot;leftimgturtle&quot;&gt;
-  &lt;div class&#x3D;&quot;tripleinfo&quot;&gt;
+&lt;section class&#x3D;&quot;masthead&quot;&gt;
+  &lt;div class&#x3D;&quot;gradient1&quot; ngStyle.lt-sm&#x3D;&quot;height: 94%;&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;container text-left topcontainer&quot; ngStyle.lt-lg&#x3D;&quot;width: 80%;&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-3&quot;&gt;
-        &lt;h5&gt;BLANK&lt;/h5&gt;
-        &lt;p&gt;Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi&lt;/p&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-sm-12 text-white animated fadeInDown delay-1s&quot; ngStyle.lt-sm&#x3D;&quot;margin-left: -4%;&quot;&gt;
+        &lt;h2 ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em;&quot;&gt;Marine Monitoring&lt;/h2&gt;
+        &lt;h1 ngStyle.lt-sm&#x3D;&quot;font-size: 3.7em;&quot;&gt;SIMPLIFIED&lt;/h1&gt;
+        &lt;p class&#x3D;&quot;biggerp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Easy Species and Ocean&lt;/p&gt;
+        &lt;p class&#x3D;&quot;biggerp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Monitoring Harnessing the&lt;/p&gt;
+        &lt;p class&#x3D;&quot;biggerp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Power of Artificial Intelligence&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-3&quot;&gt;
-        &lt;h5&gt;NAN&lt;/h5&gt;
-        &lt;p&gt;Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi&lt;/p&gt;
+      &lt;div class&#x3D;&quot;col-lg-5&quot; fxHide fxShow.xl&#x3D;&quot;true&quot;&gt;
+        &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-3&quot;&gt;
-        &lt;h5&gt;ERROR 404&lt;/h5&gt;
-        &lt;p&gt;Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi&lt;/p&gt;
+      &lt;div class&#x3D;&quot;col-lg-3 animated fadeInDown delay-1s&quot; fxHide fxShow.xl&#x3D;&quot;true&quot;&gt;
+        &lt;div class&#x3D;&quot;line&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot; fxShow.lt-sm&#x3D;&quot;false&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot; fxShow.lt-sm&#x3D;&quot;false&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-2&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;mx-auto center&quot; ngStyle.lt-lg&#x3D;&quot;margin-bottom: 50%;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;text-center customCard&quot;&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em;&quot;&gt;DASHBOARD&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; routerLink&#x3D;&quot;/dashboard&quot;&gt;SEE THE DASHBOARD&lt;/a&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;text-center customCard&quot;&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em;&quot;&gt;DATA ANALYSIS&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; style&#x3D;&quot;margin-top: 12% !important;&quot;&gt;READ ABOUT THE AI&lt;/a&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;text-center customCard&quot;&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 7%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;HARDWARE SOLUTIONS&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em; margin-bottom: -5%;&quot;&gt;The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; style&#x3D;&quot;margin-top: 12% !important;&quot;&gt;LEARN MORE&lt;/a&gt;
+        &lt;/mat-card&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- &lt;section class&#x3D;&quot;content-section bg-light&quot; id&#x3D;&quot;about&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center&quot;&gt;
+&lt;!-- Dashboard Section --&gt;
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot; ngStyle.lt-sm&#x3D;&quot;padding-top: 0%;&quot;&gt;
+  &lt;div class&#x3D;&quot;container position-absolute&quot; style&#x3D;&quot;margin-left: 5%; z-index: 10;&quot;&gt;
+    &lt;div class&#x3D;&quot;row align-items-end px-5&quot;&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-3&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-xl&#x3D;&quot;true&quot; fxShow.lt-sm&#x3D;&quot;false&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani shadow-slide&quot; class&#x3D;&quot;my-auto&quot; style&#x3D;&quot;visibility: hidden;&quot; ngStyle.lt-lg&#x3D;&quot;width: 20em; margin-left: -2rem;&quot; ngStyle.lt-sm&#x3D;&quot;width: 12em; margin-left: -3rem; top: -1rem;&quot;&gt;
+          &lt;mat-card-title style&#x3D;&quot;color: #404040; margin-left: 0.3em;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;DASHBOARD&lt;/mat-card-title&gt;
+          &lt;a class&#x3D;&quot;btn btn-light js-scroll-trigger mt-1 customButtonHomeCard md-elevation-z10&quot; routerLink&#x3D;&quot;/dashboard&quot; ngClass.gt-lg&#x3D;&quot;btn-xl&quot; ngClass.lt-lg&#x3D;&quot;btn-xl&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.7em; padding: 10%;&quot;&gt;SEE THE DASHBOARD&lt;/a&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-8 col-sm-12&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col&quot;&gt;
+    &lt;div class&#x3D;&quot;mx-auto dashboardimage&quot;&gt;
+      &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.png?alt&#x3D;media&amp;token&#x3D;1c82e6d9-64dd-437c-b0d2-1f7b93376b57&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%; margin-top: 5%; visibility: hidden;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;color: #404040&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;margin-top: 8%;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mb-4&quot;&gt;Sensor Zones&lt;/h1&gt;
+        &lt;p&gt;Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mb-4&quot;&gt;Global Database&lt;/h1&gt;
+        &lt;p&gt;Through a shared global database, collaborate with researchers around the world to see big-picture trends.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mb-4&quot;&gt;Live Data Feeds&lt;/h1&gt;
+        &lt;p&gt;View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot;&gt;
+  &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%;&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-10 mx-auto&quot;&gt;
-        &lt;h2&gt;About the Project&lt;/h2&gt;
-        &lt;p class&#x3D;&quot;lead mb-5&quot;&gt;BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. &lt;/p&gt;
-        &lt;a class&#x3D;&quot;btn btn-dark btn-xl js-scroll-trigger&quot; href&#x3D;&quot;#services&quot;&gt;What We Offer&lt;/a&gt;
+      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot;&gt;
+        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt&#x3D;media&amp;token&#x3D;cf57d6d9-99ac-4c22-9cf3-9d12eaf1085b&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-7 col-md-12&quot;&gt;
+        &lt;h1 style&#x3D;&quot;color: #404040; font-size: 4em; visibility: hidden;&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2em; margin-top: 10%;&quot;&gt;IMAGE RECOGNITION&lt;/h1&gt;
+        &lt;div style&#x3D;&quot;width: 74%; margin-top: 15%;  visibility: hidden;&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; ngStyle.lt-sm&#x3D;&quot;width: 100%;&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+              &lt;h3 style&#x3D;&quot;color: #404040;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em; margin-top: -4%;&quot;&gt;Precise Classification&lt;/h3&gt;
+              &lt;p style&#x3D;&quot;color: #404040;  margin-top: 10%;&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%; margin-bottom: 9%;&quot;&gt;The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+              &lt;h3 style&#x3D;&quot;color: #404040;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;Reliable&lt;/h3&gt;
+              &lt;p style&#x3D;&quot;color: #404040;  margin-top: 10%;&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot;&gt;Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt; --&gt;
+&lt;/section&gt;
 
-&lt;!-- Services --&gt;
-&lt;!-- &lt;section class&#x3D;&quot;content-section bg-primary text-white text-center&quot; id&#x3D;&quot;services&quot;&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;div class&#x3D;&quot;content-section-heading&quot;&gt;
-      &lt;h3 class&#x3D;&quot;text-secondary mb-0&quot;&gt;Services&lt;/h3&gt;
-      &lt;h2 class&#x3D;&quot;mb-5&quot;&gt;What We Offer&lt;/h2&gt;
-    &lt;/div&gt;
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot;&gt;
+  &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%;&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-lg-0&quot;&gt;
-          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
-            &lt;i class&#x3D;&quot;icon-screen-smartphone&quot;&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;h4&gt;
-          &lt;strong&gt;Responsive&lt;/strong&gt;
-        &lt;/h4&gt;
-        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Looks great on any screen size!&lt;/p&gt;
+      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot;&gt;
+        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;9db7f06a-84a5-46fb-8add-1c027f2db980&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-lg-0&quot;&gt;
-          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
-            &lt;i class&#x3D;&quot;icon-pencil&quot;&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;h4&gt;
-          &lt;strong&gt;Redesigned&lt;/strong&gt;
-        &lt;/h4&gt;
-        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Freshly redesigned for Bootstrap 4.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-lg-3 col-md-6 mb-5 mb-md-0&quot;&gt;
-          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
-            &lt;i class&#x3D;&quot;icon-like&quot;&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;h4&gt;
-          &lt;strong&gt;Favorited&lt;/strong&gt;
-        &lt;/h4&gt;
-        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;Millions of users
-          &lt;i class&#x3D;&quot;fas fa-heart&quot;&gt;&lt;/i&gt;
-          Start Bootstrap!&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-lg-3 col-md-6&quot;&gt;
-          &lt;span class&#x3D;&quot;service-icon rounded-circle mx-auto mb-3&quot;&gt;
-            &lt;i class&#x3D;&quot;icon-mustache&quot;&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;h4&gt;
-          &lt;strong&gt;Question&lt;/strong&gt;
-        &lt;/h4&gt;
-        &lt;p class&#x3D;&quot;text-faded mb-0&quot;&gt;I mustache you a question...&lt;/p&gt;
+      &lt;div class&#x3D;&quot;col-lg-7 col-md-12&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em; margin-top: 5%;&quot;&gt;Mobile Buoy System&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Revolutionary Marine Monitoring&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em; margin-bottom: 4%;&quot;&gt;BioSeer&#x27;s mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt; --&gt;
+&lt;/section&gt;
 
-&lt;!-- Callout --&gt;
-&lt;!-- &lt;section class&#x3D;&quot;callout&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-    &lt;h2 class&#x3D;&quot;mx-auto mb-5&quot;&gt;Welcome to
-      &lt;em&gt;your&lt;/em&gt;
-      next website!&lt;/h2&gt;
-    &lt;a class&#x3D;&quot;btn btn-primary btn-xl&quot; href&#x3D;&quot;https://startbootstrap.com/template-overviews/stylish-portfolio/&quot;&gt;Download Now!&lt;/a&gt;
+&lt;section class&#x3D;&quot;content-section imagetransition&quot; id&#x3D;&quot;image&quot;&gt;
+  &lt;!--&lt;div class&#x3D;&quot;gradient2&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--&lt;div class&#x3D;&quot;gradient3&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
   &lt;/div&gt;
-&lt;/section&gt; --&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-3&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-lg-6 col-md-12 float-right&quot;&gt;
+    &lt;h1 animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; style&#x3D;&quot;color: white; visibility: hidden;&quot; ngStyle.gt-lg&#x3D;&quot;font-size: 10em;&quot; ngStyle.lt-lg&#x3D;&quot;font-size: 6em; margin-left: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 4em;&quot;&gt;USE CASES&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
+      &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Marine Research&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Cheap and Effective for Long Term Data Collection&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+      &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+      &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
+      &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%; &quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Monitor Human Impact&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Keep Track of Pollution&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Show that you care about our enviornment. Monitor the effect  of your manufacturing or other facilities on the enviornment. Deploy a few sensors, and open access to live enviornment monitoring to show your support for the enviornment. Improve your companies productivity by maintaining a positive public image, and ensure your company helps keep marine enviornments alive and well.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
+      &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Water Management&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Make Well-Informed Decisions&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Marine enviornments are crucial to the economy in a variety of ways, from tourism to fishing. In the managment of these ecosystems to ensure their vitality, BioSeer provides a wide range of data to help you make informed decisions about water management. BioSeer helps you visualize trends in data to make well-informed decisions to preserve our marine enviornments.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+      &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
 
-&lt;!-- Portfolio --&gt;
-&lt;!--&lt;section class&#x3D;&quot;content-section&quot; id&#x3D;&quot;portfolio&quot;&gt;--&gt;
-  &lt;!--&lt;div class&#x3D;&quot;container&quot;&gt;--&gt;
-    &lt;!--&lt;div class&#x3D;&quot;content-section-heading text-center&quot;&gt;--&gt;
-      &lt;!--&lt;h3 class&#x3D;&quot;text-secondary mb-0&quot;&gt;Portfolio&lt;/h3&gt;--&gt;
-      &lt;!--&lt;h2 class&#x3D;&quot;mb-5&quot;&gt;Recent Projects&lt;/h2&gt;--&gt;
-    &lt;!--&lt;/div&gt;--&gt;
-    &lt;!--&lt;div class&#x3D;&quot;row no-gutters&quot;&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-6&quot;&gt;--&gt;
-        &lt;!--&lt;a class&#x3D;&quot;portfolio-item&quot; href&#x3D;&quot;#&quot;&gt;--&gt;
-            &lt;!--&lt;span class&#x3D;&quot;caption&quot;&gt;--&gt;
-              &lt;!--&lt;span class&#x3D;&quot;caption-content&quot;&gt;--&gt;
-                &lt;!--&lt;h2&gt;Stationary&lt;/h2&gt;--&gt;
-                &lt;!--&lt;p class&#x3D;&quot;mb-0&quot;&gt;A yellow pencil with envelopes on a clean, blue backdrop!&lt;/p&gt;--&gt;
-              &lt;!--&lt;/span&gt;--&gt;
-            &lt;!--&lt;/span&gt;--&gt;
-          &lt;!--&lt;img class&#x3D;&quot;img-fluid&quot; src&#x3D;&quot;img/portfolio-1.jpg&quot; alt&#x3D;&quot;&quot;&gt;--&gt;
-        &lt;!--&lt;/a&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-6&quot;&gt;--&gt;
-        &lt;!--&lt;a class&#x3D;&quot;portfolio-item&quot; href&#x3D;&quot;#&quot;&gt;--&gt;
-            &lt;!--&lt;span class&#x3D;&quot;caption&quot;&gt;--&gt;
-              &lt;!--&lt;span class&#x3D;&quot;caption-content&quot;&gt;--&gt;
-                &lt;!--&lt;h2&gt;Ice Cream&lt;/h2&gt;--&gt;
-                &lt;!--&lt;p class&#x3D;&quot;mb-0&quot;&gt;A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!&lt;/p&gt;--&gt;
-              &lt;!--&lt;/span&gt;--&gt;
-            &lt;!--&lt;/span&gt;--&gt;
-          &lt;!--&lt;img class&#x3D;&quot;img-fluid&quot; src&#x3D;&quot;img/portfolio-2.jpg&quot; alt&#x3D;&quot;&quot;&gt;--&gt;
-        &lt;!--&lt;/a&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-6&quot;&gt;--&gt;
-        &lt;!--&lt;a class&#x3D;&quot;portfolio-item&quot; href&#x3D;&quot;#&quot;&gt;--&gt;
-            &lt;!--&lt;span class&#x3D;&quot;caption&quot;&gt;--&gt;
-              &lt;!--&lt;span class&#x3D;&quot;caption-content&quot;&gt;--&gt;
-                &lt;!--&lt;h2&gt;Strawberries&lt;/h2&gt;--&gt;
-                &lt;!--&lt;p class&#x3D;&quot;mb-0&quot;&gt;Strawberries are such a tasty snack, especially with a little sugar on top!&lt;/p&gt;--&gt;
-              &lt;!--&lt;/span&gt;--&gt;
-            &lt;!--&lt;/span&gt;--&gt;
-          &lt;!--&lt;img class&#x3D;&quot;img-fluid&quot; src&#x3D;&quot;img/portfolio-3.jpg&quot; alt&#x3D;&quot;&quot;&gt;--&gt;
-        &lt;!--&lt;/a&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-      &lt;!--&lt;div class&#x3D;&quot;col-lg-6&quot;&gt;--&gt;
-        &lt;!--&lt;a class&#x3D;&quot;portfolio-item&quot; href&#x3D;&quot;#&quot;&gt;--&gt;
-            &lt;!--&lt;span class&#x3D;&quot;caption&quot;&gt;--&gt;
-              &lt;!--&lt;span class&#x3D;&quot;caption-content&quot;&gt;--&gt;
-                &lt;!--&lt;h2&gt;Workspace&lt;/h2&gt;--&gt;
-                &lt;!--&lt;p class&#x3D;&quot;mb-0&quot;&gt;A yellow workspace with some scissors, pencils, and other objects.&lt;/p&gt;--&gt;
-              &lt;!--&lt;/span&gt;--&gt;
-            &lt;!--&lt;/span&gt;--&gt;
-          &lt;!--&lt;img class&#x3D;&quot;img-fluid&quot; src&#x3D;&quot;img/portfolio-4.jpg&quot; alt&#x3D;&quot;&quot;&gt;--&gt;
-        &lt;!--&lt;/a&gt;--&gt;
-      &lt;!--&lt;/div&gt;--&gt;
-    &lt;!--&lt;/div&gt;--&gt;
-  &lt;!--&lt;/div&gt;--&gt;
-&lt;!--&lt;/section&gt;--&gt;
+&lt;section class&#x3D;&quot;content-section filler-section&quot; ngStyle.lt-lg&#x3D;&quot;height: 0vh; padding: 0px;&quot; ngStyle.lt-sm&#x3D;&quot;height: 96vh&quot;&gt;
+&lt;/section&gt;
 
-&lt;!-- Call to Action --&gt;
-&lt;section class&#x3D;&quot;content-section bg-primary text-white&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-    &lt;h2 class&#x3D;&quot;mb-4&quot;&gt;Contact Us&lt;/h2&gt;
-    &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-      &lt;h5&gt;Email: bioseercontact@gmail.com&lt;/h5&gt;
-      &lt;br&gt;
-      &lt;a class&#x3D;&quot;btn btn-dark btn-xl js-scroll-trigger&quot; href&#x3D;&quot;mailto:bioseercontact@gmail.com&quot;&gt;Email Us&lt;/a&gt;
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot; ngStyle.lt-sm&#x3D;&quot;padding-top: 5%; padding-bottom: 5%;&quot;&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot;&gt;
+      &lt;h1 class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2.3em;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;Interested in Technical Aspects?&lt;/h1&gt;
+      &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-top: 6%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
@@ -432,9 +542,233 @@ export class HomeComponent implements OnInit {
 @import &quot;footer&quot;;
 @import &quot;bootstrap-overrides&quot;;
 
+.use-case-cards {
+  max-width: 200px;
+}
+
+.dashboardimage {
+  width: 79%;
+}
+
+.mobile-dashboard-image {
+  width: 100% !important;
+
+}
+
+.filler-section {
+  height: 56vh;
+  background-color: #000000;
+}
+
 .masthead {
-  background-image: url(https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto&#x3D;format%2Ccompress&amp;cs&#x3D;tinysrgb&amp;dpr&#x3D;2&amp;h&#x3D;750&amp;w&#x3D;1260);
+  background-image: url(&#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/website-header.png?alt&#x3D;media&amp;token&#x3D;ac87eba7-86ad-4527-9894-5ad5d2c659ec&#x27;);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center {
+  width: 67%;
+  margin-top: 46%;
+  margin-bottom: 24%;
+}
+
+.headerHomeCards {
+  font-size: 2.3em;
+  margin-top: 5% !important;
+  color: #404040;
+}
+
+.subtextHomeCards {
+  font-size: 1.2em;
+}
+
+.customButtonHomeCard {
+  background-color: #E9E9E9;
+  color: #404040 !important;
+  border-radius: 23px;
+}
+
+.customCard {
+  border-radius: 54px !important;
+  visibility: hidden;
+}
+
+.line {
+  height: 10%;
+  width: 118%;
+  background-color: white;
+  margin-left: 80%;
+}
+
+.line2 {
+  width: 34%;
+  background-color: white;
+  height: 1.3em;
+  margin-top: 27%;
+  margin-left: 10%;
+}
+
+.topcontainer {
+  margin-left: 10%;
+  z-index: 50 !important;
+}
+
+.biggerp{
+  font-size: 1.3em;
+  margin-bottom: 0%;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate3d(0,60px,0);
+    }
+
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        transform: translate3d(0,60px,0);
+    }
+
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-delay: 0.7s;
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.shadow {
+    box-shadow: 0px 0px 31px #888888;
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.fadeInUpShadow {
+    opacity: 0;
+    animation-name: fadeInUpShadow;
+    -webkit-animation-name: fadeInUpShadow;
+}
+
+@keyframes fadeInUpShadow {
+    0% {
+        transform: translate3d(0,40px,0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0,0,1000px);
+        opacity: 1;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.65);
+    }
+}
+
+@-webkit-keyframes fadeInUpShadow {
+    0% {
+        transform: translate3d(0,40px,0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0,0,1000px);
+        opacity: 1;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.65);
+    }
+}
+
+.container1 {
+  margin-top: -67%;
+  margin-left: 6%;
+  width: 52%;
+  background-color: rgba(9,29,30,1);
+  position: absolute;
+  z-index: 30;
+  visibility: hidden;
+}
+
+.container2 {
+  margin-top: -33%;
+  margin-left: 41%;
+  width: 52%;
+  background-color: rgba(9,29,30,1);
+  position: absolute;
+  z-index: 30;
+  visibility: hidden;
+}
+
+.gradient1 {
+  background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(223,231,241,0) 70%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(223,231,241,0) 70%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(223,231,241,0) 70%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr&#x3D;&#x27;#001e5799&#x27;, endColorstr&#x3D;&#x27;#ffffff&#x27;,GradientType&#x3D;0 ); /* IE6-9 */
+  height: 96%;
+  width: 100%;
+  position: absolute;
+  z-index: 10 !important;
+  pointer-events: none;
+}
+
+.gradient2 {
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(223,231,241,0) 20%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(223,231,241,0) 20%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(223,231,241,0) 20%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr&#x3D;&#x27;#ffffffff&#x27;, endColorstr&#x3D;&#x27;#001e5799&#x27;,GradientType&#x3D;0 ); /* IE6-9 */
+  height: 20%;
+  width: 100%;
+  margin-top: -7%;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.gradient3 {
+  background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(32,124,201,0) 70%,rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(32,124,201,0) 70%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(32,124,201,0) 70%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr&#x3D;&#x27;#001e5799&#x27;, endColorstr&#x3D;&#x27;#000000&#x27;,GradientType&#x3D;0 ); /* IE6-9 */
+  height: 20%;
+  width: 100%;
+  margin-top: 18%;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.imagetransition {
+  background-image: url(&#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/waterimage.png?alt&#x3D;media&amp;token&#x3D;50e3a864-502a-4d32-8c23-003260c382ac&#x27;);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 216vh;
+}
+
+.aboutbutton{
+  width: 60%;
+  height: 37%;
+  background-color: #1D809F;
+  border-radius: 0px;
+  border: 0.5px;
+  color: white;
+  visibility: hidden;
 }
 
 .logo {
@@ -442,36 +776,51 @@ export class HomeComponent implements OnInit {
 }
 
 .tripleinfo {
-  
+  margin-top: 49%;
+  visibility: hidden;
 }
 
 .afterani {
   visibility: visible !important;
 }
 
+.contactus {
+  margin-top: -6%;
+}
+
+.footer {
+  padding-bottom: 2%;
+}
+
+.padding {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 40%;
+}
+
 .bioseercard {
   background-color: white;
   position: absolute;
   z-index: 20;
-  margin-top: 3%;
-  margin-left: 49%;
-  height: 6%;
+  margin-top: 33%;
+  margin-left: 8%;
+  height: 15em;
   width: 20%;
-  border-radius: 0px !important;
+  border-radius: 27px !important;
   visibility: hidden;
 }
 
 .leftimgturtle {
-  width: 50%;
+  width: 100%;
   margin-top: -5%;
   margin-left: 5%;
 
 }
 
 .shadow-slide {
-	-webkit-animation: shadow-slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: shadow-slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-          animation-delay: 0.5s;
+	-webkit-animation: shadow-slide 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-slide 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation-delay: 0.7s;
 }
 
 @-webkit-keyframes shadow-slide {
@@ -479,13 +828,13 @@ export class HomeComponent implements OnInit {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateZ(1000px);
-            transform: translateZ(100px);
+            transform: translateZ(1000px);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.45);
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -497,8 +846,8 @@ export class HomeComponent implements OnInit {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 0;
   }
   100% {
@@ -509,6 +858,14 @@ export class HomeComponent implements OnInit {
             transform: translateX(0);
     opacity: 1;
   }
+}
+
+.responsive-header {
+  font-size: 5vw;
+}
+
+.spacer {
+
 }
 </code></pre>
     </div>
@@ -538,8 +895,8 @@ export class HomeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Header --><header class="masthead d-flex">  <div class="container text-center my-auto">    <img src="assets/img/logo.png" class="logo mb-5 animated fadeInDown">    <h3 class="mb-5 text-black-50 animated fadeInDown">      <em>Changing the Tides of Marine Monitoring</em>    </h3>    <a class="btn btn-primary btn-xl js-scroll-trigger animated fadeInDown delay-1s" href="#about">Find Out More</a>  </div>  <div class="overlay"></div></header><!-- About --><section class="content-section bg-light">  <mat-card animateOnScroll animationName="afterani shadow-slide" class="bioseercard">    <div class="container text-center">      <h4>BioSeer</h4>    </div>  </mat-card>  <img src="assets/img/turtle.jpg" class="leftimgturtle">  <div class="tripleinfo">    <div class="row">      <div class="col-3">        <h5>BLANK</h5>        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>      </div>      <div class="col-3">        <h5>NAN</h5>        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>      </div>      <div class="col-3">        <h5>ERROR 404</h5>        <p>Lipsum iscsoifnondoaubdwonawodinaowdnaouenfoaindoi</p>      </div>    </div>  </div></section><!-- <section class="content-section bg-light" id="about">  <div class="container text-center">    <div class="row">      <div class="col-lg-10 mx-auto">        <h2>About the Project</h2>        <p class="lead mb-5">BioSeer redefines how rivers, lakes, and oceans are monitored. Current methods for aquatic habitat monitoring focus on either indirect measurement through the water’s chemical content or labor-intensive studies that require teams of scientists. Due to the continued urbanization of natural habitats, the preservation and maintenance of water bodies have become increasingly important in maintaining their quality that is conducive to economic value and ecosystem health. Without the right data in high enough frequency, ensuring decision making is well-informed can be difficult. BioSeer provides users with data, information, and analytical capabilities to help communities, companies, and industries play their part in maintaining strong and healthy marine environments. </p>        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>      </div>    </div>  </div></section> --><!-- Services --><!-- <section class="content-section bg-primary text-white text-center" id="services">  <div class="container">    <div class="content-section-heading">      <h3 class="text-secondary mb-0">Services</h3>      <h2 class="mb-5">What We Offer</h2>    </div>    <div class="row">      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-screen-smartphone"></i>          </span>        <h4>          <strong>Responsive</strong>        </h4>        <p class="text-faded mb-0">Looks great on any screen size!</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-pencil"></i>          </span>        <h4>          <strong>Redesigned</strong>        </h4>        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>      </div>      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-like"></i>          </span>        <h4>          <strong>Favorited</strong>        </h4>        <p class="text-faded mb-0">Millions of users          <i class="fas fa-heart"></i>          Start Bootstrap!</p>      </div>      <div class="col-lg-3 col-md-6">          <span class="service-icon rounded-circle mx-auto mb-3">            <i class="icon-mustache"></i>          </span>        <h4>          <strong>Question</strong>        </h4>        <p class="text-faded mb-0">I mustache you a question...</p>      </div>    </div>  </div></section> --><!-- Callout --><!-- <section class="callout">  <div class="container text-center">    <h2 class="mx-auto mb-5">Welcome to      <em>your</em>      next website!</h2>    <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>  </div></section> --><!-- Portfolio --><!--<section class="content-section" id="portfolio">-->  <!--<div class="container">-->    <!--<div class="content-section-heading text-center">-->      <!--<h3 class="text-secondary mb-0">Portfolio</h3>-->      <!--<h2 class="mb-5">Recent Projects</h2>-->    <!--</div>-->    <!--<div class="row no-gutters">-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Stationary</h2>-->                <!--<p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-1.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Ice Cream</h2>-->                <!--<p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-2.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Strawberries</h2>-->                <!--<p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-3.jpg" alt="">-->        <!--</a>-->      <!--</div>-->      <!--<div class="col-lg-6">-->        <!--<a class="portfolio-item" href="#">-->            <!--<span class="caption">-->              <!--<span class="caption-content">-->                <!--<h2>Workspace</h2>-->                <!--<p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>-->              <!--</span>-->            <!--</span>-->          <!--<img class="img-fluid" src="img/portfolio-4.jpg" alt="">-->        <!--</a>-->      <!--</div>-->    <!--</div>-->  <!--</div>--><!--</section>--><!-- Call to Action --><section class="content-section bg-primary text-white">  <div class="container text-center">    <h2 class="mb-4">Contact Us</h2>    <div class="container text-center">      <h5>Email: bioseercontact@gmail.com</h5>      <br>      <a class="btn btn-dark btn-xl js-scroll-trigger" href="mailto:bioseercontact@gmail.com">Email Us</a>    </div>  </div></section></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+        var COMPONENT_TEMPLATE = '<div><!-- Header --><section class="masthead">  <div class="gradient1" ngStyle.lt-sm="height: 94%;" fxHide fxShow.gt-sm="true"></div>  <div class="container text-left topcontainer" ngStyle.lt-lg="width: 80%;">    <div class="row">      <div class="col-lg-4 col-sm-12 text-white animated fadeInDown delay-1s" ngStyle.lt-sm="margin-left: -4%;">        <h2 ngStyle.lt-sm="font-size: 1.8em;">Marine Monitoring</h2>        <h1 ngStyle.lt-sm="font-size: 3.7em;">SIMPLIFIED</h1>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Easy Species and Ocean</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Monitoring Harnessing the</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Power of Artificial Intelligence</p>      </div>      <div class="col-lg-5" fxHide fxShow.xl="true">        <p style="visibility: hidden;">.</p>      </div>      <div class="col-lg-3 animated fadeInDown delay-1s" fxHide fxShow.xl="true">        <div class="line"></div>      </div>    </div>  </div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-2" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="mx-auto center" ngStyle.lt-lg="margin-bottom: 50%;">    <div class="row">      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DASHBOARD</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" routerLink="/dashboard">SEE THE DASHBOARD</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DATA ANALYSIS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">READ ABOUT THE AI</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;" ngStyle.lt-sm="font-size: 1.4em;">HARDWARE SOLUTIONS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em; margin-bottom: -5%;">The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">LEARN MORE</a>        </mat-card>      </div>    </div>  </div></section><!-- Dashboard Section --><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 0%;">  <div class="container position-absolute" style="margin-left: 5%; z-index: 10;">    <div class="row align-items-end px-5">      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-3" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5" fxHide fxShow.lt-xl="true" fxShow.lt-sm="false"></div>      <div class="col-12 my-5"></div>      <div class="col-lg-4 col-md-12">        <mat-card animateOnScroll animationName="afterani shadow-slide" class="my-auto" style="visibility: hidden;" ngStyle.lt-lg="width: 20em; margin-left: -2rem;" ngStyle.lt-sm="width: 12em; margin-left: -3rem; top: -1rem;">          <mat-card-title style="color: #404040; margin-left: 0.3em;" ngStyle.lt-sm="font-size: 1em;">DASHBOARD</mat-card-title>          <a class="btn btn-light js-scroll-trigger mt-1 customButtonHomeCard md-elevation-z10" routerLink="/dashboard" ngClass.gt-lg="btn-xl" ngClass.lt-lg="btn-xl" ngStyle.lt-sm="font-size: 0.7em; padding: 10%;">SEE THE DASHBOARD</a>        </mat-card>      </div>      <div class="col-lg-8 col-sm-12"></div>    </div>  </div>  <div class="col">    <div class="mx-auto dashboardimage">      <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.png?alt=media&token=1c82e6d9-64dd-437c-b0d2-1f7b93376b57" style="width: 100%;">    </div>  </div>  <div animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="mx-auto" style="width: 77%; margin-top: 5%; visibility: hidden;">    <div class="row" style="color: #404040">      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;" ngStyle.lt-sm="margin-top: 8%;">        <h1 class="mb-4">Sensor Zones</h1>        <p>Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Global Database</h1>        <p>Through a shared global database, collaborate with researchers around the world to see big-picture trends.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Live Data Feeds</h1>        <p>View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.</p>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt=media&token=cf57d6d9-99ac-4c22-9cf3-9d12eaf1085b" style="width: 99%;">      </div>      <div class="col-lg-7 col-md-12">        <h1 style="color: #404040; font-size: 4em; visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" ngStyle.lt-sm="font-size: 2em; margin-top: 10%;">IMAGE RECOGNITION</h1>        <div style="width: 74%; margin-top: 15%;  visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" ngStyle.lt-sm="width: 100%;">          <div class="row">            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em; margin-top: -4%;">Precise Classification</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%; margin-bottom: 9%;">The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.</p>            </div>            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em;">Reliable</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%;">Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.</p>            </div>          </div>        </div>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=9db7f06a-84a5-46fb-8add-1c027f2db980" style="width: 99%;">      </div>      <div class="col-lg-7 col-md-12">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 1.8em; margin-top: 5%;">Mobile Buoy System</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Revolutionary Marine Monitoring</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em; margin-bottom: 4%;">BioSeer\'s mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.</p>          </div>        </mat-card>      </div>    </div>  </div></section><section class="content-section imagetransition" id="image">  <!--<div class="gradient2"></div>-->  <!--<div class="gradient3"></div>-->  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-3">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-lg-6 col-md-12 float-right">    <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="color: white; visibility: hidden;" ngStyle.gt-lg="font-size: 10em;" ngStyle.lt-lg="font-size: 6em; margin-left: 3%;" ngStyle.lt-sm="font-size: 4em;">USE CASES</h1>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="row mx-3">    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Marine Research</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Cheap and Effective for Long Term Data Collection</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div>  <div class="row mx-3">    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%; ">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Monitor Human Impact</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Keep Track of Pollution</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Show that you care about our enviornment. Monitor the effect  of your manufacturing or other facilities on the enviornment. Deploy a few sensors, and open access to live enviornment monitoring to show your support for the enviornment. Improve your companies productivity by maintaining a positive public image, and ensure your company helps keep marine enviornments alive and well.</p>          </div>        </mat-card>      </div>    </div>  </div>  <div class="row mx-3">    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Water Management</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Make Well-Informed Decisions</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Marine enviornments are crucial to the economy in a variety of ways, from tourism to fishing. In the managment of these ecosystems to ensure their vitality, BioSeer provides a wide range of data to help you make informed decisions about water management. BioSeer helps you visualize trends in data to make well-informed decisions to preserve our marine enviornments.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div></section><section class="content-section filler-section" ngStyle.lt-lg="height: 0vh; padding: 0px;" ngStyle.lt-sm="height: 96vh"></section><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 5%; padding-bottom: 5%;">  <div class="row mx-3">    <div class="col-lg-4 col-md-12">      <h1 class="headerHomeCards" style="font-size: 2.3em;" ngStyle.lt-sm="font-size: 1.4em;">Interested in Technical Aspects?</h1>      <p class="subtextHomeCards" style="font-size: 1.4em; margin-top: 6%;" ngStyle.lt-sm="font-size: 1em;">Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.</p>    </div>  </div></section></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

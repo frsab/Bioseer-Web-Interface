@@ -1,0 +1,1463 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>bioseer-web-interface documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">bioseer-web-interface documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SidebarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/sidebar/sidebar.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-sidebar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./sidebar.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./sidebar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#menus">menus</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sidebarservice">sidebarservice</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getSideBarState">getSideBarState</a>
+                            </li>
+                            <li>
+                                <a href="#getState">getState</a>
+                            </li>
+                            <li>
+                                <a href="#hasBackgroundImage">hasBackgroundImage</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#toggle">toggle</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(sidebarservice: <a href="../injectables/SidebarService.html">SidebarService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sidebarservice</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SidebarService.html" target="_self" >SidebarService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSideBarState"></a>
+                    <span class="name">
+                        <b>
+                            getSideBarState
+                        </b>
+                        <a href="#getSideBarState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSideBarState()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getState"></a>
+                    <span class="name">
+                        <b>
+                            getState
+                        </b>
+                        <a href="#getState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getState(currentMenu)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>currentMenu</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;down&quot; | &quot;up&quot;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasBackgroundImage"></a>
+                    <span class="name">
+                        <b>
+                            hasBackgroundImage
+                        </b>
+                        <a href="#hasBackgroundImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasBackgroundImage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggle"></a>
+                    <span class="name">
+                        <b>
+                            toggle
+                        </b>
+                        <a href="#toggle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggle(currentMenu)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>currentMenu</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menus"></a>
+                        <span class="name">
+                            <b>
+                            menus</b>
+                            <a href="#menus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidebarservice"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            sidebarservice</b>
+                            <a href="#sidebarservice"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/SidebarService.html" target="_self" >SidebarService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/sidebar/sidebar.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { trigger, state, style, transition, animate } from &#x27;@angular/animations&#x27;;
+import { SidebarService } from &#x27;./sidebar.service&#x27;;
+// import { MenusService } from &#x27;./menus.service&#x27;;
+
+@Component({
+  selector: &#x27;app-sidebar&#x27;,
+  templateUrl: &#x27;./sidebar.component.html&#x27;,
+  styleUrls: [&#x27;./sidebar.component.scss&#x27;],
+  animations: [
+    trigger(&#x27;slide&#x27;, [
+      state(&#x27;up&#x27;, style({ height: 0 })),
+      state(&#x27;down&#x27;, style({ height: &#x27;*&#x27; })),
+      transition(&#x27;up &lt;&#x3D;&gt; down&#x27;, animate(200))
+    ])
+  ]
+})
+export class SidebarComponent implements OnInit {
+  menus &#x3D; [];
+  constructor(public sidebarservice: SidebarService) {
+    this.menus &#x3D; sidebarservice.getMenuList();
+  }
+
+  ngOnInit() {
+  }
+
+  getSideBarState() {
+    return this.sidebarservice.getSidebarState();
+  }
+
+  toggle(currentMenu) {
+    if (currentMenu.type &#x3D;&#x3D;&#x3D; &#x27;dropdown&#x27;) {
+      this.menus.forEach(element &#x3D;&gt; {
+        if (element &#x3D;&#x3D;&#x3D; currentMenu) {
+          currentMenu.active &#x3D; !currentMenu.active;
+        } else {
+          element.active &#x3D; false;
+        }
+      });
+    }
+  }
+
+  getState(currentMenu) {
+
+    if (currentMenu.active) {
+      return &#x27;down&#x27;;
+    } else {
+      return &#x27;up&#x27;;
+    }
+  }
+
+  hasBackgroundImage() {
+    return this.sidebarservice.hasBackgroundImage;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;nav id&#x3D;&quot;sidebar&quot; class&#x3D;&quot;sidebar&quot; [ngClass]&#x3D;&quot;{&#x27;sidebar-bg&#x27; : hasBackgroundImage()}&quot;&gt;
+  &lt;div class&#x3D;&quot;sidebar-content&quot;&gt;
+    &lt;perfect-scrollbar&gt;
+      &lt;div class&#x3D;&quot;sidebar-header&quot;&gt;
+        &lt;a href&#x3D;&quot;#&quot;&gt;Pro Sidebar&lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;sidebar-profile&quot;&gt;
+        &lt;div class&#x3D;&quot;user-pic&quot;&gt;
+          &lt;img class&#x3D;&quot;img-responsive img-rounded&quot; src&#x3D;&quot;assets/img/user.jpg&quot; alt&#x3D;&quot;User picture&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;user-info&quot;&gt;
+          &lt;span class&#x3D;&quot;user-name&quot;&gt;Jhon
+            &lt;strong&gt;Smith&lt;/strong&gt;
+          &lt;/span&gt;
+          &lt;span class&#x3D;&quot;user-role&quot;&gt;Administrator&lt;/span&gt;
+          &lt;span class&#x3D;&quot;user-status&quot;&gt;
+            &lt;i class&#x3D;&quot;fa fa-circle&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;Online&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;sidebar-search&quot;&gt;
+        &lt;div&gt;
+          &lt;div class&#x3D;&quot;input-group&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control search-menu&quot; placeholder&#x3D;&quot;Search...&quot;&gt;
+            &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+              &lt;span class&#x3D;&quot;input-group-text&quot;&gt;
+                &lt;i class&#x3D;&quot;fa fa-search&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;sidebar-menu&quot;&gt;
+        &lt;ul&gt;
+          &lt;li *ngFor&#x3D;&quot;let menu of menus&quot; [ngClass]&#x3D;&quot;{&#x27;active&#x27;: menu.active , &#x27;sidebar-dropdown&#x27;:menu.type &#x3D;&#x3D;&#x3D; &#x27;dropdown&#x27; , &#x27;header-menu&#x27;:menu.type &#x3D;&#x3D;&#x3D; &#x27;header&#x27;}&quot;&gt;
+            &lt;span *ngIf&#x3D;&quot;menu.type &#x3D;&#x3D;&#x3D; &#x27;header&#x27;&quot;&gt;{{menu.title}}&lt;/span&gt;
+            &lt;a *ngIf&#x3D;&quot;menu.type !&#x3D;&#x3D; &#x27;header&#x27;&quot; href&#x3D;&quot;#&quot; (click)&#x3D;&#x27;toggle(menu)&#x27;&gt;
+              &lt;i class&#x3D;&quot;{{menu.icon}}&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;{{menu.title}}&lt;/span&gt;
+              &lt;span *ngIf&#x3D;&quot;menu.badge&quot; class&#x3D;&quot;badge badge-pill&quot; [ngClass]&#x3D;&quot;menu.badge.class&quot;&gt;{{menu.badge.text}}&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;div *ngIf&#x3D;&quot;menu.type &#x3D;&#x3D;&#x3D; &#x27;dropdown&#x27;&quot; class&#x3D;&quot;sidebar-submenu&quot; [@slide]&#x3D;&quot;getState(menu)&quot;&gt;
+              &lt;ul&gt;
+                &lt;li *ngFor&#x3D;&quot;let submenu of menu.submenus&quot;&gt;
+                  &lt;a href&#x3D;&quot;#&quot;&gt; {{submenu.title}}
+                    &lt;span *ngIf&#x3D;&quot;submenu.badge&quot; class&#x3D;&quot;badge badge-pill&quot; [ngClass]&#x3D;&quot;submenu.badge.class&quot;&gt;{{submenu.badge.text}}&lt;/span&gt;
+                  &lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/perfect-scrollbar&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;sidebar-footer&quot;&gt;
+    &lt;div class&#x3D;&quot;dropdown&quot; dropdown&gt;
+
+      &lt;a href&#x3D;&quot;#&quot; dropdownToggle&gt;
+        &lt;i class&#x3D;&quot;fa fa-bell&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;badge badge-pill badge-warning notification&quot;&gt;5&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;div class&#x3D;&quot;dropdown-menu notifications&quot; *dropdownMenu&gt;
+        &lt;div class&#x3D;&quot;notifications-header&quot;&gt;
+          &lt;i class&#x3D;&quot;fa fa-bell&quot;&gt;&lt;/i&gt;
+          Notifications
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;
+          &lt;div class&#x3D;&quot;notification-content&quot;&gt;
+            &lt;div class&#x3D;&quot;icon&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-check text-success border border-success&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;content&quot;&gt;
+              &lt;div class&#x3D;&quot;notification-detail&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. In totam explicabo&lt;/div&gt;
+              &lt;div class&#x3D;&quot;notification-time&quot;&gt;
+                6 minutes ago
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;
+          &lt;div class&#x3D;&quot;notification-content&quot;&gt;
+            &lt;div class&#x3D;&quot;icon&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-exclamation text-info border border-info&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;content&quot;&gt;
+              &lt;div class&#x3D;&quot;notification-detail&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. In totam explicabo&lt;/div&gt;
+              &lt;div class&#x3D;&quot;notification-time&quot;&gt;
+                Today
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;
+          &lt;div class&#x3D;&quot;notification-content&quot;&gt;
+            &lt;div class&#x3D;&quot;icon&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-exclamation-triangle text-warning border border-warning&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;content&quot;&gt;
+              &lt;div class&#x3D;&quot;notification-detail&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. In totam explicabo&lt;/div&gt;
+              &lt;div class&#x3D;&quot;notification-time&quot;&gt;
+                Yesterday
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a class&#x3D;&quot;dropdown-item text-center&quot; href&#x3D;&quot;#&quot;&gt;View all notifications&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown&quot; dropdown&gt;
+      &lt;a href&#x3D;&quot;#&quot; dropdownToggle&gt;
+        &lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;badge badge-pill badge-success notification&quot;&gt;7&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;div class&#x3D;&quot;dropdown-menu messages&quot; *dropdownMenu&gt;
+        &lt;div class&#x3D;&quot;messages-header&quot;&gt;
+          &lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;
+          Messages
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;
+          &lt;div class&#x3D;&quot;message-content&quot;&gt;
+            &lt;div class&#x3D;&quot;pic&quot;&gt;
+              &lt;img src&#x3D;&quot;assets/img/user.jpg&quot; alt&#x3D;&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;content&quot;&gt;
+              &lt;div class&#x3D;&quot;message-title&quot;&gt;
+                &lt;strong&gt; Jhon doe&lt;/strong&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;message-detail&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. In totam explicabo&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/a&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;
+          &lt;div class&#x3D;&quot;message-content&quot;&gt;
+            &lt;div class&#x3D;&quot;pic&quot;&gt;
+              &lt;img src&#x3D;&quot;assets/img/user.jpg&quot; alt&#x3D;&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;content&quot;&gt;
+              &lt;div class&#x3D;&quot;message-title&quot;&gt;
+                &lt;strong&gt; Jhon doe&lt;/strong&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;message-detail&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. In totam explicabo&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/a&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;
+          &lt;div class&#x3D;&quot;message-content&quot;&gt;
+            &lt;div class&#x3D;&quot;pic&quot;&gt;
+              &lt;img src&#x3D;&quot;assets/img/user.jpg&quot; alt&#x3D;&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;content&quot;&gt;
+              &lt;div class&#x3D;&quot;message-title&quot;&gt;
+                &lt;strong&gt; Jhon doe&lt;/strong&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;message-detail&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. In totam explicabo&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a class&#x3D;&quot;dropdown-item text-center&quot; href&#x3D;&quot;#&quot;&gt;View all messages&lt;/a&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown&quot; dropdown&gt;
+      &lt;a href&#x3D;&quot;#&quot; dropdownToggle&gt;
+        &lt;i class&#x3D;&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;badge-sonar&quot;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;div class&#x3D;&quot;dropdown-menu&quot; *dropdownMenu&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;My profile&lt;/a&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Help&lt;/a&gt;
+        &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Setting&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;a href&#x3D;&quot;#&quot;&gt;
+        &lt;i class&#x3D;&quot;fa fa-power-off&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./sidebar.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(.9);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  max-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 10000;
+  transition: left .3s ease;
+
+  a {
+    text-decoration: none;
+    transition: color .3s ease;
+  }
+
+  .sidebar-content {
+    max-height: calc(100% - 30px);
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    position: relative;
+
+    .sidebar-header {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+
+      &gt;a {
+        text-transform: uppercase;
+        font-weight: bold;
+        flex-grow: 1;
+        text-decoration: none;
+      }
+
+      #close-sidebar {
+        cursor: pointer;
+        font-size: 20px;
+        transition: color .3s ease;
+      }
+    }
+
+    .sidebar-profile {
+      padding: 20px;
+      overflow: hidden;
+
+      .user-pic {
+        float: left;
+        width: 60px;
+        padding: 2px;
+        border-radius: 12px;
+        margin-right: 15px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .user-info {
+        float: left;
+
+        &gt;span {
+          display: block;
+        }
+
+        .user-role {
+          font-size: 12px;
+        }
+
+        .user-status {
+          font-size: 11px;
+          margin-top: 4px;
+
+          i {
+            font-size: 8px;
+            margin-right: 4px;
+            color: #5cb85c;
+          }
+        }
+      }
+
+    }
+
+    .sidebar-search {
+
+      &gt;div {
+        padding: 10px 20px;
+      }
+
+      .input-group-append .input-group-text {
+        border-left: 0;
+      }
+    }
+
+    .sidebar-menu {
+      padding-bottom: 10px;
+
+      .header-menu span {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 15px 20px 5px 20px;
+        display: inline-block;
+      }
+
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li a {
+          display: inline-block;
+          width: 100%;
+          text-decoration: none;
+          position: relative;
+          padding: 8px 30px 8px 20px;
+
+          i {
+            margin-right: 10px;
+            font-size: 12px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+          }
+
+          &amp;:hover&gt;i::before {
+            display: inline-block;
+            animation: swing ease-in-out .5s 1 alternate;
+          }
+
+          span.label,
+          span.badge {
+            float: right;
+            margin-top: 8px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .sidebar-dropdown {
+        &gt;a:after {
+          font-family: &quot;Font Awesome 5 Free&quot;;
+          font-weight: 900;
+          content: &quot;\f105&quot;;
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-align: center;
+          background: 0 0;
+          position: absolute;
+          right: 15px;
+          top: 14px;
+          transition: transform .3s ease;
+
+        }
+
+        .sidebar-submenu {
+          // display: none;
+          overflow: hidden;
+
+          ul {
+            padding: 5px 0;
+          }
+
+          li {
+            padding-left: 25px;
+            font-size: 13px;
+
+            a {
+              &amp;:before {
+                content: &quot;\f111&quot;;
+                font-family: &quot;Font Awesome 5 Free&quot;;
+                font-weight: 400;
+                font-style: normal;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                margin-right: 10px;
+                font-size: 8px;
+              }
+
+              .badge,
+              .label {
+                float: right;
+                margin-top: 0px;
+              }
+            }
+          }
+        }
+
+        &amp;.active&gt;a:after {
+          transform: rotate(90deg);
+          right: 15px;
+        }
+      }
+
+    }
+
+
+  }
+
+  .sidebar-footer {
+
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+
+    &gt;div {
+      flex-grow: 1;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      position: static;
+      display: flex;
+
+      &gt;a {
+        flex-grow: 1;
+      }
+
+      a .notification {
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    .dropdown-menu {
+      bottom: 31px;
+      left: 0 !important;
+      top: initial !important;
+      right: 0 !important;
+      transform: none !important;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      font-size: .9rem;
+    }
+
+    .messages {
+      .dropdown-item {
+        padding: .25rem 1rem;
+      }
+
+      .messages-header {
+        padding: 0 1rem;
+      }
+
+      .message-content {
+        display: flex;
+
+        .pic {
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+            height: 100%;
+          }
+        }
+
+        .content {
+          line-height: 1.6;
+          padding-left: 5px;
+          width: calc(100% - 40px);
+
+          .message-title {
+            font-size: 13px;
+          }
+
+          .message-detail {
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+        }
+      }
+
+    }
+
+    .notifications {
+      .dropdown-item {
+        padding: .25rem 1rem;
+      }
+
+      .notifications-header {
+        padding: 0 1rem;
+      }
+
+      .notification-content {
+        display: flex;
+
+        .icon {
+          width: 40px;
+          height: 40px;
+
+          i {
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 4px;
+          }
+        }
+
+        .content {
+          line-height: 1.6;
+          padding-left: 5px;
+          width: calc(100% - 40px);
+
+          .notification-time {
+            font-size: .7rem;
+            color: #828282;
+          }
+
+          .notification-detail {
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+
+    .badge-sonar {
+      display: inline-block;
+      background: #980303;
+      border-radius: 50%;
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      top: 0;
+
+      &amp;:after {
+        content: &#x27;&#x27;;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid #980303;
+        opacity: 0;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        animation: sonar 1.5s infinite;
+      }
+    }
+
+
+  }
+}
+
+
+/*------------------------------default theme---------------------------------*/
+$bg-sidebar-wrapper : #1d1d1d;
+$border-color : #2b2b2b;
+$footer-top-border-color :#3a3a3a;
+$color:#bdbdbd;
+$header-menu-color :#6c7b88;
+$hover-color:#ffffff;
+$shadow-color:#131212;
+$bg-scrollbar :#636363;
+
+// colors with backgound image
+$img-bg-sidebar-wrapper : rgba(29, 29, 29, 0.8);
+$img-border-color : rgba(255, 255, 255, 0.1);
+$img-bg-footer :rgba(43, 43, 43, 0.5);
+$img-shadow-color:rgba(0, 0, 0, 0.5);
+
+
+
+.sidebar {
+
+  background-color: $bg-sidebar-wrapper;
+
+  .sidebar-profile,
+  .sidebar-search,
+  .sidebar-menu {
+    border-top: 1px solid $border-color;
+  }
+
+  .sidebar-search input.search-menu,
+  .sidebar-search .input-group-text {
+    border-color: $border-color;
+    box-shadow: none;
+  }
+
+  .sidebar-profile .user-info .user-role,
+  .sidebar-profile .user-info .user-status,
+  .sidebar-search input.search-menu,
+  .sidebar-search .input-group-text,
+  .sidebar-header&gt;a,
+  .sidebar-menu ul li a,
+  .sidebar-footer&gt;div&gt;a,
+  #close-sidebar {
+    color: $color;
+  }
+
+  .sidebar-menu ul li:hover&gt;a,
+  .sidebar-menu .sidebar-dropdown.active&gt;a,
+  .sidebar-profile .user-info,
+  .sidebar-header&gt;a:hover,
+  .sidebar-footer&gt;div&gt;a:hover i,
+  #close-sidebar:hover {
+    color: $hover-color;
+  }
+
+  ul li:hover a i,
+  .sidebar-dropdown .sidebar-submenu li a:hover:before,
+  .sidebar-search input.search-menu:focus+span,
+  .sidebar-menu .sidebar-dropdown.active a i {
+    color: $hover-color;
+  }
+
+  .sidebar-menu ul li a i,
+  .sidebar-menu .sidebar-dropdown div,
+  .sidebar-search input.search-menu,
+  .sidebar-search .input-group-text {
+    background-color: $border-color;
+    border: none;
+    margin-left: 1px;
+  }
+
+  .sidebar-menu .header-menu span {
+    color: $header-menu-color;
+  }
+
+  .sidebar-footer {
+    background-color: $border-color;
+    box-shadow: 0px -1px 5px $shadow-color;
+    border-top: 1px solid $footer-top-border-color;
+  }
+
+  .sidebar-footer&gt;div:first-child {
+    border-left: none;
+  }
+
+  .sidebar-footer&gt;div:last-child {
+    border-right: none;
+  }
+
+  // styles with background image
+  &amp;.sidebar-bg {
+
+    background-image: url(/assets/img/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &amp;:before {
+      content: &#x27;&#x27;;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $img-bg-sidebar-wrapper;
+    }
+
+    .sidebar-profile,
+    .sidebar-search,
+    .sidebar-menu {
+      border-top: 1px solid $img-border-color;
+    }
+
+    .sidebar-search input.search-menu,
+    .sidebar-search .input-group-text {
+      border-color: $img-border-color;
+      box-shadow: none;
+    }
+
+    .sidebar-menu ul li a i,
+    .sidebar-menu .sidebar-dropdown div,
+    .sidebar-search input.search-menu,
+    .sidebar-search .input-group-text {
+      background-color: $img-border-color;
+
+    }
+
+    .sidebar-footer {
+      background-color: $img-bg-footer;
+      box-shadow: 0px -1px 5px $img-bg-footer;
+      border-top: 1px solid $img-border-color;
+    }
+
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><nav id="sidebar" class="sidebar" [ngClass]="{\'sidebar-bg\' : hasBackgroundImage()}">  <div class="sidebar-content">    <perfect-scrollbar>      <div class="sidebar-header">        <a href="#">Pro Sidebar</a>      </div>      <div class="sidebar-profile">        <div class="user-pic">          <img class="img-responsive img-rounded" src="assets/img/user.jpg" alt="User picture">        </div>        <div class="user-info">          <span class="user-name">Jhon            <strong>Smith</strong>          </span>          <span class="user-role">Administrator</span>          <span class="user-status">            <i class="fa fa-circle"></i>            <span>Online</span>          </span>        </div>      </div>      <div class="sidebar-search">        <div>          <div class="input-group">            <input type="text" class="form-control search-menu" placeholder="Search...">            <div class="input-group-append">              <span class="input-group-text">                <i class="fa fa-search" aria-hidden="true"></i>              </span>            </div>          </div>        </div>      </div>      <div class="sidebar-menu">        <ul>          <li *ngFor="let menu of menus" [ngClass]="{\'active\': menu.active , \'sidebar-dropdown\':menu.type === \'dropdown\' , \'header-menu\':menu.type === \'header\'}">            <span *ngIf="menu.type === \'header\'">{{menu.title}}</span>            <a *ngIf="menu.type !== \'header\'" href="#" (click)=\'toggle(menu)\'>              <i class="{{menu.icon}}"></i>              <span>{{menu.title}}</span>              <span *ngIf="menu.badge" class="badge badge-pill" [ngClass]="menu.badge.class">{{menu.badge.text}}</span>            </a>            <div *ngIf="menu.type === \'dropdown\'" class="sidebar-submenu" [@slide]="getState(menu)">              <ul>                <li *ngFor="let submenu of menu.submenus">                  <a href="#"> {{submenu.title}}                    <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>                  </a>                </li>              </ul>            </div>          </li>        </ul>      </div>    </perfect-scrollbar>  </div>  <div class="sidebar-footer">    <div class="dropdown" dropdown>      <a href="#" dropdownToggle>        <i class="fa fa-bell"></i>        <span class="badge badge-pill badge-warning notification">5</span>      </a>      <div class="dropdown-menu notifications" *dropdownMenu>        <div class="notifications-header">          <i class="fa fa-bell"></i>          Notifications        </div>        <div class="dropdown-divider"></div>        <a class="dropdown-item" href="#">          <div class="notification-content">            <div class="icon">              <i class="fas fa-check text-success border border-success"></i>            </div>            <div class="content">              <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing                elit. In totam explicabo</div>              <div class="notification-time">                6 minutes ago              </div>            </div>          </div>        </a>        <a class="dropdown-item" href="#">          <div class="notification-content">            <div class="icon">              <i class="fas fa-exclamation text-info border border-info"></i>            </div>            <div class="content">              <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing                elit. In totam explicabo</div>              <div class="notification-time">                Today              </div>            </div>          </div>        </a>        <a class="dropdown-item" href="#">          <div class="notification-content">            <div class="icon">              <i class="fas fa-exclamation-triangle text-warning border border-warning"></i>            </div>            <div class="content">              <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing                elit. In totam explicabo</div>              <div class="notification-time">                Yesterday              </div>            </div>          </div>        </a>        <div class="dropdown-divider"></div>        <a class="dropdown-item text-center" href="#">View all notifications</a>      </div>    </div>    <div class="dropdown" dropdown>      <a href="#" dropdownToggle>        <i class="fa fa-envelope"></i>        <span class="badge badge-pill badge-success notification">7</span>      </a>      <div class="dropdown-menu messages" *dropdownMenu>        <div class="messages-header">          <i class="fa fa-envelope"></i>          Messages        </div>        <div class="dropdown-divider"></div>        <a class="dropdown-item" href="#">          <div class="message-content">            <div class="pic">              <img src="assets/img/user.jpg" alt="">            </div>            <div class="content">              <div class="message-title">                <strong> Jhon doe</strong>              </div>              <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing                elit. In totam explicabo</div>            </div>          </div>        </a>        <a class="dropdown-item" href="#">          <div class="message-content">            <div class="pic">              <img src="assets/img/user.jpg" alt="">            </div>            <div class="content">              <div class="message-title">                <strong> Jhon doe</strong>              </div>              <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing                elit. In totam explicabo</div>            </div>          </div>        </a>        <a class="dropdown-item" href="#">          <div class="message-content">            <div class="pic">              <img src="assets/img/user.jpg" alt="">            </div>            <div class="content">              <div class="message-title">                <strong> Jhon doe</strong>              </div>              <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing                elit. In totam explicabo</div>            </div>          </div>        </a>        <div class="dropdown-divider"></div>        <a class="dropdown-item text-center" href="#">View all messages</a>      </div>    </div>    <div class="dropdown" dropdown>      <a href="#" dropdownToggle>        <i class="fa fa-cog"></i>        <span class="badge-sonar"></span>      </a>      <div class="dropdown-menu" *dropdownMenu>        <a class="dropdown-item" href="#">My profile</a>        <a class="dropdown-item" href="#">Help</a>        <a class="dropdown-item" href="#">Setting</a>      </div>    </div>    <div>      <a href="#">        <i class="fa fa-power-off"></i>      </a>    </div>  </div></nav></div>'
+    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SidebarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SidebarComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
