@@ -55,6 +55,7 @@
 
 .topcontainer {
   margin-left: 10%;
+  z-index: 50 !important;
 }
 
 .biggerp{
@@ -166,7 +167,7 @@
   height: 96%;
   width: 100%;
   position: absolute;
-  z-index: 20;
+  z-index: 10 !important;
   pointer-events: none;
 }
 
@@ -300,4 +301,12 @@
             transform: translateX(0);
     opacity: 1;
   }
+}
+
+.responsive-header {
+  font-size: 5vw;
+}
+
+.spacer {
+
 }
