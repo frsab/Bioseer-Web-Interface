@@ -79,10 +79,11 @@ import {AuthGuard} from &#x27;./_guards/auth.guard&#x27;;
 import {EditAccountComponent} from &#x27;./user/edit-account/edit-account.component&#x27;;
 import {UploadImagesComponent} from &#x27;./upload-images/upload-images.component&#x27;;
 import {RegisterComponent} from &#x27;./user/register/register.component&#x27;;
-import {MobiledashboardComponent} from &#x27;./mobiledashboard/mobiledashboard.component&#x27;
-import {OurmissionComponent} from &#x27;./ourmission/ourmission.component&#x27;
-import {OurtechnologyComponent} from &#x27;./ourtechnology/ourtechnology.component&#x27;
-import {AboutusComponent} from &#x27;./aboutus/aboutus.component&#x27;
+import {MobiledashboardComponent} from &#x27;./mobiledashboard/mobiledashboard.component&#x27;;
+import {OurmissionComponent} from &#x27;./ourmission/ourmission.component&#x27;;
+import {OurtechnologyComponent} from &#x27;./ourtechnology/ourtechnology.component&#x27;;
+import {AboutusComponent} from &#x27;./aboutus/aboutus.component&#x27;;
+import {ErrorpageComponent} from &#x27;./errorpage/errorpage.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
@@ -128,8 +129,12 @@ const routes: Routes &#x3D; [
     path: &#x27;ourtechnology&#x27;,
     component: OurtechnologyComponent,
   },
+  {
+    path: &#x27;error&#x27;,
+    component: ErrorpageComponent,
+  },
   // otherwise redirect to home
-  { path: &#x27;**&#x27;, redirectTo: &#x27;&#x27; }
+  { path: &#x27;**&#x27;, redirectTo: &#x27;error&#x27; }
 ];
 
 @NgModule({

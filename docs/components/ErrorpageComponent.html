@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>MobiledashboardComponent</li>
+  <li>ErrorpageComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/mobiledashboard/mobiledashboard.component.ts</code>
+    <code>src/app/errorpage/errorpage.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-mobiledashboard</code></td>
+                <td class="col-md-9"><code>app-errorpage</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./mobiledashboard.component.scss</code></td>
+                <td class="col-md-9"><code>./errorpage.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./mobiledashboard.component.html</code></td>
+                <td class="col-md-9"><code>./errorpage.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/mobiledashboard/mobiledashboard.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/errorpage/errorpage.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/mobiledashboard/mobiledashboard.component.ts:12</a></div>
+                            class="link-to-prism">src/app/errorpage/errorpage.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-mobiledashboard&#x27;,
-  templateUrl: &#x27;./mobiledashboard.component.html&#x27;,
-  styleUrls: [&#x27;./mobiledashboard.component.scss&#x27;]
+  selector: &#x27;app-errorpage&#x27;,
+  templateUrl: &#x27;./errorpage.component.html&#x27;,
+  styleUrls: [&#x27;./errorpage.component.scss&#x27;]
 })
-export class MobiledashboardComponent implements OnInit {
+export class ErrorpageComponent implements OnInit {
 
   constructor() { }
 
@@ -238,8 +238,8 @@ export class MobiledashboardComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-card class&#x3D;&quot;mat-elevation-z20 text-center centered p-5&quot;&gt;
-  &lt;h1&gt;You Can&#x27;t Go Here&lt;/h1&gt;
-  &lt;p&gt;Sorry, the dashboard is not meant to be accessed from a mobile device.&lt;/p&gt;
+  &lt;h1&gt;Oops! That Doesn&#x27;t Exist.&lt;/h1&gt;
+  &lt;p&gt;Sorry, the page your looking for doesn&#x27;t exist.&lt;/p&gt;
   &lt;button mat-button routerLink&#x3D;&quot;/&quot;&gt;Go Home&lt;/button&gt;
 &lt;/mat-card&gt;
 </code></pre>
@@ -247,7 +247,7 @@ export class MobiledashboardComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./mobiledashboard.component.scss</code>
+                    <code>./errorpage.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.centered {
   position: fixed;
@@ -284,10 +284,10 @@ export class MobiledashboardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-card class="mat-elevation-z20 text-center centered p-5">  <h1>You Can\'t Go Here</h1>  <p>Sorry, the dashboard is not meant to be accessed from a mobile device.</p>  <button mat-button routerLink="/">Go Home</button></mat-card></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-card class="mat-elevation-z20 text-center centered p-5">  <h1>Oops! That Doesn\'t Exist.</h1>  <p>Sorry, the page your looking for doesn\'t exist.</p>  <button mat-button routerLink="/">Go Home</button></mat-card></div>'
     var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'MobiledashboardComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ErrorpageComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -321,7 +321,7 @@ export class MobiledashboardComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'MobiledashboardComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ErrorpageComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
