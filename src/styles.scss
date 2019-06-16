@@ -9,6 +9,9 @@
 // Loadi8ng bar styles
 @import '~ng2-slim-loading-bar/style.css';
 
+@import '~@uppy/core/dist/style.css';
+@import '~@uppy/dashboard/dist/style.css';
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!

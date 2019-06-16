@@ -20,10 +20,7 @@
 <!--<input type="file" id="fileUpload" name="fileUpload" multiple="multiple"-->
 
        <!--accept="{{accept}}" style="display:none;"/>-->
-<div class="UppyForm">
-  <form action="//api2.transloadit.com">
-    <h5>Uppy was not loaded — slow connection, unsupported browser, weird JS error on a page — but the upload still works, because HTML is cool like that</h5>
-    <input type="file" name="files[]" multiple="">
-    <button type="submit">Fallback Form Upload</button>
-  </form>
-</div>
+<div id="drag-drop-area"></div>
+<canvas style=";" id="canvas"></canvas>
+
+<button mat-button (click)="test()">Testy Boi</button>
