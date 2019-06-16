@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from '../../_services/authentication.service';
 import {SidebarService} from '../sidebar/sidebar.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +11,18 @@ import {SidebarService} from '../sidebar/sidebar.service';
 export class HeaderComponent implements OnInit {
 
   displayName: string;
+  transparentBackground: boolean;
 
   constructor(
     private authenticationService: AuthenticationService,
+    private router: Router,
+    private route: ActivatedRoute,
     public sidebarservice: SidebarService
-  ) { }
+  ) {
+    this.router.events.subscribe(res => {
+       this.router.url === '/' ? this.transparentBackground = true : this.transparentBackground = false;
+    });
+  }
 
   ngOnInit() {
     this.authenticationService.currentUser.subscribe(user => {

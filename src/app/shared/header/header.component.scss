@@ -29,7 +29,16 @@ body {
 }
 
 #header {
+}
+
+.transparent-background {
   background-color: transparent;
-  position: absolute;
   color: white;
+  position: absolute;
+}
+
+.smoke-background {
+  background-color: whitesmoke;
+  color: black;
+  position: relative;
 }
