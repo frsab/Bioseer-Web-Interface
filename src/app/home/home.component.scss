@@ -19,11 +19,14 @@
 
 .mobile-dashboard-image {
   width: 100% !important;
+}
 
+.max-600px {
+  max-width: 600px;
 }
 
 .filler-section {
-  height: 93vh;
+  height: 40vh;
   background-color: #000000;
 }
 

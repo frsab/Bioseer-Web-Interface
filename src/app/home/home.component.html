@@ -41,7 +41,7 @@
       </div>
       <div class="col-lg-4 col-md-12 my-2">
         <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">
-          <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;">HARDWARE SOLUTIONS</p>
+          <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;">HARDWARE</p>
           <p class="subtextHomeCards">The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.</p>
           <a class="btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10" style="margin-top: 12% !important;">LEARN MORE</a>
         </mat-card>
@@ -56,10 +56,6 @@
     <div class="row align-items-end px-5">
       <div class="col-12 my-5" fxHide fxShow.lg="true"></div>
       <div class="col-12 my-5" fxHide fxShow.lg="true"></div>
-      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>
-      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>
-      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>
-      <div class="col-12 my-3" fxHide fxShow.lg="true"></div>
       <div class="col-12 my-5"></div>
       <div class="col-12 my-5"></div>
       <div class="col-lg-4 col-md-12">
@@ -123,7 +119,7 @@
 <section class="content-section" style="background-color: white;">
   <div class="mx-auto" style="width: 77%;">
     <div class="row">
-      <div class="col-lg-5 col-md-12">
+      <div class="col-lg-5 col-md-12" fxHide fxShow.lt-lg>
         <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=9db7f06a-84a5-46fb-8add-1c027f2db980" style="width: 99%;">
       </div>
       <div class="col-lg-7 col-md-12">
@@ -134,6 +130,9 @@
             <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;">BioSeer's mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.</p>
           </div>
         </mat-card>
+      </div>
+      <div class="col-lg-5 col-md-12" fxHide.lt-lg>
+        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=9db7f06a-84a5-46fb-8add-1c027f2db980" style="width: 99%;">
       </div>
     </div>
   </div>
@@ -170,7 +169,7 @@
     <p style="visibility: hidden;">.</p>
   </div>
   <div class="col-lg-6 col-md-12 float-right">
-    <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="color: white; visibility: hidden;" ngStyle.gt-lg="font-size: 10em;" ngStyle.lt-lg="font-size: 6em; margin-left: 3%;">USE CASES</h1>
+    <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="color: white; visibility: hidden;" ngStyle.gt-lg="font-size: 13em !important;" ngStyle.lt-lg="font-size: 6em !important; margin-left: 3%;">USE CASES</h1>
   </div>
   <div class="col-12 my-5">
     <p style="visibility: hidden;">.</p>
@@ -188,11 +187,11 @@
     <p style="visibility: hidden;">.</p>
   </div>
   <div class="row mx-3">
-    <div class="col-lg-8 col-md-12">
+    <div class="col-lg-6 col-md-12">
       <div class="mx-auto">
-        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">
+        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow max-600px mx-auto" style="margin-top: 12%;">
           <div style="margin-left: 2%; margin-right: 2%;">
-            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Marine Research</p>
+            <p class="headerHomeCards " style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Marine Research</p>
             <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;">Cheap and Effective for Long Term Data Collection</p>
             <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;">BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.</p>
           </div>
@@ -204,12 +203,12 @@
     </div>
   </div>
   <div class="row mx-3">
-    <div class="col-4" fxHide.lt-lg="true">
+    <div class="col-8 col-lg-6" fxHide.lt-lg="true">
       <p style="visibility: hidden;">.</p>
     </div>
-    <div class="col-lg-8 col-md-12">
+    <div class="col-lg-6 col-md-12">
       <div class="mx-auto">
-        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%; ">
+        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow max-600px mx-auto" style="margin-top: 12%; ">
           <div style="margin-left: 2%; margin-right: 2%;">
             <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Monitor Human Impact</p>
             <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;">Keep Track of Pollution</p>
@@ -220,9 +219,9 @@
     </div>
   </div>
   <div class="row mx-3">
-    <div class="col-lg-8 col-md-12">
+    <div class="col-lg-6 col-md-12">
       <div class="mx-auto">
-        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">
+        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow max-600px mx-auto" style="margin-top: 12%;">
           <div style="margin-left: 2%; margin-right: 2%;">
             <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Water Management</p>
             <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;">Make Well-Informed Decisions</p>
@@ -237,11 +236,10 @@
   </div>
 </section>
 
-<section class="content-section filler-section" ngStyle.lt-lg="height: 51vh;">
-</section>
+<section class="content-section filler-section" ngStyle.lt-lg="height: 51vh;"></section>
 
 <section class="content-section" style="background-color: white;">
-  <div class="row mx-3">
+  <div class="row mx-5">
     <div class="col-lg-4 col-md-12">
       <h1 class="headerHomeCards" style="font-size: 2.3em;">Interested in Technical Aspects?</h1>
       <p class="subtextHomeCards" style="font-size: 1.4em; margin-top: 6%;">Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.</p>
