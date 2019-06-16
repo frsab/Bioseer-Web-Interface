@@ -13,6 +13,11 @@
   width: 135%;
 }
 
+.filler-section {
+  height: 93vh;
+  background-color: #000000;
+}
+
 .masthead {
   background-image: url('../../assets/img/website-header.png');
   background-position: center;
@@ -51,6 +56,14 @@
   width: 70%;
   background-color: white;
   margin-left: 84%;
+}
+
+.line2 {
+  width: 34%;
+  background-color: white;
+  height: 1.3em;
+  margin-top: 27%;
+  margin-left: 10%;
 }
 
 .topcontainer {
@@ -175,7 +188,7 @@
   background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(223,231,241,0) 20%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(223,231,241,0) 20%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
-  height: 27%;
+  height: 20%;
   width: 100%;
   margin-top: -7%;
   position: absolute;
@@ -184,16 +197,16 @@
 }
 
 .gradient3 {
-  background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(12,37,47,0) 30%, rgba(9,29,30,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(12,37,47,0) 30%,rgba(9,29,30,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(12,37,47,0) 30%,rgba(9,29,30,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#091d1e',GradientType=0 ); /* IE6-9 */
-  height: 27%;
+  background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(32,124,201,0) 70%,rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(32,124,201,0) 70%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(32,124,201,0) 70%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  height: 20%;
   width: 100%;
-  bottom: 6%;
-  left: 0px;
+  margin-top: 18%;
   position: absolute;
-  z-index: 20;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .imagetransition {
@@ -201,6 +214,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 216vh;
 }
 
 .aboutbutton{
