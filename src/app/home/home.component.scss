@@ -9,6 +9,10 @@
 @import "footer";
 @import "bootstrap-overrides";
 
+.dashboardimage {
+  width: 135%;
+}
+
 .masthead {
   background-image: url('../../assets/img/website-header.png');
   background-position: center;
@@ -51,7 +55,6 @@
 }
 
 .topcontainer {
-  margin-top: 6%;
   margin-left: 10%;
 }
 
@@ -237,11 +240,11 @@
   background-color: white;
   position: absolute;
   z-index: 20;
-  margin-top: 3%;
-  margin-left: 44%;
-  height: 4%;
+  margin-top: 33%;
+  margin-left: 8%;
+  height: 15em;
   width: 20%;
-  border-radius: 0px !important;
+  border-radius: 27px !important;
   visibility: hidden;
 }
 
@@ -263,8 +266,8 @@
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
     opacity: 0;
   }
   100% {
@@ -281,8 +284,8 @@
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
     opacity: 0;
   }
   100% {
