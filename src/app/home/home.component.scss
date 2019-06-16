@@ -9,8 +9,17 @@
 @import "footer";
 @import "bootstrap-overrides";
 
+.use-case-cards {
+  max-width: 200px;
+}
+
 .dashboardimage {
   width: 135%;
+}
+
+.mobile-dashboard-image {
+  width: 100% !important;
+
 }
 
 .filler-section {
