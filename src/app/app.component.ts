@@ -25,7 +25,6 @@ export class AppComponent {
     public sidebarservice: SidebarService,
     private _router: Router) {
     this.bingApiLoader.load().then(() => {
-      console.log('map loaded');
       this.mapLoaded = true;
     });
     this._router.events.subscribe((event: Event) => {
