@@ -12,7 +12,7 @@
   .page-content {
     display: inline-block;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 0;
     transition: padding-left .3s ease;
 
     @media screen and (min-width: 768px) {
@@ -60,3 +60,10 @@
   }
 }
 
+app-sidebar {
+  z-index: 10000 !important;
+}
+
+app-header {
+  z-index: 100 !important;
+}
