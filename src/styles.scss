@@ -57,8 +57,16 @@ $status-theme: mat-light-theme($status-primary, $status-accent, $status-warn);
 
 /* You can add global styles to this file, and also import other style files */
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family:
+  Roboto, "Helvetica Neue", sans-serif;
+}
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 mat-card {
   border-radius: 12px !important;
