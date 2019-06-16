@@ -8,6 +8,7 @@ import { NavigationCancel,
   Router } from '@angular/router';
 
 import {BingApiLoaderService} from './_services/bing-api-loader.service';
+import {SidebarService} from './shared/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent {
   constructor(
     private bingApiLoader: BingApiLoaderService,
     private _loadingBar: SlimLoadingBarService,
+    public sidebarservice: SidebarService,
     private _router: Router) {
     this.bingApiLoader.load().then(() => {
       console.log('map loaded');
@@ -43,5 +45,19 @@ export class AppComponent {
     if (event instanceof NavigationError) {
       this._loadingBar.stop();
     }
+  }
+
+  toggleSidebar() {
+    this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());
+  }
+  toggleBackgroundImage() {
+    this.sidebarservice.hasBackgroundImage = !this.sidebarservice.hasBackgroundImage;
+  }
+  getSideBarState() {
+    return this.sidebarservice.getSidebarState();
+  }
+
+  hideSidebar() {
+    this.sidebarservice.setSidebarState(true);
   }
 }

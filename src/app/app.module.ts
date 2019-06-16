@@ -35,6 +35,16 @@ import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component'
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { MobilehomeComponent } from './mobilehome/mobilehome.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import {SidebarComponent} from './shared/sidebar/sidebar.component';
+
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -60,7 +70,8 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     OurmissionComponent,
     OurtechnologyComponent,
     MobilehomeComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +80,9 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     MaterialModule,
     SlimLoadingBarModule,
     HttpClientModule,
-    AnimateOnScrollModule.forRoot()
+    AnimateOnScrollModule.forRoot(),
+    PerfectScrollbarModule
+
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -78,7 +91,10 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     BingApiLoaderService,
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
     // provider used to create fake backend
     // fakeBackendProvider
   ]

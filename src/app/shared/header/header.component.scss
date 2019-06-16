@@ -8,7 +8,7 @@
 }
 
 .menu-spacer {
-  flex: 1 1 auto;
+  flex: 1 1 0;
 }
 
 button:focus {
@@ -26,4 +26,10 @@ a:hover {
 
 body {
   overflow: hidden !important;
+}
+
+#header {
+  background-color: transparent;
+  position: absolute;
+  color: white;
 }
