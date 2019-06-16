@@ -17,22 +17,22 @@
   </div>
   <div class="mx-auto center">
     <div class="row">
-      <div class="col-lg-4 col-md-12">
-        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard mr-4">
+      <div class="col-lg-4 col-md-12 my-2">
+        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">
           <p class="headerHomeCards">DASHBOARD</p>
           <p class="subtextHomeCards">The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.</p>
           <a class="btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10"  routerLink="/dashboard">SEE THE DASHBOARD</a>
         </mat-card>
       </div>
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-12 my-2">
         <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">
           <p class="headerHomeCards">DATA ANALYSIS</p>
           <p class="subtextHomeCards">Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.</p>
           <a class="btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10" style="margin-top: 12% !important;">READ ABOUT THE AI</a>
         </mat-card>
       </div>
-      <div class="col-lg-4 col-md-12">
-        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard ml-4">
+      <div class="col-lg-4 col-md-12 my-2">
+        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">
           <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;">HARDWARE SOLUTIONS</p>
           <p class="subtextHomeCards">The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.</p>
           <a class="btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10" style="margin-top: 12% !important;">LEARN MORE</a>
@@ -54,9 +54,9 @@
       <div class="col-12 my-3" fxHide fxShow.lg="true"></div>
       <div class="col-12 my-5"></div>
       <div class="col-12 my-5"></div>
-      <div class="col-lg-4 col-sm-12">
-        <mat-card animateOnScroll animationName="afterani shadow-slide">
-          <mat-card-title style="color: #404040">DASHBOARD</mat-card-title>
+      <div class="col-lg-4 col-md-12">
+        <mat-card animateOnScroll animationName="afterani shadow-slide" class="my-auto">
+          <mat-card-title style="color: #404040; margin-left: 0.3em;">DASHBOARD</mat-card-title>
           <a class="btn btn-light btn-xl js-scroll-trigger mt-1 customButtonHomeCard md-elevation-z10" routerLink="/dashboard">SEE THE DASHBOARD</a>
         </mat-card>
       </div>
@@ -70,15 +70,15 @@
   </div>
   <div animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="mx-auto" style="width: 77%; margin-top: 5%; visibility: hidden;">
     <div class="row" style="color: #404040">
-      <div class="col">
+      <div class="col-lg-4 col-md-12">
         <h1 class="mb-4">Sensor Zones</h1>
         <p>Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.</p>
       </div>
-      <div class="col">
+      <div class="col-lg-4 col-md-12">
         <h1 class="mb-4">Global Database</h1>
         <p>Through a shared global database, collaborate with researchers around the world to see big-picture trends.</p>
       </div>
-      <div class="col">
+      <div class="col-lg-4 col-md-12">
         <h1 class="mb-4">Live Data Feeds</h1>
         <p>View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.</p>
       </div>
@@ -89,24 +89,25 @@
 <section class="content-section" style="background-color: white;">
   <div class="mx-auto" style="width: 77%;">
     <div class="row">
-      <div class="col-7">
+      <div class="col-lg-5 col-md-12">
+        <img src="assets/imagerec.png" style="width: 99%;">
+      </div>
+      <div class="col-lg-7 col-md-12">
         <h1 style="color: #404040; font-size: 4em; visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">IMAGE RECOGNITION</h1>
         <div style="width: 74%; margin-top: 15%;  visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">
           <div class="row">
-            <div class="col">
+            <div class="col-lg-6 col-md-12">
               <h3 style="color: #404040;">Precise Classification</h3>
               <p style="color: #404040;  margin-top: 10%;">The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.</p>
             </div>
-            <div class="col">
+            <div class="col-lg-6 col-md-12">
               <h3 style="color: #404040;">Reliable</h3>
               <p style="color: #404040;  margin-top: 10%;">Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-5">
-        <img src="assets/imagerec.png" style="width: 99%;">
-      </div>
+
     </div>
   </div>
 </section>
@@ -114,10 +115,10 @@
 <section class="content-section" style="background-color: white;">
   <div class="mx-auto" style="width: 77%;">
     <div class="row">
-      <div class="col-5">
+      <div class="col-lg-5 col-md-12">
         <img src="assets/buoy.png" style="width: 99%;">
       </div>
-      <div class="col-7">
+      <div class="col-lg-7 col-md-12">
         <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">
           <div style="margin-left: 2%;">
             <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Mobile Buoy System</p>
@@ -131,17 +132,19 @@
 </section>
 
 <section class="content-section imagetransition" id="image">
-  <div class="gradient2"></div>
-  <div class="gradient3"></div>
-  <div class="col">
-    <div class="line2"></div>
+  <!--<div class="gradient2"></div>-->
+  <!--<div class="gradient3"></div>-->
+  <div class="row mx-3" ngClass.lt-lg="mt-5">
+    <div class="col-lg-3 col-md-12 mb-3">
+      <div class="line2"></div>
+    </div>
+    <div class="col-lg-3 col-md-12" style="margin-bottom: 11%;">
+      <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="color: white;" ngStyle.gt-lg="font-size: 10em" ngStyle.lt-lg="font-size: 6em">USE CASES</h1>
+    </div>
   </div>
-  <div class="col" style="margin-bottom: 11%;">
-    <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="font-size: 10em; color: white; margin-left: 45%; margin-top: 13%; visibility: hidden;">USE CASES</h1>
-  </div>
-  <div class="row">
-    <div class="col-8">
-      <div class="mx-auto" style="width: 75%;">
+  <div class="row mx-3">
+    <div class="col-lg-8 col-md-12">
+      <div class="mx-auto">
         <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">
           <div style="margin-left: 2%; margin-right: 2%;">
             <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Marine Research</p>
@@ -151,16 +154,16 @@
         </mat-card>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-4" fxHide.lt-lg="true">
       <p style="visibility: hidden;">.</p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-4">
+  <div class="row mx-3">
+    <div class="col-4" fxHide.lt-lg="true">
       <p style="visibility: hidden;">.</p>
     </div>
-    <div class="col-8">
-      <div class="mx-auto" style="width: 75%;">
+    <div class="col-lg-8 col-md-12">
+      <div class="mx-auto">
         <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%; ">
           <div style="margin-left: 2%; margin-right: 2%;">
             <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Monitor Human Impact</p>
@@ -171,9 +174,9 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-8">
-      <div class="mx-auto" style="width: 75%;">
+  <div class="row mx-3">
+    <div class="col-lg-8 col-md-12">
+      <div class="mx-auto">
         <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">
           <div style="margin-left: 2%; margin-right: 2%;">
             <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;">Water Management</p>
@@ -183,7 +186,7 @@
         </mat-card>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-4" fxHide.lt-lg="true">
       <p style="visibility: hidden;">.</p>
     </div>
   </div>
@@ -193,8 +196,8 @@
 </section>
 
 <section class="content-section" style="background-color: white;">
-  <div style="width: 36%;">
-    <div style="margin-left: 21%;">
+  <div class="row mx-3">
+    <div class="col-lg-4 col-md-12">
       <h1 class="headerHomeCards" style="font-size: 2.3em;">Interested in Technical Aspects?</h1>
       <p class="subtextHomeCards" style="font-size: 1.4em; margin-top: 6%;">Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.</p>
     </div>
