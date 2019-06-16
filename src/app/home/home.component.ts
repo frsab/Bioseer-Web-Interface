@@ -12,12 +12,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    if ((navigator.userAgent.indexOf('iPhone') !== -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') !== -1)) {
-      this.router.navigate(['mobilehome']);
-    }
-    if (screen.width <= 699) {
-      this.router.navigate(['mobilehome']);
-    }
+    // if ((navigator.userAgent.indexOf('iPhone') !== -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') !== -1)) {
+    //   this.router.navigate(['mobilehome']);
+    // }
+    // if (screen.width <= 699) {
+    //   this.router.navigate(['mobilehome']);
+    // }
   }
 
 }
