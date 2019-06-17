@@ -102,78 +102,78 @@ export class FileUploadComponent implements OnInit {
     // });
   }
 
-  async test2() {
-    let that = this;
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-
-    const image = new Image(60, 45); // Using optional size for image
-    image.crossOrigin = 'Anonymous';
-
-    image.onload = drawImageActualSize; // Draw when image has loaded
-
-// Load an image of intrinsic size 300x227 in CSS pixels
-    image.src = 'http://localhost:1337/mw1.google.com/ges/dd/images/NASA_OCEANDATA_sample.png';
-
-    function drawImageActualSize() {
-      // Use the intrinsic size of image in CSS pixels for the canvas element
-      canvas.width = this.naturalWidth;
-      canvas.height = this.naturalHeight;
-
-      // Will draw the image as 300x227, ignoring the custom size of 60x45
-      // given in the constructor
-      ctx.drawImage(this, 0, 0);
-
-      // To use the custom size we'll have to specify the scale parameters
-      // using the element's width and height properties - lets draw one
-      // on top in the corner:
-      ctx.drawImage(this, 0, 0, this.width, this.height);
-      const imageData = ctx.getImageData(0, 0, 256, 256);
-      const a = math.ones([256, 256, 3]);
-      // console.log(a.shape);
-      console.log(imageData);
-      let p = 0;
-      console.log(imageData.data)
-      for (let r = 0; r < imageData.height; r++) {
-        for (let c = 0; c < imageData.width; c++) {
-          for (let x =0; x < 3; x++) {
-            a[r, c, x] = imageData.data[p++];
-          }
-          p++;
-        }
-      }
-      console.log(a);
-      // for (let i = 0; i += 2; i < 256) {
-      //   data.push(imageData.data[i], imageData.data[i + 1]);
-      // }
-
-      const uri = 'http://localhost:1337/3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
-
-      const options = {
-        uri,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          // Authorization: 'Bearer ' + apiKey,
-        },
-      };
-
-      const httpOptions = {
-        headers: new HttpHeaders({
-          'Content-Type': 'application/json'
-        })
-      };
-
-      const jsonData = { a };
-
-
-      // console.log(jsonData);
-
-      that.http.post(options.uri, JSON.stringify(jsonData), httpOptions).subscribe((res) => {
-        console.log(res);
-      });
-    }
-
-
-  }
+//   async test2() {
+//     let that = this;
+//     const canvas = document.getElementById('canvas');
+//     const ctx = canvas.getContext('2d');
+//
+//     const image = new Image(60, 45); // Using optional size for image
+//     image.crossOrigin = 'Anonymous';
+//
+//     image.onload = drawImageActualSize; // Draw when image has loaded
+//
+// // Load an image of intrinsic size 300x227 in CSS pixels
+//     image.src = 'http://localhost:1337/mw1.google.com/ges/dd/images/NASA_OCEANDATA_sample.png';
+//
+//     function drawImageActualSize() {
+//       // Use the intrinsic size of image in CSS pixels for the canvas element
+//       canvas.width = this.naturalWidth;
+//       canvas.height = this.naturalHeight;
+//
+//       // Will draw the image as 300x227, ignoring the custom size of 60x45
+//       // given in the constructor
+//       ctx.drawImage(this, 0, 0);
+//
+//       // To use the custom size we'll have to specify the scale parameters
+//       // using the element's width and height properties - lets draw one
+//       // on top in the corner:
+//       ctx.drawImage(this, 0, 0, this.width, this.height);
+//       const imageData = ctx.getImageData(0, 0, 256, 256);
+//       const a = math.ones([256, 256, 3]);
+//       // console.log(a.shape);
+//       console.log(imageData);
+//       let p = 0;
+//       console.log(imageData.data)
+//       for (let r = 0; r < imageData.height; r++) {
+//         for (let c = 0; c < imageData.width; c++) {
+//           for (let x =0; x < 3; x++) {
+//             a[r, c, x] = imageData.data[p++];
+//           }
+//           p++;
+//         }
+//       }
+//       console.log(a);
+//       // for (let i = 0; i += 2; i < 256) {
+//       //   data.push(imageData.data[i], imageData.data[i + 1]);
+//       // }
+//
+//       const uri = 'http://localhost:1337/3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
+//
+//       const options = {
+//         uri,
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//           // Authorization: 'Bearer ' + apiKey,
+//         },
+//       };
+//
+//       const httpOptions = {
+//         headers: new HttpHeaders({
+//           'Content-Type': 'application/json'
+//         })
+//       };
+//
+//       const jsonData = { a };
+//
+//
+//       // console.log(jsonData);
+//
+//       that.http.post(options.uri, JSON.stringify(jsonData), httpOptions).subscribe((res) => {
+//         console.log(res);
+//       });
+//     }
+//
+//
+//   }
 }
