@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiUrl: 'http://localhost:1337/localhost:5000/bioseer-c55f5/us-central1/api',
+  apiUrl: 'http://localhost:1337/localhost:5001/bioseer-c55f5/us-central1/api',
+  imageUrl: 'http://localhost:1337/3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score',
   production: false
 };
 
