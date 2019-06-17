@@ -409,76 +409,7 @@ export class UploadImagesComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
-  &lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;div class&#x3D;&quot;col-1&quot;&gt;
-
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;col-5 text-center&quot;&gt;
-      &lt;mat-card class&#x3D;&quot;mt-3&quot; style&#x3D;&quot;background-color: rgba(253,253,253,0.99);&quot;&gt;
-        &lt;h1&gt;Upload Files for Analysis&lt;/h1&gt;
-        &lt;h3&gt;Files must be in png format, 256x256 pixels&lt;/h3&gt;
-        &lt;br&gt;
-        &lt;p&gt;1. First Fill in Form&lt;/p&gt;
-        &lt;p&gt;2. Press Upload and Choose Photos to Submit&lt;/p&gt;
-        &lt;p&gt;3. Begin Photo Upload&lt;/p&gt;
-        &lt;!--&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;fileInput.click()&quot;&gt;Click to Upload File&lt;/button&gt;--&gt;
-        &lt;!--&lt;br&gt;--&gt;
-        &lt;!--&lt;input hidden id&#x3D;&quot;singleFile&quot; type&#x3D;&quot;file&quot; #fileInput [fileUploadInputFor]&#x3D;&quot;fileUploadQueue&quot; accept&#x3D;&quot;image/x-png/&quot;&gt;--&gt;
-        &lt;!--&lt;br&gt;--&gt;
-
-        &lt;!--&lt;p&gt;or...&lt;/p&gt;--&gt;
-
-        &lt;!--&lt;div [fileUploadInputFor]&#x3D;&quot;fileUploadQueue&quot; class&#x3D;&quot;upload-drop-zone&quot;&gt;--&gt;
-          &lt;!--Just drag and drop files here--&gt;
-        &lt;!--&lt;/div&gt;--&gt;
-
-        &lt;!--&lt;div class&#x3D;&quot;text-center mx-auto&quot; style&#x3D;&quot;width: 500px&quot;&gt;--&gt;
-          &lt;!--&lt;mat-file-upload-queue #fileUploadQueue--&gt;
-                                 &lt;!--[fileAlias]&#x3D;&quot;&#x27;file&#x27;&quot;--&gt;
-                                 &lt;!--[httpUrl]&#x3D;&quot;&#x27;http://file.io&#x27;&quot;--&gt;
-                                 &lt;!--accept&#x3D;&quot;image/x-png&quot;--&gt;
-                                 &lt;!--multiple&gt;--&gt;
-
-            &lt;!--&lt;mat-file-upload [file]&#x3D;&quot;file&quot; [id]&#x3D;&quot;i&quot; *ngFor&#x3D;&quot;let file of fileUploadQueue.files; let i &#x3D; index&quot;&gt;&lt;/mat-file-upload&gt;--&gt;
-          &lt;!--&lt;/mat-file-upload-queue&gt;--&gt;
-        &lt;!--&lt;/div&gt;--&gt;
-      &lt;/mat-card&gt;
-    &lt;/div&gt;
-
-    &lt;div class&#x3D;&quot;col-5 text-center&quot;&gt;
-      &lt;mat-card class&#x3D;&quot;mt-3&quot; style&#x3D;&quot;background-color: rgba(253,253,253,0.99);&quot;&gt;
-        &lt;h3&gt;Metadata&lt;/h3&gt;
-        &lt;div class&#x3D;&quot;form-container mx-auto&quot;&gt;
-          &lt;mat-form-field class&#x3D;&quot;m-1&quot;&gt;
-            &lt;input matInput placeholder&#x3D;&quot;SensorID&quot;&gt;
-            &lt;mat-hint&gt;Default is UPLOAD, don&#x27;t touch this unless you know what you&#x27;re doing&lt;/mat-hint&gt;
-          &lt;/mat-form-field&gt;
-
-          &lt;mat-form-field class&#x3D;&quot;m-1&quot;&gt;
-            &lt;input matInput placeholder&#x3D;&quot;Sensor Name&quot;&gt;
-            &lt;mat-hint&gt;Default is UPLOAD, don&#x27;t touch this unless you know what you&#x27;re doing&lt;/mat-hint&gt;
-          &lt;/mat-form-field&gt;
-
-          &lt;mat-form-field class&#x3D;&quot;m-1&quot;&gt;
-            &lt;input matInput [matDatepicker]&#x3D;&quot;date&quot; placeholder&#x3D;&quot;Date Data Collected&quot;&gt;
-            &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;date&quot;&gt;&lt;/mat-datepicker-toggle&gt;
-            &lt;mat-datepicker #date&gt;&lt;/mat-datepicker&gt;
-          &lt;/mat-form-field&gt;
-
-          &lt;mat-form-field class&#x3D;&quot;m-1&quot;&gt;
-            &lt;mat-select placeholder&#x3D;&quot;Zone Location&quot;&gt;
-              &lt;mat-option value&#x3D;&quot;zone1&quot;&gt;Zone 1&lt;/mat-option&gt;
-            &lt;/mat-select&gt;
-          &lt;/mat-form-field&gt;
-        &lt;/div&gt;
-        &lt;app-file-upload (clicked)&#x3D;&quot;onSubmit()&quot; (complete)&#x3D;&quot;onFileComplete($event)&quot;&gt;&lt;/app-file-upload&gt;
-      &lt;/mat-card&gt;
-      &lt;!-- Options for Other Data --&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;col-1&quot;&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;app-file-upload&gt;&lt;/app-file-upload&gt;
 &lt;/div&gt;
 
 </code></pre>
@@ -557,7 +488,7 @@ label {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">  <div class="row">    <div class="col-1">    </div>    <div class="col-5 text-center">      <mat-card class="mt-3" style="background-color: rgba(253,253,253,0.99);">        <h1>Upload Files for Analysis</h1>        <h3>Files must be in png format, 256x256 pixels</h3>        <br>        <p>1. First Fill in Form</p>        <p>2. Press Upload and Choose Photos to Submit</p>        <p>3. Begin Photo Upload</p>        <!--<button mat-raised-button color="primary" (click)="fileInput.click()">Click to Upload File</button>-->        <!--<br>-->        <!--<input hidden id="singleFile" type="file" #fileInput [fileUploadInputFor]="fileUploadQueue" accept="image/x-png/">-->        <!--<br>-->        <!--<p>or...</p>-->        <!--<div [fileUploadInputFor]="fileUploadQueue" class="upload-drop-zone">-->          <!--Just drag and drop files here-->        <!--</div>-->        <!--<div class="text-center mx-auto" style="width: 500px">-->          <!--<mat-file-upload-queue #fileUploadQueue-->                                 <!--[fileAlias]="\'file\'"-->                                 <!--[httpUrl]="\'http://file.io\'"-->                                 <!--accept="image/x-png"-->                                 <!--multiple>-->            <!--<mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>-->          <!--</mat-file-upload-queue>-->        <!--</div>-->      </mat-card>    </div>    <div class="col-5 text-center">      <mat-card class="mt-3" style="background-color: rgba(253,253,253,0.99);">        <h3>Metadata</h3>        <div class="form-container mx-auto">          <mat-form-field class="m-1">            <input matInput placeholder="SensorID">            <mat-hint>Default is UPLOAD, don\'t touch this unless you know what you\'re doing</mat-hint>          </mat-form-field>          <mat-form-field class="m-1">            <input matInput placeholder="Sensor Name">            <mat-hint>Default is UPLOAD, don\'t touch this unless you know what you\'re doing</mat-hint>          </mat-form-field>          <mat-form-field class="m-1">            <input matInput [matDatepicker]="date" placeholder="Date Data Collected">            <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>            <mat-datepicker #date></mat-datepicker>          </mat-form-field>          <mat-form-field class="m-1">            <mat-select placeholder="Zone Location">              <mat-option value="zone1">Zone 1</mat-option>            </mat-select>          </mat-form-field>        </div>        <app-file-upload (clicked)="onSubmit()" (complete)="onFileComplete($event)"></app-file-upload>      </mat-card>      <!-- Options for Other Data -->    </div>    <div class="col-1">    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">  <app-file-upload></app-file-upload></div></div>'
     var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'UploadImagesComponent'};

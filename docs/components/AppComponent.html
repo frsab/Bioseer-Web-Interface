@@ -664,7 +664,7 @@ export class AppComponent {
   &lt;app-sidebar&gt;&lt;/app-sidebar&gt;
   &lt;app-header&gt;&lt;/app-header&gt;
   &lt;router-outlet&gt;&lt;/router-outlet&gt;
-  &lt;main class&#x3D;&quot;page-content&quot;&gt;
+  &lt;!--&lt;main class&#x3D;&quot;page-content&quot;&gt;--&gt;
     &lt;!--&lt;div class&#x3D;&quot;container-fluid&quot;&gt;--&gt;
       &lt;!--&lt;div class&#x3D;&quot;row&quot;&gt;--&gt;
         &lt;!--&lt;div class&#x3D;&quot;form-group col-md-12&quot;&gt;--&gt;
@@ -678,7 +678,7 @@ export class AppComponent {
     &lt;!--&lt;/div&gt;--&gt;
     &lt;!--&lt;div class&#x3D;&quot;overlay&quot; (click)&#x3D;&quot;toggleSidebar()&quot; [ngClass]&#x3D;&quot;{&#x27;show&#x27; : !getSideBarState()}&quot;&gt;&lt;/div&gt;--&gt;
     &lt;!--&lt;router-outlet&gt;&lt;/router-outlet&gt;--&gt;
-  &lt;/main&gt;
+  &lt;!--&lt;/main&gt;--&gt;
 
   &lt;!-- &lt;a href&#x3D;&quot;https://github.com/azouaoui-med/angular-pro-sidebar&quot;&gt;&lt;img style&#x3D;&quot;position: absolute; top: 0; right: 0; border: 0;&quot; src&#x3D;&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png&quot; alt&#x3D;&quot;Fork me on GitHub&quot;&gt;&lt;/a&gt; --&gt;
 &lt;/div&gt;
@@ -786,7 +786,7 @@ app-header {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng2-slim-loading-bar></ng2-slim-loading-bar><div class="page-wrapper" [ngClass]="{\'toggled\' : getSideBarState()}">  <app-sidebar></app-sidebar>  <app-header></app-header>  <router-outlet></router-outlet>  <main class="page-content">    <!--<div class="container-fluid">-->      <!--<div class="row">-->        <!--<div class="form-group col-md-12">-->          <!--<a href="#" class="btn btn-outline-secondary mr-1 mb-1" (click)="toggleSidebar()">Toggle Sidebar</a>-->          <!--<a href="#" class="btn btn-secondary" (click)="toggleBackgroundImage()">Toggle Background Image</a>-->        <!--</div>-->      <!--</div>-->      <!--<div class="attribution text-center badge badge-warning">-->        <!--Created by <strong>Azouaoui Mohamed</strong>-->      <!--</div>-->    <!--</div>-->    <!--<div class="overlay" (click)="toggleSidebar()" [ngClass]="{\'show\' : !getSideBarState()}"></div>-->    <!--<router-outlet></router-outlet>-->  </main>  <!-- <a href="https://github.com/azouaoui-med/angular-pro-sidebar"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a> --></div></div>'
+        var COMPONENT_TEMPLATE = '<div><ng2-slim-loading-bar></ng2-slim-loading-bar><div class="page-wrapper" [ngClass]="{\'toggled\' : getSideBarState()}">  <app-sidebar></app-sidebar>  <app-header></app-header>  <router-outlet></router-outlet>  <!--<main class="page-content">-->    <!--<div class="container-fluid">-->      <!--<div class="row">-->        <!--<div class="form-group col-md-12">-->          <!--<a href="#" class="btn btn-outline-secondary mr-1 mb-1" (click)="toggleSidebar()">Toggle Sidebar</a>-->          <!--<a href="#" class="btn btn-secondary" (click)="toggleBackgroundImage()">Toggle Background Image</a>-->        <!--</div>-->      <!--</div>-->      <!--<div class="attribution text-center badge badge-warning">-->        <!--Created by <strong>Azouaoui Mohamed</strong>-->      <!--</div>-->    <!--</div>-->    <!--<div class="overlay" (click)="toggleSidebar()" [ngClass]="{\'show\' : !getSideBarState()}"></div>-->    <!--<router-outlet></router-outlet>-->  <!--</main>-->  <!-- <a href="https://github.com/azouaoui-med/angular-pro-sidebar"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a> --></div></div>'
     var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};

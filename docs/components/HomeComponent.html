@@ -258,7 +258,7 @@ import { Router } from &#x27;@angular/router&#x27;;
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router){
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -268,6 +268,41 @@ export class HomeComponent implements OnInit {
     // if (screen.width &lt;&#x3D; 699) {
     //   this.router.navigate([&#x27;mobilehome&#x27;]);
     // }
+
+    // const buoy &#x3D; document.createElement(&#x27;img&#x27;);
+    // const dashboard &#x3D; document.createElement(&#x27;img&#x27;);
+    // const websiteheader &#x3D; document.createElement(&#x27;img&#x27;);
+    // let rec &#x3D; document.createElement(&#x27;img&#x27;);
+    // const water &#x3D; document.createElement(&#x27;img&#x27;);
+    //
+    // const buoyimg &#x3D; document.images[2];
+    // const dashboardimg &#x3D; document.images[0];
+    // const recimg &#x3D; document.images[1];
+    // buoy.onload &#x3D; function() {
+    //   buoyimg.src &#x3D; this.src;
+    // };
+    //
+    // rec.onload &#x3D; function() {
+    //   recimg.src &#x3D; this.src;
+    // };
+    //
+    // dashboard.onload &#x3D; function() {
+    //   dashboardimg.src &#x3D; this.src;
+    // };
+    //
+    // websiteheader.onload &#x3D; function() {
+    //   document.getElementById(&#x27;header&#x27;).style.backgroundImage &#x3D; this.src;
+    // };
+    //
+    // water.onload &#x3D; function() {
+    //   document.getElementById(&#x27;lastsection&#x27;).style.backgroundImage &#x3D; this.src;
+    // };
+
+    // water.src &#x3D; &#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/waterimage.jpg?alt&#x3D;media&amp;token&#x3D;c2c816fb-20ca-46da-b06d-ea15d9d7071a&#x27;;
+    // rec.src &#x3D; &#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt&#x3D;media&amp;token&#x3D;ee66477b-5991-4878-b81a-0ce3f035e139&#x27;;
+    // buoy.src &#x3D; &#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;53fb4e46-a51c-4b33-a990-c990f7f17a81&#x27;;
+    // dashboard.src &#x3D; &#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.jpg?alt&#x3D;media&amp;token&#x3D;e0c57a1e-7b97-488f-90b4-80acf855211f&#x27;;
+    // websiteheader.src &#x3D; &#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/website-header.jpg?alt&#x3D;media&amp;token&#x3D;7db462af-6fa4-45d1-a7f5-d5ca3fa681b1&#x27;;
   }
 
 }
@@ -275,8 +310,7 @@ export class HomeComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- Header --&gt;
-&lt;section class&#x3D;&quot;masthead&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;section class&#x3D;&quot;masthead&quot;&gt;
   &lt;div class&#x3D;&quot;gradient1&quot; ngStyle.lt-sm&#x3D;&quot;height: 94%;&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
   &lt;div class&#x3D;&quot;container text-left topcontainer&quot; ngStyle.lt-lg&#x3D;&quot;width: 80%;&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
@@ -318,35 +352,19 @@ export class HomeComponent implements OnInit {
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
         &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;text-center customCard&quot;&gt;
-          &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 7%;&quot;&gt;HARDWARE&lt;/p&gt;
-          &lt;p class&#x3D;&quot;subtextHomeCards&quot;&gt;The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.&lt;/p&gt;
-          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10&quot; style&#x3D;&quot;margin-top: 12% !important;&quot;&gt;LEARN MORE&lt;/a&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 7%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;HARDWARE SOLUTIONS&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em; margin-bottom: -5%;&quot;&gt;The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; style&#x3D;&quot;margin-top: 12% !important;&quot;&gt;LEARN MORE&lt;/a&gt;
         &lt;/mat-card&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;!-- Dashboard Section --&gt;
 &lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot; ngStyle.lt-sm&#x3D;&quot;padding-top: 0%;&quot;&gt;
-  &lt;div class&#x3D;&quot;container position-absolute&quot; style&#x3D;&quot;margin-left: 5%; z-index: 10;&quot;&gt;
-    &lt;div class&#x3D;&quot;row align-items-end px-5&quot;&gt;
-      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lg&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;&lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;&lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot;&gt;
-        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani shadow-slide&quot; class&#x3D;&quot;my-auto&quot; style&#x3D;&quot;visibility: hidden;&quot; ngStyle.lt-lg&#x3D;&quot;width: 20em; margin-left: -2rem;&quot; ngStyle.lt-sm&#x3D;&quot;width: 12em; margin-left: -3rem; top: -1rem;&quot;&gt;
-          &lt;mat-card-title style&#x3D;&quot;color: #404040; margin-left: 0.3em;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;DASHBOARD&lt;/mat-card-title&gt;
-          &lt;a class&#x3D;&quot;btn btn-light js-scroll-trigger mt-1 customButtonHomeCard md-elevation-z10&quot; routerLink&#x3D;&quot;/dashboard&quot; ngClass.gt-lg&#x3D;&quot;btn-xl&quot; ngClass.lt-lg&#x3D;&quot;btn-xl&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.7em; padding: 10%;&quot;&gt;SEE THE DASHBOARD&lt;/a&gt;
-        &lt;/mat-card&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-lg-8 col-sm-12&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
   &lt;div class&#x3D;&quot;col&quot;&gt;
     &lt;div class&#x3D;&quot;mx-auto dashboardimage&quot;&gt;
-      &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.png?alt&#x3D;media&amp;token&#x3D;1c82e6d9-64dd-437c-b0d2-1f7b93376b57&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
+      &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.jpg?alt&#x3D;media&amp;token&#x3D;e0c57a1e-7b97-488f-90b4-80acf855211f&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%; margin-top: 5%; visibility: hidden;&quot;&gt;
@@ -371,7 +389,7 @@ export class HomeComponent implements OnInit {
   &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%;&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
       &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot;&gt;
-        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt&#x3D;media&amp;token&#x3D;cf57d6d9-99ac-4c22-9cf3-9d12eaf1085b&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
+        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt&#x3D;media&amp;token&#x3D;ee66477b-5991-4878-b81a-0ce3f035e139https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;53fb4e46-a51c-4b33-a990-c990f7f17a81&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;col-lg-7 col-md-12&quot;&gt;
         &lt;h1 style&#x3D;&quot;color: #404040; font-size: 4em; visibility: hidden;&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2em; margin-top: 10%;&quot;&gt;IMAGE RECOGNITION&lt;/h1&gt;
@@ -395,9 +413,6 @@ export class HomeComponent implements OnInit {
 &lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot;&gt;
   &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%;&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot; fxHide fxShow.lt-lg&gt;
-        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;9db7f06a-84a5-46fb-8add-1c027f2db980&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
-      &lt;/div&gt;
       &lt;div class&#x3D;&quot;col-lg-7 col-md-12&quot;&gt;
         &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
           &lt;div style&#x3D;&quot;margin-left: 2%;&quot;&gt;
@@ -407,8 +422,237 @@ export class HomeComponent implements OnInit {
           &lt;/div&gt;
         &lt;/mat-card&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot; fxHide.lt-lg&gt;
-        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;9db7f06a-84a5-46fb-8add-1c027f2db980&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot;&gt;
+        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;53fb4e46-a51c-4b33-a990-c990f7f17a81&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;content-section imagetransition&quot; id&#x3D;&quot;image&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-3&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+    &lt;h1 animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; style&#x3D;&quot;color: white; visibility: hidden;&quot; ngStyle.gt-lg&#x3D;&quot;font-size: 10em;&quot; ngStyle.lt-lg&#x3D;&quot;font-size: 6em; margin-left: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 4em;&quot;&gt;USE CASES&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;
+    &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
+      &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Marine Research&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Cheap and Effective for Long Term Data Collection&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+      &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+      &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
+      &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%; &quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Monitor Human Impact&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Keep Track of Pollution&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Show that you care about our enviornment. Monitor the effect  of your manufacturing or other facilities on the enviornment. Deploy a few sensors, and open access to live enviornment monitoring to show your support for the enviornment. Improve your companies productivity by maintaining a positive public image, and ensure your company helps keep marine enviornments alive and well.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
+      &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Water Management&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Make Well-Informed Decisions&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Marine enviornments are crucial to the economy in a variety of ways, from tourism to fishing. In the managment of these ecosystems to ensure their vitality, BioSeer provides a wide range of data to help you make informed decisions about water management. BioSeer helps you visualize trends in data to make well-informed decisions to preserve our marine enviornments.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+      &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;content-section filler-section&quot; ngStyle.lt-lg&#x3D;&quot;height: 8vh; padding: 0px;&quot; ngStyle.lt-sm&#x3D;&quot;height: 106vh&quot;&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot; ngStyle.lt-sm&#x3D;&quot;padding-top: 5%; padding-bottom: 5%;&quot;&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot;&gt;
+      &lt;h1 class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2.3em;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;Interested in Technical Aspects?&lt;/h1&gt;
+      &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-top: 6%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt; --&gt;
+
+&lt;!-- No Animations --&gt;
+&lt;section class&#x3D;&quot;masthead&quot;&gt;
+  &lt;div class&#x3D;&quot;gradient1&quot; ngStyle.lt-sm&#x3D;&quot;height: 94%;&quot; fxHide fxShow.gt-sm&#x3D;&quot;true&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;container text-left topcontainer&quot; ngStyle.lt-lg&#x3D;&quot;width: 80%;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-sm-12 text-white&quot; ngStyle.lt-sm&#x3D;&quot;margin-left: -4%;&quot;&gt;
+        &lt;h2 ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em;&quot;&gt;Marine Monitoring&lt;/h2&gt;
+        &lt;h1 ngStyle.lt-sm&#x3D;&quot;font-size: 3.7em;&quot;&gt;SIMPLIFIED&lt;/h1&gt;
+        &lt;p class&#x3D;&quot;biggerp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Easy Species and Ocean&lt;/p&gt;
+        &lt;p class&#x3D;&quot;biggerp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Monitoring Harnessing the&lt;/p&gt;
+        &lt;p class&#x3D;&quot;biggerp&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Power of Artificial Intelligence&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-5&quot; fxHide fxShow.xl&#x3D;&quot;true&quot;&gt;
+        &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-3&quot; fxHide fxShow.xl&#x3D;&quot;true&quot;&gt;
+        &lt;div class&#x3D;&quot;line&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot; fxShow.lt-sm&#x3D;&quot;false&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot; fxShow.lt-sm&#x3D;&quot;false&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-5&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 my-2&quot; fxHide fxShow.lt-lg&#x3D;&quot;true&quot;&gt;&lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;mx-auto center&quot; ngStyle.lt-lg&#x3D;&quot;margin-bottom: 50%;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
+        &lt;mat-card class&#x3D;&quot;text-center customCard&quot;&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em;&quot;&gt;DASHBOARD&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; routerLink&#x3D;&quot;/dashboard&quot;&gt;SEE THE DASHBOARD&lt;/a&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
+        &lt;mat-card class&#x3D;&quot;text-center customCard&quot;&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em;&quot;&gt;DATA ANALYSIS&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; style&#x3D;&quot;margin-top: 12% !important;&quot;&gt;READ ABOUT THE AI&lt;/a&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 my-2&quot;&gt;
+        &lt;mat-card class&#x3D;&quot;text-center customCard&quot;&gt;
+          &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 7%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;HARDWARE SOLUTIONS&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtextHomeCards&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em; margin-bottom: -5%;&quot;&gt;The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.&lt;/p&gt;
+          &lt;a class&#x3D;&quot;btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 0.9em;&quot; style&#x3D;&quot;margin-top: 12% !important;&quot;&gt;LEARN MORE&lt;/a&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Dashboard Section --&gt;
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot; ngStyle.lt-sm&#x3D;&quot;padding-top: 0%;&quot;&gt;
+  &lt;div class&#x3D;&quot;col&quot;&gt;
+    &lt;div class&#x3D;&quot;mx-auto dashboardimage&quot;&gt;
+      &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.jpg?alt&#x3D;media&amp;token&#x3D;e0c57a1e-7b97-488f-90b4-80acf855211f&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%; margin-top: 5%;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;color: #404040&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;margin-top: 8%;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mb-4&quot;&gt;Sensor Zones&lt;/h1&gt;
+        &lt;p&gt;Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mb-4&quot;&gt;Global Database&lt;/h1&gt;
+        &lt;p&gt;Through a shared global database, collaborate with researchers around the world to see big-picture trends.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;mb-4&quot;&gt;Live Data Feeds&lt;/h1&gt;
+        &lt;p&gt;View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot;&gt;
+  &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot;&gt;
+        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt&#x3D;media&amp;token&#x3D;ee66477b-5991-4878-b81a-0ce3f035e139https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;53fb4e46-a51c-4b33-a990-c990f7f17a81&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-7 col-md-12&quot;&gt;
+        &lt;h1 style&#x3D;&quot;color: #404040; font-size: 4em;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2em; margin-top: 10%;&quot;&gt;IMAGE RECOGNITION&lt;/h1&gt;
+        &lt;div style&#x3D;&quot;width: 74%; margin-top: 15%;&quot; ngStyle.lt-sm&#x3D;&quot;width: 100%;&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+              &lt;h3 style&#x3D;&quot;color: #404040;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em; margin-top: -4%;&quot;&gt;Precise Classification&lt;/h3&gt;
+              &lt;p style&#x3D;&quot;color: #404040;  margin-top: 10%;&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%; margin-bottom: 9%;&quot;&gt;The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+              &lt;h3 style&#x3D;&quot;color: #404040;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;Reliable&lt;/h3&gt;
+              &lt;p style&#x3D;&quot;color: #404040;  margin-top: 10%;&quot; ngStyle.lt-lg&#x3D;&quot;margin-top: 3%;&quot;&gt;Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot;&gt;
+  &lt;div class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 77%;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-7 col-md-12&quot;&gt;
+        &lt;mat-card class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+          &lt;div style&#x3D;&quot;margin-left: 2%;&quot;&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.8em; margin-top: 5%;&quot;&gt;Mobile Buoy System&lt;/p&gt;
+            &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Revolutionary Marine Monitoring&lt;/p&gt;
+            &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-bottom: 2%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em; margin-bottom: 4%;&quot;&gt;BioSeer&#x27;s mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/mat-card&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-5 col-md-12&quot;&gt;
+        &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt&#x3D;media&amp;token&#x3D;53fb4e46-a51c-4b33-a990-c990f7f17a81&quot; style&#x3D;&quot;width: 99%;&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -444,8 +688,8 @@ export class HomeComponent implements OnInit {
   &lt;div class&#x3D;&quot;col-12 my-3&quot;&gt;
     &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;col-lg-6 col-md-12 float-right&quot;&gt;
-    &lt;h1 animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; style&#x3D;&quot;color: white; visibility: hidden;&quot; ngStyle.gt-lg&#x3D;&quot;font-size: 13em !important;&quot; ngStyle.lt-lg&#x3D;&quot;font-size: 6em !important; margin-left: 3%;&quot;&gt;USE CASES&lt;/h1&gt;
+  &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+    &lt;h1 style&#x3D;&quot;color: white;&quot; ngStyle.gt-lg&#x3D;&quot;font-size: 10em;&quot; ngStyle.lt-lg&#x3D;&quot;font-size: 6em; margin-left: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 4em;&quot;&gt;USE CASES&lt;/h1&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;col-12 my-5&quot;&gt;
     &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
@@ -463,9 +707,9 @@ export class HomeComponent implements OnInit {
     &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
-    &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
       &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
-        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow max-600px mx-auto&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+        &lt;mat-card class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
           &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
             &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Marine Research&lt;/p&gt;
             &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Cheap and Effective for Long Term Data Collection&lt;/p&gt;
@@ -479,12 +723,12 @@ export class HomeComponent implements OnInit {
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
-    &lt;div class&#x3D;&quot;col-8 col-lg-6&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
+    &lt;div class&#x3D;&quot;col-4&quot; fxHide.lt-lg&#x3D;&quot;true&quot;&gt;
       &lt;p style&#x3D;&quot;visibility: hidden;&quot;&gt;.&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
       &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
-        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow max-600px mx-auto&quot; style&#x3D;&quot;margin-top: 12%; &quot;&gt;
+        &lt;mat-card class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%; &quot;&gt;
           &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
             &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Monitor Human Impact&lt;/p&gt;
             &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Keep Track of Pollution&lt;/p&gt;
@@ -495,9 +739,9 @@ export class HomeComponent implements OnInit {
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
-    &lt;div class&#x3D;&quot;col-lg-6 col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-8 col-md-12&quot;&gt;
       &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
-        &lt;mat-card animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot; class&#x3D;&quot;customCard shadow max-600px mx-auto&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
+        &lt;mat-card class&#x3D;&quot;customCard shadow&quot; style&#x3D;&quot;margin-top: 12%;&quot;&gt;
           &lt;div style&#x3D;&quot;margin-left: 2%; margin-right: 2%;&quot;&gt;
             &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 2.3em;&quot;&gt;Water Management&lt;/p&gt;
             &lt;p class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2em; margin-bottom: 3%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.3em;&quot;&gt;Make Well-Informed Decisions&lt;/p&gt;
@@ -512,10 +756,11 @@ export class HomeComponent implements OnInit {
   &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section class&#x3D;&quot;content-section filler-section&quot; ngStyle.lt-lg&#x3D;&quot;height: 51vh;&quot;&gt;&lt;/section&gt;
+&lt;section class&#x3D;&quot;content-section filler-section&quot; ngStyle.lt-lg&#x3D;&quot;height: 8vh; padding: 0px;&quot; ngStyle.lt-sm&#x3D;&quot;height: 106vh&quot;&gt;
+&lt;/section&gt;
 
-&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot;&gt;
-  &lt;div class&#x3D;&quot;row mx-5&quot;&gt;
+&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: white;&quot; ngStyle.lt-sm&#x3D;&quot;padding-top: 5%; padding-bottom: 5%;&quot;&gt;
+  &lt;div class&#x3D;&quot;row mx-3&quot;&gt;
     &lt;div class&#x3D;&quot;col-lg-4 col-md-12&quot;&gt;
       &lt;h1 class&#x3D;&quot;headerHomeCards&quot; style&#x3D;&quot;font-size: 2.3em;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1.4em;&quot;&gt;Interested in Technical Aspects?&lt;/h1&gt;
       &lt;p class&#x3D;&quot;subtextHomeCards&quot; style&#x3D;&quot;font-size: 1.4em; margin-top: 6%;&quot; ngStyle.lt-sm&#x3D;&quot;font-size: 1em;&quot;&gt;Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.&lt;/p&gt;
@@ -550,19 +795,16 @@ export class HomeComponent implements OnInit {
 
 .mobile-dashboard-image {
   width: 100% !important;
-}
 
-.max-600px {
-  max-width: 600px;
 }
 
 .filler-section {
-  height: 40vh;
+  height: 79vh;
   background-color: #000000;
 }
 
 .masthead {
-  background-image: url(&#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/website-header.png?alt&#x3D;media&amp;token&#x3D;ac87eba7-86ad-4527-9894-5ad5d2c659ec&#x27;);
+  background-image: url(&#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/website-header.jpg?alt&#x3D;media&amp;token&#x3D;7db462af-6fa4-45d1-a7f5-d5ca3fa681b1&#x27;);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -592,7 +834,6 @@ export class HomeComponent implements OnInit {
 
 .customCard {
   border-radius: 54px !important;
-  visibility: hidden;
 }
 
 .line {
@@ -703,7 +944,7 @@ export class HomeComponent implements OnInit {
   background-color: rgba(9,29,30,1);
   position: absolute;
   z-index: 30;
-  visibility: hidden;
+
 }
 
 .container2 {
@@ -713,7 +954,7 @@ export class HomeComponent implements OnInit {
   background-color: rgba(9,29,30,1);
   position: absolute;
   z-index: 30;
-  visibility: hidden;
+
 }
 
 .gradient1 {
@@ -755,7 +996,7 @@ export class HomeComponent implements OnInit {
 }
 
 .imagetransition {
-  background-image: url(&#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/waterimage.png?alt&#x3D;media&amp;token&#x3D;50e3a864-502a-4d32-8c23-003260c382ac&#x27;);
+  background-image: url(&#x27;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/waterimage.jpg?alt&#x3D;media&amp;token&#x3D;c2c816fb-20ca-46da-b06d-ea15d9d7071a&#x27;);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -769,7 +1010,7 @@ export class HomeComponent implements OnInit {
   border-radius: 0px;
   border: 0.5px;
   color: white;
-  visibility: hidden;
+
 }
 
 .logo {
@@ -778,7 +1019,7 @@ export class HomeComponent implements OnInit {
 
 .tripleinfo {
   margin-top: 49%;
-  visibility: hidden;
+
 }
 
 .afterani {
@@ -808,7 +1049,7 @@ export class HomeComponent implements OnInit {
   height: 15em;
   width: 20%;
   border-radius: 27px !important;
-  visibility: hidden;
+
 }
 
 .leftimgturtle {
@@ -896,7 +1137,7 @@ export class HomeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Header --><section class="masthead">  <div class="gradient1" ngStyle.lt-sm="height: 94%;" fxHide fxShow.gt-sm="true"></div>  <div class="container text-left topcontainer" ngStyle.lt-lg="width: 80%;">    <div class="row">      <div class="col-lg-4 col-sm-12 text-white animated fadeInDown delay-1s" ngStyle.lt-sm="margin-left: -4%;">        <h2 ngStyle.lt-sm="font-size: 1.8em;">Marine Monitoring</h2>        <h1 ngStyle.lt-sm="font-size: 3.7em;">SIMPLIFIED</h1>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Easy Species and Ocean</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Monitoring Harnessing the</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Power of Artificial Intelligence</p>      </div>      <div class="col-lg-5" fxHide fxShow.xl="true">        <p style="visibility: hidden;">.</p>      </div>      <div class="col-lg-3 animated fadeInDown delay-1s" fxHide fxShow.xl="true">        <div class="line"></div>      </div>    </div>  </div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-2" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="mx-auto center" ngStyle.lt-lg="margin-bottom: 50%;">    <div class="row">      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DASHBOARD</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" routerLink="/dashboard">SEE THE DASHBOARD</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DATA ANALYSIS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">READ ABOUT THE AI</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;">HARDWARE</p>          <p class="subtextHomeCards">The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10" style="margin-top: 12% !important;">LEARN MORE</a>        </mat-card>      </div>    </div>  </div></section><!-- Dashboard Section --><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 0%;">  <div class="container position-absolute" style="margin-left: 5%; z-index: 10;">    <div class="row align-items-end px-5">      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5" fxHide fxShow.lg="true"></div>      <div class="col-12 my-5"></div>      <div class="col-12 my-5"></div>      <div class="col-lg-4 col-md-12">        <mat-card animateOnScroll animationName="afterani shadow-slide" class="my-auto" style="visibility: hidden;" ngStyle.lt-lg="width: 20em; margin-left: -2rem;" ngStyle.lt-sm="width: 12em; margin-left: -3rem; top: -1rem;">          <mat-card-title style="color: #404040; margin-left: 0.3em;" ngStyle.lt-sm="font-size: 1em;">DASHBOARD</mat-card-title>          <a class="btn btn-light js-scroll-trigger mt-1 customButtonHomeCard md-elevation-z10" routerLink="/dashboard" ngClass.gt-lg="btn-xl" ngClass.lt-lg="btn-xl" ngStyle.lt-sm="font-size: 0.7em; padding: 10%;">SEE THE DASHBOARD</a>        </mat-card>      </div>      <div class="col-lg-8 col-sm-12"></div>    </div>  </div>  <div class="col">    <div class="mx-auto dashboardimage">      <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.png?alt=media&token=1c82e6d9-64dd-437c-b0d2-1f7b93376b57" style="width: 100%;">    </div>  </div>  <div animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="mx-auto" style="width: 77%; margin-top: 5%; visibility: hidden;">    <div class="row" style="color: #404040">      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;" ngStyle.lt-sm="margin-top: 8%;">        <h1 class="mb-4">Sensor Zones</h1>        <p>Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Global Database</h1>        <p>Through a shared global database, collaborate with researchers around the world to see big-picture trends.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Live Data Feeds</h1>        <p>View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.</p>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt=media&token=cf57d6d9-99ac-4c22-9cf3-9d12eaf1085b" style="width: 99%;">      </div>      <div class="col-lg-7 col-md-12">        <h1 style="color: #404040; font-size: 4em; visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" ngStyle.lt-sm="font-size: 2em; margin-top: 10%;">IMAGE RECOGNITION</h1>        <div style="width: 74%; margin-top: 15%;  visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" ngStyle.lt-sm="width: 100%;">          <div class="row">            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em; margin-top: -4%;">Precise Classification</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%; margin-bottom: 9%;">The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.</p>            </div>            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em;">Reliable</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%;">Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.</p>            </div>          </div>        </div>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-5 col-md-12" fxHide fxShow.lt-lg>        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=9db7f06a-84a5-46fb-8add-1c027f2db980" style="width: 99%;">      </div>      <div class="col-lg-7 col-md-12">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 1.8em; margin-top: 5%;">Mobile Buoy System</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Revolutionary Marine Monitoring</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em; margin-bottom: 4%;">BioSeer\'s mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.</p>          </div>        </mat-card>      </div>      <div class="col-lg-5 col-md-12" fxHide.lt-lg>        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=9db7f06a-84a5-46fb-8add-1c027f2db980" style="width: 99%;">      </div>    </div>  </div></section><section class="content-section imagetransition" id="image">  <!--<div class="gradient2"></div>-->  <!--<div class="gradient3"></div>-->  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-3">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-lg-6 col-md-12 float-right">    <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="color: white; visibility: hidden;" ngStyle.gt-lg="font-size: 13em !important;" ngStyle.lt-lg="font-size: 6em !important; margin-left: 3%;">USE CASES</h1>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="row mx-3">    <div class="col-lg-6 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow max-600px mx-auto" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Marine Research</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Cheap and Effective for Long Term Data Collection</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div>  <div class="row mx-3">    <div class="col-8 col-lg-6" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>    <div class="col-lg-6 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow max-600px mx-auto" style="margin-top: 12%; ">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Monitor Human Impact</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Keep Track of Pollution</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Show that you care about our enviornment. Monitor the effect  of your manufacturing or other facilities on the enviornment. Deploy a few sensors, and open access to live enviornment monitoring to show your support for the enviornment. Improve your companies productivity by maintaining a positive public image, and ensure your company helps keep marine enviornments alive and well.</p>          </div>        </mat-card>      </div>    </div>  </div>  <div class="row mx-3">    <div class="col-lg-6 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow max-600px mx-auto" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Water Management</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Make Well-Informed Decisions</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Marine enviornments are crucial to the economy in a variety of ways, from tourism to fishing. In the managment of these ecosystems to ensure their vitality, BioSeer provides a wide range of data to help you make informed decisions about water management. BioSeer helps you visualize trends in data to make well-informed decisions to preserve our marine enviornments.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div></section><section class="content-section filler-section" ngStyle.lt-lg="height: 51vh;"></section><section class="content-section" style="background-color: white;">  <div class="row mx-5">    <div class="col-lg-4 col-md-12">      <h1 class="headerHomeCards" style="font-size: 2.3em;" ngStyle.lt-sm="font-size: 1.4em;">Interested in Technical Aspects?</h1>      <p class="subtextHomeCards" style="font-size: 1.4em; margin-top: 6%;" ngStyle.lt-sm="font-size: 1em;">Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.</p>    </div>  </div></section></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- <section class="masthead">  <div class="gradient1" ngStyle.lt-sm="height: 94%;" fxHide fxShow.gt-sm="true"></div>  <div class="container text-left topcontainer" ngStyle.lt-lg="width: 80%;">    <div class="row">      <div class="col-lg-4 col-sm-12 text-white animated fadeInDown delay-1s" ngStyle.lt-sm="margin-left: -4%;">        <h2 ngStyle.lt-sm="font-size: 1.8em;">Marine Monitoring</h2>        <h1 ngStyle.lt-sm="font-size: 3.7em;">SIMPLIFIED</h1>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Easy Species and Ocean</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Monitoring Harnessing the</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Power of Artificial Intelligence</p>      </div>      <div class="col-lg-5" fxHide fxShow.xl="true">        <p style="visibility: hidden;">.</p>      </div>      <div class="col-lg-3 animated fadeInDown delay-1s" fxHide fxShow.xl="true">        <div class="line"></div>      </div>    </div>  </div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-2" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="mx-auto center" ngStyle.lt-lg="margin-bottom: 50%;">    <div class="row">      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DASHBOARD</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" routerLink="/dashboard">SEE THE DASHBOARD</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DATA ANALYSIS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">READ ABOUT THE AI</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="text-center customCard">          <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;" ngStyle.lt-sm="font-size: 1.4em;">HARDWARE SOLUTIONS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em; margin-bottom: -5%;">The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">LEARN MORE</a>        </mat-card>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 0%;">  <div class="col">    <div class="mx-auto dashboardimage">      <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.jpg?alt=media&token=e0c57a1e-7b97-488f-90b4-80acf855211f" style="width: 100%;">    </div>  </div>  <div animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="mx-auto" style="width: 77%; margin-top: 5%; visibility: hidden;">    <div class="row" style="color: #404040">      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;" ngStyle.lt-sm="margin-top: 8%;">        <h1 class="mb-4">Sensor Zones</h1>        <p>Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Global Database</h1>        <p>Through a shared global database, collaborate with researchers around the world to see big-picture trends.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Live Data Feeds</h1>        <p>View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.</p>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt=media&token=ee66477b-5991-4878-b81a-0ce3f035e139https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=53fb4e46-a51c-4b33-a990-c990f7f17a81" style="width: 99%;">      </div>      <div class="col-lg-7 col-md-12">        <h1 style="color: #404040; font-size: 4em; visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" ngStyle.lt-sm="font-size: 2em; margin-top: 10%;">IMAGE RECOGNITION</h1>        <div style="width: 74%; margin-top: 15%;  visibility: hidden;" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" ngStyle.lt-sm="width: 100%;">          <div class="row">            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em; margin-top: -4%;">Precise Classification</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%; margin-bottom: 9%;">The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.</p>            </div>            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em;">Reliable</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%;">Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.</p>            </div>          </div>        </div>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-7 col-md-12">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 1.8em; margin-top: 5%;">Mobile Buoy System</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Revolutionary Marine Monitoring</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em; margin-bottom: 4%;">BioSeer\'s mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.</p>          </div>        </mat-card>      </div>      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=53fb4e46-a51c-4b33-a990-c990f7f17a81" style="width: 99%;">      </div>    </div>  </div></section><section class="content-section imagetransition" id="image">  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-3">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-lg-6 col-md-12">    <h1 animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" style="color: white; visibility: hidden;" ngStyle.gt-lg="font-size: 10em;" ngStyle.lt-lg="font-size: 6em; margin-left: 3%;" ngStyle.lt-sm="font-size: 4em;">USE CASES</h1>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="row mx-3">    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Marine Research</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Cheap and Effective for Long Term Data Collection</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div>  <div class="row mx-3">    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%; ">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Monitor Human Impact</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Keep Track of Pollution</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Show that you care about our enviornment. Monitor the effect  of your manufacturing or other facilities on the enviornment. Deploy a few sensors, and open access to live enviornment monitoring to show your support for the enviornment. Improve your companies productivity by maintaining a positive public image, and ensure your company helps keep marine enviornments alive and well.</p>          </div>        </mat-card>      </div>    </div>  </div>  <div class="row mx-3">    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp" class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Water Management</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Make Well-Informed Decisions</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Marine enviornments are crucial to the economy in a variety of ways, from tourism to fishing. In the managment of these ecosystems to ensure their vitality, BioSeer provides a wide range of data to help you make informed decisions about water management. BioSeer helps you visualize trends in data to make well-informed decisions to preserve our marine enviornments.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div></section><section class="content-section filler-section" ngStyle.lt-lg="height: 8vh; padding: 0px;" ngStyle.lt-sm="height: 106vh"></section><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 5%; padding-bottom: 5%;">  <div class="row mx-3">    <div class="col-lg-4 col-md-12">      <h1 class="headerHomeCards" style="font-size: 2.3em;" ngStyle.lt-sm="font-size: 1.4em;">Interested in Technical Aspects?</h1>      <p class="subtextHomeCards" style="font-size: 1.4em; margin-top: 6%;" ngStyle.lt-sm="font-size: 1em;">Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.</p>    </div>  </div></section> --><!-- No Animations --><section class="masthead">  <div class="gradient1" ngStyle.lt-sm="height: 94%;" fxHide fxShow.gt-sm="true"></div>  <div class="container text-left topcontainer" ngStyle.lt-lg="width: 80%;">    <div class="row">      <div class="col-lg-4 col-sm-12 text-white" ngStyle.lt-sm="margin-left: -4%;">        <h2 ngStyle.lt-sm="font-size: 1.8em;">Marine Monitoring</h2>        <h1 ngStyle.lt-sm="font-size: 3.7em;">SIMPLIFIED</h1>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Easy Species and Ocean</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Monitoring Harnessing the</p>        <p class="biggerp" ngStyle.lt-sm="font-size: 1.3em;">Power of Artificial Intelligence</p>      </div>      <div class="col-lg-5" fxHide fxShow.xl="true">        <p style="visibility: hidden;">.</p>      </div>      <div class="col-lg-3" fxHide fxShow.xl="true">        <div class="line"></div>      </div>    </div>  </div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true" fxShow.lt-sm="false"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-5" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="col-12 my-2" fxHide fxShow.lt-lg="true"><p style="visibility: hidden;">.</p></div>  <div class="mx-auto center" ngStyle.lt-lg="margin-bottom: 50%;">    <div class="row">      <div class="col-lg-4 col-md-12 my-2">        <mat-card class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DASHBOARD</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">The BioSeer website is designed to make viewing and analyzing data easy and accessible. Integrated sattelite maps make keeping track of enviornmental statuses a breeze.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-3 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" routerLink="/dashboard">SEE THE DASHBOARD</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card class="text-center customCard">          <p class="headerHomeCards" ngStyle.lt-sm="font-size: 1.8em;">DATA ANALYSIS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em;">Using advance Artificial Intelegence techniques, BioSeer can recognize and count a variety of marine species. This makes collecting data on species health.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">READ ABOUT THE AI</a>        </mat-card>      </div>      <div class="col-lg-4 col-md-12 my-2">        <mat-card class="text-center customCard">          <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 7%;" ngStyle.lt-sm="font-size: 1.4em;">HARDWARE SOLUTIONS</p>          <p class="subtextHomeCards" ngStyle.lt-sm="font-size: 1em; margin-bottom: -5%;">The BioSeer Mobile Buoy System is designed for long term marine monitoring, while allowing for movement to collect data in a variety of conditions.</p>          <a class="btn btn-light btn-xl js-scroll-trigger mt-4 mb-4 customButtonHomeCard md-elevation-z10" ngStyle.lt-sm="font-size: 0.9em;" style="margin-top: 12% !important;">LEARN MORE</a>        </mat-card>      </div>    </div>  </div></section><!-- Dashboard Section --><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 0%;">  <div class="col">    <div class="mx-auto dashboardimage">      <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/dashboardscreenshot.jpg?alt=media&token=e0c57a1e-7b97-488f-90b4-80acf855211f" style="width: 100%;">    </div>  </div>  <div class="mx-auto" style="width: 77%; margin-top: 5%;">    <div class="row" style="color: #404040">      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;" ngStyle.lt-sm="margin-top: 8%;">        <h1 class="mb-4">Sensor Zones</h1>        <p>Data is organized into easily digestible zones. Each zone is assigned a water quality score and has a variety of metrics, such as species diversity or temperature.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Global Database</h1>        <p>Through a shared global database, collaborate with researchers around the world to see big-picture trends.</p>      </div>      <div class="col-lg-4 col-md-12" ngStyle.lt-lg="margin-top: 3%;">        <h1 class="mb-4">Live Data Feeds</h1>        <p>View data from sensors and mobile buoys live, with video feeds and other metrics available easier. View live locations of your hardware, and monitor status in real time. Go back in time and view metrics from past times to see trends in data.</p>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/imagerec.png?alt=media&token=ee66477b-5991-4878-b81a-0ce3f035e139https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=53fb4e46-a51c-4b33-a990-c990f7f17a81" style="width: 99%;">      </div>      <div class="col-lg-7 col-md-12">        <h1 style="color: #404040; font-size: 4em;" ngStyle.lt-sm="font-size: 2em; margin-top: 10%;">IMAGE RECOGNITION</h1>        <div style="width: 74%; margin-top: 15%;" ngStyle.lt-sm="width: 100%;">          <div class="row">            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em; margin-top: -4%;">Precise Classification</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%; margin-bottom: 9%;">The algorithm detects to a pixel levels species and objects in the water. Once all the objects in the image are detected, a water quality score is assigned.</p>            </div>            <div class="col-lg-6 col-md-12">              <h3 style="color: #404040;" ngStyle.lt-sm="font-size: 1.4em;">Reliable</h3>              <p style="color: #404040;  margin-top: 10%;" ngStyle.lt-lg="margin-top: 3%;">Our software has undergone thousands of images of testing, and has proven reliable in the detection of various marine objects.</p>            </div>          </div>        </div>      </div>    </div>  </div></section><section class="content-section" style="background-color: white;">  <div class="mx-auto" style="width: 77%;">    <div class="row">      <div class="col-lg-7 col-md-12">        <mat-card class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 1.8em; margin-top: 5%;">Mobile Buoy System</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Revolutionary Marine Monitoring</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em; margin-bottom: 4%;">BioSeer\'s mobile buoy integrates seamlessly into the system of BioSeer products. Designed for long deployment times, the BioSeer mobile buoy uses adaptive buoyancy systems and thrusters to navigate and explore its enviornment, allowing users to take a larger scope of data than ever before. The advanced sensor system transmits live data to the dashboard, making monitoring marine enviornments easy.</p>          </div>        </mat-card>      </div>      <div class="col-lg-5 col-md-12">        <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/buoy.png?alt=media&token=53fb4e46-a51c-4b33-a990-c990f7f17a81" style="width: 99%;">      </div>    </div>  </div></section><section class="content-section imagetransition" id="image">  <!--<div class="gradient2"></div>-->  <!--<div class="gradient3"></div>-->  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-3">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-lg-6 col-md-12">    <h1 style="color: white;" ngStyle.gt-lg="font-size: 10em;" ngStyle.lt-lg="font-size: 6em; margin-left: 3%;" ngStyle.lt-sm="font-size: 4em;">USE CASES</h1>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="col-12 my-5" fxHide fxShow.gt-sm="true">    <p style="visibility: hidden;">.</p>  </div>  <div class="row mx-3">    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Marine Research</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Cheap and Effective for Long Term Data Collection</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">BioSeer products utilize big data techniques for analysis, saving expensive human assets. View a variety of metrics, such as biodiversity, or temperature live from our dashboard, and see long-term trends in data. Unlike research vessels, BioSeer Buoys can collect data 24/7 for months at a time without intervention, making close-interval long-term data collection a reality.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div>  <div class="row mx-3">    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card class="customCard shadow" style="margin-top: 12%; ">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Monitor Human Impact</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Keep Track of Pollution</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Show that you care about our enviornment. Monitor the effect  of your manufacturing or other facilities on the enviornment. Deploy a few sensors, and open access to live enviornment monitoring to show your support for the enviornment. Improve your companies productivity by maintaining a positive public image, and ensure your company helps keep marine enviornments alive and well.</p>          </div>        </mat-card>      </div>    </div>  </div>  <div class="row mx-3">    <div class="col-lg-8 col-md-12">      <div class="mx-auto">        <mat-card class="customCard shadow" style="margin-top: 12%;">          <div style="margin-left: 2%; margin-right: 2%;">            <p class="headerHomeCards" style="font-size: 3.3em; margin-bottom: -4%; margin-top: 1% !important;" ngStyle.lt-sm="font-size: 2.3em;">Water Management</p>            <p class="headerHomeCards" style="font-size: 2em; margin-bottom: 3%;" ngStyle.lt-sm="font-size: 1.3em;">Make Well-Informed Decisions</p>            <p class="subtextHomeCards" style="font-size: 1.4em; margin-bottom: 2%;" ngStyle.lt-sm="font-size: 1em;">Marine enviornments are crucial to the economy in a variety of ways, from tourism to fishing. In the managment of these ecosystems to ensure their vitality, BioSeer provides a wide range of data to help you make informed decisions about water management. BioSeer helps you visualize trends in data to make well-informed decisions to preserve our marine enviornments.</p>          </div>        </mat-card>      </div>    </div>    <div class="col-4" fxHide.lt-lg="true">      <p style="visibility: hidden;">.</p>    </div>  </div></section><section class="content-section filler-section" ngStyle.lt-lg="height: 8vh; padding: 0px;" ngStyle.lt-sm="height: 106vh"></section><section class="content-section" style="background-color: white;" ngStyle.lt-sm="padding-top: 5%; padding-bottom: 5%;">  <div class="row mx-3">    <div class="col-lg-4 col-md-12">      <h1 class="headerHomeCards" style="font-size: 2.3em;" ngStyle.lt-sm="font-size: 1.4em;">Interested in Technical Aspects?</h1>      <p class="subtextHomeCards" style="font-size: 1.4em; margin-top: 6%;" ngStyle.lt-sm="font-size: 1em;">Check our techreport, Github Repo for the algorithm, Github Repo for this webpage, or contact us if you have any other questions.</p>    </div>  </div></section></div>'
     var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
