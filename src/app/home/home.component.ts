@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
     // const buoyimg = document.images[2];
     // const dashboardimg = document.images[0];
     // const recimg = document.images[1];
-    //
     // buoy.onload = function() {
     //   buoyimg.src = this.src;
     // };
