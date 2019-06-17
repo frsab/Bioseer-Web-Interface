@@ -1,7 +1,7 @@
 <ng2-slim-loading-bar></ng2-slim-loading-bar>
-<div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}">
+<div class="page-wrapper position-relative" [ngClass]="{'toggled' : getSideBarState()}" [ngClass]="{'position-absolute': absolute}">
   <app-sidebar></app-sidebar>
-  <div class="page-content">
+  <div class="page-content" >
     <app-header></app-header>
     <router-outlet></router-outlet>
   </div>

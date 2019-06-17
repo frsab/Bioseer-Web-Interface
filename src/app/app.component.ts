@@ -19,6 +19,8 @@ export class AppComponent {
   title = 'Bioseer-Web-Interface';
   mapLoaded = false;
 
+  absolute: true;
+
   constructor(
     private bingApiLoader: BingApiLoaderService,
     private _loadingBar: SlimLoadingBarService,
@@ -29,6 +31,9 @@ export class AppComponent {
     });
     this._router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
+    });
+    this._router.events.subscribe(res => {
+      this._router.url === '/' ? this.absolute = true : this.absolute = false;
     });
   }
   private navigationInterceptor(event: Event): void {
