@@ -1,10 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import * as Uppy from '@uppy/core';
 import * as Dashboard from '@uppy/dashboard';
-import * as XHRUpload from '@uppy/xhr-upload';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {ImageService} from '../../_services/image.service';
-import {environment} from '../../../environments/environment';
 // import * as math from 'mathjs';
 
 @Component({
@@ -20,60 +18,41 @@ export class FileUploadComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // const uppy = Uppy({
-    //   debug: true,
-    //   autoProceed: false,
-    //   restrictions: {
-    //     maxNumberOfFiles: 1,
-    //     minNumberOfFiles: 1,
-    //     maxFileSize: 1000000,
-    //     allowedFileTypes: ['.jpg']
-    //   },
-    //   allowMultipleUploads: false,
-    // })
-    //   .use(Dashboard, {
-    //     inline: true,
-    //     target: '#drag-drop-area',
-    //     replaceTargetContent: true,
-    //     showProgressDetails: true,
-    //     note: 'Images Only',
-    //     height: 470,
-    //     browserBackButtonClose: true,
-    //     allowMultipleUploads: false,
-    //     showLinkToFileUploadResult: false
-    //   })
-    //   .use(XHRUpload, {
-    //     endpoint: `${environment.apiUrl}/api/images/upload`,
-    //     formData: fala,
-    //     fieldName: 'test[]'
-    //   });
+    const uppy = Uppy({
+      debug: true,
+      autoProceed: false,
+      restrictions: {
+        maxFileSize: 1000000,
+        allowedFileTypes: ['.jpg']
+      },
+      allowMultipleUploads: false,
+    })
+      .use(Dashboard, {
+        inline: true,
+        target: '#drag-drop-area',
+        replaceTargetContent: true,
+        showProgressDetails: true,
+        note: 'Images Only',
+        height: 470,
+        browserBackButtonClose: true,
+        allowMultipleUploads: false,
+        showLinkToFileUploadResult: false
+      });
 
-    // uppy.on('upload', result => {
-    //   const image = new Image();
-    //   image.crossOrigin = 'Anonymous';
-    //   console.log(uppy.getFiles());
-    //   image.src = uppy.getFiles()[0].preview;
-    //   image.onload = () => {
-    //     const $original = document.getElementById('original');
-    //     this.imageService.analyzeImage(image).subscribe((res) => {
-    //       console.log(res);
-    //       this.imageService.convertArrayToImage(res[0], $original);
-    //       uppy.reset();
-    //     });
-    //   };
-    // });
-
-    function handleFileSelect(e) {
-      const file = e.target.files[0];
-      const reader = new FileReader();
-
-      reader.onload = e => {
-        this.imageService.analyzeImage(e.target.result);
+    uppy.on('upload', result => {
+      const image = new Image();
+      image.crossOrigin = 'Anonymous';
+      console.log(uppy.getFiles());
+      image.src = uppy.getFiles()[0].preview;
+      image.onload = () => {
+        const $original = document.getElementById('original');
+        this.imageService.analyzeImage(image).subscribe((res) => {
+          console.log(res);
+          this.imageService.convertArrayToImage(res[0], $original);
+          uppy.reset();
+        });
       };
-      reader.readAsDataURL(file);
-    }
-
-    document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    });
 
   }
 
