@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { SidebarService } from './sidebar.service';
+import { AuthenticationService } from '../../_services/authentication.service';
+
 // import { MenusService } from './menus.service';
 
 @Component({
@@ -17,11 +19,24 @@ import { SidebarService } from './sidebar.service';
 })
 export class SidebarComponent implements OnInit {
   menus = [];
-  constructor(public sidebarservice: SidebarService) {
+  displayName: string;
+
+  constructor(
+    public sidebarservice: SidebarService,
+    private authenticationService: AuthenticationService,
+  ) {
     this.menus = sidebarservice.getMenuList();
   }
 
   ngOnInit() {
+    this.authenticationService.currentUser.subscribe(user => {
+      // console.log(user);
+      user ? this.displayName = user.firstName + ' ' + user.lastName : this.displayName = undefined;
+    });
+  }
+
+  logout() {
+    this.authenticationService.logout();
   }
 
   getSideBarState() {

@@ -29,12 +29,13 @@ body {
 }
 
 #header {
+  position: relative;
 }
 
 .transparent-background {
   background-color: transparent;
   color: white;
-  position: absolute;
+  position: absolute !important;
 }
 
 .smoke-background {

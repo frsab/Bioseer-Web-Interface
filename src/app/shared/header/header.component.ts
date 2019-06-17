@@ -10,7 +10,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  displayName: string;
   transparentBackground: boolean;
 
   constructor(
@@ -31,9 +30,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  logout() {
-    this.authenticationService.logout();
-  }
+
 
   toggleSidebar() {
     this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());

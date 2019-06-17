@@ -8,33 +8,78 @@ export class SidebarService {
   _hasBackgroundImage = true;
   menus = [
     {
+      title: 'Home',
+      icon: 'fas fa-home',
+      link: '/',
+      active: false
+    },
+    {
       title: 'General',
+      type: 'header'
+    },
+    {
+      title: 'About Us',
+      type: 'dropdown',
+      icon: 'fa fa-question-circle',
+      active: false,
+      submenus: [
+        {
+          title: 'Our Team',
+          link: '/team'
+        },
+        {
+          title: 'Our Mission',
+          link: '/mission'
+        }
+      ]
+    },
+    {
+      title: 'The Technology',
+      type: 'dropdown',
+      icon: 'fas fa-tint',
+      active: false,
+      submenus: [
+        {
+          title: 'The Software',
+          link: '/software'
+        },
+        {
+          title: 'The Hardware',
+          link: '/hardware'
+        }
+      ]
+    },
+    {
+      title: 'Dashboard',
       type: 'header'
     },
     {
       title: 'Dashboard',
       icon: 'fa fa-tachometer-alt',
+      link: '/dashboard',
       active: false,
-      type: 'dropdown',
-      badge: {
-        text: 'New ',
-        class: 'badge-warning'
-      },
-      submenus: [
-        {
-          title: 'Dashboard 1',
-          badge: {
-            text: 'Pro ',
-            class: 'badge-success'
-          }
-        },
-        {
-          title: 'Dashboard 2'
-        },
-        {
-          title: 'Dashboard 3'
-        }
-      ]
+      // badge: {
+      //   text: 'New ',
+      //   class: 'badge-warning'
+      // },
+    },
+    {
+      title: 'Upload Image',
+      icon: 'fas fa-cloud-upload-alt',
+      link: '/upload-images',
+      active: false,
+      auth: true
+    },
+    {
+      title: 'Account',
+      auth: true
+    },
+    {
+      title: 'Edit Account',
+      icon: 'fas fa-edit',
+      link: '/edit-account',
+      active: false,
+      auth: true
     },
     // {
     //   title: 'E-commerce',
