@@ -1,2 +1,6 @@
 @import '~@uppy/core/src/style';
 @import '~@uppy/dashboard/dist/style.css';
+
+.uppy-Dashboard-inner {
+  margin: 0 auto !important;
+}

@@ -20,7 +20,30 @@
 <!--<input type="file" id="fileUpload" name="fileUpload" multiple="multiple"-->
 
        <!--accept="{{accept}}" style="display:none;"/>-->
-<div id="drag-drop-area"></div>
+<div class="container text-center my-5">
+  <div class="row">
+    <div class="col-12">
+      <div id="drag-drop-area" class="mx-auto mb-5"></div>
+      <mat-card>
+        <mat-card-title>Processed Images</mat-card-title>
+        <mat-card-subtitle>Once Processed, Images will show up here</mat-card-subtitle>
+        <mat-card-content class="mt-2">
+          <div *ngIf="processing">
+            <p>Processing Images</p>
+            <mat-spinner [diameter]="30" class="mx-auto"></mat-spinner>
+          </div>
+          <canvas mat-card-image id="original" style="width: 256px; height: 256px;"></canvas>
+          <div *ngIf="data">
+            <p>Algae: {{ data['algae'] }}</p>
+            <p>Aquatic Plants: {{ data['aquatic plant'] }}</p>
+            <p>Human Interference: {{ data['human interference'] }}</p>
+            <p>Non Aquatic Plants: {{ data['non-aquatic plant'] }}</p>
+            <p>Rock: {{ data['rock'] }}</p>
+            <p>Soil/Clay: {{ data['soil/clay'] }}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
 
-
-<canvas id="original" style="width: 256px; height: 256px;"></canvas>
+  </div>
+</div>
