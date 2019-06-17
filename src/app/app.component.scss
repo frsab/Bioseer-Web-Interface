@@ -9,14 +9,12 @@
 .page-wrapper {
 
   .page-content {
+    position: absolute;
     display: inline-block;
     width: 100%;
     padding-top: 0;
     transition: padding-left .3s ease;
 
-    @media screen and (min-width: 768px) {
-      padding-left: 300px;
-    }
 
     .overlay {
       position: fixed;
@@ -31,9 +29,7 @@
 
       &.show {
 
-        @media screen and (max-width: 768px) {
-          display: block;
-        }
+        display: block;
       }
     }
   }
