@@ -36,6 +36,7 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import {SidebarComponent} from './shared/sidebar/sidebar.component';
 
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -79,6 +80,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SlimLoadingBarModule,
     HttpClientModule,
     AnimateOnScrollModule.forRoot(),
+    BsDropdownModule.forRoot(),
     PerfectScrollbarModule
 
   ],
