@@ -7,8 +7,10 @@ const jwt = require('./api/helpers/jwt');
 const errorHandler = require('./api/helpers/error-handler');
 const functions = require("firebase-functions");
 const admin = require('firebase-admin');
+const fileUpload = require('express-fileupload');
 
 admin.initializeApp();
+app.use(fileUpload());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,7 +18,7 @@ app.use(cors());
 
 // api routes
 app.use('/users', require('./api/users/users.controller'));
-app.use('/api/images', jwt(), require('./api/images/images.controller'));
+app.use('/images', require('./api/images/images.controller'));
 
 app.get('/test', (req, res) => {
   console.log(req.auth);
