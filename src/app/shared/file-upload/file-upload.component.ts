@@ -102,77 +102,77 @@ export class FileUploadComponent implements OnInit {
     // });
   }
 
-  imageArray;
-
-  async test2() {
-    let that = this;
-    let $image;
-    let bracketsImageArray;
-    let testArray;
-    // const canvas = document.getElementById('canvas');
-    // const ctx = canvas.getContext('2d');
-
-    const image = new Image(); // Using optional size for image
-    image.crossOrigin = 'Anonymous';
-
-    // image.onload = drawImageActualSize; // Draw when image has loaded
-
-// Load an image of intrinsic size 300x227 in CSS pixels
-    image.src = 'assets/test.jpg';
-
-    image.onload = () => {
-      $image = nj.images.read(image);
-
-      // let newArray = imageArray.slice(null, null, 3)
-      let slicedArray = $image.slice(null, null, [null, 3]);
-      slicedArray.dtype = 'float64';
-      // console.log(slicedArray.shape);
-      let testimageArray = slicedArray.tolist();
-      console.log([testimageArray]);
-      var size = 150;
-      let W = 265;
-      let H = 265;
-      const $original = document.getElementById('original');
-      $original.width = W; $original.height = H;
-      nj.images.save(slicedArray, $original);
-
-      const uri = 'http://localhost:1337/3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
-
-      const options = {
-        uri,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          // Authorization: 'Bearer ' + apiKey,
-        },
-      };
-
-      const httpOptions = {
-        headers: new HttpHeaders({
-          'Content-Type': 'application/json'
-        })
-      };
-
-
-      const data = {
-        // Inputs: {
-        data: [testimageArray]
-        // }
-      };
-
-
-      // console.log(jsonData);
-
-      that.http.post(options.uri, data, httpOptions).subscribe((res) => {
-        console.log(res);
-      });
-    };
-
-    testArray = nj.ones([1, 256, 256, 3], 'float64');
-    console.log(testArray.shape);
-    let testList = testArray.tolist();
-    console.log(testList);
-
-
-  }
+//   imageArray;
+//
+//   async test2() {
+//     let that = this;
+//     let $image;
+//     let bracketsImageArray;
+//     let testArray;
+//     // const canvas = document.getElementById('canvas');
+//     // const ctx = canvas.getContext('2d');
+//
+//     const image = new Image(); // Using optional size for image
+//     image.crossOrigin = 'Anonymous';
+//
+//     // image.onload = drawImageActualSize; // Draw when image has loaded
+//
+// // Load an image of intrinsic size 300x227 in CSS pixels
+//     image.src = 'assets/test.jpg';
+//
+//     image.onload = () => {
+//       $image = nj.images.read(image);
+//
+//       // let newArray = imageArray.slice(null, null, 3)
+//       let slicedArray = $image.slice(null, null, [null, 3]);
+//       slicedArray.dtype = 'float64';
+//       // console.log(slicedArray.shape);
+//       let testimageArray = slicedArray.tolist();
+//       console.log([testimageArray]);
+//       var size = 150;
+//       let W = 265;
+//       let H = 265;
+//       const $original = document.getElementById('original');
+//       $original.width = W; $original.height = H;
+//       nj.images.save(slicedArray, $original);
+//
+//       const uri = 'http://localhost:1337/3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
+//
+//       const options = {
+//         uri,
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//           // Authorization: 'Bearer ' + apiKey,
+//         },
+//       };
+//
+//       const httpOptions = {
+//         headers: new HttpHeaders({
+//           'Content-Type': 'application/json'
+//         })
+//       };
+//
+//
+//       const data = {
+//         // Inputs: {
+//         data: [testimageArray]
+//         // }
+//       };
+//
+//
+//       // console.log(jsonData);
+//
+//       that.http.post(options.uri, data, httpOptions).subscribe((res) => {
+//         console.log(res);
+//       });
+//     };
+//
+//     testArray = nj.ones([1, 256, 256, 3], 'float64');
+//     console.log(testArray.shape);
+//     let testList = testArray.tolist();
+//     console.log(testList);
+//
+//
+//   }
 }
