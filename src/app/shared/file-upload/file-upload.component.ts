@@ -22,6 +22,8 @@ export class FileUploadComponent implements OnInit {
       debug: true,
       autoProceed: false,
       restrictions: {
+        maxNumberOfFiles: 1,
+        minNumberOfFiles: 1,
         maxFileSize: 1000000,
         allowedFileTypes: ['.jpg']
       },
@@ -53,70 +55,6 @@ export class FileUploadComponent implements OnInit {
         });
       };
     });
-
-  }
-
-
-  async test2() {
-    let response;
-    // const canvas = document.getElementById('canvas');
-    // const ctx = canvas.getContext('2d');
-
-    const image = new Image(); // Using optional size for image
-    image.crossOrigin = 'Anonymous';
-
-    // image.onload = drawImageActualSize; // Draw when image has loaded
-
-// Load an image of intrinsic size 300x227 in CSS pixels
-    image.src = 'assets/test.jpg';
-
-    image.onload = () => {
-      const $original = document.getElementById('original');
-      this.imageService.analyzeImage(image).subscribe((res) => {
-        response = res;
-        this.imageService.convertArrayToImage(response[0], $original);
-      });
-      // $image = nj.images.read(image);
-      //
-      // // let newArray = imageArray.slice(null, null, 3)
-      // let slicedArray = $image.slice(null, null, [null, 3]);
-      // slicedArray.dtype = 'float64';
-      // // console.log(slicedArray.shape);
-      // let testimageArray = slicedArray.tolist();
-      // console.log([testimageArray]);
-      //
-      // const uri = 'http://localhost:1337/3966065b-6d05-4777-9a8a-1861f78521bc.westus.azurecontainer.io/score';
-      //
-      // const options = {
-      //   uri,
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     // Authorization: 'Bearer ' + apiKey,
-      //   },
-      // };
-      //
-      // const httpOptions = {
-      //   headers: new HttpHeaders({
-      //     'Content-Type': 'application/json'
-      //   })
-      // };
-      //
-      //
-      // const data = {
-      //   // Inputs: {
-      //   data: [testimageArray]
-      //   // }
-      // };
-      //
-      //
-      // // console.log(jsonData);
-      //
-      // that.http.post(options.uri, data, httpOptions).subscribe((res) => {
-      //   console.log(res);
-      // });
-    };
-
 
   }
 }
