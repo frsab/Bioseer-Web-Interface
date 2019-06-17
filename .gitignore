@@ -35,3 +35,4 @@ Thumbs.db
 
 documentation
 /functions/node_modules/
+/.travis.yml
