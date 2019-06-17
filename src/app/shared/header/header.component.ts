@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from '../../_services/authentication.service';
 import {SidebarService} from '../sidebar/sidebar.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
@@ -13,7 +12,6 @@ export class HeaderComponent implements OnInit {
   transparentBackground: boolean;
 
   constructor(
-    private authenticationService: AuthenticationService,
     private router: Router,
     private route: ActivatedRoute,
     public sidebarservice: SidebarService
@@ -24,10 +22,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authenticationService.currentUser.subscribe(user => {
-      // console.log(user);
-      user ? this.displayName = user.firstName + ' ' + user.lastName : this.displayName = undefined;
-    });
   }
 
 

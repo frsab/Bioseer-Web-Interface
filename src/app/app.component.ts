@@ -19,7 +19,7 @@ export class AppComponent {
   title = 'Bioseer-Web-Interface';
   mapLoaded = false;
 
-  absolute: true;
+  absolute: boolean;
 
   constructor(
     private bingApiLoader: BingApiLoaderService,
