@@ -12,6 +12,10 @@ import {ImageService} from '../../_services/image.service';
 })
 export class FileUploadComponent implements OnInit {
 
+  processing: boolean; // If the algorithm is pr0o9cessing data
+  processed: boolean;
+  data: object;
+
   constructor(
     private http: HttpClient,
     private imageService: ImageService
@@ -31,14 +35,15 @@ export class FileUploadComponent implements OnInit {
     })
       .use(Dashboard, {
         inline: true,
+        width: '100%',
         target: '#drag-drop-area',
         replaceTargetContent: true,
         showProgressDetails: true,
         note: 'Images Only',
-        height: 470,
         browserBackButtonClose: true,
         allowMultipleUploads: false,
-        showLinkToFileUploadResult: false
+        showLinkToFileUploadResult: false,
+        proudlyDisplayPoweredByUppy: false
       });
 
     uppy.on('upload', result => {
@@ -48,9 +53,13 @@ export class FileUploadComponent implements OnInit {
       image.src = uppy.getFiles()[0].preview;
       image.onload = () => {
         const $original = document.getElementById('original');
+        this.processing = true;
         this.imageService.analyzeImage(image).subscribe((res) => {
           console.log(res);
+          this.data = res[2];
+          this.processed = true;
           this.imageService.convertArrayToImage(res[0], $original);
+          this.processing = false;
           uppy.reset();
         });
       };

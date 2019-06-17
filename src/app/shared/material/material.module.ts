@@ -16,6 +16,7 @@ import {
   MatNativeDateModule,
   MatOptionModule,
   MatProgressBarModule,
+  MatProgressSpinnerModule,
   MatSelectModule,
   MatSidenavModule,
   MatTabsModule,
@@ -54,6 +55,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FlexLayoutModule,
     MatSidenavModule,
     MatListModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }
