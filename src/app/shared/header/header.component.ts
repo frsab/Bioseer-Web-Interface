@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   transparentBackground: boolean;
+  positionAbsolute: boolean;
 
   constructor(
     private router: Router,
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
   ) {
     this.router.events.subscribe(res => {
        this.router.url === '/' ? this.transparentBackground = true : this.transparentBackground = false;
+       this.router.url === '/error' || this.router.url === '/login' || this.router.url === '/register' ? this.positionAbsolute = true : this.positionAbsolute = false;
     });
   }
 
