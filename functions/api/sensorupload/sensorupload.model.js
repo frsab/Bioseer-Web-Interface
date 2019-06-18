@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
   sensorId: { type: String, unique: true, required: true},
   sensorName: { type: String, unique: true, required: true},
-  ownerId: { type: String, unique: true, required: true},
+  ownerId: { type: String, required: true},
   currentLocation: {
     lat: { type: String },
     long: { type: String }
