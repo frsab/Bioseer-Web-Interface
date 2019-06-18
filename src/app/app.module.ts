@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ButtonsModule, InputsModule } from 'angular-bootstrap-md'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -78,8 +79,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SlimLoadingBarModule,
     HttpClientModule,
     AnimateOnScrollModule.forRoot(),
-    PerfectScrollbarModule
-
+    PerfectScrollbarModule,
+    ButtonsModule.forRoot(),
+    InputsModule.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: [
