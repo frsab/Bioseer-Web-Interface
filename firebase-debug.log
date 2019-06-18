@@ -1,0 +1,88 @@
+[debug] [2019-06-18T01:51:08.618Z] ----------------------------------------------------------------------
+[debug] [2019-06-18T01:51:08.620Z] Command:       /home/aldenparker/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase emulators:start --only functions
+[debug] [2019-06-18T01:51:08.620Z] CLI Version:   7.0.0
+[debug] [2019-06-18T01:51:08.620Z] Platform:      linux
+[debug] [2019-06-18T01:51:08.620Z] Node Version:  v10.16.0
+[debug] [2019-06-18T01:51:08.620Z] Time:          Mon Jun 17 2019 18:51:08 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-06-18T01:51:08.620Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-18T01:51:08.626Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-18T01:51:08.626Z] > authorizing via signed-in user
+[debug] [2019-06-18T01:51:08.627Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-18T01:51:08.627Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-18T01:51:09.008Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T01:51:09.012Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
+ 
+[debug] [2019-06-18T01:51:09.548Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["functions"]
+[info] ✔  functions: Using node@10 from host.
+[debug] [2019-06-18T01:51:09.585Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
+ 
+[debug] [2019-06-18T01:51:10.116Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "/home/aldenparker/Documents/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
+[debug] [2019-06-18T01:51:10.383Z] Functions runtime initialized.
+[debug] [2019-06-18T01:51:10.383Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:51:19.471Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:51:19.941Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:51:19.947Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:51:50.302Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:51:50.539Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:51:50.540Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:51:54.745Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:51:54.986Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:51:54.987Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:09.783Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:52:10.089Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:10.094Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:12.592Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:52:13.028Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:13.030Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:36.868Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:52:37.150Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:37.151Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:42.777Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:52:42.860Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:52:42.992Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:42.993Z] Disabled runtime features: undefined
+[debug] [2019-06-18T01:52:42.994Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:43.062Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:43.063Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:43.078Z] Accepted request GET /bioseer-c55f5/us-central1/api/users --> api
+[debug] [2019-06-18T01:52:43.223Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:43.224Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-18T01:52:43.292Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-18T01:52:43.293Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
