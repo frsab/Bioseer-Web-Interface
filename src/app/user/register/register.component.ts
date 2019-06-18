@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   allUsers: [User];
   success: boolean;
   submitted = false;
+  allEmails: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -59,11 +60,9 @@ export class RegisterComponent implements OnInit {
 
   checkInUseEmail(control) {
     return new Observable(observer => {
-      this.authenticationService.getAlUsers().subscribe((users) => {
-        const result = users.some(el => el.email === control.value) ? { alreadyInUse: true} : null;
-        observer.next(result);
-        observer.complete();
-      });
+      const result = this.allUsers.some(el => el.email === control.value) ? { alreadyInUse: true} : null;
+      observer.next(result);
+      observer.complete();
     });
   }
 
@@ -73,11 +72,9 @@ export class RegisterComponent implements OnInit {
    */
   checkInUseUsername(control) {
     return new Observable(observer => {
-      this.authenticationService.getAlUsers().subscribe((users) => {
-        const result = users.some(el => el.username === control.value) ? { alreadyInUse: true} : null;
-        observer.next(result);
-        observer.complete();
-      });
+      const result = this.allUsers.some(el => el.username === control.value) ? { alreadyInUse: true} : null;
+      observer.next(result);
+      observer.complete();
     });
   }
 

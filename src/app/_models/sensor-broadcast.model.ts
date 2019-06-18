@@ -10,7 +10,8 @@ export class SensorBroadcastModel {
   status: string;
   imageData: [
     { // Images in broadcast
-      images: string; // Image array of arrays
+      images: string; // URL Link to processed Image
+      processedArray: string; // URL link to processed image
       meta: {
         algae: number;
         rocks: number

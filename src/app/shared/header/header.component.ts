@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SidebarService} from '../sidebar/sidebar.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +20,9 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe(res => {
        this.router.url === '/' || this.router.url === '/mission' ? this.transparentBackground = true : this.transparentBackground = false;
        this.router.url === '/error' || this.router.url === '/login' || this.router.url === '/register' ? this.positionAbsolute = true : this.positionAbsolute = false;
+       if (NavigationEnd) {
+         this.hideSidebar();
+       }
     });
   }
 
