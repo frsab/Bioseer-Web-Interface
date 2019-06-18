@@ -7,5 +7,6 @@ mongoose.connect(mongoUri, { useCreateIndex: true, useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
 module.exports = {
-  User: require('../users/user.model')
+  User: require('../users/user.model'),
+  SensorUpload: require('../sensorupload/sensorupload.model')
 };

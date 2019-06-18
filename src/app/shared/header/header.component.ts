@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     public sidebarservice: SidebarService
   ) {
     this.router.events.subscribe(res => {
-       this.router.url === '/' ? this.transparentBackground = true : this.transparentBackground = false;
+       this.router.url === '/' || this.router.url === '/mission' ? this.transparentBackground = true : this.transparentBackground = false;
        this.router.url === '/error' || this.router.url === '/login' || this.router.url === '/register' ? this.positionAbsolute = true : this.positionAbsolute = false;
     });
   }
