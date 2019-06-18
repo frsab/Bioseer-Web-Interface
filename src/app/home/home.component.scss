@@ -1,13 +1,13 @@
-@import "variables";
-@import "mixins";
-@import "global";
-@import "masthead";
-@import "sidebar";
-@import "services";
-@import "callout";
-@import "portfolio";
-@import "footer";
-@import "bootstrap-overrides";
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/global";
+@import "scss/masthead";
+@import "scss/sidebar";
+@import "scss/services";
+@import "scss/callout";
+@import "scss/portfolio";
+@import "scss/footer";
+@import "scss/bootstrap-overrides";
 
 h1, h2, h3, h4, h5, p {
   font-family: 'Poppins', sans-serif;

@@ -13,8 +13,8 @@ import {ImageService} from '../../_services/image.service';
 export class FileUploadComponent implements OnInit {
 
   processing: boolean; // If the algorithm is pr0o9cessing data
-  processed: boolean;
-  data: object;
+  processed = false;
+  data = [];
 
   constructor(
     private http: HttpClient,
@@ -26,7 +26,6 @@ export class FileUploadComponent implements OnInit {
       debug: true,
       autoProceed: false,
       restrictions: {
-        maxNumberOfFiles: 1,
         minNumberOfFiles: 1,
         maxFileSize: 1000000,
         allowedFileTypes: ['.jpg']
@@ -41,28 +40,42 @@ export class FileUploadComponent implements OnInit {
         showProgressDetails: true,
         note: 'Images Only',
         browserBackButtonClose: true,
-        allowMultipleUploads: false,
         showLinkToFileUploadResult: false,
         proudlyDisplayPoweredByUppy: false
       });
 
     uppy.on('upload', result => {
-      const image = new Image();
-      image.crossOrigin = 'Anonymous';
       console.log(uppy.getFiles());
-      image.src = uppy.getFiles()[0].preview;
-      image.onload = () => {
-        const $original = document.getElementById('original');
-        this.processing = true;
-        this.imageService.analyzeImage(image).subscribe((res) => {
-          console.log(res);
-          this.data = res[2];
-          this.processed = true;
-          this.imageService.convertArrayToImage(res[0], $original);
-          this.processing = false;
-          uppy.reset();
-        });
-      };
+      let canvasObjects = Array(uppy.getFiles().length);
+      let dataObjects = Array(uppy.getFiles().length);
+      console.log(uppy.getFiles());
+      for (const i in uppy.getFiles()) {
+        const that = this;
+        const image = new Image();
+        image.crossOrigin = 'Anonymous';
+        image.src = uppy.getFiles()[i].preview;
+        image.onload = () => {
+          // TODO I know I can do this a better way at some point in the future
+          canvasObjects[i] = document.createElement('canvas');
+          dataObjects[i] = document.createElement('p');
+          this.processing = true;
+          this.imageService.analyzeImage(image).subscribe((res) => {
+            dataObjects[i].innerHTML = JSON.stringify(res[2]);
+            that.processed = true;
+            that.imageService.convertArrayToImage(res[0], canvasObjects[i]);
+            canvasObjects[i].classList.add('col-lg-3');
+            canvasObjects[i].classList.add('col-md-12');
+            dataObjects[i].classList.add('col-lg-3');
+            dataObjects[i].classList.add('col-md-12');
+            document.getElementById('for-appending').appendChild(canvasObjects[i]);
+            document.getElementById('for-appending').appendChild(dataObjects[i]);
+            that.processing = false;
+          });
+        };
+      }
+      uppy.reset();
+
+
     });
 
   }

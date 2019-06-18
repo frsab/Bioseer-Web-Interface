@@ -64,8 +64,4 @@ export class AppComponent {
   hideSidebar() {
     this.sidebarservice.setSidebarState(true);
   }
-
-  pageContentClick() {
-    console.log('page click');
-  }
 }

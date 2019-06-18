@@ -33,13 +33,18 @@
             <mat-spinner [diameter]="30" class="mx-auto"></mat-spinner>
           </div>
           <canvas mat-card-image id="original" style="width: 256px; height: 256px;"></canvas>
-          <div *ngIf="data">
-            <p>Algae: {{ data['algae'] }}</p>
-            <p>Aquatic Plants: {{ data['aquatic plant'] }}</p>
-            <p>Human Interference: {{ data['human interference'] }}</p>
-            <p>Non Aquatic Plants: {{ data['non-aquatic plant'] }}</p>
-            <p>Rock: {{ data['rock'] }}</p>
-            <p>Soil/Clay: {{ data['soil/clay'] }}</p>
+          <div *ngIf="data" >
+            <div *ngFor="let i of data">
+              <p>Algae: {{ i['algae'] }}</p>
+              <p>Aquatic Plants: {{ i['aquatic plant'] }}</p>
+              <p>Human Interference: {{ i['human interference'] }}</p>
+              <p>Non Aquatic Plants: {{ i['non-aquatic plant'] }}</p>
+              <p>Rock: {{ i['rock'] }}</p>
+              <p>Soil/Clay: {{ i['soil/clay'] }}</p>
+            </div>
+          </div>
+          <div id="for-appending" class="row">
+
           </div>
         </mat-card-content>
       </mat-card>
