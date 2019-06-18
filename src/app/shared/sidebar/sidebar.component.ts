@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { SidebarService } from './sidebar.service';
 import { AuthenticationService } from '../../_services/authentication.service';
+import { Router} from '@angular/router';
 
 // import { MenusService } from './menus.service';
 
@@ -24,6 +25,7 @@ export class SidebarComponent implements OnInit {
   constructor(
     public sidebarservice: SidebarService,
     private authenticationService: AuthenticationService,
+    private router: Router
   ) {
     this.menus = sidebarservice.getMenuList();
   }
