@@ -1,0 +1,29 @@
+h1, h2, h3, h4, h5, p {
+  font-family: 'Poppins', sans-serif;
+  color: #313131;
+}
+
+.header {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/Coral%20Photo.jpg?alt=media&token=b940df37-fdb4-4c3e-a307-8ce22c34565e');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headertext {
+    font-size: 6em;
+    color: white;
+    font-weight: bold;
+}
+
+.smallerTextSubheader {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.biggerTextSubheader {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
