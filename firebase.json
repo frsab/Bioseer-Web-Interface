@@ -6,12 +6,19 @@
       "**/.*",
       "**/node_modules/**"
     ],
+<<<<<<< HEAD
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
     ]
+=======
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    }]
+>>>>>>> 0c9fd608d8098a9c0f10c363153f38a76a100d70
   },
   "functions": {
     "predeploy": [
