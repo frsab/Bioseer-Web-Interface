@@ -23,23 +23,23 @@ a.btn-social,
     border-radius: 50%;
     color: #ffffff !important;
     display: inline-block;
-    height: 54px;
-    line-height: 54px;
+    height: 40px;
+    line-height: 40px;
     margin: 8px 4px;
     text-align: center;
     text-decoration: none;
     transition: background-color .3s;
     webkit-transition: background-color .3s;
-    width: 54px;
+    width: 40px;
 }
 
 .btn-social .fa,.btn-social i
 {
     backface-visibility: hidden;
     moz-backface-visibility: hidden;
-    ms-transform: scale(1);
-    o-transform: scale(1);
-    transform: scale(1);
+    ms-transform: scale(.75);
+    o-transform: scale(.75);
+    transform: scale(.75);
     transition: all .25s;
     webkit-backface-visibility: hidden;
     webkit-transform: scale(1);

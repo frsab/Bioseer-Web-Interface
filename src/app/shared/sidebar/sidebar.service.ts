@@ -35,24 +35,24 @@ export class SidebarService {
         }
       ]
     },
-    {
-      title: 'The Technology',
-      type: 'dropdown',
-      icon: 'fas fa-tint',
-      active: false,
-      submenus: [
-        {
-          title: 'The Software',
-          link: '/software',
-          active: false
-        },
-        {
-          title: 'The Hardware',
-          link: '/hardware',
-          active: false
-        }
-      ]
-    },
+    // {
+    //   title: 'The Technology',
+    //   type: 'dropdown',
+    //   icon: 'fas fa-tint',
+    //   active: false,
+    //   submenus: [
+    //     {
+    //       title: 'The Software',
+    //       link: '/software',
+    //       active: false
+    //     },
+    //     {
+    //       title: 'The Hardware',
+    //       link: '/hardware',
+    //       active: false
+    //     }
+    //   ]
+    // },
     {
       title: 'Dashboard',
       type: 'header',
