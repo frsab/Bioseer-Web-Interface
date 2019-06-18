@@ -27,7 +27,23 @@ h1, h2, h3, h4, h5, p {
   font-size: 4em;
   font-weight: bold;
 }
+
 .head {
   font-weight: bold;
-  font-size: 4em;
+  font-size: 5.5em;
+}
+
+.headsmall {
+  font-weight: bold;
+  font-size: 3.5em;
+}
+
+.subtext {
+  font-size: 1.3em;
+}
+
+.line {
+  height: 1em;
+  width: 50%;
+  background-color: #313131;
 }
