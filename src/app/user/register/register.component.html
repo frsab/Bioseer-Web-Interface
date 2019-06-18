@@ -49,10 +49,18 @@
   </form>
 </mat-card>
 <div class="container-fluid" *ngIf="success === true">
-  <h1>Welcome to BioSeer</h1>
+  <div class="background"></div>
+  <mat-card class="mat-elevation-z20 text-center centered p-5" >
+    <h1 ngStyle.lt-sm="font-size: 1.5em;">Welcome to Bioseer!</h1>
+    <p>Thanks for registering!</p>
+    <button mat-button routerLink="/">Go Home</button>
+  </mat-card>
 </div>
 <div class="container-fluid" *ngIf="success === false">
-  <mat-error>Something Went Wrong</mat-error>
+  <div class="background"></div>
+  <mat-card class="mat-elevation-z20 text-center centered p-5" >
+    <h1 ngStyle.lt-sm="font-size: 1.5em;">Something Went Wrong!</h1>
+    <p>Sorry, something went wrong. Please try to register again.</p>
+    <button mat-button routerLink="/register">Go Back</button>
+  </mat-card>
 </div>
-
-
