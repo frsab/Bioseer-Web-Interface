@@ -47,8 +47,8 @@ export class FileUploadComponent implements OnInit {
 
     uppy.on('upload', result => {
       console.log(uppy.getFiles());
-      let canvasObjects = Array(uppy.getFiles().length);
-      let dataObjects = Array(uppy.getFiles().length);
+      const canvasObjects = Array(uppy.getFiles().length);
+      const dataObjects = Array(uppy.getFiles().length);
       console.log(uppy.getFiles());
       for (const i in uppy.getFiles()) {
         const that = this;
