@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   ) {
     this.router.events.subscribe(res => {
        this.router.url === '/' ? this.transparentBackground = true : this.transparentBackground = false;
+       this,router.url === '/error' ||
     });
   }
 

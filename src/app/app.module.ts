@@ -34,7 +34,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurmissionComponent } from './ourmission/ourmission.component';
 import { OurtechnologyComponent } from './ourtechnology/ourtechnology.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
-import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { ErrorpageComponent } from './shared/errorpage/errorpage.component';
 import {SidebarComponent} from './shared/sidebar/sidebar.component';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';

@@ -1,0 +1,15 @@
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.background {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/404%20Page%20Background.jpg?alt=media&token=a11726b3-b946-493f-a133-db3c36ac423c);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}

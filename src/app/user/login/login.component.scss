@@ -31,11 +31,10 @@
 }
 
 .background {
-  position: static;
-  overflow: hidden;
-  height: 100%;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/cloudsandstones.jpg?alt=media&token=b669c6cb-bb4b-452c-a3ef-0d64014fb715);
+  background-position: bottom; /* Center the image */
+  background-size: cover;
+  position: absolute;
   width: 100%;
-  z-index: -1000;
-  background-image: url(https://images.pexels.com/photos/2049422/pexels-photo-2049422.jpeg?auto=compress&cs=tinysrgb&dpr=2z&w=1760);
-  background-size: auto;
+  height: 100vh;
 }

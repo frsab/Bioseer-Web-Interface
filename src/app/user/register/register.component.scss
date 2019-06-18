@@ -26,3 +26,11 @@
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+.background {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/bluewave.jpg?alt=media&token=4fdad35b-44f8-45d3-89cc-4d034b929bc1);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}

@@ -77,6 +77,7 @@ export class SidebarService {
     },
     {
       title: 'Account',
+      type: 'header',
       auth: true
     },
     {

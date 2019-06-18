@@ -11,7 +11,7 @@ import {MobiledashboardComponent} from './mobiledashboard/mobiledashboard.compon
 import {OurmissionComponent} from './ourmission/ourmission.component';
 import {OurtechnologyComponent} from './ourtechnology/ourtechnology.component';
 import {AboutusComponent} from './aboutus/aboutus.component';
-import {ErrorpageComponent} from './errorpage/errorpage.component';
+import {ErrorpageComponent} from './shared/errorpage/errorpage.component';
 
 const routes: Routes = [
   {
@@ -46,11 +46,11 @@ const routes: Routes = [
     component: MobiledashboardComponent,
   },
   {
-    path: 'aboutus',
+    path: 'team',
     component: AboutusComponent,
   },
   {
-    path: 'ourmission',
+    path: 'mission',
     component: OurmissionComponent,
   },
   {

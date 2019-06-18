@@ -55,8 +55,8 @@
             <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
               <ul>
                 <li *ngFor="let submenu of menu.submenus">
-                  <a href="#"> {{submenu.title}}
-                    <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
+                  <a [routerLink]="submenu.link ? submenu.link : null"> {{submenu.title}}
+                    <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class" >{{submenu.badge.text}}</span>
                   </a>
                 </li>
               </ul>

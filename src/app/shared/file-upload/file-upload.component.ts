@@ -27,6 +27,7 @@ export class FileUploadComponent implements OnInit {
       autoProceed: false,
       restrictions: {
         minNumberOfFiles: 1,
+        maxNumberOfFiles: 0,
         maxFileSize: 1000000,
         allowedFileTypes: ['.jpg']
       },
