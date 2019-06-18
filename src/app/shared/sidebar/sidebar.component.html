@@ -7,7 +7,7 @@
         <!--</div>-->
         <div class="user-info" *ngIf="displayName">
           <span class="user-name">{{ displayName }}</span>
-          <span class="logout" (click)="logout()">Sign Out</span>
+          <span class="logout" (click)="logout()" routerLink="/">Sign Out</span>
           <span class="user-status">
             <i class="fa fa-circle"></i>
             <span>Online</span>
@@ -52,6 +52,15 @@
               <span>{{menu.title}}</span>
               <span *ngIf="menu.badge" class="badge badge-pill" [ngClass]="menu.badge.class">{{menu.badge.text}}</span>
             </a>
+            <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
+              <ul>
+                <li *ngFor="let submenu of menu.submenus">
+                  <a href="#"> {{submenu.title}}
+                    <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>

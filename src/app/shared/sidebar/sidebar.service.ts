@@ -25,11 +25,13 @@ export class SidebarService {
       submenus: [
         {
           title: 'Our Team',
-          link: '/team'
+          link: '/team',
+          active: false
         },
         {
           title: 'Our Mission',
-          link: '/mission'
+          link: '/mission',
+          active: false
         }
       ]
     },
@@ -41,17 +43,20 @@ export class SidebarService {
       submenus: [
         {
           title: 'The Software',
-          link: '/software'
+          link: '/software',
+          active: false
         },
         {
           title: 'The Hardware',
-          link: '/hardware'
+          link: '/hardware',
+          active: false
         }
       ]
     },
     {
       title: 'Dashboard',
-      type: 'header'
+      type: 'header',
+      active: false
     },
     {
       title: 'Dashboard',
