@@ -64,6 +64,13 @@
     <code>src/app/shared/footer/footer.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Webpage footer</p>
+
+    </p>
 
 
     <p class="comment">
@@ -156,7 +163,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/shared/footer/footer.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/footer/footer.component.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -195,8 +202,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/shared/footer/footer.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/shared/footer/footer.component.ts:15</a></div>
                 </td>
             </tr>
 
@@ -220,6 +227,9 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
+/**
+ * Webpage footer
+ */
 @Component({
   selector: &#x27;app-footer&#x27;,
   templateUrl: &#x27;./footer.component.html&#x27;,
@@ -240,25 +250,11 @@ export class FooterComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">
 &lt;!-- Footer --&gt;
 &lt;footer class&#x3D;&quot;footer text-center&quot;&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;ul class&#x3D;&quot;list-inline mb-5&quot;&gt;
-      &lt;li class&#x3D;&quot;list-inline-item&quot;&gt;
-        &lt;a class&#x3D;&quot;social-link rounded-circle text-white mr-3&quot; href&#x3D;&quot;#&quot;&gt;
-          &lt;i class&#x3D;&quot;icon-social-facebook&quot;&gt;&lt;/i&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class&#x3D;&quot;list-inline-item&quot;&gt;
-        &lt;a class&#x3D;&quot;social-link rounded-circle text-white mr-3&quot; href&#x3D;&quot;#&quot;&gt;
-          &lt;i class&#x3D;&quot;icon-social-twitter&quot;&gt;&lt;/i&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class&#x3D;&quot;list-inline-item&quot;&gt;
-        &lt;a class&#x3D;&quot;social-link rounded-circle text-white&quot; href&#x3D;&quot;#&quot;&gt;
-          &lt;i class&#x3D;&quot;icon-social-github&quot;&gt;&lt;/i&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p class&#x3D;&quot;text-muted small mb-0&quot;&gt;Copyright &amp;copy; Your Website 2019&lt;/p&gt;
+  &lt;div class&#x3D;&quot;container mb-4&quot;&gt;
+    &lt;span class&#x3D;&quot;text-muted small&quot;&gt;
+      Contact us at
+      &lt;a href&#x3D;&quot;mailto:contact@bioseer.io&quot;&gt;contact@bioseer.io&lt;/a&gt;
+    &lt;/span&gt;
   &lt;/div&gt;
 &lt;/footer&gt;
 </code></pre>
@@ -296,8 +292,8 @@ export class FooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Footer --><footer class="footer text-center">  <div class="container">    <ul class="list-inline mb-5">      <li class="list-inline-item">        <a class="social-link rounded-circle text-white mr-3" href="#">          <i class="icon-social-facebook"></i>        </a>      </li>      <li class="list-inline-item">        <a class="social-link rounded-circle text-white mr-3" href="#">          <i class="icon-social-twitter"></i>        </a>      </li>      <li class="list-inline-item">        <a class="social-link rounded-circle text-white" href="#">          <i class="icon-social-github"></i>        </a>      </li>    </ul>    <p class="text-muted small mb-0">Copyright &copy; Your Website 2019</p>  </div></footer></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+        var COMPONENT_TEMPLATE = '<div><!-- Footer --><footer class="footer text-center">  <div class="container mb-4">    <span class="text-muted small">      Contact us at      <a href="mailto:contact@bioseer.io">contact@bioseer.io</a>    </span>  </div></footer></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
 </script>

@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AboutusComponent</li>
+  <li>AboutUsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/aboutus/aboutus.component.ts</code>
+    <code>src/app/static-pages/aboutus/about-us.component.ts</code>
 </p>
 
 
@@ -96,14 +96,14 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./aboutus.component.scss</code></td>
+                <td class="col-md-9"><code>./about-us.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./aboutus.component.html</code></td>
+                <td class="col-md-9"><code>./about-us.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/aboutus/aboutus.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/static-pages/aboutus/about-us.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/aboutus/aboutus.component.ts:12</a></div>
+                            class="link-to-prism">src/app/static-pages/aboutus/about-us.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -222,10 +222,10 @@
 
 @Component({
   selector: &#x27;app-aboutus&#x27;,
-  templateUrl: &#x27;./aboutus.component.html&#x27;,
-  styleUrls: [&#x27;./aboutus.component.scss&#x27;]
+  templateUrl: &#x27;./about-us.component.html&#x27;,
+  styleUrls: [&#x27;./about-us.component.scss&#x27;]
 })
-export class AboutusComponent implements OnInit {
+export class AboutUsComponent implements OnInit {
 
   constructor() { }
 
@@ -237,47 +237,142 @@ export class AboutusComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;header class&#x3D;&quot;masthead d-flex&quot; style&#x3D;&quot;background-color: #4c4c4c&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center my-auto&quot;&gt;
-    &lt;h2 class&#x3D;&quot;mb-3 mt-5&quot; style&#x3D;&quot;color: white;&quot;&gt;Our Team&lt;/h2&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;section style&#x3D;&quot;background-color: white;&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12 text-center mt-4 beforeani&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+    &lt;h2&gt;Our Team&lt;/h2&gt;
   &lt;/div&gt;
-&lt;/header&gt;
-
-&lt;section class&#x3D;&quot;content-section&quot; style&#x3D;&quot;background-color: #4c4c4c&quot; id&#x3D;&quot;intro&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-10 mx-auto&quot;&gt;
-        &lt;p class&#x3D;&quot;lead mb-3&quot; style&#x3D;&quot;color: white;&quot;&gt;The BioSeer Development team is a subset of Rovotics, a 17 person underwater robotics company based in Sacramento California. There are five key members of the development team. Heading the project as CEO, Michael Equi organizes the vision for the overall project and is the main AI and ML developer. Jaiveer Gahunia also develops the AI. Caelin Sutch heads the Web Interface, with Alden Parker providing front end support. James Monroe is in charge of our hardware.&lt;/p&gt;
-        &lt;p class&#x3D;&quot;lead mb-5&quot; style&#x3D;&quot;color: white;&quot;&gt;Rovotics is a high school academic team specializing in the design, manufacture, and operation of underwater Remotely Operated Vehicles (ROVs). Our team is comprised of highly-skilled members with multiple years of experience, providing us with the expertise to tackle a variety of challenges. Over the past decade, Rovotics has successfully produced ROVs suited to a variety of missions, including exploration of shipwrecks in the Great Lakes in 2014 and scientific research and oilfield maintenance in the Arctic in 2015.&lt;/p&gt;
-      &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 text-center mt-4 beforeani&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-3 col-md-7 col-sm-11 mx-auto&quot;&gt;
+      &lt;p&gt;We&#x27;re BioSeer, a Research and Development team of Rovotics, a high school underwater robotics team in California. Our six member team ranges from AI development backgrounds to front-end UI design.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 text-center mt-4 beforeani&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-4 col-sm-11 mx-auto&quot;&gt;
+      &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/GroupPhoto-small.png?alt&#x3D;media&amp;token&#x3D;60424de4-66fa-4f0c-8edf-731823221466&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section class&#x3D;&quot;content-section bg-light&quot; id&#x3D;&quot;pictures&quot;&gt;
-  &lt;div class&#x3D;&quot;container text-center mb-3&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-10 mx-auto&quot;&gt;
-        &lt;h2 class&#x3D;&quot;mt-4 mb-3&quot;&gt;IMAGES OF THE TEAM&lt;/h2&gt;
+&lt;section style&#x3D;&quot;background-color: white;&quot; class&#x3D;&quot;mt-5 pt-5&quot;&gt;
+    &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+      &lt;div class&#x3D;&quot;row text-center mx-3&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 col-md-6 col-sm-12 mx-auto beforeani my-2&quot; ngClass.lt-sm&#x3D;&quot;mb-2&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+          &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-8 col-sm-8 col-md-5 mx-auto&quot;&gt;
+              &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Caelin.png?alt&#x3D;media&amp;token&#x3D;9fd296d4-2c5f-4dc6-a0bc-bf232803e7e0&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 90%;&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;headerText mt-4&quot;&gt;CAELIN SUTCH&lt;/h3&gt;
+            &lt;h4 class&#x3D;&quot;headerSubtext&quot;&gt;Full Stack Developer&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+              &lt;p class&#x3D;&quot;content&quot;&gt;Graphic designer and front-end developer, Caelin manages the design of the BioSeer website. Caelin is experienced in UI, UX, and various front-end development frameworks. Caelin can be found aggressively petting Sky, Michael&#x27;s husky, or hunched over his three monitor setup working on the next feature.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+              &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-twitter&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-email&quot;&gt;&lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 col-md-6 col-sm-12 mx-auto beforeani&quot; ngClass.lt-sm&#x3D;&quot;mb-2&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+          &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-8 col-sm-8 col-md-5 mx-auto&quot;&gt;
+              &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Mike.png?alt&#x3D;media&amp;token&#x3D;f1a4581f-0d87-406e-b257-8065b583e155&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 90%;&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;headerText mt-4&quot;&gt;MICHAEL EQUI&lt;/h3&gt;
+            &lt;h4 class&#x3D;&quot;headerSubtext&quot;&gt;CEO&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-lg-12 col-sm-12 col-md-9 mx-auto&quot;&gt;
+              &lt;p class&#x3D;&quot;content&quot;&gt;A maker, engineer, and dreamer who is seemingly always thinking up amazing things that will help the world. He is often found working in his makerspace working on one of his many projects. A dedicated worker, Michael often stays awake long into the night to ensure the success of his projects.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+              &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-twitter&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-email&quot;&gt;&lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 col-md-6 col-sm-12 mx-auto beforeani&quot; ngClass.lt-sm&#x3D;&quot;mb-2&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+          &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-8 col-sm-8 col-md-5 mx-auto&quot;&gt;
+              &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Alden.png?alt&#x3D;media&amp;token&#x3D;a61aada1-a032-4b12-af44-040a38e939d7&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 90%;&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;headerText mt-4&quot;&gt;ALDEN PARKER&lt;/h3&gt;
+            &lt;h4 class&#x3D;&quot;headerSubtext&quot;&gt;Front End Developer&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-lg-12 col-sm-12 col-md-9 mx-auto&quot;&gt;
+              &lt;p class&#x3D;&quot;content&quot;&gt;A programmer who can create almost anything when given an hour and a computer.  He often finds himself dreaming about what he can do to make the world a better place. He is the glue that can keep a team together through his determination and patience.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+              &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-twitter&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-email&quot;&gt;&lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 col-md-6 col-sm-12 mx-auto beforeani&quot; ngClass.lt-sm&#x3D;&quot;mb-2&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+          &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-8 col-sm-8 col-md-5 mx-auto&quot;&gt;
+              &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Jaiveer.png?alt&#x3D;media&amp;token&#x3D;7088b8e4-2b35-4591-9f23-dca1b9405f05&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 90%;&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;headerText mt-4&quot;&gt;JAIVEER GAHUNIA&lt;/h3&gt;
+            &lt;h4 class&#x3D;&quot;headerSubtext&quot;&gt;AI Developer&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-lg-12 col-sm-12 col-md-9 mx-auto&quot;&gt;
+              &lt;p class&#x3D;&quot;content&quot;&gt;A backend programmer who can make all your troubles disappear.  What others say is impossible to make run smoothly is child’s play for him. Jaiveer loves everything vaporwave and is an avid watcher of Super Smash Brothers Melee.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+              &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-twitter&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-email&quot;&gt;&lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 col-md-6 col-sm-12 mx-auto beforeani&quot; ngClass.lt-sm&#x3D;&quot;mb-2&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+          &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-8 col-sm-8 col-md-5 mx-auto&quot;&gt;
+              &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-james.png?alt&#x3D;media&amp;token&#x3D;94642520-54b7-4137-862c-4e9af2a21333&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 90%;&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;headerText mt-4&quot;&gt;JAMES MONROE&lt;/h3&gt;
+            &lt;h4 class&#x3D;&quot;headerSubtext&quot;&gt;Hardware&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-lg-12 col-sm-12 col-md-9 mx-auto&quot;&gt;
+              &lt;p class&#x3D;&quot;content&quot;&gt;A mechanical engineer, James can take ideas formulated by himself and the rest of the team and turn them into realistic CAD drawings in his free time. James can help a group come to a decision and adds meaningful input to every conversation.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+              &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-twitter&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-email&quot;&gt;&lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 col-md-6 col-sm-12 mx-auto beforeani&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+          &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-8 col-sm-8 col-md-5 mx-auto&quot;&gt;
+              &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-cropped.png?alt&#x3D;media&amp;token&#x3D;cf85226a-c3a1-4f2e-807b-a41c1a77ace6&quot; class&#x3D;&quot;mx-auto&quot; style&#x3D;&quot;width: 90%;&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class&#x3D;&quot;headerText mt-4&quot;&gt;SKY THE HUSKY&lt;/h3&gt;
+            &lt;h4 class&#x3D;&quot;headerSubtext&quot;&gt;Moral Support/Inspiration&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-lg-12 col-sm-12 col-md-9 mx-auto&quot;&gt;
+              &lt;p class&#x3D;&quot;content&quot;&gt;Michael’s husky, Sky, was the source of inspiration for the first prototype AI, SkyAI. SkyAI detected Sky in images and drew bounding boxes around her. She also provides moral support and keeps the team happy as we work late into the night.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mx-auto&quot;&gt;
+              &lt;div class&#x3D;&quot;mx-auto&quot;&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-twitter&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn-social btn-email&quot;&gt;&lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;container text-center pb-5&quot;&gt;
-    &lt;div id&#x3D;&quot;carouselExampleSlidesOnly&quot; class&#x3D;&quot;carousel slide&quot; data-ride&#x3D;&quot;carousel&quot;&gt;
-    &lt;div class&#x3D;&quot;carousel-inner&quot; style&#x3D;&quot;border-radius: 20px;&quot;&gt;
-      &lt;div class&#x3D;&quot;carousel-item active&quot;&gt;
-        &lt;img class&#x3D;&quot;d-block w-100&quot; src&#x3D;&quot;assets/img/IMG_7018.jpg&quot; alt&#x3D;&quot;First slide&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-        &lt;img class&#x3D;&quot;d-block w-100&quot; src&#x3D;&quot;assets/img/JNW07219.jpg&quot; alt&#x3D;&quot;Second slide&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-        &lt;img class&#x3D;&quot;d-block w-100&quot; src&#x3D;&quot;assets/img/IMG_7892-Edit.jpg&quot; alt&#x3D;&quot;Third slide&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-        &lt;img class&#x3D;&quot;d-block w-100&quot; src&#x3D;&quot;assets/img/JNW09191.jpg&quot; alt&#x3D;&quot;Third slide&quot;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section style&#x3D;&quot;background-color: white;&quot; class&#x3D;&quot;mt-5 pt-5 mb-5 pb-5&quot;&gt;
+  &lt;div class&#x3D;&quot;col-11 mx-auto beforeani&quot; animateOnScroll animationName&#x3D;&quot;afterani animated animatedFadeInUp fadeInUp&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-6 col-md-11 mx-auto&quot;&gt;
+      &lt;img src&#x3D;&quot;https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/T%20Shirt%20Back.png?alt&#x3D;media&amp;token&#x3D;3c3d5e0e-2acf-4150-b4b8-117e1b5c6278&quot; style&#x3D;&quot;width: 100%;&quot; id&#x3D;&quot;img1&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
@@ -286,9 +381,440 @@ export class AboutusComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./aboutus.component.scss</code>
+                    <code>./about-us.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">h1, h2, h3, h4, h5, p {
+  font-family: &#x27;Lato&#x27;, sans-serif;
+  color: #38344D;
+}
+
+.headerText {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.headerSubtext {
+  color: #2A263D;
+  font-size: 1.1em;
+}
+
+.content {
+  font-size: 1em;
+}
+
+a.btn-social,
+.btn-social
+{
+    border-radius: 50%;
+    color: #ffffff !important;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    webkit-transition: background-color .3s;
+    width: 40px;
+}
+
+.btn-social .fa,.btn-social i
+{
+    backface-visibility: hidden;
+    moz-backface-visibility: hidden;
+    ms-transform: scale(.75);
+    o-transform: scale(.75);
+    transform: scale(.75);
+    transition: all .25s;
+    webkit-backface-visibility: hidden;
+    webkit-transform: scale(1);
+    webkit-transition: all .25s;
+}
+.btn-social:hover,.btn-social:focus
+{
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+.btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+{
+    ms-transform: scale(1.3);
+    o-transform: scale(1.3);
+    transform: scale(1.3);
+    webkit-transform: scale(1.3);
+}
+.btn-social.btn-xs
+{
+    font-size: 9px;
+    height: 24px;
+    line-height: 13px;
+    margin: 6px 2px;
+    width: 24px;
+}
+.btn-social.btn-sm
+{
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    margin: 6px 2px;
+    width: 36px;
+}
+.btn-social.btn-lg
+{
+    font-size: 22px;
+    height: 72px;
+    line-height: 40px;
+    margin: 10px 6px;
+    width: 72px;
+}
+
+.btn-behance
+{
+    background-color: #1769ff;
+}
+.btn-behance:hover
+{
+    background-color: #4a8aff;
+}
+.btn-bitbucket
+{
+    background-color: #205081;
+}
+.btn-bitbucket:hover
+{
+    background-color: #2a69aa;
+}
+.btn-codepen
+{
+    background-color: #76daff;
+}
+.btn-codepen:hover
+{
+    background-color: #a9e8ff;
+}
+.btn-deviantart
+{
+    background-color: #4e6252;
+}
+.btn-deviantart:hover
+{
+    background-color: #657e6a;
+}
+.btn-digg
+{
+    background-color: #000;
+}
+.btn-digg:hover
+{
+    background-color: #1a1a1a;
+}
+.btn-dribbble
+{
+    background-color: #ea4c89;
+}
+.btn-dribbble:hover
+{
+    background-color: #ef7aa7;
+}
+.btn-dropbox
+{
+    background-color: #007ee5;
+}
+.btn-dropbox:hover
+{
+    background-color: #1998ff;
+}
+.btn-facebook
+{
+    background-color: #3b5998;
+}
+.btn-facebook:hover
+{
+    background-color: #4c70ba;
+}
+.btn-flickr
+{
+    background-color: #0063dc;
+}
+.btn-flickr:hover
+{
+    background-color: #107cff;
+}
+.btn-foursquare
+{
+    background-color: #ef4b78;
+}
+.btn-foursquare:hover
+{
+    background-color: #f37a9b;
+}
+.btn-github
+{
+    background-color: #4183c4;
+}
+.btn-github:hover
+{
+    background-color: #689cd0;
+}
+.btn-google-plus
+{
+    background-color: #dd4b39;
+}
+.btn-google-plus:hover
+{
+    background-color: #e47365;
+}
+.btn-instagram
+{
+    background-color: #3f729b;
+}
+.btn-instagram:hover
+{
+    background-color: #548cb9;
+}
+.btn-jsfiddle
+{
+    background-color: #4679bd;
+}
+.btn-jsfiddle:hover
+{
+    background-color: #6c94ca;
+}
+.btn-lastfm
+{
+    background-color: #e31b23;
+}
+.btn-lastfm:hover
+{
+    background-color: #e9484e;
+}
+.btn-linkedin
+{
+    background-color: #0976b4;
+}
+.btn-linkedin:hover
+{
+    background-color: #0b96e5;
+}
+.btn-paypal
+{
+    background-color: #253b80;
+}
+.btn-paypal:hover
+{
+    background-color: #304da8;
+}
+.btn-pinterest
+{
+    background-color: #cc2127;
+}
+.btn-pinterest:hover
+{
+    background-color: #e04046;
+}
+.btn-reddit
+{
+    background-color: #ff4500;
+}
+.btn-reddit:hover
+{
+    background-color: #ff6a33;
+}
+.btn-skype
+{
+    background-color: #00aff0;
+}
+.btn-skype:hover
+{
+    background-color: #24c4ff;
+}
+.btn-soundcloud
+{
+    background-color: #f80;
+}
+.btn-soundcloud:hover
+{
+    background-color: #ffa033;
+}
+.btn-stack-overflow
+{
+    background-color: #fe7a15;
+}
+.btn-stack-overflow:hover
+{
+    background-color: #fe9748;
+}
+.btn-steam
+{
+    background-color: #7da10e;
+}
+.btn-steam:hover
+{
+    background-color: #a1d012;
+}
+.btn-stumbleupon
+{
+    background-color: #eb4924;
+}
+.btn-stumbleupon:hover
+{
+    background-color: #ef7053;
+}
+.btn-trello
+{
+    background-color: #256a92;
+}
+.btn-trello:hover
+{
+    background-color: #2f88bb;
+}
+.btn-tumblr
+{
+    background-color: #35465c;
+}
+.btn-tumblr:hover
+{
+    background-color: #485f7c;
+}
+.btn-twitch
+{
+    background-color: #6441a5;
+}
+.btn-twitch:hover
+{
+    background-color: #7e5bbe;
+}
+.btn-twitter
+{
+    background-color: #38344D;
+}
+.btn-twitter:hover
+{
+    background-color: #38344D;
+}
+.btn-vimeo
+{
+    background-color: #1ab7ea;
+}
+.btn-vimeo:hover
+{
+    background-color: #49c6ee;
+}
+.btn-vine
+{
+    background-color: #00b488;
+}
+.btn-vine:hover
+{
+    background-color: #00e7af;
+}
+.btn-vk
+{
+    background-color: #45668e;
+}
+.btn-vk:hover
+{
+    background-color: #587fae;
+}
+.btn-wechat
+{
+    background-color: #98d11c;
+}
+.btn-wechat:hover
+{
+    background-color: #afe53b;
+}
+.btn-wordpress
+{
+    background-color: #21759b;
+}
+.btn-wordpress:hover
+{
+    background-color: #2a95c5;
+}
+.btn-xing
+{
+    background-color: #026466;
+}
+.btn-xing:hover
+{
+    background-color: #039598;
+}
+.btn-yahoo
+{
+    background-color: #400191;
+}
+.btn-yahoo:hover
+{
+    background-color: #5601c4;
+}
+.btn-yelp
+{
+    background-color: #af0606;
+}
+.btn-yelp:hover
+{
+    background-color: #e00808;
+}
+.btn-youtube
+{
+    background-color: #e52d27;
+}
+.btn-youtube:hover
+{
+    background-color: #ea5955;
+}
+.btn-email
+{
+    background-color: #38344D;
+}
+.btn-email:hover
+{
+    background-color: #38344D;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate3d(0,60px,0);
+    }
+
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        transform: translate3d(0,60px,0);
+    }
+
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-delay: 0.3s;
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.afterani {
+  visibility: visible !important;
+}
+
+.beforeani {
+  visibility: hidden;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -316,7 +842,7 @@ export class AboutusComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header class="masthead d-flex" style="background-color: #4c4c4c">  <div class="container text-center my-auto">    <h2 class="mb-3 mt-5" style="color: white;">Our Team</h2>  </div></header><section class="content-section" style="background-color: #4c4c4c" id="intro">  <div class="container text-center">    <div class="row">      <div class="col-lg-10 mx-auto">        <p class="lead mb-3" style="color: white;">The BioSeer Development team is a subset of Rovotics, a 17 person underwater robotics company based in Sacramento California. There are five key members of the development team. Heading the project as CEO, Michael Equi organizes the vision for the overall project and is the main AI and ML developer. Jaiveer Gahunia also develops the AI. Caelin Sutch heads the Web Interface, with Alden Parker providing front end support. James Monroe is in charge of our hardware.</p>        <p class="lead mb-5" style="color: white;">Rovotics is a high school academic team specializing in the design, manufacture, and operation of underwater Remotely Operated Vehicles (ROVs). Our team is comprised of highly-skilled members with multiple years of experience, providing us with the expertise to tackle a variety of challenges. Over the past decade, Rovotics has successfully produced ROVs suited to a variety of missions, including exploration of shipwrecks in the Great Lakes in 2014 and scientific research and oilfield maintenance in the Arctic in 2015.</p>      </div>    </div>  </div></section><section class="content-section bg-light" id="pictures">  <div class="container text-center mb-3">    <div class="row">      <div class="col-lg-10 mx-auto">        <h2 class="mt-4 mb-3">IMAGES OF THE TEAM</h2>      </div>    </div>  </div>  <div class="container text-center pb-5">    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">    <div class="carousel-inner" style="border-radius: 20px;">      <div class="carousel-item active">        <img class="d-block w-100" src="assets/img/IMG_7018.jpg" alt="First slide">      </div>      <div class="carousel-item">        <img class="d-block w-100" src="assets/img/JNW07219.jpg" alt="Second slide">      </div>      <div class="carousel-item">        <img class="d-block w-100" src="assets/img/IMG_7892-Edit.jpg" alt="Third slide">      </div>      <div class="carousel-item">        <img class="d-block w-100" src="assets/img/JNW09191.jpg" alt="Third slide">      </div>    </div>    </div>  </div></section></div>'
+        var COMPONENT_TEMPLATE = '<div><section style="background-color: white;">  <div class="col-12 text-center mt-4 beforeani" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">    <h2>Our Team</h2>  </div>  <div class="col-12 text-center mt-4 beforeani" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">    <div class="col-lg-3 col-md-7 col-sm-11 mx-auto">      <p>We\'re BioSeer, a Research and Development team of Rovotics, a high school underwater robotics team in California. Our six member team ranges from AI development backgrounds to front-end UI design.</p>    </div>  </div>  <div class="col-12 text-center mt-4 beforeani" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">    <div class="col-lg-4 col-sm-11 mx-auto">      <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/GroupPhoto-small.png?alt=media&token=60424de4-66fa-4f0c-8edf-731823221466" style="width: 100%;">    </div>  </div></section><section style="background-color: white;" class="mt-5 pt-5">    <div class="mx-auto">      <div class="row text-center mx-3">        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto beforeani my-2" ngClass.lt-sm="mb-2" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">          <div class="mx-auto">            <div class="col-lg-8 col-sm-8 col-md-5 mx-auto">              <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Caelin.png?alt=media&token=9fd296d4-2c5f-4dc6-a0bc-bf232803e7e0" class="mx-auto" style="width: 90%;">            </div>            <h3 class="headerText mt-4">CAELIN SUTCH</h3>            <h4 class="headerSubtext">Full Stack Developer</h4>            <div class="mx-auto">              <p class="content">Graphic designer and front-end developer, Caelin manages the design of the BioSeer website. Caelin is experienced in UI, UX, and various front-end development frameworks. Caelin can be found aggressively petting Sky, Michael\'s husky, or hunched over his three monitor setup working on the next feature.</p>            </div>            <div class="row mx-auto">              <div class="mx-auto">                <a href="" class="btn-social btn-twitter"><i class="fab fa-instagram"></i></a>                <a href="" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>              </div>            </div>          </div>        </div>        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto beforeani" ngClass.lt-sm="mb-2" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">          <div class="mx-auto">            <div class="col-lg-8 col-sm-8 col-md-5 mx-auto">              <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Mike.png?alt=media&token=f1a4581f-0d87-406e-b257-8065b583e155" class="mx-auto" style="width: 90%;">            </div>            <h3 class="headerText mt-4">MICHAEL EQUI</h3>            <h4 class="headerSubtext">CEO</h4>            <div class="col-lg-12 col-sm-12 col-md-9 mx-auto">              <p class="content">A maker, engineer, and dreamer who is seemingly always thinking up amazing things that will help the world. He is often found working in his makerspace working on one of his many projects. A dedicated worker, Michael often stays awake long into the night to ensure the success of his projects.</p>            </div>            <div class="row mx-auto">              <div class="mx-auto">                <a href="" class="btn-social btn-twitter"><i class="fab fa-instagram"></i></a>                <a href="" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>              </div>            </div>          </div>        </div>        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto beforeani" ngClass.lt-sm="mb-2" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">          <div class="mx-auto">            <div class="col-lg-8 col-sm-8 col-md-5 mx-auto">              <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Alden.png?alt=media&token=a61aada1-a032-4b12-af44-040a38e939d7" class="mx-auto" style="width: 90%;">            </div>            <h3 class="headerText mt-4">ALDEN PARKER</h3>            <h4 class="headerSubtext">Front End Developer</h4>            <div class="col-lg-12 col-sm-12 col-md-9 mx-auto">              <p class="content">A programmer who can create almost anything when given an hour and a computer.  He often finds himself dreaming about what he can do to make the world a better place. He is the glue that can keep a team together through his determination and patience.</p>            </div>            <div class="row mx-auto">              <div class="mx-auto">                <a href="" class="btn-social btn-twitter"><i class="fab fa-instagram"></i></a>                <a href="" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>              </div>            </div>          </div>        </div>        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto beforeani" ngClass.lt-sm="mb-2" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">          <div class="mx-auto">            <div class="col-lg-8 col-sm-8 col-md-5 mx-auto">              <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-Jaiveer.png?alt=media&token=7088b8e4-2b35-4591-9f23-dca1b9405f05" class="mx-auto" style="width: 90%;">            </div>            <h3 class="headerText mt-4">JAIVEER GAHUNIA</h3>            <h4 class="headerSubtext">AI Developer</h4>            <div class="col-lg-12 col-sm-12 col-md-9 mx-auto">              <p class="content">A backend programmer who can make all your troubles disappear.  What others say is impossible to make run smoothly is child’s play for him. Jaiveer loves everything vaporwave and is an avid watcher of Super Smash Brothers Melee.</p>            </div>            <div class="row mx-auto">              <div class="mx-auto">                <a href="" class="btn-social btn-twitter"><i class="fab fa-instagram"></i></a>                <a href="" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>              </div>            </div>          </div>        </div>        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto beforeani" ngClass.lt-sm="mb-2" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">          <div class="mx-auto">            <div class="col-lg-8 col-sm-8 col-md-5 mx-auto">              <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-james.png?alt=media&token=94642520-54b7-4137-862c-4e9af2a21333" class="mx-auto" style="width: 90%;">            </div>            <h3 class="headerText mt-4">JAMES MONROE</h3>            <h4 class="headerSubtext">Hardware</h4>            <div class="col-lg-12 col-sm-12 col-md-9 mx-auto">              <p class="content">A mechanical engineer, James can take ideas formulated by himself and the rest of the team and turn them into realistic CAD drawings in his free time. James can help a group come to a decision and adds meaningful input to every conversation.</p>            </div>            <div class="row mx-auto">              <div class="mx-auto">                <a href="" class="btn-social btn-twitter"><i class="fab fa-instagram"></i></a>                <a href="" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>              </div>            </div>          </div>        </div>        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto beforeani" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">          <div class="mx-auto">            <div class="col-lg-8 col-sm-8 col-md-5 mx-auto">              <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/circle-cropped.png?alt=media&token=cf85226a-c3a1-4f2e-807b-a41c1a77ace6" class="mx-auto" style="width: 90%;">            </div>            <h3 class="headerText mt-4">SKY THE HUSKY</h3>            <h4 class="headerSubtext">Moral Support/Inspiration</h4>            <div class="col-lg-12 col-sm-12 col-md-9 mx-auto">              <p class="content">Michael’s husky, Sky, was the source of inspiration for the first prototype AI, SkyAI. SkyAI detected Sky in images and drew bounding boxes around her. She also provides moral support and keeps the team happy as we work late into the night.</p>            </div>            <div class="row mx-auto">              <div class="mx-auto">                <a href="" class="btn-social btn-twitter"><i class="fab fa-instagram"></i></a>                <a href="" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>              </div>            </div>          </div>        </div>      </div>    </div></section><section style="background-color: white;" class="mt-5 pt-5 mb-5 pb-5">  <div class="col-11 mx-auto beforeani" animateOnScroll animationName="afterani animated animatedFadeInUp fadeInUp">    <div class="col-lg-6 col-md-11 mx-auto">      <img src="https://firebasestorage.googleapis.com/v0/b/bioseer-c55f5.appspot.com/o/T%20Shirt%20Back.png?alt=media&token=3c3d5e0e-2acf-4150-b4b8-117e1b5c6278" style="width: 100%;" id="img1">    </div>  </div></section></div>'
     var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AboutUsComponent'};

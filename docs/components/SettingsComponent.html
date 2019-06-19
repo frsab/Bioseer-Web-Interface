@@ -64,6 +64,13 @@
     <code>src/app/dashboard/map-overlay/group/settings/settings.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Settings for zone</p>
+
+    </p>
 
 
     <p class="comment">
@@ -173,7 +180,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -212,8 +219,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:17</a></div>
                 </td>
             </tr>
 
@@ -254,7 +261,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -286,7 +293,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/dashboard/map-overlay/group/settings/settings.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -302,6 +309,9 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { FormControl } from &#x27;@angular/forms&#x27;;
 
+/**
+ * Settings for zone
+ */
 @Component({
   selector: &#x27;app-settings&#x27;,
   templateUrl: &#x27;./settings.component.html&#x27;,
@@ -412,7 +422,7 @@ export class SettingsComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><mat-form-field>  <mat-label>Sensor #</mat-label>  <mat-select>    <mat-option value="1">      Sensor 1    </mat-option>    <mat-option value="2">      Sensor 2    </mat-option>  </mat-select></mat-form-field><p class="text-left text-sub"> ID: 123532431</p><p class="text-left text-sub">Added 5/23/17 5:24:23 GMT</p><h6 class="mt-4">Reassign</h6><mat-form-field>  <mat-label>Group #</mat-label>  <mat-select>    <mat-option value="1">      Group 1    </mat-option>    <mat-option value="2">      Group 2    </mat-option>    <mat-option value="10">      Group 10    </mat-option>  </mat-select></mat-form-field><form class="example-form">  <mat-form-field class="example-full-width">    <input type="text" placeholder="Label" matInput [formControl]="myControl" [matAutocomplete]="auto">    <mat-autocomplete #auto="matAutocomplete">      <mat-option *ngFor="let option of options" [value]="option">        {{option}}      </mat-option>    </mat-autocomplete>  </mat-form-field></form><h6 class="mt-4">Frequency</h6><mat-form-field>  <mat-label>Data Collection Frequency</mat-label>  <mat-select>    <mat-option value="1">      Every Second    </mat-option>    <mat-option value="2">      Every Minute    </mat-option>    <mat-option value="2">      Every Hour    </mat-option>  </mat-select></mat-form-field></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SettingsComponent'};
 </script>

@@ -64,6 +64,13 @@
     <code>src/app/shared/file-upload/file-upload.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>For file uploading to the Azure cloud</p>
+
+    </p>
 
 
     <p class="comment">
@@ -176,7 +183,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -257,14 +264,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:29</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Creates Uppy uploading and listens for upload event</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -294,13 +303,18 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                            <i>Type : </i>    <code>[]</code>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -321,13 +335,12 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
+                            <i>Default value : </i><code>false</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -354,7 +367,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/file-upload/file-upload.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -372,8 +385,10 @@ import * as Uppy from &#x27;@uppy/core&#x27;;
 import * as Dashboard from &#x27;@uppy/dashboard&#x27;;
 import {HttpClient, HttpHeaders} from &#x27;@angular/common/http&#x27;;
 import {ImageService} from &#x27;../../_services/image.service&#x27;;
-// import * as math from &#x27;mathjs&#x27;;
 
+/**
+ * For file uploading to the Azure cloud
+ */
 @Component({
   selector: &#x27;app-file-upload&#x27;,
   templateUrl: &#x27;./file-upload.component.html&#x27;,
@@ -382,21 +397,25 @@ import {ImageService} from &#x27;../../_services/image.service&#x27;;
 export class FileUploadComponent implements OnInit {
 
   processing: boolean; // If the algorithm is pr0o9cessing data
-  processed: boolean;
-  data: object;
+  processed &#x3D; false; // If the file is finished processing
+  data &#x3D; []; // Holds imge data
 
   constructor(
     private http: HttpClient,
     private imageService: ImageService
   ) {}
 
+  /**
+   * Creates Uppy uploading and listens for upload event
+   */
   ngOnInit(): void {
+    // Uppy File uploading configuration
     const uppy &#x3D; Uppy({
       debug: true,
       autoProceed: false,
       restrictions: {
-        maxNumberOfFiles: 1,
         minNumberOfFiles: 1,
+        maxNumberOfFiles: 0,
         maxFileSize: 1000000,
         allowedFileTypes: [&#x27;.jpg&#x27;]
       },
@@ -410,30 +429,44 @@ export class FileUploadComponent implements OnInit {
         showProgressDetails: true,
         note: &#x27;Images Only&#x27;,
         browserBackButtonClose: true,
-        allowMultipleUploads: false,
         showLinkToFileUploadResult: false,
         proudlyDisplayPoweredByUppy: false
       });
 
+    // Listen for upload event
     uppy.on(&#x27;upload&#x27;, result &#x3D;&gt; {
-      const image &#x3D; new Image();
-      image.crossOrigin &#x3D; &#x27;Anonymous&#x27;;
-      console.log(uppy.getFiles());
-      image.src &#x3D; uppy.getFiles()[0].preview;
-      image.onload &#x3D; () &#x3D;&gt; {
-        const $original &#x3D; document.getElementById(&#x27;original&#x27;);
-        this.processing &#x3D; true;
-        this.imageService.analyzeImage(image).subscribe((res) &#x3D;&gt; {
-          console.log(res);
-          this.data &#x3D; res[2];
-          this.processed &#x3D; true;
-          this.imageService.convertArrayToImage(res[0], $original);
-          this.processing &#x3D; false;
-          uppy.reset();
-        });
-      };
+      const canvasObjects &#x3D; Array(uppy.getFiles().length); // Creates array for canvas objects with length of images
+      const dataObjects &#x3D; Array(uppy.getFiles().length); // Creates array for data with length of images
+      // For each image uploaded
+      for (const i in uppy.getFiles()) {
+        const that &#x3D; this; // Reference for this since in nested class
+        const image &#x3D; new Image(); // Creates a new image object
+        image.crossOrigin &#x3D; &#x27;Anonymous&#x27;; // Cross origin anony,ous (prevens error)
+        image.src &#x3D; uppy.getFiles()[i].preview; // Gets data and sets it to source of the image
+        // Once the image object is loaded
+        image.onload &#x3D; () &#x3D;&gt; {
+          // TODO Refactor into a service
+          canvasObjects[i] &#x3D; document.createElement(&#x27;canvas&#x27;); // Creates new &lt;canvas&gt;
+          dataObjects[i] &#x3D; document.createElement(&#x27;p&#x27;); // Creates new &lt;p&gt;
+          this.processing &#x3D; true; // Sets image processing status to true to display loading animation
+          // Analyzes image
+          this.imageService.analyzeImage(image).subscribe((res) &#x3D;&gt; {
+            dataObjects[i].innerHTML &#x3D; JSON.stringify(res[2]); // Sets html of the &lt;p&gt; to a stringified return object
+            that.processed &#x3D; true; // Sets processed to true
+            that.imageService.convertArrayToImage(res[0], canvasObjects[i]); // Creates a new canvas ibject with processed image
+            canvasObjects[i].classList.add(&#x27;col-lg-3&#x27;);
+            canvasObjects[i].classList.add(&#x27;col-md-12&#x27;);
+            dataObjects[i].classList.add(&#x27;col-lg-3&#x27;);
+            dataObjects[i].classList.add(&#x27;col-md-12&#x27;);
+            // Adds elements to DOm
+            document.getElementById(&#x27;for-appending&#x27;).appendChild(canvasObjects[i]);
+            document.getElementById(&#x27;for-appending&#x27;).appendChild(dataObjects[i]);
+            that.processing &#x3D; false;
+          });
+        };
+      }
+      uppy.reset(); // Reset the uppy dashboard component
     });
-
   }
 }
 </code></pre>
@@ -475,13 +508,18 @@ export class FileUploadComponent implements OnInit {
             &lt;mat-spinner [diameter]&#x3D;&quot;30&quot; class&#x3D;&quot;mx-auto&quot;&gt;&lt;/mat-spinner&gt;
           &lt;/div&gt;
           &lt;canvas mat-card-image id&#x3D;&quot;original&quot; style&#x3D;&quot;width: 256px; height: 256px;&quot;&gt;&lt;/canvas&gt;
-          &lt;div *ngIf&#x3D;&quot;data&quot;&gt;
-            &lt;p&gt;Algae: {{ data[&#x27;algae&#x27;] }}&lt;/p&gt;
-            &lt;p&gt;Aquatic Plants: {{ data[&#x27;aquatic plant&#x27;] }}&lt;/p&gt;
-            &lt;p&gt;Human Interference: {{ data[&#x27;human interference&#x27;] }}&lt;/p&gt;
-            &lt;p&gt;Non Aquatic Plants: {{ data[&#x27;non-aquatic plant&#x27;] }}&lt;/p&gt;
-            &lt;p&gt;Rock: {{ data[&#x27;rock&#x27;] }}&lt;/p&gt;
-            &lt;p&gt;Soil/Clay: {{ data[&#x27;soil/clay&#x27;] }}&lt;/p&gt;
+          &lt;div *ngIf&#x3D;&quot;data&quot; &gt;
+            &lt;div *ngFor&#x3D;&quot;let i of data&quot;&gt;
+              &lt;p&gt;Algae: {{ i[&#x27;algae&#x27;] }}&lt;/p&gt;
+              &lt;p&gt;Aquatic Plants: {{ i[&#x27;aquatic plant&#x27;] }}&lt;/p&gt;
+              &lt;p&gt;Human Interference: {{ i[&#x27;human interference&#x27;] }}&lt;/p&gt;
+              &lt;p&gt;Non Aquatic Plants: {{ i[&#x27;non-aquatic plant&#x27;] }}&lt;/p&gt;
+              &lt;p&gt;Rock: {{ i[&#x27;rock&#x27;] }}&lt;/p&gt;
+              &lt;p&gt;Soil/Clay: {{ i[&#x27;soil/clay&#x27;] }}&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div id&#x3D;&quot;for-appending&quot; class&#x3D;&quot;row&quot;&gt;
+
           &lt;/div&gt;
         &lt;/mat-card-content&gt;
       &lt;/mat-card&gt;
@@ -530,8 +568,8 @@ export class FileUploadComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--<button mat-button color="warn" (click)="onClick()">-->  <!--<mat-icon>file_upload</mat-icon>-->  <!--{{text}}--><!--</button>--><!--<br/>--><!--<ul>-->  <!--<li *ngFor="let file of files" [@fadeInOut]="file.state" class="my-2">-->    <!--<mat-progress-bar [value]="file.progress" style="width: 50%;" class="mx-auto"></mat-progress-bar>-->    <!--<span id="file-label" class="mt-1">-->            <!--{{file.data.name}}-->      <!--<a title="Retry" (click)="retryFile(file)" *ngIf="file.canRetry">-->        <!--<mat-icon class="mx-1">refresh</mat-icon>-->      <!--</a>-->      <!--<a title="Cancel" (click)="cancelFile(file)" *ngIf="file.canCancel">-->        <!--<mat-icon class="mx-1">cancel</mat-icon>-->      <!--</a>-->    <!--</span>-->  <!--</li>--><!--</ul>--><!--<input type="file" id="fileUpload" name="fileUpload" multiple="multiple"-->       <!--accept="{{accept}}" style="display:none;"/>--><div class="container text-center my-5">  <div class="row">    <div class="col-12">      <div id="drag-drop-area" class="mx-auto mb-5"></div>      <mat-card>        <mat-card-title>Processed Images</mat-card-title>        <mat-card-subtitle>Once Processed, Images will show up here</mat-card-subtitle>        <mat-card-content class="mt-2">          <div *ngIf="processing">            <p>Processing Images</p>            <mat-spinner [diameter]="30" class="mx-auto"></mat-spinner>          </div>          <canvas mat-card-image id="original" style="width: 256px; height: 256px;"></canvas>          <div *ngIf="data">            <p>Algae: {{ data[\'algae\'] }}</p>            <p>Aquatic Plants: {{ data[\'aquatic plant\'] }}</p>            <p>Human Interference: {{ data[\'human interference\'] }}</p>            <p>Non Aquatic Plants: {{ data[\'non-aquatic plant\'] }}</p>            <p>Rock: {{ data[\'rock\'] }}</p>            <p>Soil/Clay: {{ data[\'soil/clay\'] }}</p>          </div>        </mat-card-content>      </mat-card>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AboutusComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
+        var COMPONENT_TEMPLATE = '<div><!--<button mat-button color="warn" (click)="onClick()">-->  <!--<mat-icon>file_upload</mat-icon>-->  <!--{{text}}--><!--</button>--><!--<br/>--><!--<ul>-->  <!--<li *ngFor="let file of files" [@fadeInOut]="file.state" class="my-2">-->    <!--<mat-progress-bar [value]="file.progress" style="width: 50%;" class="mx-auto"></mat-progress-bar>-->    <!--<span id="file-label" class="mt-1">-->            <!--{{file.data.name}}-->      <!--<a title="Retry" (click)="retryFile(file)" *ngIf="file.canRetry">-->        <!--<mat-icon class="mx-1">refresh</mat-icon>-->      <!--</a>-->      <!--<a title="Cancel" (click)="cancelFile(file)" *ngIf="file.canCancel">-->        <!--<mat-icon class="mx-1">cancel</mat-icon>-->      <!--</a>-->    <!--</span>-->  <!--</li>--><!--</ul>--><!--<input type="file" id="fileUpload" name="fileUpload" multiple="multiple"-->       <!--accept="{{accept}}" style="display:none;"/>--><div class="container text-center my-5">  <div class="row">    <div class="col-12">      <div id="drag-drop-area" class="mx-auto mb-5"></div>      <mat-card>        <mat-card-title>Processed Images</mat-card-title>        <mat-card-subtitle>Once Processed, Images will show up here</mat-card-subtitle>        <mat-card-content class="mt-2">          <div *ngIf="processing">            <p>Processing Images</p>            <mat-spinner [diameter]="30" class="mx-auto"></mat-spinner>          </div>          <canvas mat-card-image id="original" style="width: 256px; height: 256px;"></canvas>          <div *ngIf="data" >            <div *ngFor="let i of data">              <p>Algae: {{ i[\'algae\'] }}</p>              <p>Aquatic Plants: {{ i[\'aquatic plant\'] }}</p>              <p>Human Interference: {{ i[\'human interference\'] }}</p>              <p>Non Aquatic Plants: {{ i[\'non-aquatic plant\'] }}</p>              <p>Rock: {{ i[\'rock\'] }}</p>              <p>Soil/Clay: {{ i[\'soil/clay\'] }}</p>            </div>          </div>          <div id="for-appending" class="row">          </div>        </mat-card-content>      </mat-card>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FileUploadComponent'};
 </script>

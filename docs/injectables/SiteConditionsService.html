@@ -166,8 +166,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/_services/site-conditions.service.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/_services/site-conditions.service.ts:30</a></div>
                 </td>
             </tr>
 
@@ -307,12 +307,6 @@ export class SiteConditionsService {
    * Run on program startup, gets initial center and sets it to center$
    */
   constructor() {
-    // this.route.params.pipe(
-    //   take(1),
-    //   switchMap(params &#x3D;&gt; this.getInitialCenter(+params.id))
-    // ).subscribe(initialCenter &#x3D;&gt; {
-    //   this.center.next(initialCenter);
-    // });
     this.getInitialCenter(0).subscribe(initialCenter &#x3D;&gt; {
       this.center.next(initialCenter);
     });

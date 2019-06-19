@@ -59,6 +59,13 @@
             <code>src/app/_services/image.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Handles image uploading to Azure</p>
+
+            </p>
 
 
 
@@ -104,12 +111,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/_services/image.service.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/_services/image.service.ts:13</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Creates http reference</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -118,6 +127,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -132,6 +142,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>HttpClient reference</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -169,14 +183,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/_services/image.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/_services/image.service.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends image to Azure for analysis</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -185,6 +201,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -196,6 +213,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Image object</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -207,7 +228,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Http post request to server</p>
+
                     </div>
                 </td>
             </tr>
@@ -235,14 +257,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/_services/image.service.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/_services/image.service.ts:53</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Converts numjs array to object</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -251,6 +275,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -262,6 +287,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Array for converting</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>domObject</td>
@@ -271,6 +300,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Dom Object image is set too</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -299,37 +332,58 @@ import {HttpClient, HttpHeaders} from &#x27;@angular/common/http&#x27;;
 import { environment } from &#x27;../../environments/environment&#x27;;
 import {Observable} from &#x27;rxjs&#x27;;
 
+/**
+ * Handles image uploading to Azure
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class ImageService {
 
+  /**
+   * Creates http reference
+   * @param http HttpClient reference
+   */
   constructor(private http: HttpClient) { }
 
+  /**
+   * Sends image to Azure for analysis
+   * @param $image Image object
+   * @returns Http post request to server
+   */
   analyzeImage($image): Observable&lt;any&gt; {
-    const image &#x3D; nj.images.read($image);
-    const resizeImage &#x3D; nj.images.resize(image, 256, 256);
-    const rgbImage &#x3D; resizeImage.slice(null, null, [null, 3]);
-    const translatedArray &#x3D; rgbImage.tolist();
-    const imageForSend &#x3D; [translatedArray];
+    const image &#x3D; nj.images.read($image); // Reads image as numjs image object, turns it into array
+    const resizeImage &#x3D; nj.images.resize(image, 256, 256); // Resizes image to a 256 x 256 image in case it isnt already
+    const rgbImage &#x3D; resizeImage.slice(null, null, [null, 3]); // Turns from RGBA to RGB image, canvas passes in RGBA
+    const translatedArray &#x3D; rgbImage.tolist(); // Converts numjs array back into a normal array
+    const imageForSend &#x3D; [translatedArray]; // Embeds image in an array since the format is a 4d array for sending
+    // Sets http options for sending
     const httpOptions &#x3D; {
       headers: new HttpHeaders({
         &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
       })
     };
+    // Sets data thats being sent
     const data &#x3D; {
       // Inputs: {
       data: imageForSend
       // }
     };
+    // Sends post request
     return this.http.post(environment.imageUrl, data, httpOptions);
   }
 
+  /**
+   * Converts numjs array to object
+   * @param responseArray Array for converting
+   * @param domObject Dom Object image is set too
+   */
   convertArrayToImage(responseArray, domObject) {
-    const array &#x3D; nj.array(responseArray[0]);
+    const array &#x3D; nj.array(responseArray[0]); // Converts to njarray
+    /// Sets width and height to 256
     domObject.width &#x3D; 256;
     domObject.height &#x3D; 256;
-    nj.images.save(array, domObject);
+    nj.images.save(array, domObject); // Saves array to domObject
   }
 }
 

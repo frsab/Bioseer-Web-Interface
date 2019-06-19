@@ -72,18 +72,18 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import {Routes, RouterModule, Router} from &#x27;@angular/router&#x27;;
-import {HomeComponent} from &#x27;./home/home.component&#x27;;
+import {HomeComponent} from &#x27;./static-pages/home/home.component&#x27;;
 import {DashboardComponent} from &#x27;./dashboard/dashboard.component&#x27;;
 import {LoginComponent} from &#x27;./user/login/login.component&#x27;;
 import {AuthGuard} from &#x27;./_guards/auth.guard&#x27;;
 import {EditAccountComponent} from &#x27;./user/edit-account/edit-account.component&#x27;;
 import {UploadImagesComponent} from &#x27;./upload-images/upload-images.component&#x27;;
 import {RegisterComponent} from &#x27;./user/register/register.component&#x27;;
-import {MobiledashboardComponent} from &#x27;./mobiledashboard/mobiledashboard.component&#x27;;
-import {OurmissionComponent} from &#x27;./ourmission/ourmission.component&#x27;;
-import {OurtechnologyComponent} from &#x27;./ourtechnology/ourtechnology.component&#x27;;
-import {AboutusComponent} from &#x27;./aboutus/aboutus.component&#x27;;
-import {ErrorpageComponent} from &#x27;./errorpage/errorpage.component&#x27;;
+import {MobiledashboardComponent} from &#x27;./dashboard/mobiledashboard/mobiledashboard.component&#x27;;
+import {OurmissionComponent} from &#x27;./static-pages/ourmission/ourmission.component&#x27;;
+import {OurtechnologyComponent} from &#x27;./static-pages/ourtechnology/ourtechnology.component&#x27;;
+import {AboutUsComponent} from &#x27;./static-pages/aboutus/about-us.component&#x27;;
+import {ErrorpageComponent} from &#x27;./shared/errorpage/errorpage.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
@@ -118,11 +118,11 @@ const routes: Routes &#x3D; [
     component: MobiledashboardComponent,
   },
   {
-    path: &#x27;aboutus&#x27;,
-    component: AboutusComponent,
+    path: &#x27;team&#x27;,
+    component: AboutUsComponent,
   },
   {
-    path: &#x27;ourmission&#x27;,
+    path: &#x27;mission&#x27;,
     component: OurmissionComponent,
   },
   {
