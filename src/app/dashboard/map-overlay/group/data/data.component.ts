@@ -1,28 +1,22 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Chart } from 'chart.js';
-import {NavigationEnd, Router} from '@angular/router';
 
-// @ts-ignore
+/**
+ * View data from the sensor
+ */
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.scss']
 })
 export class DataComponent implements OnInit {
+  lineChart = []; // Creates line chart instance
 
-
-  lineChart = [];
-  constructor(
-    private elementRef: ElementRef,
-    private router: Router) {
-    this.router.events.subscribe((e) => {
-      if (e instanceof NavigationEnd) {
-        console.log('Na End');
-      }
-    });
-  }
-
+  /**
+   * On initialization creates a new line chart
+   */
   ngOnInit() {
+    // Creates a new linechart
     this.lineChart = new Chart('lineChart', {
       type: 'line',
       data: {

@@ -6,6 +6,9 @@ import {first} from 'rxjs/operators';
 import {User} from '../../_models/user.model';
 import {Observable} from 'rxjs';
 
+/**
+ * Component for logging in the user
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,13 +16,20 @@ import {Observable} from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  formGroup: FormGroup;
-  titleAlert = 'This field is required';
+  formGroup: FormGroup; // Formgroup reference object
+  titleAlert = 'This field is required'; // Required alert
   post: any = '';
-  submitted = false;
-  returnUrl: string;
-  error = '';
+  submitted = false; // If Submitted
+  returnUrl: string; // Return URL
+  error = ''; // Error
 
+  /**
+   *
+   * @param formBuilder FormBuilder reference
+   * @param route ActivatedRouter reference
+   * @param router Router reference
+   * @param authenticationService AuthenticationService reference
+   */
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -28,6 +38,9 @@ export class LoginComponent implements OnInit {
   ) {
   }
 
+  /**
+   * Creates the form, logs out user, and takes snapshot of old route
+   */
   ngOnInit() {
     this.createForm();
     // reset login status
@@ -36,6 +49,9 @@ export class LoginComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
   }
 
+  /**
+   * Builds form
+   */
   createForm() {
     this.formGroup = this.formBuilder.group({
       username: [null, [Validators.required]],
@@ -44,67 +60,23 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  /**
+   * Once user submits send data and return to old address or throws error
+   * @param post Reference to the form
+   */
   onSubmit(post) {
+    // Logs in user
     this.authenticationService.login(post.username, post.password)
       .pipe(first())
       .subscribe(
         data => {
+          // Navigates to previous user position
           this.submitted = true;
           this.router.navigate([this.returnUrl]);
         },
         error => {
+          // Throws error
           this.error = error;
         });
   }
 }
-  // loginForm: FormGroup;
-  // loading = false;
-  // submitted = false;
-  // returnUrl: string;
-  // error = '';
-  //
-  // constructor(
-  //   private formBuilder: FormBuilder,
-  //   private route: ActivatedRoute,
-  //   private router: Router,
-  //   private authenticationService: AuthenticationService
-  // ) { }
-  //
-  // ngOnInit() {
-  //   this.loginForm = this.formBuilder.group({
-  //     username: ['', Validators.required],
-  //     password: ['', Validators.required]
-  //   });
-  //
-  //   // reset login status
-  //   this.authenticationService.logout();
-  //
-  //   // get return url from route parameters or default to '/'
-  //   this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
-  // }
-  //
-  // // convenience getter for easy access to form fields
-  // get f() { return this.loginForm.controls; }
-  //
-  // onSubmit() {
-  //   this.submitted = true;
-  //
-  //   // stop here if form is invalid
-  //   if (this.loginForm.invalid) {
-  //     return;
-  //   }
-  //
-  //   this.loading = true;
-  //   this.authenticationService.login(this.f.username.value, this.f.password.value)
-  //     .pipe(first())
-  //     .subscribe(
-  //       data => {
-  //         this.router.navigate([this.returnUrl]);
-  //       },
-  //       error => {
-  //         this.error = error;
-  //         this.loading = false;
-  //       });
-  // }
-
-//}

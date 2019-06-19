@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Webpage footer
+ */
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

@@ -8,7 +8,7 @@ import { NavigationCancel,
   Router } from '@angular/router';
 
 import {BingApiLoaderService} from './_services/bing-api-loader.service';
-import {SidebarService} from './shared/sidebar/sidebar.service';
+import {SidebarService} from './_services/sidebar.service';
 
 @Component({
   selector: 'app-root',

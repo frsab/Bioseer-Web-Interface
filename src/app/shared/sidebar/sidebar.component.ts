@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { SidebarService } from './sidebar.service';
+import { SidebarService } from '../../_services/sidebar.service';
 import { AuthenticationService } from '../../_services/authentication.service';
 import { Router} from '@angular/router';
 
 // import { MenusService } from './menus.service';
 
+/**
+ * Popout sidebar with animations
+ */
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -19,9 +22,15 @@ import { Router} from '@angular/router';
   ]
 })
 export class SidebarComponent implements OnInit {
-  menus = [];
-  displayName: string;
+  menus = []; // Menus that are being created
+  displayName: string; // Current user
 
+  /**
+   * Gets the list of menus from the constructor
+   * @param sidebarservice Sidebar service referenfce
+   * @param authenticationService Auth service reference
+   * @param router Router reference
+   */
   constructor(
     public sidebarservice: SidebarService,
     private authenticationService: AuthenticationService,
@@ -30,6 +39,9 @@ export class SidebarComponent implements OnInit {
     this.menus = sidebarservice.getMenuList();
   }
 
+  /**
+   * Sets displayName to current user
+   */
   ngOnInit() {
     this.authenticationService.currentUser.subscribe(user => {
       // console.log(user);
@@ -37,14 +49,24 @@ export class SidebarComponent implements OnInit {
     });
   }
 
+  /**
+   * Logs user out
+   */
   logout() {
     this.authenticationService.logout();
   }
 
+  /**
+   * Gets current state of sidebar
+   */
   getSideBarState() {
     return this.sidebarservice.getSidebarState();
   }
 
+  /**
+   * Toggles submenus
+   * @param currentMenu Current referenced menu item
+   */
   toggle(currentMenu) {
     if (currentMenu.type === 'dropdown') {
       this.menus.forEach(element => {

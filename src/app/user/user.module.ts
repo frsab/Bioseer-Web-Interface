@@ -6,6 +6,9 @@ import {RegisterComponent} from './register/register.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from '../shared/material/material.module';
 
+/**
+ * Handles all the user functions
+ */
 @NgModule({
   declarations: [
     EditAccountComponent,

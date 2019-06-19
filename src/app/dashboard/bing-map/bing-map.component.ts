@@ -1,11 +1,9 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
-import { filter, take } from 'rxjs/operators';
 import { SiteConditionsService } from '../../_services/site-conditions.service';
 import {SensorBroadcastModel} from '../../_models/sensor-broadcast.model';
-import {group} from '@angular/animations';
 import {BingMapsService} from '../../_services/bing-maps.service';
 import {ZoneModel} from '../../_models/zone.model';
+import {Observable} from 'rxjs';
 
 // Needed to reference typescript for microsoft object
 /// <reference path="types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
@@ -18,8 +16,11 @@ import {ZoneModel} from '../../_models/zone.model';
   templateUrl: './bing-map.component.html',
   styleUrls: ['./bing-map.component.scss']
 })
-export class BingMapComponent implements OnChanges, AfterViewInit  {
+export class BingMapComponent implements AfterViewInit  {
 
+  /**
+   * Declare inputs for sensors and zones
+   */
   @Input() sensors: Observable<[SensorBroadcastModel]>;
   @Input() zones: Observable<[ZoneModel]>;
 
@@ -35,9 +36,9 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
   }
 
   // @ts-ignore
-  map: Microsoft.Maps.Map;
+  map: Microsoft.Maps.Map; // Creates Microsoft Maps instance
   // @ts-ignore
-  position: Microsoft.Maps.Location;
+  position: Microsoft.Maps.Location; // Creates microsoft position instance
 
   // Output log, printed in the html
   log: string[] = [];
@@ -46,11 +47,6 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
     private service: SiteConditionsService,
     private bingMaps: BingMapsService
   ) {
-    this.log.push('Constructor');
-  }
-
-  ngOnChanges() {
-    this.log.push('OnChanges');
   }
 
   /**
@@ -85,6 +81,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
 
     // Subscribe to Inputs and create markers
     if (this.sensors) {
+      // If there are sensors being inputed, subscribe to it
       this.sensors.subscribe((currentSensor: [SensorBroadcastModel]) => {
         for (const i of Object.keys(currentSensor)) {
           const selectedSensor: SensorBroadcastModel = currentSensor[i];
@@ -94,13 +91,14 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       });
     }
 
+    // If zones are passed in, create zones on map
     if (this.zones) {
       this.zones.subscribe((currentZones: [ZoneModel]) => {
         for (let i of Object.keys(currentZones)) {
           const selectedZone: ZoneModel = currentZones[i];
           this.bingMaps.handleZone(selectedZone.location, selectedZone.zoneHealth, this.map, selectedZone.zoneName, selectedZone.zoneId);
         }
-      })
+      });
     }
 
     // let locations = this.bingMaps.createArrayOfLocations([38.618394, -121.305682, 38.617571, -121.305246, 38.617477, -121.305792, 38.618365, -121.306204])
@@ -108,7 +106,7 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
   }
 
   /**
-   * Creates streetside maps using Microsoft maps object
+   * Creates map using Microsoft maps object
    */
   createMap() {
     // @ts-ignore
@@ -116,18 +114,14 @@ export class BingMapComponent implements OnChanges, AfterViewInit  {
       this.streetsideMapViewChild.nativeElement,
       {
         // @ts-ignore
-        credentials: 'AukHSv0yxiZQnvbYs4szic5RfGEmKxhaSLCmRZ5PV8UmgQWI11uH2Mo5_sWDh8l8',
+        credentials: 'AukHSv0yxiZQnvbYs4szic5RfGEmKxhaSLCmRZ5PV8UmgQWI11uH2Mo5_sWDh8l8',  // User key
         // @ts-ignore
-        center: new Microsoft.Maps.Location(38.616070, -121.304723),
+        center: new Microsoft.Maps.Location(38.616070, -121.304723), // Spawn center
         // @ts-ignore
-        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+        mapTypeId: Microsoft.Maps.MapTypeId.aerial, // Type of map
         zoom: 17
       }
     );
-    // @ts-ignore
-    // Microsoft.Maps.Events.addHandler(this.map, 'viewchange', (e) => {
-    //   console.log(this.map.getCenter());
-    // });
   }
 }
 

@@ -17,12 +17,6 @@ export class SiteConditionsService {
    * Run on program startup, gets initial center and sets it to center$
    */
   constructor() {
-    // this.route.params.pipe(
-    //   take(1),
-    //   switchMap(params => this.getInitialCenter(+params.id))
-    // ).subscribe(initialCenter => {
-    //   this.center.next(initialCenter);
-    // });
     this.getInitialCenter(0).subscribe(initialCenter => {
       this.center.next(initialCenter);
     });

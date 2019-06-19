@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {SidebarService} from '../sidebar/sidebar.service';
+import {SidebarService} from '../../_services/sidebar.service';
 import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 
+/**
+ * Webpage header
+ */
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,14 +12,19 @@ import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  transparentBackground: boolean;
-  positionAbsolute: boolean;
+  transparentBackground: boolean; // If the header has a trans background
+  positionAbsolute: boolean; // If the header is in position absolute
 
+  /**
+   * Checks if the
+   * @param router Router object
+   * @param sidebarService Sidebar service reference
+   */
   constructor(
     private router: Router,
-    private route: ActivatedRoute,
-    public sidebarservice: SidebarService
+    public sidebarService: SidebarService
   ) {
+    // Subscribe to router events, checks if route is going to be a transparent header or absolute position header
     this.router.events.subscribe(res => {
        this.router.url === '/' || this.router.url === '/mission' ? this.transparentBackground = true : this.transparentBackground = false;
        this.router.url === '/error' || this.router.url === '/login' || this.router.url === '/register' ? this.positionAbsolute = true : this.positionAbsolute = false;
@@ -30,19 +38,18 @@ export class HeaderComponent implements OnInit {
   }
 
 
-
+  /**
+   * Toggles sidebar
+   */
   toggleSidebar() {
-    this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());
-  }
-  toggleBackgroundImage() {
-    this.sidebarservice.hasBackgroundImage = !this.sidebarservice.hasBackgroundImage;
-  }
-  getSideBarState() {
-    return this.sidebarservice.getSidebarState();
+    this.sidebarService.setSidebarState(!this.sidebarService.getSidebarState());
   }
 
+  /**
+   * Hides sidebar
+   */
   hideSidebar() {
-    this.sidebarservice.setSidebarState(true);
+    this.sidebarService.setSidebarState(true);
   }
 
 }

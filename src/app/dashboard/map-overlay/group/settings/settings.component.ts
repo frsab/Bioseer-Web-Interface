@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+/**
+ * Settings for zone
+ */
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',

@@ -13,6 +13,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
+/**
+ * General components across the application
+ */
 @NgModule({
   declarations: [
     ErrorpageComponent,

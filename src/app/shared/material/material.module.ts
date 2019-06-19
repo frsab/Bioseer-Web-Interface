@@ -26,6 +26,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+/**
+ * Organizes all of the material componenents
+ */
 @NgModule({
   declarations: [],
   imports: [

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * General information about the zone
+ */
 @Component({
   selector: 'app-general-cards',
   templateUrl: './general-cards.component.html',

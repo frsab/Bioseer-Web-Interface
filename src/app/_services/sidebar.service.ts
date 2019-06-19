@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * Handles the sidebar construction, object with all the menu items
+ */
 @Injectable({
   providedIn: 'root'
 })
