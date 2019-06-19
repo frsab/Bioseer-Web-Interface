@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule, Router} from '@angular/router';
-import {HomeComponent} from './home/home.component';
+import {HomeComponent} from './static-pages/home/home.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {LoginComponent} from './user/login/login.component';
 import {AuthGuard} from './_guards/auth.guard';
 import {EditAccountComponent} from './user/edit-account/edit-account.component';
 import {UploadImagesComponent} from './upload-images/upload-images.component';
 import {RegisterComponent} from './user/register/register.component';
-import {MobiledashboardComponent} from './mobiledashboard/mobiledashboard.component';
-import {OurmissionComponent} from './ourmission/ourmission.component';
-import {OurtechnologyComponent} from './ourtechnology/ourtechnology.component';
-import {AboutusComponent} from './aboutus/aboutus.component';
+import {MobiledashboardComponent} from './dashboard/mobiledashboard/mobiledashboard.component';
+import {OurmissionComponent} from './static-pages/ourmission/ourmission.component';
+import {OurtechnologyComponent} from './static-pages/ourtechnology/ourtechnology.component';
+import {AboutUsComponent} from './static-pages/aboutus/about-us.component';
 import {ErrorpageComponent} from './shared/errorpage/errorpage.component';
 
 const routes: Routes = [
@@ -47,7 +47,7 @@ const routes: Routes = [
   },
   {
     path: 'team',
-    component: AboutusComponent,
+    component: AboutUsComponent,
   },
   {
     path: 'mission',
