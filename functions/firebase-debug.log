@@ -597,3 +597,65 @@
 [info] >    createdDate: 2019-06-12T19:54:25.406Z,
 [info] >    __v: 0 }
 [info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-19T20:12:07.322Z] ----------------------------------------------------------------------
+[debug] [2019-06-19T20:12:07.324Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2019-06-19T20:12:07.325Z] CLI Version:   7.0.0
+[debug] [2019-06-19T20:12:07.325Z] Platform:      darwin
+[debug] [2019-06-19T20:12:07.325Z] Node Version:  v8.11.3
+[debug] [2019-06-19T20:12:07.325Z] Time:          Wed Jun 19 2019 16:12:07 GMT-0400 (EDT)
+[debug] [2019-06-19T20:12:07.325Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-19T20:12:07.340Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-19T20:12:07.340Z] > authorizing via signed-in user
+[debug] [2019-06-19T20:12:07.343Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
+ 
+[debug] [2019-06-19T20:12:07.569Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["functions","hosting"]
+[warn] ⚠  Your requested "node" version "10" doesn't match your global version "8"
+[debug] [2019-06-19T20:12:07.590Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
+ 
+[debug] [2019-06-19T20:12:07.755Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-06-19T20:12:07.766Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-19T20:12:07.926Z] <<< HTTP RESPONSE 200
+[info] ✔  hosting: Emulator started at http://localhost:5000
+[info] i  hosting: Serving hosting files from: dist/Bioseer-Web-Interface
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] i  functions: Watching "/Users/caelinsutch/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
+[debug] [2019-06-19T20:12:08.617Z] Functions runtime initialized.
+[debug] [2019-06-19T20:12:08.618Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-06-19T20:13:17.715Z] ----------------------------------------------------------------------
+[debug] [2019-06-19T20:13:17.718Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2019-06-19T20:13:17.718Z] CLI Version:   7.0.0
+[debug] [2019-06-19T20:13:17.718Z] Platform:      darwin
+[debug] [2019-06-19T20:13:17.718Z] Node Version:  v8.11.3
+[debug] [2019-06-19T20:13:17.719Z] Time:          Wed Jun 19 2019 16:13:17 GMT-0400 (EDT)
+[debug] [2019-06-19T20:13:17.719Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-19T20:13:17.729Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-19T20:13:17.729Z] > authorizing via signed-in user
+[debug] [2019-06-19T20:13:17.731Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
+ 
+[debug] [2019-06-19T20:13:18.004Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["functions","hosting"]
+[warn] ⚠  Your requested "node" version "10" doesn't match your global version "8"
+[debug] [2019-06-19T20:13:18.025Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
+ 
+[debug] [2019-06-19T20:13:18.195Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-06-19T20:13:18.208Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-19T20:13:18.379Z] <<< HTTP RESPONSE 200
+[info] ✔  hosting: Emulator started at http://localhost:5000
+[info] i  hosting: Serving hosting files from: dist/Bioseer-Web-Interface
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] i  functions: Watching "/Users/caelinsutch/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
+[debug] [2019-06-19T20:13:19.061Z] Functions runtime initialized.
+[debug] [2019-06-19T20:13:19.062Z] Disabled runtime features: undefined
+[debug] [2019-06-19T20:13:19.368Z] Found google-gax at /Users/caelinsutch/Github/Bioseer-Web-Interface/functions/node_modules/google-gax/build/src/index.js
+[debug] [2019-06-19T20:13:19.368Z] Outgoing network have been stubbed.
+[debug] [2019-06-19T20:13:19.438Z] Checked functions.config()
+[debug] [2019-06-19T20:13:19.443Z] firebase-admin has been stubbed.

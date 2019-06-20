@@ -1,115 +1,62 @@
-[debug] [2019-06-19T01:13:38.729Z] ----------------------------------------------------------------------
-[debug] [2019-06-19T01:13:38.731Z] Command:       /home/aldenparker/.nvm/versions/node/v10.16.0/bin/node /usr/local/bin/firebase deploy
-[debug] [2019-06-19T01:13:38.731Z] CLI Version:   7.0.0
-[debug] [2019-06-19T01:13:38.731Z] Platform:      linux
-[debug] [2019-06-19T01:13:38.731Z] Node Version:  v10.16.0
-[debug] [2019-06-19T01:13:38.731Z] Time:          Tue Jun 18 2019 18:13:38 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-06-19T01:13:38.731Z] ----------------------------------------------------------------------
+[debug] [2019-06-19T20:10:27.280Z] ----------------------------------------------------------------------
+[debug] [2019-06-19T20:10:27.282Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-19T20:10:27.282Z] CLI Version:   4.2.0
+[debug] [2019-06-19T20:10:27.282Z] Platform:      darwin
+[debug] [2019-06-19T20:10:27.282Z] Node Version:  v8.11.3
+[debug] [2019-06-19T20:10:27.283Z] Time:          Wed Jun 19 2019 16:10:27 GMT-0400 (EDT)
+[debug] [2019-06-19T20:10:27.283Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-06-19T01:13:38.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-06-19T01:13:38.737Z] > authorizing via signed-in user
-[debug] [2019-06-19T01:13:38.737Z] [iam] checking project bioseer-c55f5 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2019-06-19T01:13:38.738Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5:testIamPermissions  
-
-[debug] [2019-06-19T01:13:39.059Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:39.066Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/bioseer-c55f5  
+[debug] [2019-06-19T20:10:27.293Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-19T20:10:27.293Z] > authorizing via signed-in user
+[debug] [2019-06-19T20:10:27.295Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/bioseer-c55f5  
  
-[debug] [2019-06-19T01:13:39.325Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-19T20:10:27.715Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-19T20:10:27.717Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
+ 
+[debug] [2019-06-19T20:10:27.908Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Deploying to 'bioseer-c55f5'...
+[info] === Serving from '/Users/caelinsutch/Github/Bioseer-Web-Interface'...
 [info] 
-[info] i  deploying functions, hosting
-[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
-[info] ✔  functions: Finished running predeploy script.
-[debug] [2019-06-19T01:13:41.699Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "eslint .",
-    "serve": "firebase serve --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "main": "./index.js",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "express-fileupload": "^1.1.5",
-    "express-jwt": "^5.3.1",
-    "firebase-admin": "~7.0.0",
-    "firebase-functions": "^3.0.1",
-    "http": "0.0.0",
-    "mongoose": "^5.5.15",
-    "multer": "^1.4.1",
-    "path": "^0.12.7",
-    "rootpath": "^0.1.2"
-  },
-  "devDependencies": {
-    "eslint": "^5.12.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "firebase-functions-test": "^0.1.6"
-  },
-  "lint-staged": {
-    "*.{js,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "engines": {
-    "node": "10"
-  },
-  "private": true
-}
-[info] i  functions: ensuring necessary APIs are enabled...
-[debug] [2019-06-19T01:13:41.699Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/bioseer-c55f5?view=CONSUMER_VIEW  
+[debug] [2019-06-19T20:10:28.458Z] Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/logs'
+    at Object.fs.mkdirSync (fs.js:885:18)
+    at Object.assertLogsPath (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/emulator/logs.js:65:10)
+    at new Controller (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/cli/controller.js:77:32)
+    at FunctionsEmulator.start (/usr/local/lib/node_modules/firebase-tools/lib/functionsEmulator.js:113:21)
+    at Object.start (/usr/local/lib/node_modules/firebase-tools/lib/serve/functions.js:9:29)
+    at /usr/local/lib/node_modules/firebase-tools/lib/serve/index.js:17:21
+    at arrayMap (/usr/local/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:639:23)
+    at Function.map (/usr/local/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9554:14)
+    at _serve (/usr/local/lib/node_modules/firebase-tools/lib/serve/index.js:15:7)
+    at Command._action (/usr/local/lib/node_modules/firebase-tools/commands/serve.js:48:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-06-19T20:11:53.533Z] ----------------------------------------------------------------------
+[debug] [2019-06-19T20:11:53.536Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2019-06-19T20:11:53.536Z] CLI Version:   7.0.0
+[debug] [2019-06-19T20:11:53.536Z] Platform:      darwin
+[debug] [2019-06-19T20:11:53.536Z] Node Version:  v8.11.3
+[debug] [2019-06-19T20:11:53.537Z] Time:          Wed Jun 19 2019 16:11:53 GMT-0400 (EDT)
+[debug] [2019-06-19T20:11:53.537Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-19T20:11:53.547Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-19T20:11:53.547Z] > authorizing via signed-in user
+[debug] [2019-06-19T20:11:53.549Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
  
-[debug] [2019-06-19T01:13:41.700Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/bioseer-c55f5?view=CONSUMER_VIEW  
+[debug] [2019-06-19T20:11:54.230Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["functions","hosting"]
+[warn] ⚠  Your requested "node" version "10" doesn't match your global version "8"
+[debug] [2019-06-19T20:11:54.254Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
  
-[debug] [2019-06-19T01:13:42.617Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:42.773Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: all necessary APIs are enabled
-[debug] [2019-06-19T01:13:42.773Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bioseer-c55f5  
+[debug] [2019-06-19T20:11:54.445Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-06-19T20:11:54.461Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771/clients/_:getWebAppConfig  
  
-[debug] [2019-06-19T01:13:43.077Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:43.077Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/222562557771:getServerAppConfig  
- 
-[debug] [2019-06-19T01:13:43.299Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:43.301Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/bioseer-c55f5/versions  
-
-[debug] [2019-06-19T01:13:44.618Z] <<< HTTP RESPONSE 200
-[info] i  functions: preparing functions directory for uploading...
-[debug] [2019-06-19T01:13:44.624Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs  
- 
-[debug] [2019-06-19T01:13:45.132Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:45.134Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs/bioseer/variables  
- 
-[debug] [2019-06-19T01:13:45.611Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:45.614Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs/bioseer/variables/port  
- 
-[debug] [2019-06-19T01:13:45.615Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs/bioseer/variables/accountname  
- 
-[debug] [2019-06-19T01:13:45.616Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs/bioseer/variables/databasename  
- 
-[debug] [2019-06-19T01:13:45.617Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bioseer-c55f5/configs/bioseer/variables/key  
- 
-[debug] [2019-06-19T01:13:45.812Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:45.820Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:46.088Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:46.263Z] <<< HTTP RESPONSE 200
-[info] i  functions: packaged functions (52.29 KB) for uploading
-[debug] [2019-06-19T01:13:46.763Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/bioseer-c55f5/locations/us-central1/functions:generateUploadUrl  
- 
-[debug] [2019-06-19T01:13:47.335Z] <<< HTTP RESPONSE 200
-[debug] [2019-06-19T01:13:47.336Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-f255a504-dc88-48e7-bf2f-c77e119d14a2/51226da0-d34d-4285-91d3-b212e0a46776.zip?GoogleAccessId=service-222562557771@gcf-admin-robot.iam.gserviceaccount.com&Expires=1560908627&Signature=iHZcMiLxVu3inQTIEdZgiBAw3Af79iXBnBUBVQlxWCVCbdS1vC8%2Fsv7I%2FC%2Fqy8sKcWjcVXS28fzx1PamajweAGLwMRzkCYshXBk5Pq3LL9CPc4syw8b4P2sJJf9bQqk3Y3wH4E4hWccYWUZaIrOUiOKFdyszawOKnXgBVHQSbMuZO6XE1yO1cpkLQgziWHn%2BBR2LpX5sPuRKiTopX3Xk37wksWnUfPT1dFNhqa7ocLSS3d%2FR1z2A1FfwmBaatr4y2X3jX988HTt2BBFxLCHcEazQP7dTec9ZARfhIsHHtIp2%2FejVQnXmNsczG7JTJ7Vgb2OEUTpks0MGtKwWNvugjg%3D%3D  
-
-[debug] [2019-06-19T01:13:47.767Z] <<< HTTP RESPONSE 200
-[info] ✔  functions: functions folder uploaded successfully
-[info] i  hosting[bioseer-c55f5]: beginning deploy...
-[info] i  hosting[bioseer-c55f5]: found 56 files in dist/Bioseer-Web-Interface
-[debug] [2019-06-19T01:13:47.775Z] [hosting] hash cache [ZGlzdC9CaW9zZWVyLVdlYi1JbnRlcmZhY2U] load error: lines is not defined
-[debug] [2019-06-19T01:13:48.029Z] [hosting] hash cache [ZGlzdC9CaW9zZWVyLVdlYi1JbnRlcmZhY2U] stored for 56 files
-[debug] [2019-06-19T01:13:48.029Z] [hosting][hash queue][FINAL]
-[debug] [2019-06-19T01:13:48.029Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/bioseer-c55f5/versions/e29f87b4e163e2cb:populateFiles  
- <request body omitted>
+[debug] [2019-06-19T20:11:54.712Z] <<< HTTP RESPONSE 200
+[info] ✔  hosting: Emulator started at http://localhost:5000
+[info] i  hosting: Serving hosting files from: dist/Bioseer-Web-Interface
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] i  functions: Watching "/Users/caelinsutch/Github/Bioseer-Web-Interface/functions" for Cloud Functions...
+[debug] [2019-06-19T20:11:55.291Z] Functions runtime initialized.
+[debug] [2019-06-19T20:11:55.291Z] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)

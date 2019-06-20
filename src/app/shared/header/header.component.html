@@ -14,9 +14,12 @@
       <!--<a mat-button [matMenuTriggerFor]="appMenu">About Us</a>-->
       <!--<a mat-button routerLink="/upload-images" *ngIf="displayName">Upload File</a>-->
     <!--</div>-->
-    <button mat-icon-button (click)="toggleSidebar()">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <div id="nav-icon" [ngClass]="!sidebarService.getSidebarState() ? 'open' : ''" (click)="toggleSidebar()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </mat-toolbar-row>
 
 </mat-toolbar>
