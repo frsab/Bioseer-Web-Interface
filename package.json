@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -d docs",
-    "deploy": "ng build --prod && firebase deploy"
+    "deploy-hosting": "npm run doc && ng build --prod && firebase deploy --only hosting && git add . && git commit -a -m 'deployed hosting'",
+    "deploy-functions": "firebase deploy --only functions && git commit -a -m 'deployed functions"
   },
   "repository": {
     "type": "git",
