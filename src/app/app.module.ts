@@ -14,7 +14,6 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import {SharedModule} from './shared/shared.module';
 import {UserModule} from './user/user.module';
 import {StaticPagesModule} from './static-pages/static-pages.module';
@@ -36,7 +35,6 @@ import {MaterialModule} from './shared/material/material.module';
     UserModule,
     StaticPagesModule,
     DashboardModule,
-    AnimateOnScrollModule.forRoot(),
     ButtonsModule.forRoot(),
     InputsModule.forRoot()
   ],

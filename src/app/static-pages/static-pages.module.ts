@@ -5,6 +5,7 @@ import {OurmissionComponent} from './ourmission/ourmission.component';
 import {OurtechnologyComponent} from './ourtechnology/ourtechnology.component';
 import {AboutUsComponent} from './aboutus/about-us.component';
 import {MaterialModule} from '../shared/material/material.module';
+import {AnimateOnScrollModule} from 'ng2-animate-on-scroll';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {MaterialModule} from '../shared/material/material.module';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    AnimateOnScrollModule.forRoot(),
   ]
 })
 export class StaticPagesModule { }
