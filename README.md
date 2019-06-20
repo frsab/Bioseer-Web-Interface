@@ -6,15 +6,38 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Built off of [this angular project](https://stackblitz.com/edit/angular-bing-maps?file=src%2Fapp%2Fbing-map.component.ts) that incorporated bing maps.
 
-Documented using compodoc. Before every push to master, run `npm run doc` to build docs for github pages.
+[Documentation](https://jhsrobo.github.io/Bioseer-Web-Interface/) built by compdoc. Before every push to master, run `npm run doc` to build docs for github pages.
 
 Built with a combination of a nodejs backend serve with MongoDB and an Angular 7 frontend. Hosted using firebase.
 
+## Development Environment
+Follow the following setup instructions to get developing.
+
+### Make sure you're running node 10
+
+Install for managing and installing node versions easily. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash`
+
+Run `nvm install 10 && nvm alias default 10`
+
+### Install CLI Tools
+
+`npm i -g @angular/cli`
+
+`npm i -g firebase-tools`
+
+Sign into firebase cli with your account (make one if you don't have one) using `firebase login`
+
+### Clone the Github and install packages
+
+`git clone https://github.com/JHSRobo/Bioseer-Web-Interface/`
+
+Run `npm i` to install all the packages
+
+`cd functions && npm i` to install packages for Firebase Functions
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. To launch the node server, open a new terminal `nodemon server`. 
-
-If nodemon not installed, install it with `npm i -g nodemon` 
+To begin developing, first start the Angular development server `ng s` and then run `firebase emulator:start` to emulate the server functions locally
 
 ## Further help
 
