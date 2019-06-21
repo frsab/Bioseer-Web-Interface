@@ -299,8 +299,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="118"
-                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:118</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:120</a></div>
                 </td>
             </tr>
 
@@ -365,8 +365,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="122"
-                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:122</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="124"
+                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:124</a></div>
                 </td>
             </tr>
 
@@ -431,8 +431,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="86"
-                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:86</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/dashboard/dashboard.component.ts:87</a></div>
                 </td>
             </tr>
 
@@ -1009,6 +1009,7 @@ export class DashboardComponent implements OnInit {
   ) {
     this.bingApiLoader.load().then(() &#x3D;&gt; {
       this.mapLoaded &#x3D; true;
+      console.log(&#x27;Map loaded&#x27;)
     });
   }
 
@@ -1042,6 +1043,7 @@ export class DashboardComponent implements OnInit {
       subscriber.next(exampleZone);
       subscriber.complete();
     });
+
   }
 
   mapSettings(event) {
@@ -1057,15 +1059,23 @@ export class DashboardComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;m-3 default-theme hud&quot;&gt;
-  &lt;div id&#x3D;&quot;right-side&quot; class&#x3D;&quot;m-3&quot;&gt;
-    &lt;app-map-settings (mapSettings)&#x3D;&quot;mapSettings($event)&quot; (newZone)&#x3D;&quot;newZone($event)&quot; &gt;&lt;/app-map-settings&gt;
-    &lt;app-overview&gt;&lt;/app-overview&gt;
-    &lt;!--&lt;app-group&gt;&lt;/app-group&gt;--&gt;
-  &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!--&lt;div *ngIf&#x3D;&quot;mapLoaded&quot;&gt;--&gt;
+  &lt;!--&lt;div class&#x3D;&quot;m-3 default-theme hud&quot;&gt;--&gt;
+    &lt;!--&lt;div id&#x3D;&quot;right-side&quot; class&#x3D;&quot;m-3&quot;&gt;--&gt;
+      &lt;!--&lt;app-map-settings (mapSettings)&#x3D;&quot;mapSettings($event)&quot; (newZone)&#x3D;&quot;newZone($event)&quot; &gt;&lt;/app-map-settings&gt;--&gt;
+      &lt;!--&lt;app-overview&gt;&lt;/app-overview&gt;--&gt;
+      &lt;!--&amp;lt;!&amp;ndash;&lt;app-group&gt;&lt;/app-group&gt;&amp;ndash;&amp;gt;--&gt;
+    &lt;!--&lt;/div&gt;--&gt;
+  &lt;!--&lt;/div&gt;--&gt;
+  &lt;!--&amp;lt;!&amp;ndash; TODO Create a loading animation wbhen the map is loading&amp;ndash;&amp;gt;--&gt;
+  &lt;!--&lt;app-bing-map *ngIf&#x3D;&quot;mapLoaded&quot; [sensors]&#x3D;&quot;sensors&quot; [zones]&#x3D;&quot;zones&quot; &gt;&lt;/app-bing-map&gt;--&gt;
+&lt;!--&lt;/div&gt;--&gt;
+
+&lt;div class&#x3D;&quot;h-100 text-center centered p-5&quot;&gt;
+  &lt;!-- TODO Add a cool little svg animation here or something--&gt;
+  &lt;h3&gt;Dashboard Loading&lt;/h3&gt;
+  &lt;mat-spinner [diameter]&#x3D;&quot;40&quot; class&#x3D;&quot;mx-auto mt-4&quot; &gt;&lt;/mat-spinner&gt;
 &lt;/div&gt;
-&lt;!-- TODO Create a loading animation wbhen the map is loading--&gt;
-&lt;app-bing-map *ngIf&#x3D;&quot;mapLoaded&quot; [sensors]&#x3D;&quot;sensors&quot; [zones]&#x3D;&quot;zones&quot;&gt;&lt;/app-bing-map&gt;
 </code></pre>
     </div>
 
@@ -1115,7 +1125,7 @@ export class DashboardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="m-3 default-theme hud">  <div id="right-side" class="m-3">    <app-map-settings (mapSettings)="mapSettings($event)" (newZone)="newZone($event)" ></app-map-settings>    <app-overview></app-overview>    <!--<app-group></app-group>-->  </div></div><!-- TODO Create a loading animation wbhen the map is loading--><app-bing-map *ngIf="mapLoaded" [sensors]="sensors" [zones]="zones"></app-bing-map></div>'
+        var COMPONENT_TEMPLATE = '<div><!--<div *ngIf="mapLoaded">-->  <!--<div class="m-3 default-theme hud">-->    <!--<div id="right-side" class="m-3">-->      <!--<app-map-settings (mapSettings)="mapSettings($event)" (newZone)="newZone($event)" ></app-map-settings>-->      <!--<app-overview></app-overview>-->      <!--&lt;!&ndash;<app-group></app-group>&ndash;&gt;-->    <!--</div>-->  <!--</div>-->  <!--&lt;!&ndash; TODO Create a loading animation wbhen the map is loading&ndash;&gt;-->  <!--<app-bing-map *ngIf="mapLoaded" [sensors]="sensors" [zones]="zones" ></app-bing-map>--><!--</div>--><div class="h-100 text-center centered p-5">  <!-- TODO Add a cool little svg animation here or something-->  <h3>Dashboard Loading</h3>  <mat-spinner [diameter]="40" class="mx-auto mt-4" ></mat-spinner></div></div>'
     var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-aboutus'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BingMapComponent', 'selector': 'app-bing-map'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DataComponent', 'selector': 'app-data'},{'name': 'EditAccountComponent', 'selector': 'app-edit-account'},{'name': 'ErrorpageComponent', 'selector': 'app-errorpage'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeneralCardsComponent', 'selector': 'app-general-cards'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapSettingsComponent', 'selector': 'app-map-settings'},{'name': 'MobiledashboardComponent', 'selector': 'app-mobiledashboard'},{'name': 'OurmissionComponent', 'selector': 'app-ourmission'},{'name': 'OurtechnologyComponent', 'selector': 'app-ourtechnology'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UploadImagesComponent', 'selector': 'app-upload-file'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};

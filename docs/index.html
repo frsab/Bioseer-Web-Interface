@@ -34,11 +34,23 @@
 <h1 id="bioseerwebinterface">BioseerWebInterface</h1>
 <p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 7.3.9.</p>
 <p>Built off of <a href="https://stackblitz.com/edit/angular-bing-maps?file=src%2Fapp%2Fbing-map.component.ts">this angular project</a> that incorporated bing maps.</p>
-<p>Documented using compodoc. Before every push to master, run <code>npm run doc</code> to build docs for github pages.</p>
+<p><a href="https://jhsrobo.github.io/Bioseer-Web-Interface/">Documentation</a> built by compdoc. Before every push to master, run <code>npm run doc</code> to build docs for github pages.</p>
 <p>Built with a combination of a nodejs backend serve with MongoDB and an Angular 7 frontend. Hosted using firebase.</p>
+<h2 id="development-environment">Development Environment</h2>
+<p>Follow the following setup instructions to get developing.</p>
+<h3 id="make-sure-youre-running-node-10">Make sure you&#39;re running node 10</h3>
+<p>Install for managing and installing node versions easily. <code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash</code></p>
+<p>Run <code>nvm install 10 &amp;&amp; nvm alias default 10</code></p>
+<h3 id="install-cli-tools">Install CLI Tools</h3>
+<p><code>npm i -g @angular/cli</code></p>
+<p><code>npm i -g firebase-tools</code></p>
+<p>Sign into firebase cli with your account (make one if you don&#39;t have one) using <code>firebase login</code></p>
+<h3 id="clone-the-github-and-install-packages">Clone the Github and install packages</h3>
+<p><code>git clone https://github.com/JHSRobo/Bioseer-Web-Interface/</code></p>
+<p>Run <code>npm i</code> to install all the packages</p>
+<p><code>cd functions &amp;&amp; npm i</code> to install packages for Firebase Functions</p>
 <h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files. To launch the node server, open a new terminal <code>nodemon server</code>. </p>
-<p>If nodemon not installed, install it with <code>npm i -g nodemon</code> </p>
+<p>To begin developing, first start the Angular development server <code>ng s</code> and then run <code>firebase emulator:start</code> to emulate the server functions locally</p>
 <h2 id="further-help">Further help</h2>
 <p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
 

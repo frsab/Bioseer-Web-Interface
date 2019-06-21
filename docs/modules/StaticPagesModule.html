@@ -219,6 +219,7 @@ import {OurmissionComponent} from &#x27;./ourmission/ourmission.component&#x27;;
 import {OurtechnologyComponent} from &#x27;./ourtechnology/ourtechnology.component&#x27;;
 import {AboutUsComponent} from &#x27;./aboutus/about-us.component&#x27;;
 import {MaterialModule} from &#x27;../shared/material/material.module&#x27;;
+import {AnimateOnScrollModule} from &#x27;ng2-animate-on-scroll&#x27;;
 
 @NgModule({
   declarations: [
@@ -229,7 +230,8 @@ import {MaterialModule} from &#x27;../shared/material/material.module&#x27;;
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    AnimateOnScrollModule.forRoot(),
   ]
 })
 export class StaticPagesModule { }

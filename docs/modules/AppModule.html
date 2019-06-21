@@ -377,8 +377,6 @@ import {ErrorInterceptor} from &#x27;./_helpers/error.interceptor&#x27;;
 import {HTTP_INTERCEPTORS, HttpClientModule} from &#x27;@angular/common/http&#x27;;
 import {JwtInterceptor} from &#x27;./_helpers/jwt.interceptor&#x27;;
 import { UploadImagesComponent } from &#x27;./upload-images/upload-images.component&#x27;;
-import { AnimateOnScrollModule } from &#x27;ng2-animate-on-scroll&#x27;;
-import { PERFECT_SCROLLBAR_CONFIG } from &#x27;ngx-perfect-scrollbar&#x27;;
 import {SharedModule} from &#x27;./shared/shared.module&#x27;;
 import {UserModule} from &#x27;./user/user.module&#x27;;
 import {StaticPagesModule} from &#x27;./static-pages/static-pages.module&#x27;;
@@ -400,7 +398,6 @@ import {MaterialModule} from &#x27;./shared/material/material.module&#x27;;
     UserModule,
     StaticPagesModule,
     DashboardModule,
-    AnimateOnScrollModule.forRoot(),
     ButtonsModule.forRoot(),
     InputsModule.forRoot()
   ],
@@ -414,8 +411,7 @@ import {MaterialModule} from &#x27;./shared/material/material.module&#x27;;
     BingApiLoaderService,
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-    // provider used to create fake backend
-    // fakeBackendProvider
+
   ]
 })
 export class AppModule { }
