@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, Output, ViewChild} from '@angular/core';
 import { SiteConditionsService } from '../../_services/site-conditions.service';
 import {SensorBroadcastModel} from '../../_models/sensor-broadcast.model';
 import {BingMapsService} from '../../_services/bing-maps.service';

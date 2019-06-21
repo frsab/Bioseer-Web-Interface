@@ -49,6 +49,7 @@ body {
   height: 30px;
   position: relative;
   margin: 0 auto;
+  top: 6px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -58,6 +59,10 @@ body {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+}
+
+.black-background span {
+  background: #1a1a1a !important;
 }
 
 #nav-icon span {

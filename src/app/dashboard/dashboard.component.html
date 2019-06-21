@@ -1,9 +1,17 @@
-<div class="m-3 default-theme hud">
-  <div id="right-side" class="m-3">
-    <app-map-settings (mapSettings)="mapSettings($event)" (newZone)="newZone($event)" ></app-map-settings>
-    <app-overview></app-overview>
-    <!--<app-group></app-group>-->
-  </div>
+<!--<div *ngIf="mapLoaded">-->
+  <!--<div class="m-3 default-theme hud">-->
+    <!--<div id="right-side" class="m-3">-->
+      <!--<app-map-settings (mapSettings)="mapSettings($event)" (newZone)="newZone($event)" ></app-map-settings>-->
+      <!--<app-overview></app-overview>-->
+      <!--&lt;!&ndash;<app-group></app-group>&ndash;&gt;-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--&lt;!&ndash; TODO Create a loading animation wbhen the map is loading&ndash;&gt;-->
+  <!--<app-bing-map *ngIf="mapLoaded" [sensors]="sensors" [zones]="zones" ></app-bing-map>-->
+<!--</div>-->
+
+<div class="h-100 text-center centered p-5">
+  <!-- TODO Add a cool little svg animation here or something-->
+  <h3>Dashboard Loading</h3>
+  <mat-spinner [diameter]="40" class="mx-auto mt-4" ></mat-spinner>
 </div>
-<!-- TODO Create a loading animation wbhen the map is loading-->
-<app-bing-map *ngIf="mapLoaded" [sensors]="sensors" [zones]="zones"></app-bing-map>

@@ -13,7 +13,6 @@ import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import {SharedModule} from './shared/shared.module';
 import {UserModule} from './user/user.module';
 import {StaticPagesModule} from './static-pages/static-pages.module';
@@ -48,8 +47,7 @@ import {MaterialModule} from './shared/material/material.module';
     BingApiLoaderService,
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-    // provider used to create fake backend
-    // fakeBackendProvider
+
   ]
 })
 export class AppModule { }

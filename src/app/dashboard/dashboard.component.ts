@@ -80,6 +80,7 @@ export class DashboardComponent implements OnInit {
   ) {
     this.bingApiLoader.load().then(() => {
       this.mapLoaded = true;
+      console.log('Map loaded')
     });
   }
 
@@ -113,6 +114,7 @@ export class DashboardComponent implements OnInit {
       subscriber.next(exampleZone);
       subscriber.complete();
     });
+
   }
 
   mapSettings(event) {

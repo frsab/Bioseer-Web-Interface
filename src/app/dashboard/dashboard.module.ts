@@ -10,6 +10,7 @@ import {GroupComponent} from './map-overlay/group/group.component';
 import {SettingsComponent} from './map-overlay/group/settings/settings.component';
 import {GeneralCardsComponent} from './map-overlay/group/general-cards/general-cards.component';
 import {DataComponent} from './map-overlay/group/data/data.component';
+import { LoadingComponent } from './loading/loading.component';
 
 /**
  * Dashboard module for the sensor dashboard based on bing maps
@@ -24,7 +25,8 @@ import {DataComponent} from './map-overlay/group/data/data.component';
     GroupComponent,
     SettingsComponent,
     GeneralCardsComponent,
-    DataComponent
+    DataComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
